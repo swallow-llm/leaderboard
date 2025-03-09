@@ -1,0 +1,11 @@
+th.sort-asc::after {
+  content: '🔼';
+}
+
+th.sort-desc::after {
+  content: '🔽';
+}
+
+.markdown>table thead th, .table thead th {
+  text-transform: unset;
+}
