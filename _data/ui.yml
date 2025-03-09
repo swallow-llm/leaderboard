@@ -1,0 +1,72 @@
+baseurl: https://chokkan.org/temp/leaderboard
+
+model:
+  name:
+    ja: モデル名
+    en: Model name
+  params:
+    ja: パラメータ数 [B]
+    en: "# Parameters [B]"
+  date:
+    ja: 公開日
+    en: Release date
+  id:
+    ja: ID
+    en: ID
+  type:
+    ja: 種別
+    en: Type
+  missing:
+    ja: 未評価タスク
+    en: Missing scores
+
+title:
+  ja: Swallow LLM Leaderboard
+  en: Swallow LLM Leaderboard
+
+categories:
+  ja: カテゴリ
+  en: Category
+about:
+  ja: このサイトについて
+  en: About
+
+languages:
+  ja: 言語
+  en: Language
+
+japanese:
+  ja: 日本語 (Japanese)
+  en: Japanese (日本語)
+
+english:
+  ja: 英語 (English)
+  en: English (英語)
+
+no_data:
+  ja: "データなし"
+  en: "No data"
+
+xaxis:
+  ja: "X軸"
+  en: "X axis"
+
+yaxis:
+  ja: "Y軸"
+  en: "Y axis"
+
+metric:
+  ja: 評価尺度
+  en: Metric
+
+setting:
+  ja: 実験設定
+  en: Setting
+
+reference:
+  ja: 出典
+  en: Reference
+
+unknown_size:
+  ja: パラメータ数不明
+  en: Unknown size

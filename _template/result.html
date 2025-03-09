@@ -1,0 +1,124 @@
+{% macro tabletab(prefix, category) -%}
+{% set tasks = taskcats[category].tasks %}
+
+<div class="table-responsive">
+  <table class="table card-table table-vcenter text-nowrap datatable">
+    <thead>
+      <tr>
+        <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all models" name="__ALL__"></th>
+        <th class="text-center">{{ ui.model.name }}</th>
+        {% for _, task in tasks.items() %}
+        <th class="text-center">{{ task.short }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for id, model in models.items() %}
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="{{ model.id }}"></td>
+        <td><a href="{{ model.uri }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        {% for _, task in tasks.items() %}{% if category in model.results %}
+        {% set value = model.results[category][task.name] %}
+        <td class="text-end">{% if 0 <= value %}{{ '%0.3f' | format(value | float) }}{% endif %}</td>
+        {% else %}
+        <td></td>
+        {% endif %}{% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%- endmacro %}
+
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs">
+      <li class="nav-item">
+        <a href="#tabs-result-ja-basic" class="nav-link active" data-bs-toggle="tab">{{ taskcats['ja_basic'].title }}</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tabs-result-en-basic" class="nav-link" data-bs-toggle="tab">{{ taskcats['en_basic'].title }}</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tabs-result-ja-mtb" class="nav-link" data-bs-toggle="tab">{{ taskcats['ja_mtb'].title }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <div class="tab-content">
+      <div class="tab-pane active show" id="tabs-result-ja-basic">
+        {{ tabletab("ja_basic", "ja_basic") }}
+      </div>
+      <div class="tab-pane" id="tabs-result-en-basic">
+        {{ tabletab("en_basic", "en_basic") }}
+      </div>
+      <div class="tab-pane" id="tabs-result-ja-mtb">
+        {{ tabletab("ja_mtb", "ja_mtb") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // @formatter:off
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('td > input').forEach(e => e.onclick = function() {
+      const id = this.name;
+      const checked = this.checked;
+      if (checked) {
+        if (g_filter === null) {
+          g_filter = [id];
+        } else {
+          g_filter.push(id);
+        }
+      } else {
+        var i = g_filter.indexOf(id);
+        if (i !== -1) {
+          g_filter.splice(i, 1);
+        }
+      }
+
+      // Update check states in other tabs.
+      document.querySelectorAll('input[name="'+id+'"]').forEach(function(e) {
+        e.checked = checked;
+      });
+
+      update();
+    });
+
+    document.querySelectorAll('th > input').forEach(e => e.onclick = function() {
+      const id = this.name;
+      const checked = this.checked;
+      if (checked) {
+        for (let key in g_models) {
+          g_filter.push(g_models[key].id);
+        }
+      } else {
+        g_filter = [];
+      }
+
+      // Update check states in other tabs.
+      document.querySelectorAll('th > input').forEach(function(e) {
+        e.checked = checked;
+      });
+
+      document.querySelectorAll('td > input').forEach(function(e) {
+        e.checked = checked;
+      });
+
+      update();
+    });
+
+    g_filter.forEach(function(id) {
+      document.querySelectorAll('input[name="'+id+'"]').forEach(function(e) {
+        e.checked = true;
+      });
+    });
+    if (g_filter.length == Object.keys(g_models).length) {
+      document.querySelectorAll('th > input').forEach(function(e) {
+        e.checked = true;
+      });
+    }
+  });
+// @formatter:on
+</script>

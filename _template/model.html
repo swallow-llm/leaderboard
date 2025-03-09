@@ -1,0 +1,58 @@
+{% extends "site.html" %}
+
+{% block content_title %}
+<h2 class="page-title">{{ models[model_id].name }}</h2>
+<div class="text-secondary mt-1">{% if 0 < models[model_id].params %}{{ models[model_id].params }}B{% else %}{{ ui.unknown_size }}{% endif %} ({{ models[model_id].date }}) <a href="{{ models[model_id].url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></div>
+{% endblock %}
+
+{% block content %}
+{% if models[model_id].base_model %}
+{% set class="col-sm-6 col-lg-4" %}
+{% set height=320 %}
+{% else %}
+{% set class="col-sm-6 col-lg-6" %}
+{% set height=480 %}
+{% endif %}
+
+<div class="row row-deck row-cards">
+<div class="{{ class }}">
+  {% with _id="ja_avg", _model=model_id, _category="ja_basic", _task="Ja Avg" %}
+  {% include "rank.html" %}
+  {% endwith %}
+</div>
+<div class="{{ class }}">
+  {% with _id="en_avg", _model=model_id, _category="en_basic", _task="En Avg" %}
+  {% include "rank.html" %}
+  {% endwith %}
+</div>
+{% if models[model_id].base_model %}
+<div class="{{ class }}">
+  {% with _id="ja_mtb", _model=model_id, _category="ja_mtb", _task="JMT Avg" %}
+  {% include "rank.html" %}
+  {% endwith %}
+</div>
+{% endif %}
+<div class="{{ class }}">
+  {% with _models=[model_id], _category="ja_basic", _height=height %}
+  {% include "radar.html" %}
+  {% endwith %}
+</div>
+<div class="{{ class }}">
+  {% with _models=[model_id], _category="en_basic", _height=height %}
+  {% include "radar.html" %}
+  {% endwith %}
+</div>
+{% if models[model_id].base_model %}
+<div class="{{ class }}">
+  {% with _models=[model_id], _category="ja_mtb", _height=height %}
+  {% include "radar.html" %}
+  {% endwith %}
+</div>
+{% endif %}
+
+<div class="col-12">
+  {% include "result.html" %}
+</div>
+
+</div>
+{% endblock %}

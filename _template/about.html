@@ -1,0 +1,148 @@
+{% extends "site.html" %}
+
+{% macro task_description(taskcat) -%}
+<div class="row row-deck row-cards pt-1 pb-4">
+  <div class="col-sm-6 col-lg-3">
+    <div class="card border-primary">
+      <div class="card-body">
+        <h5 class="card-title mb-3 fw-bold">{{ taskcat.title }}</h5>
+        <p class="text-secondary">{{ taskcat.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% for item in taskcat.tasks.values() %}{% if not item.collective %}
+  <div class="col-sm-6 col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        {% if item.subtitle %}<div class="subheader">{{ item.subtitle }}</div>{% endif %}
+        <h5 class="card-title mb-3">{{ item.title }}</h5>
+        {% if item.description %}<p class="text-secondary">{{ item.description }}</p>{% endif %}
+        {% if item.metric %}<div>{{ ui.metric }}: <span class="text-secondary">{{ item.metric }}</span></div>{% endif %}
+        {% if item.setting %}<div>{{ ui.setting }}: <span class="text-secondary">{{ item.setting }}</span></div>{% endif %}
+        {% if item.link %}<div>{{ ui.reference }}: <span class="text-secondary"><a href="{{ item.link.href }}">{{ item.link.author }} ({{ item.link.year }})</a></span></div>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}{% endfor %}
+</div>
+{%- endmacro %}
+
+{% block content_title %}
+<h1 class="page-title h1">{{ ui.about }}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="row row-deck row-cards">
+  <div class="col-12">
+    <div class="card card-md">
+      <div class="card-stamp card-stamp-lg">
+        <div class="card-stamp-icon bg-primary">
+          <!-- Downloaded the SVG icon from https://www.svgrepo.com/svg/323407/swallow -->
+          <svg width="100" height="100" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M96.18 22.49C264.6 98.36 403.1 214.8 40.11 270.5 153 268 191.6 291.1 64.12 382.6c230.18-128 331.68-189 318.98 106.9 30.5-54.4 114.6-241 36.4-268.3 6.2-7.4 15.5-19.4 22.1-31.9 13.1-5.7 22.6-13.6 30.3-23.7-8.7-2-16-2.5-22.8-2.3-.2-2.8-.8-5.5-2.1-7.9-8.7-16.5-48.1-13.7-62.4-12.1 4.7-81-226.8-117.09-288.42-120.81z"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col-10">
+            <div class="markdown">
+              {{ about.about }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% set block_content %}
+<ul>
+  {% for item in about.changelog.changes %}
+  <li>{{ item.date }}: {{ item.text}}</li>
+  {% endfor %}
+</ul>
+{% endset %}
+{% with _title=about.changelog.title, _content=block_content %}
+{% include "block.html" %}
+{% endwith %}
+
+<h2 class="pt-6">{{ about.task.title }}</h2>
+
+{{ task_description(taskcats.ja_basic) }}
+{{ task_description(taskcats.en_basic) }}
+{{ task_description(taskcats.ja_mtb) }}
+
+<h2 class="pt-6">{{ about.tools.title }}</h2>
+
+<div class="row row-deck row-cards">
+  {% for item in about.tools.content %}
+  <div class="col-sm-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title mb-3">{{ item.title }}</h5>
+        <div class="text-secondary">{{ item.subtitle }}</div>
+        <div class="text-secondary"><a href="{{ item.link.href }}">{% if item.link.text %}{{ item.link.text }}{% else %}{{ item.link.href }}{% endif %}</a></div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2 class="pt-6">{{ about.models.title }}</h2>
+
+<div class="row row-deck row-cards">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table card-table table-vcenter text-nowrap datatable">
+            <thead>
+              <tr>
+                <th class="text-center">{{ ui.model.name }}</th>
+                <th class="text-center">{{ ui.model.params }}</th>
+                <th class="text-center">{{ ui.model.date }}</th>
+                <th class="text-center">{{ ui.model.type }}</th>
+                <th class="text-center">{{ ui.model.missing }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for id, model in models.items() %}
+              <tr>
+                <td><a href="{{ model.uri }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td>{{ model.params }}</td>
+                <td>{{ model.date }}</td>
+                <td>{% if model.base_model == "" %}base{% else %}chat{% endif %}</td>
+                <td>
+                  {% for tastcat, tasks in model.results.items() %}{% for name, value in tasks.items() %}
+                  {% if value < 0 %}{{ name }}{% endif %}
+                  {% endfor %}{% endfor %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if lang == "ja" %}
+{% with _title=about.issues.title, _content=about.issues.content %}
+{% include "block.html" %}
+{% endwith %}
+{% endif %}
+
+{% set block_content %}
+<ul>
+  <li><a href="https://tabler.io/admin-template">Tabler Admin Template</a> licensed under MIT License</li>
+  <li><a href="https://apexcharts.com/">ApexCharts</a> licensed under MIT License</li>
+  <li>Swallow icon by <a href="https://game-icons.net/?ref=svgrepo.com" target="_blank">Game Icons.net</a> in CC Attribution License via <a href="https://www.svgrepo.com/svg/323407/swallow" target="_blank">SVG Repo</a></li>
+  <li>The research and development of the large language model Swallow has been supported by the AIST Project "Research and Development on Generative AI Foundation Models in the Physical Domain"</li>
+</ul>
+{% endset %}
+{% with _title=about.acknowledgements.title, _content=block_content %}
+{% include "block.html" %}
+{% endwith %}
+
+{% endblock %}

@@ -1,0 +1,215 @@
+{% macro axisselector(_id, axis, title) -%}
+<div class="dropdown">
+  <a href="#" class="btn dropdown-toggle" data-bs-toggle="dropdown">{{ title }}</a>
+  <div id="axis-{{ _id }}-{{ axis }}" class="dropdown-menu">
+    <div class="dropdown-menu-columns">
+      <div class="dropdown-menu-column">
+        {% for task in taskcats.ja_basic.tasks.values() %}
+        <span data="ja_basic,{{ task.name }}" class="dropdown-item">{{ task.title }}</span>
+        {% endfor %}
+      </div>
+      <div class="dropdown-menu-column">
+        {% for task in taskcats.en_basic.tasks.values() %}
+        <span data="en_basic,{{ task.name }}" class="dropdown-item">{{ task.title }}</span>
+        {% endfor %}
+      </div>
+      <div class="dropdown-menu-column">
+        {% for task in taskcats.ja_mtb.tasks.values() %}
+        <span data="ja_mtb,{{ task.name }}" class="dropdown-item">{{ task.title }}</span>
+        {% endfor %}
+      </div>
+      <div class="dropdown-menu-column">
+        <span data="params," class="dropdown-item">{{ ui.model.params }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{%- endmacro %}
+
+<div class="card">
+  <div class="card-body">
+    <div id="scatter-{{ _id }}" class="chart-lg"></div>
+  </div>
+  <ul class="nav">
+    <li class="nav-item">
+      {{ axisselector(_id, "x", ui.xaxis) }}
+    </li>
+    <li class="nav-item">
+      {{ axisselector(_id, "y", ui.yaxis) }}
+    </li>
+  </ul>
+</div>
+
+<script>
+  // @formatter:off
+  document.addEventListener("DOMContentLoaded", function () {
+    var set_active = function(axis, field) {
+      document.querySelectorAll("#axis-{{ _id }}-" + axis + " span").forEach(function(e) {
+        if (e.getAttribute("data") == field) {
+          e.className = "dropdown-item active";
+        } else {
+          e.className = "dropdown-item";
+        }
+      });
+    };
+
+    var get_active = function(axis) {
+      e = document.querySelectorAll("#axis-{{ _id }}-" + axis + " span[class*='active']")[0];
+      return e.getAttribute("data");
+    };
+
+    var repr_value = function(val, axis, add_prefix) {
+      const xfields = get_active(axis).split(",");
+      const cat = xfields[0];
+      const id = xfields[1];
+      if (cat == "params") {
+        const v = Math.pow(2, parseFloat(val));
+        return v < 10 ? v.toFixed(1) : v.toFixed(0);
+      } else {
+        return typeof val == "string" ? val : parseFloat(val).toFixed(4);
+      }
+    }
+
+    var build_series = function(xcat, xid, ycat, yid) {
+      var series = [];
+      for (let i = 0; i < g_filter.length; ++i) {
+        const m = g_models[g_filter[i]];
+        const x = xcat == "params" ? Math.log2(m["params"]) : m.results[xcat][xid];
+        const y = ycat == "params" ? Math.log2(m["params"]) : m.results[ycat][yid];
+        series.push({
+          name: m.name,
+          data: [[x, y]],
+        })
+      }
+      return series;
+    };
+
+    var build_axis = function(cat, id) {
+      if (cat == "params") {
+        return {
+          min: 0, // 2^0 = 1.
+          max: 8, // 2^8 = 256.
+          title: {text: {{ ui.model.params | tojson }} },
+          tickAmount: 10,
+          labels: {
+            formatter: function(val) {
+              const v = Math.pow(2, parseFloat(val));
+              return v < 10 ? v.toFixed(1) : v.toFixed(0);
+            }
+          }
+        }
+      } else {
+        return {
+          min: 0,
+          max: 1,
+          title: {text: g_taskcats[cat].tasks[id].title },
+          tickAmount: 10,
+          labels: {
+            formatter: function(val) {
+              return parseFloat(val).toFixed(1)
+            }
+          }
+        }
+      }
+    };
+
+    var build = function()
+    {
+      const xfields = get_active("x").split(",");
+      const yfields = get_active("y").split(",");
+      const xcat = xfields[0];
+      const xid = xfields[1];
+      const ycat = yfields[0];
+      const yid = yfields[1];
+      const series = build_series(xcat, xid, ycat, yid);
+      const xaxis = build_axis(xcat, xid);
+      const yaxis = build_axis(ycat, yid);
+      return [series, xaxis, yaxis];
+    }
+
+    //series = build("ja_basic", "Ja Avg", "en_basic", "En Avg");
+    set_active("x", "{{ _xcat }},{{ _xid}}");
+    set_active("y", "{{ _ycat }},{{ _yid}}");
+
+    D = build();
+    const series = D[0];
+    const xaxis = D[1];
+    const yaxis = D[2];
+
+    var g_scatter_{{ _id }} = new ApexCharts(document.getElementById('scatter-{{ _id }}'), {
+      chart: {
+        type: "scatter",
+        fontFamily: 'inherit',
+        height: 480,
+        parentHeightOffset: 0,
+        toolbar: {
+          tools: {
+            download: true,
+            selection: false,
+            zoom: false,
+            zoomin: false,
+            zoomout: false,
+            pan: false,
+            reset: false,
+          },
+        },
+        zoom: {
+          enabled: false,
+          allowMouseWheelZoom: false,
+        },
+      },
+      series: series,
+      xaxis: xaxis,
+      yaxis: yaxis,
+      legend: {
+        show: false,
+      },
+      markers: {
+        size: 4,
+      },
+      tooltip: {
+        marker: {
+          show: false,
+        },
+        x: {
+          formatter: function(val) {
+            return repr_value(val, "x");
+          }
+        },
+        y: {
+          formatter: function(val) {
+            return repr_value(val, "y");
+          }
+        },
+      },
+    });
+    g_scatter_{{ _id }}.render();
+
+    document.querySelectorAll('#axis-{{ _id }}-x span').forEach(e => e.onclick = function() {
+      const field = this.getAttribute("data");
+      set_active("x", field);
+      update();
+    });
+
+    document.querySelectorAll('#axis-{{ _id }}-y span').forEach(e => e.onclick = function() {
+      const field = this.getAttribute("data");
+      set_active("y", field);
+      update();
+    });
+
+    // Register an update function.
+    g_updater.push(function() {
+      D = build();
+      const series = D[0];
+      const xaxis = D[1];
+      const yaxis = D[2];
+
+      g_scatter_{{ _id }}.updateOptions({
+        series: series,
+        xaxis: xaxis,
+        yaxis: yaxis,
+      }, false, true);
+    });
+  });
+  // @formatter:on
+</script>

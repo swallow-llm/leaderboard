@@ -1,0 +1,31 @@
+{% extends "site.html" %}
+
+{% block content_title %}
+<h2 class="page-title">{{ modelcat.title }}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="row row-deck row-cards">
+<div class="col-12">
+  {% with _id="", _modelcat=modelcat, _task="Ja Avg" %}
+  {% include "bar.html" %}
+  {% endwith %}
+</div>
+
+<div class="col-sm-6 col-lg-6">
+  {% with _id="left", _xcat="params", _xid="", _ycat="ja_basic", _yid="Ja Avg" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+</div>
+
+<div class="col-sm-6 col-lg-6">
+  {% with _id="right", _xcat="ja_basic", _xid="Ja Avg", _ycat="en_basic", _yid="En Avg" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+</div>
+
+<div class="col-12">
+  {% include "result.html" %}
+</div>
+</div>
+{% endblock %}
