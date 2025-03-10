@@ -501,8 +501,8 @@ en_basic:
         en: 4-shot
       link:
         href:
-          ja: https://arxiv.org/abs/2103.03874
-          en: https://arxiv.org/abs/2103.03874
+          ja: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html
+          en: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html
         author:
           ja: Hendrycks et al.
           en: Hendrycks et al.
