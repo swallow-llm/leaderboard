@@ -1,3 +1,7 @@
+# Evaluation results in Swallow LLM Leaderboard
+# Copyright (c) 2025 Swallow LLM team
+# This file is distributed under Creative Commons Attribution 4.0 (CC-BY 4.0) License
+
 - id: CohereForAI/aya-expanse-8b
   name: Aya Expanse 8B
   date: '2024-10-24'
@@ -2764,6 +2768,50 @@
       HumanEval: 0.382
     other:
       GPQA: 0.179
+- id: nvidia/Mistral-NeMo-Minitron-8B-Instruct
+  name: Mistral-NeMo-Minitron 8B Instruct
+  date: '2024-08-21'
+  params: 8.4
+  base_model: Mistral-NeMo-Minitron 8B
+  sortkey: mistral nemo minitron
+  url: https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Instruct
+  results:
+    ja_basic:
+      Ja Avg: 0.4781
+      JComQA: 0.8919
+      JEMHopQA: 0.4979
+      NIILC: 0.3801
+      JSQuAD: 0.5781
+      XL-Sum: 0
+      MGSM: 0.556
+      WMT20-en-ja: 0.1992
+      WMT20-ja-en: 0.1927
+      JMMLU: 0.5103
+      JHumanEval: 0.4963
+    ja_mtb:
+      JMT Avg: 0.567
+      coding: 0.547
+      extraction: 0.684
+      humanities: 0.649
+      math: 0.545
+      reasoning: 0.454
+      roleplay: 0.564
+      stem: 0.549
+      writing: 0.541
+    en_basic:
+      En Avg: 0.6336
+      OpenBookQA: 0.452
+      TriviaQA: 0.7192
+      HellaSwag: 0.6392
+      SQuAD2: 0.6239
+      XWINO: 0.9092
+      MMLU: 0.7008
+      GSM8K: 0.7536
+      MATH: 0.274
+      BBH: 0.6632
+      HumanEval: 0.6006
+    other:
+      GPQA: 0.2835
 - id: mistralai/Mistral-7B-v0.3
   name: Mistral-7B-v0.3
   date: '2024-05-22'

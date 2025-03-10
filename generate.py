@@ -2,6 +2,7 @@ import copy
 import yaml
 import json
 import operator
+import os
 from jinja2 import Template, Environment, FileSystemLoader
 from markdown_it import MarkdownIt
 
@@ -209,3 +210,7 @@ if __name__ == '__main__':
                 ),
                 file=fo
                 )
+
+    os.system('rsync -av --delete dist _site/')
+    os.system('rsync -av --delete static _site/')
+    os.system('rsync -av --delete index.html _site/')
