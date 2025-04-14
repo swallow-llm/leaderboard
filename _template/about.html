@@ -58,7 +58,13 @@
 {% set block_content %}
 <ul>
   {% for item in about.changelog.changes %}
-  <li>{{ item.date }}: {{ item.text}}</li>
+  <li>{{ item.date }} 
+    <ul>
+      {% for text in item.text %}
+      <li>{{ text }}</li>
+      {% endfor %}
+    </ul>
+  </li>
   {% endfor %}
 </ul>
 {% endset %}

@@ -10,14 +10,22 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2025-04-14
+      text:
+        - ja: Gemma 3 1B, 4B, 12B, 27Bの評価結果を追加しました。
+          en: Added evaluation results of Gemma 3 5B, 12B, 27B.
+        - ja: GPT-4 (gpt-4-0613) の評価結果（日本語理解・生成タスクと日本語MT-Benchのスコア）を追加しました。
+          en: Added evaluation results (Japanese Understanding & Generation and Japanese MT-Bench) of GPT-4 (gpt-4-0613).
+        - ja: GPT-4.5 (gpt-4.5-preview-2025-02-27) とo1 (o1-2024-12-17) の日本語MT-Benchの評価結果を追加しました。日本語理解・生成タスクでの評価も検討しましたが、Open AIのAPIの仕様により、他のモデルと実験条件を揃えられない部分（具体的には、一つのプロンプトに対して10個の応答を生成させることができない点）があるため、日本語理解・生成タスクのスコアは欠損扱いとします。
+          en: Added evaluation results (Japanese Understanding & Generation and Japanese MT-Bench) of GPT-4.5 (gpt-4.5-preview-2025-02-27) and o1 (o1-2024-12-17). We also considered evaluating on Japanese understanding and generation tasks; however, due to limitations in the OpenAI API specifications — specifically, the inability to generate 10 responses for a single prompt under the same conditions as other models — we will treat the scores for Japanese understanding and generation tasks as blank.
     - date: 2025-03-10
       text:
-        ja: Swallow LLM Leaderboardとしてリニューアル公開しました。MATHベンチマークを追加しました。
-        en: Relaunched as the Swallow LLM Leaderboard.
+        - ja: Swallow LLM Leaderboardとしてリニューアル公開しました。MATHベンチマークを追加しました。
+          en: Relaunched as the Swallow LLM Leaderboard.
     - date: 2024-07-01
       text:
-        ja: 前身である<a href="https://swallow-llm.github.io/evaluation/">日本語LLM評価</a>を公開
-        en: The predecessor project, <a href="https://swallow-llm.github.io/evaluation/">Japanese LLM Evaluation</a>, was publicly released.
+        - ja: 前身である<a href="https://swallow-llm.github.io/evaluation/">日本語LLM評価</a>を公開
+          en: The predecessor project, <a href="https://swallow-llm.github.io/evaluation/">Japanese LLM Evaluation</a>, was publicly released.
 
 link_to_eval:
   Swallow evaluation
