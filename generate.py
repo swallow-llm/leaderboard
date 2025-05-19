@@ -214,3 +214,4 @@ if __name__ == '__main__':
     os.system('rsync -av --delete dist _site/')
     os.system('rsync -av --delete static _site/')
     os.system('rsync -av --delete index.html _site/')
+    os.system('rsync -av --delete bar.js _site/')
