@@ -4606,6 +4606,240 @@
       HumanEval: 0.281
     other:
       GPQA: 0.163
+- id: sbintuitions/sarashina2.2-0.5b
+  name: Sarashina2.2 0.5B
+  date: '2025-03-07'
+  params: 0.8
+  base_model: ''
+  sortkey: sarashina2.2
+  url: https://huggingface.co/sbintuitions/sarashina2.2-0.5b
+  results:
+    ja_basic:
+      Ja Avg: 0.296
+      JComQA: 0.211
+      JEMHopQA: 0.472
+      NIILC: 0.451
+      JSQuAD: 0.824
+      XL-Sum: 0.091
+      MGSM: 0.196
+      WMT20-en-ja: 0.201
+      WMT20-ja-en: 0.111
+      JMMLU: 0.253
+      JHumanEval: 0.148
+    en_basic:
+      En Avg: 0.339
+      OpenBookQA: 0.302
+      TriviaQA: 0.203
+      HellaSwag: 0.42
+      SQuAD2: 0.501
+      XWINO: 0.794
+      MMLU: 0.262
+      GSM8K: 0.246
+      MATH: 0.13
+      BBH: 0.312
+      HumanEval: 0.223
+    other:
+      GPQA: 0.074
+- id: sbintuitions/sarashina2.2-1b
+  name: Sarashina2.2 1B
+  date: '2025-03-07'
+  params: 1.4
+  base_model: ''
+  sortkey: sarashina2.2
+  url: https://huggingface.co/sbintuitions/sarashina2.2-1b
+  results:
+    ja_basic:
+      Ja Avg: 0.392
+      JComQA: 0.649
+      JEMHopQA: 0.462
+      NIILC: 0.523
+      JSQuAD: 0.858
+      XL-Sum: 0.1
+      MGSM: 0.388
+      WMT20-en-ja: 0.219
+      WMT20-ja-en: 0.136
+      JMMLU: 0.371
+      JHumanEval: 0.215
+    en_basic:
+      En Avg: 0.415
+      OpenBookQA: 0.324
+      TriviaQA: 0.289
+      HellaSwag: 0.469
+      SQuAD2: 0.502
+      XWINO: 0.827
+      MMLU: 0.4
+      GSM8K: 0.403
+      MATH: 0.206
+      BBH: 0.385
+      HumanEval: 0.342
+    other:
+      GPQA: 0.103
+- id: sbintuitions/sarashina2.2-3b
+  name: Sarashina2.2 3B
+  date: '2025-03-07'
+  params: 3.4
+  base_model: ''
+  sortkey: sarashina2.2
+  url: https://huggingface.co/sbintuitions/sarashina2.2-3b
+  results:
+    ja_basic:
+      Ja Avg: 0.516
+      JComQA: 0.911
+      JEMHopQA: 0.563
+      NIILC: 0.642
+      JSQuAD: 0.906
+      XL-Sum: 0.162
+      MGSM: 0.596
+      WMT20-en-ja: 0.273
+      WMT20-ja-en: 0.202
+      JMMLU: 0.541
+      JHumanEval: 0.36
+    en_basic:
+      En Avg: 0.532
+      OpenBookQA: 0.362
+      TriviaQA: 0.447
+      HellaSwag: 0.538
+      SQuAD2: 0.513
+      XWINO: 0.877
+      MMLU: 0.572
+      GSM8K: 0.624
+      MATH: 0.31
+      BBH: 0.551
+      HumanEval: 0.53
+    other:
+      GPQA: 0.275
+- id: sbintuitions/sarashina2.2-0.5b-instruct-v0.1
+  name: Sarashina2.2 0.5B Instruct v0.1
+  date: '2025-03-07'
+  params: 0.8
+  base_model: Sarashina2.2 0.5B
+  sortkey: sarashina2.2 v0.1
+  url: https://huggingface.co/sbintuitions/sarashina2.2-0.5b-instruct-v0.1
+  results:
+    ja_basic:
+      Ja Avg: 0.283
+      JComQA: 0.35
+      JEMHopQA: 0.37
+      NIILC: 0.363
+      JSQuAD: 0.756
+      XL-Sum: 0.077
+      MGSM: 0.228
+      WMT20-en-ja: 0.161
+      WMT20-ja-en: 0.112
+      JMMLU: 0.267
+      JHumanEval: 0.143
+    ja_mtb:
+      JMT Avg: 0.424
+      coding: 0.338
+      extraction: 0.364
+      humanities: 0.596
+      math: 0.45
+      reasoning: 0.283
+      roleplay: 0.482
+      stem: 0.386
+      writing: 0.49
+    en_basic:
+      En Avg: 0.331
+      OpenBookQA: 0.294
+      TriviaQA: 0.173
+      HellaSwag: 0.426
+      SQuAD2: 0.502
+      XWINO: 0.773
+      MMLU: 0.335
+      GSM8K: 0.221
+      MATH: 0.146
+      BBH: 0.28
+      HumanEval: 0.163
+    other:
+      GPQA: 0.027
+- id: sbintuitions/sarashina2.2-1b-instruct-v0.1
+  name: Sarashina2.2 1B Instruct v0.1
+  date: '2025-03-07'
+  params: 1.4
+  base_model: Sarashina2.2 1B
+  sortkey: sarashina2.2 v0.1
+  url: https://huggingface.co/sbintuitions/sarashina2.2-1b-instruct-v0.1
+  results:
+    ja_basic:
+      Ja Avg: 0.376
+      JComQA: 0.794
+      JEMHopQA: 0.45
+      NIILC: 0.395
+      JSQuAD: 0.795
+      XL-Sum: 0.081
+      MGSM: 0.312
+      WMT20-en-ja: 0.182
+      WMT20-ja-en: 0.129
+      JMMLU: 0.369
+      JHumanEval: 0.25
+    ja_mtb:
+      JMT Avg: 0.511
+      coding: 0.414
+      extraction: 0.429
+      humanities: 0.724
+      math: 0.472
+      reasoning: 0.321
+      roleplay: 0.607
+      stem: 0.549
+      writing: 0.568
+    en_basic:
+      En Avg: 0.415
+      OpenBookQA: 0.324
+      TriviaQA: 0.246
+      HellaSwag: 0.487
+      SQuAD2: 0.501
+      XWINO: 0.797
+      MMLU: 0.435
+      GSM8K: 0.444
+      MATH: 0.286
+      BBH: 0.332
+      HumanEval: 0.301
+    other:
+      GPQA: 0.158
+- id: sbintuitions/sarashina2.2-3b-instruct-v0.1
+  name: Sarashina2.2 3B Instruct v0.1
+  date: '2025-03-07'
+  params: 3.4
+  base_model: Sarashina2.2 3B
+  sortkey: sarashina2.2 v0.1
+  url: https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1
+  results:
+    ja_basic:
+      Ja Avg: 0.485
+      JComQA: 0.921
+      JEMHopQA: 0.352
+      NIILC: 0.56
+      JSQuAD: 0.874
+      XL-Sum: 0.105
+      MGSM: 0.616
+      WMT20-en-ja: 0.256
+      WMT20-ja-en: 0.182
+      JMMLU: 0.543
+      JHumanEval: 0.437
+    ja_mtb:
+      JMT Avg: 0.629
+      coding: 0.548
+      extraction: 0.779
+      humanities: 0.816
+      math: 0.514
+      reasoning: 0.373
+      roleplay: 0.714
+      stem: 0.629
+      writing: 0.659
+    en_basic:
+      En Avg: 0.536
+      OpenBookQA: 0.378
+      TriviaQA: 0.388
+      HellaSwag: 0.59
+      SQuAD2: 0.534
+      XWINO: 0.855
+      MMLU: 0.582
+      GSM8K: 0.672
+      MATH: 0.474
+      BBH: 0.4
+      HumanEval: 0.489
+    other:
+      GPQA: 0.096
 - id: stockmark/stockmark-100b
   name: Stockmark-100b
   date: '2024-05-16'

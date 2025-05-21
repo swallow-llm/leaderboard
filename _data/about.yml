@@ -10,6 +10,14 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2025-05-21
+      text:
+        - ja: Sarashina2.2 0.5B, 1B, 3Bの評価結果を追加しました。
+          en: Added evaluation results of Sarashina2.2 0.5B, 1B, 3B.
+    - date: 2025-05-19
+      text:
+        - ja: Gemma-2-Llama Swallow 2B, 9B, 27Bの評価結果を追加しました。
+          en: Added evaluation results of Gemma-2-Llama Swallow 2B, 9B, 27B.
     - date: 2025-04-14
       text:
         - ja: Gemma 3 1B, 4B, 12B, 27Bの評価結果を追加しました。
