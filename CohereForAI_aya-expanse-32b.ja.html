@@ -202,8 +202,8 @@
     <div class="d-flex align-items-baseline">
       <div class="h1 mb-0 me-2">0.512</div>
       <div class="me-auto">
-        <span class="text-danger d-inline-flex align-items-center lh-1">#47</span>
-        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 130</span>
+        <span class="text-danger d-inline-flex align-items-center lh-1">#48</span>
+        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 136</span>
       </div>
     </div>
     
@@ -218,7 +218,7 @@
     var build = function() {
       const theme_color_other = "#78909C";
       const theme_colors = ["#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0"];
-      var ids = ['tiiuae/Falcon3-1B-Base', 'tiiuae/Falcon3-1B-Instruct', 'meta-llama/Llama-3.2-1B', 'tiiuae/Falcon3-3B-Base', 'google/gemma-3-1b-pt', 'tiiuae/Falcon3-3B-Instruct', 'Qwen/Qwen2.5-0.5B', 'stockmark/stockmark-100b', 'meta-llama/Llama-3.2-1B-Instruct', 'Qwen/Qwen2.5-0.5B-Instruct', 'pfnet/plamo-2-1b', 'llm-jp/llm-jp-3-1.8b', 'llm-jp/llm-jp-3-3.7b', 'google/gemma-3-1b-it', 'llm-jp/llm-jp-3-1.8b-instruct', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Llama-3.2-3B', 'tiiuae/Falcon3-7B-Base', 'tokyotech-llm/Swallow-7b-hf', 'google/gemma-2-2b', 'llm-jp/llm-jp-3-3.7b-instruct', 'tokyotech-llm/Swallow-7b-instruct-v0.1', '01-ai/Yi-1.5-6B', 'Qwen/Qwen2.5-1.5B-Instruct', 'mistralai/Mistral-7B-v0.3', 'tiiuae/Falcon3-7B-Instruct', 'rinna/gemma-2-baku-2b-it', 'tiiuae/Falcon3-10B-Instruct', 'Qwen/Qwen2.5-1.5B', 'rinna/gemma-2-baku-2b', 'google/gemma-2-2b-jpn-it', 'mistralai/Mistral-7B-Instruct-v0.3', 'meta-llama/Llama-3.2-3B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'tiiuae/Falcon3-10B-Base', 'google/gemma-2-2b-it', 'llm-jp/llm-jp-3-13b', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'sbintuitions/sarashina2-7b', 'SakanaAI/TinySwallow-1.5B-Instruct', 'SakanaAI/TinySwallow-1.5B', 'Qwen/Qwen2.5-3B-Instruct', 'tokyotech-llm/Swallow-13b-hf', 'google/gemma-3-4b-it', 'google/gemma-3-4b-pt', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'meta-llama/Meta-Llama-3-8B', 'meta-llama/Meta-Llama-3-8B-Instruct', '01-ai/Yi-1.5-9B', 'llm-jp/llm-jp-3-13b-instruct', 'meta-llama/Meta-Llama-3.1-8B', 'tokyotech-llm/Swallow-MS-7b-v0.1', 'Qwen/Qwen2.5-3B', 'rinna/llama-3-youko-8b', 'nvidia/Mistral-NeMo-Minitron-8B-Base', 'sbintuitions/sarashina2-13b', 'CohereForAI/aya-expanse-8b', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'mistralai/Mistral-Nemo-Base-2407', '01-ai/Yi-1.5-34B', 'rinna/llama-3-youko-8b-instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'tokyotech-llm/Llama-3-Swallow-8B-v0.1', 'elyza/Llama-3-ELYZA-JP-8B', 'cyberagent/calm3-22b-chat', 'Qwen/Qwen2-7B', 'Qwen/Qwen2-7B-Instruct', 'pfnet/plamo-2-8b', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.1', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'mistralai/Mixtral-8x22B-v0.1', 'Qwen/Qwen2.5-7B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.2', 'mistralai/Mistral-Nemo-Instruct-2407', 'google/gemma-2-9b', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'Qwen/Qwen2.5-7B', 'CohereForAI/aya-expanse-32b', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'gpt-3.5-turbo-0125', 'google/gemma-3-12b-pt', 'tokyotech-llm/Swallow-70b-hf', 'sbintuitions/sarashina2-70b', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'google/gemma-2-9b-it', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'google/gemma-2-27b', 'Qwen/Qwen2.5-14B-Instruct', 'google/gemma-3-12b-it', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1', 'meta-llama/Meta-Llama-3.1-70B', 'google/gemma-2-27b-it', 'Qwen/Qwen2.5-14B', 'meta-llama/Meta-Llama-3-70B', 'Qwen/Qwen2.5-32B-Instruct', 'rinna/llama-3-youko-70b', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'Qwen/Qwen2.5-72B-Instruct', 'google/gemma-3-27b-pt', 'meta-llama/Meta-Llama-3-70B-Instruct', 'microsoft/phi-4', 'gpt-4o-mini-2024-07-18', 'rinna/llama-3-youko-70b-instruct', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'Qwen/Qwen2.5-32B', 'google/gemma-3-27b-it', 'Qwen/Qwen2-72B', 'tokyotech-llm/Llama-3.1-Swallow-70B-v0.1', 'tokyotech-llm/Llama-3-Swallow-70B-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen/Qwen2-72B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'meta-llama/Llama-3.3-70B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'gpt-4-0613', 'Qwen/Qwen2.5-72B', 'gpt-4-turbo-2024-04-09', 'tokyotech-llm/Llama-3.3-Swallow-70B-v0.4', 'gpt-4o-2024-08-06', 'gpt-4o-2024-05-13'];
+      var ids = ['tiiuae/Falcon3-1B-Base', 'tiiuae/Falcon3-1B-Instruct', 'meta-llama/Llama-3.2-1B', 'tiiuae/Falcon3-3B-Base', 'google/gemma-3-1b-pt', 'tiiuae/Falcon3-3B-Instruct', 'Qwen/Qwen2.5-0.5B', 'stockmark/stockmark-100b', 'meta-llama/Llama-3.2-1B-Instruct', 'Qwen/Qwen2.5-0.5B-Instruct', 'pfnet/plamo-2-1b', 'llm-jp/llm-jp-3-1.8b', 'llm-jp/llm-jp-3-3.7b', 'sbintuitions/sarashina2.2-0.5b-instruct-v0.1', 'google/gemma-3-1b-it', 'llm-jp/llm-jp-3-1.8b-instruct', 'sbintuitions/sarashina2.2-0.5b', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Llama-3.2-3B', 'tiiuae/Falcon3-7B-Base', 'tokyotech-llm/Swallow-7b-hf', 'google/gemma-2-2b', 'llm-jp/llm-jp-3-3.7b-instruct', 'tokyotech-llm/Swallow-7b-instruct-v0.1', '01-ai/Yi-1.5-6B', 'Qwen/Qwen2.5-1.5B-Instruct', 'mistralai/Mistral-7B-v0.3', 'tiiuae/Falcon3-7B-Instruct', 'rinna/gemma-2-baku-2b-it', 'tiiuae/Falcon3-10B-Instruct', 'Qwen/Qwen2.5-1.5B', 'rinna/gemma-2-baku-2b', 'sbintuitions/sarashina2.2-1b-instruct-v0.1', 'google/gemma-2-2b-jpn-it', 'mistralai/Mistral-7B-Instruct-v0.3', 'meta-llama/Llama-3.2-3B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'tiiuae/Falcon3-10B-Base', 'sbintuitions/sarashina2.2-1b', 'google/gemma-2-2b-it', 'llm-jp/llm-jp-3-13b', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'sbintuitions/sarashina2-7b', 'SakanaAI/TinySwallow-1.5B-Instruct', 'SakanaAI/TinySwallow-1.5B', 'Qwen/Qwen2.5-3B-Instruct', 'tokyotech-llm/Swallow-13b-hf', 'google/gemma-3-4b-it', 'google/gemma-3-4b-pt', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'meta-llama/Meta-Llama-3-8B', 'meta-llama/Meta-Llama-3-8B-Instruct', '01-ai/Yi-1.5-9B', 'llm-jp/llm-jp-3-13b-instruct', 'meta-llama/Meta-Llama-3.1-8B', 'tokyotech-llm/Swallow-MS-7b-v0.1', 'Qwen/Qwen2.5-3B', 'rinna/llama-3-youko-8b', 'nvidia/Mistral-NeMo-Minitron-8B-Base', 'sbintuitions/sarashina2-13b', 'CohereForAI/aya-expanse-8b', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'mistralai/Mistral-Nemo-Base-2407', '01-ai/Yi-1.5-34B', 'rinna/llama-3-youko-8b-instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'tokyotech-llm/Llama-3-Swallow-8B-v0.1', 'elyza/Llama-3-ELYZA-JP-8B', 'cyberagent/calm3-22b-chat', 'Qwen/Qwen2-7B', 'Qwen/Qwen2-7B-Instruct', 'pfnet/plamo-2-8b', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'sbintuitions/sarashina2.2-3b-instruct-v0.1', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.1', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'mistralai/Mixtral-8x22B-v0.1', 'Qwen/Qwen2.5-7B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.2', 'mistralai/Mistral-Nemo-Instruct-2407', 'google/gemma-2-9b', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'Qwen/Qwen2.5-7B', 'CohereForAI/aya-expanse-32b', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'gpt-3.5-turbo-0125', 'sbintuitions/sarashina2.2-3b', 'google/gemma-3-12b-pt', 'tokyotech-llm/Swallow-70b-hf', 'sbintuitions/sarashina2-70b', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'google/gemma-2-9b-it', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'google/gemma-2-27b', 'Qwen/Qwen2.5-14B-Instruct', 'google/gemma-3-12b-it', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1', 'meta-llama/Meta-Llama-3.1-70B', 'google/gemma-2-27b-it', 'Qwen/Qwen2.5-14B', 'meta-llama/Meta-Llama-3-70B', 'Qwen/Qwen2.5-32B-Instruct', 'rinna/llama-3-youko-70b', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'Qwen/Qwen2.5-72B-Instruct', 'google/gemma-3-27b-pt', 'meta-llama/Meta-Llama-3-70B-Instruct', 'microsoft/phi-4', 'gpt-4o-mini-2024-07-18', 'rinna/llama-3-youko-70b-instruct', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'Qwen/Qwen2.5-32B', 'google/gemma-3-27b-it', 'Qwen/Qwen2-72B', 'tokyotech-llm/Llama-3.1-Swallow-70B-v0.1', 'tokyotech-llm/Llama-3-Swallow-70B-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen/Qwen2-72B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'meta-llama/Llama-3.3-70B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'gpt-4-0613', 'Qwen/Qwen2.5-72B', 'gpt-4-turbo-2024-04-09', 'tokyotech-llm/Llama-3.3-Swallow-70B-v0.4', 'gpt-4o-2024-08-06', 'gpt-4o-2024-05-13'];
 
       var colors = new Array(ids.length);
       for (let i = 0; i < ids.length; ++i) {
@@ -236,7 +236,7 @@
       return colors;
     }
 
-    var series = [0.129, 0.169, 0.201, 0.209, 0.223, 0.232, 0.234, 0.238, 0.239, 0.243, 0.25, 0.251, 0.281, 0.285, 0.293, 0.311, 0.337, 0.337, 0.346, 0.348, 0.35, 0.353, 0.354, 0.355, 0.361, 0.364, 0.366, 0.367, 0.372, 0.372, 0.377, 0.378, 0.38, 0.382, 0.383, 0.392, 0.393, 0.394, 0.395, 0.398, 0.402, 0.409, 0.415, 0.416, 0.417, 0.421, 0.424, 0.429, 0.43, 0.432, 0.436, 0.437, 0.439, 0.442, 0.442, 0.444, 0.445, 0.445, 0.446, 0.454, 0.46, 0.468, 0.468, 0.47, 0.471, 0.471, 0.471, 0.472, 0.478, 0.481, 0.481, 0.488, 0.49, 0.492, 0.496, 0.498, 0.499, 0.5, 0.5, 0.505, 0.506, 0.51, 0.512, 0.512, 0.514, 0.515, 0.518, 0.519, 0.53, 0.532, 0.535, 0.546, 0.546, 0.553, 0.553, 0.558, 0.566, 0.567, 0.568, 0.569, 0.571, 0.571, 0.571, 0.574, 0.574, 0.578, 0.58, 0.58, 0.582, 0.588, 0.591, 0.591, 0.593, 0.593, 0.594, 0.594, 0.595, 0.597, 0.598, 0.598, 0.601, 0.602, 0.613, 0.615, 0.621, 0.623, 0.626, 0.629, 0.646, 0.649];
+    var series = [0.129, 0.169, 0.201, 0.209, 0.223, 0.232, 0.234, 0.238, 0.239, 0.243, 0.25, 0.251, 0.281, 0.283, 0.285, 0.293, 0.296, 0.311, 0.337, 0.337, 0.346, 0.348, 0.35, 0.353, 0.354, 0.355, 0.361, 0.364, 0.366, 0.367, 0.372, 0.372, 0.376, 0.377, 0.378, 0.38, 0.382, 0.383, 0.392, 0.392, 0.393, 0.394, 0.395, 0.398, 0.402, 0.409, 0.415, 0.416, 0.417, 0.421, 0.424, 0.429, 0.43, 0.432, 0.436, 0.437, 0.439, 0.442, 0.442, 0.444, 0.445, 0.445, 0.446, 0.454, 0.46, 0.468, 0.468, 0.47, 0.471, 0.471, 0.471, 0.472, 0.478, 0.481, 0.481, 0.485, 0.488, 0.49, 0.492, 0.496, 0.498, 0.499, 0.5, 0.5, 0.505, 0.506, 0.51, 0.512, 0.512, 0.514, 0.515, 0.516, 0.518, 0.519, 0.53, 0.532, 0.535, 0.546, 0.546, 0.553, 0.553, 0.558, 0.566, 0.567, 0.568, 0.569, 0.571, 0.571, 0.571, 0.574, 0.574, 0.578, 0.58, 0.58, 0.582, 0.588, 0.591, 0.591, 0.593, 0.593, 0.594, 0.594, 0.595, 0.597, 0.598, 0.598, 0.601, 0.602, 0.613, 0.615, 0.621, 0.623, 0.626, 0.629, 0.646, 0.649];
     var colors = build();
     window.ApexCharts && (new ApexCharts(document.getElementById('rank-ja_avg'), {
       chart: {
@@ -291,7 +291,7 @@
           padding: 4
         },
       },
-      labels: ['Falcon3-1B-Base', 'Falcon3-1B-Instruct', 'Llama 3.2 1B', 'Falcon3-3B-Base', 'Gemma 3 1B', 'Falcon3-3B-Instruct', 'Qwen2.5-0.5B', 'Stockmark-100b', 'Llama 3.2 1B Instruct', 'Qwen2.5-0.5B-Instruct', 'PLaMo 2 1B', 'llm-jp-3-1.8b', 'llm-jp-3-3.7b', 'Gemma 3 1B IT', 'llm-jp-3-1.8b-instruct', 'Tanuki-8B-dpo-v1.0', 'Llama 3.2 3B', 'Falcon3-7B-Base', 'Swallow 7B', 'Gemma 2 2B', 'llm-jp-3-3.7b-instruct', 'Swallow-7b-instruct-v0.1', 'Yi-1.5 6B', 'Qwen2.5-1.5B-Instruct', 'Mistral-7B-v0.3', 'Falcon3-7B-Instruct', 'Gemma 2 Baku 2B IT', 'Falcon3-10B-Instruct', 'Qwen2.5-1.5B', 'Gemma 2 Baku 2B', 'Gemma 2 JPN', 'Mistral-7B-Instruct-v0.3', 'Llama 3.2 3B Instruct', 'Phi-3-Mini-128K-Instruct', 'Falcon3-10B-Base', 'Gemma 2 2B IT', 'llm-jp-3-13b', 'Swallow-MS-7b-instruct-v0.1', 'Sarashina2-7B', 'TinySwallow-1.5B-Instruct', 'TinySwallow-1.5B', 'Qwen2.5-3B-Instruct', 'Swallow 13B', 'Gemma 3 4B IT', 'Gemma 3 4B', 'Gemma2-Llama Swallow 2B', 'Gemma-2-Llama Swallow 2B IT', 'Llama 3 8B', 'Llama 3 8B Instruct', 'Yi-1.5 9B', 'llm-jp-3-13b-instruct', 'Llama 3.1 8B', 'Swallow-MS 7B v0.1', 'Qwen2.5-3B', 'Llama 3 Youko 8B', 'Mistral-NeMo-Minitron 8B', 'Sarashina2-13B', 'Aya Expanse 8B', 'Mistral-NeMo-Minitron 8B Instruct', 'Tanuki-8x8B-dpo-v1.0', 'Mistral-Nemo-Base-2407 (12B)', 'Yi-1.5 34B', 'Llama 3 Youko 8B Instruct', 'Llama 3.1 8B Instruct', 'Llama 3 Swallow 8B', 'Llama-3-ELYZA-JP-8B', 'CyberAgentLM3-22B-chat', 'Qwen2-7B', 'Qwen2-7B-Instruct', 'PLaMo 2 8B', 'Llama 3 Swallow 8B Instruct', 'Llama 3 heron brain 8B v0.3', 'Llama 3.1 Swallow 8B v0.1', 'Swallow-70b-instruct-v0.1', 'Mixtral-8x22B-v0.1', 'Qwen2.5-7B-Instruct', 'Llama 3.1 Swallow 8B v0.2', 'Mistral-NeMo-Instruct-2407 (12B)', 'Gemma 2 9B', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Swallow-MX 8x7B v0.1', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Qwen2.5-7B', 'Aya Expanse 32B', 'Llama 3.1 Swallow 8B Instruct v0.2', 'GPT-3.5 (gpt-3.5-turbo-0125)', 'Gemma 3 12B', 'Swallow 70B', 'Sarashina2-70B', 'Mixtral-8x22B-Instruct-v0.1', 'Gemma 2 9B IT', 'Gemma-2-Llama Swallow 9B IT', 'Gemma 2 27B', 'Qwen2.5-14B-Instruct', 'Gemma 3 12B IT', 'Gemma2-Llama Swallow 9B', 'Llama 3.1 70B', 'Gemma 2 27B IT', 'Qwen2.5-14B', 'Llama 3 70B', 'Qwen2.5-32B-Instruct', 'Llama 3 Youko 70B', 'Llama 3 Swallow 70B Instruct', 'Qwen2.5-72B-Instruct', 'Gemma 3 27B', 'Llama 3 70B Instruct', 'Phi-4', 'GPT-4o-mini (gpt-4o-mini-2024-07-18)', 'Llama 3 Youko 70B Instruct', 'Llama 3.1 Swallow 70B Instruct v0.1', 'Qwen2.5-32B', 'Gemma 3 27B IT', 'Qwen2-72B', 'Llama 3.1 Swallow 70B v0.1', 'Llama 3 Swallow 70B', 'Gemma2-Llama Swallow 27B', 'Llama 3.1 70B Instruct', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen2-72B-Instruct', 'Llama 3.1 Swallow 70B Instruct v0.3', 'Llama 3.3 70B Instruct', 'Gemma-2-Llama Swallow 27B IT', 'Llama 3.3 Swallow 70B Instruct v0.4', 'Llama 3 heron brain 70B v0.3', 'GPT-4 (gpt-4-0613)', 'Qwen2.5-72B', 'GPT-4-turbo (gpt-4-turbo-2024-04-09)', 'Llama 3.3 Swallow 70B v0.4', 'GPT-4o (gpt-4o-2024-08-06)', 'GPT-4o (gpt-4o-2024-05-13)'],
+      labels: ['Falcon3-1B-Base', 'Falcon3-1B-Instruct', 'Llama 3.2 1B', 'Falcon3-3B-Base', 'Gemma 3 1B', 'Falcon3-3B-Instruct', 'Qwen2.5-0.5B', 'Stockmark-100b', 'Llama 3.2 1B Instruct', 'Qwen2.5-0.5B-Instruct', 'PLaMo 2 1B', 'llm-jp-3-1.8b', 'llm-jp-3-3.7b', 'Sarashina2.2 0.5B Instruct v0.1', 'Gemma 3 1B IT', 'llm-jp-3-1.8b-instruct', 'Sarashina2.2 0.5B', 'Tanuki-8B-dpo-v1.0', 'Llama 3.2 3B', 'Falcon3-7B-Base', 'Swallow 7B', 'Gemma 2 2B', 'llm-jp-3-3.7b-instruct', 'Swallow-7b-instruct-v0.1', 'Yi-1.5 6B', 'Qwen2.5-1.5B-Instruct', 'Mistral-7B-v0.3', 'Falcon3-7B-Instruct', 'Gemma 2 Baku 2B IT', 'Falcon3-10B-Instruct', 'Qwen2.5-1.5B', 'Gemma 2 Baku 2B', 'Sarashina2.2 1B Instruct v0.1', 'Gemma 2 JPN', 'Mistral-7B-Instruct-v0.3', 'Llama 3.2 3B Instruct', 'Phi-3-Mini-128K-Instruct', 'Falcon3-10B-Base', 'Sarashina2.2 1B', 'Gemma 2 2B IT', 'llm-jp-3-13b', 'Swallow-MS-7b-instruct-v0.1', 'Sarashina2-7B', 'TinySwallow-1.5B-Instruct', 'TinySwallow-1.5B', 'Qwen2.5-3B-Instruct', 'Swallow 13B', 'Gemma 3 4B IT', 'Gemma 3 4B', 'Gemma2-Llama Swallow 2B', 'Gemma-2-Llama Swallow 2B IT', 'Llama 3 8B', 'Llama 3 8B Instruct', 'Yi-1.5 9B', 'llm-jp-3-13b-instruct', 'Llama 3.1 8B', 'Swallow-MS 7B v0.1', 'Qwen2.5-3B', 'Llama 3 Youko 8B', 'Mistral-NeMo-Minitron 8B', 'Sarashina2-13B', 'Aya Expanse 8B', 'Mistral-NeMo-Minitron 8B Instruct', 'Tanuki-8x8B-dpo-v1.0', 'Mistral-Nemo-Base-2407 (12B)', 'Yi-1.5 34B', 'Llama 3 Youko 8B Instruct', 'Llama 3.1 8B Instruct', 'Llama 3 Swallow 8B', 'Llama-3-ELYZA-JP-8B', 'CyberAgentLM3-22B-chat', 'Qwen2-7B', 'Qwen2-7B-Instruct', 'PLaMo 2 8B', 'Llama 3 Swallow 8B Instruct', 'Sarashina2.2 3B Instruct v0.1', 'Llama 3 heron brain 8B v0.3', 'Llama 3.1 Swallow 8B v0.1', 'Swallow-70b-instruct-v0.1', 'Mixtral-8x22B-v0.1', 'Qwen2.5-7B-Instruct', 'Llama 3.1 Swallow 8B v0.2', 'Mistral-NeMo-Instruct-2407 (12B)', 'Gemma 2 9B', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Swallow-MX 8x7B v0.1', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Qwen2.5-7B', 'Aya Expanse 32B', 'Llama 3.1 Swallow 8B Instruct v0.2', 'GPT-3.5 (gpt-3.5-turbo-0125)', 'Sarashina2.2 3B', 'Gemma 3 12B', 'Swallow 70B', 'Sarashina2-70B', 'Mixtral-8x22B-Instruct-v0.1', 'Gemma 2 9B IT', 'Gemma-2-Llama Swallow 9B IT', 'Gemma 2 27B', 'Qwen2.5-14B-Instruct', 'Gemma 3 12B IT', 'Gemma2-Llama Swallow 9B', 'Llama 3.1 70B', 'Gemma 2 27B IT', 'Qwen2.5-14B', 'Llama 3 70B', 'Qwen2.5-32B-Instruct', 'Llama 3 Youko 70B', 'Llama 3 Swallow 70B Instruct', 'Qwen2.5-72B-Instruct', 'Gemma 3 27B', 'Llama 3 70B Instruct', 'Phi-4', 'GPT-4o-mini (gpt-4o-mini-2024-07-18)', 'Llama 3 Youko 70B Instruct', 'Llama 3.1 Swallow 70B Instruct v0.1', 'Qwen2.5-32B', 'Gemma 3 27B IT', 'Qwen2-72B', 'Llama 3.1 Swallow 70B v0.1', 'Llama 3 Swallow 70B', 'Gemma2-Llama Swallow 27B', 'Llama 3.1 70B Instruct', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen2-72B-Instruct', 'Llama 3.1 Swallow 70B Instruct v0.3', 'Llama 3.3 70B Instruct', 'Gemma-2-Llama Swallow 27B IT', 'Llama 3.3 Swallow 70B Instruct v0.4', 'Llama 3 heron brain 70B v0.3', 'GPT-4 (gpt-4-0613)', 'Qwen2.5-72B', 'GPT-4-turbo (gpt-4-turbo-2024-04-09)', 'Llama 3.3 Swallow 70B v0.4', 'GPT-4o (gpt-4o-2024-08-06)', 'GPT-4o (gpt-4o-2024-05-13)'],
       colors: colors,
       legend: {
         show: false,
@@ -326,7 +326,7 @@
       <div class="h1 mb-0 me-2">0.614</div>
       <div class="me-auto">
         <span class="text-danger d-inline-flex align-items-center lh-1">#42</span>
-        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 124</span>
+        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 130</span>
       </div>
     </div>
     
@@ -341,7 +341,7 @@
     var build = function() {
       const theme_color_other = "#78909C";
       const theme_colors = ["#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0"];
-      var ids = ['pfnet/plamo-2-1b', 'llm-jp/llm-jp-3-1.8b', 'stockmark/stockmark-100b', 'google/gemma-3-1b-pt', 'llm-jp/llm-jp-3-1.8b-instruct', 'llm-jp/llm-jp-3-3.7b', 'Qwen/Qwen2.5-0.5B-Instruct', 'meta-llama/Llama-3.2-1B', 'llm-jp/llm-jp-3-3.7b-instruct', 'rinna/gemma-2-baku-2b-it', 'tokyotech-llm/Swallow-7b-hf', 'Qwen/Qwen2.5-0.5B', 'tokyotech-llm/Swallow-7b-instruct-v0.1', 'tiiuae/Falcon3-1B-Base', 'tiiuae/Falcon3-1B-Instruct', 'sbintuitions/sarashina2-7b', 'google/gemma-3-1b-it', 'llm-jp/llm-jp-3-13b', 'rinna/gemma-2-baku-2b', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Llama-3.2-1B-Instruct', 'SakanaAI/TinySwallow-1.5B-Instruct', 'tokyotech-llm/Swallow-13b-hf', 'SakanaAI/TinySwallow-1.5B', 'sbintuitions/sarashina2-13b', 'Qwen/Qwen2.5-1.5B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'llm-jp/llm-jp-3-13b-instruct', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'google/gemma-2-2b', 'meta-llama/Llama-3.2-3B', 'tokyotech-llm/Swallow-MS-7b-v0.1', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'google/gemma-2-2b-jpn-it', 'Qwen/Qwen2.5-3B-Instruct', 'pfnet/plamo-2-8b', 'rinna/llama-3-youko-8b', 'google/gemma-2-2b-it', 'Qwen/Qwen2.5-1.5B', 'sbintuitions/sarashina2-70b', 'elyza/Llama-3-ELYZA-JP-8B', 'tiiuae/Falcon3-3B-Base', 'google/gemma-3-4b-pt', 'mistralai/Mistral-7B-v0.3', 'rinna/llama-3-youko-8b-instruct', 'tokyotech-llm/Llama-3-Swallow-8B-v0.1', 'tiiuae/Falcon3-3B-Instruct', 'cyberagent/calm3-22b-chat', 'Qwen/Qwen2.5-3B', 'meta-llama/Llama-3.2-3B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.2', 'CohereForAI/aya-expanse-8b', '01-ai/Yi-1.5-6B', 'mistralai/Mistral-7B-Instruct-v0.3', 'meta-llama/Meta-Llama-3-8B', 'tokyotech-llm/Swallow-70b-hf', 'meta-llama/Meta-Llama-3.1-8B', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'mistralai/Mistral-Nemo-Base-2407', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'google/gemma-3-4b-it', 'nvidia/Mistral-NeMo-Minitron-8B-Base', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'Qwen/Qwen2-7B-Instruct', 'Qwen/Qwen2.5-32B-Instruct', 'tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1', '01-ai/Yi-1.5-9B', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1', 'tiiuae/Falcon3-7B-Base', 'google/gemma-2-9b', 'Qwen/Qwen2-7B', 'Qwen/Qwen2.5-7B-Instruct', 'meta-llama/Meta-Llama-3-8B-Instruct', 'mistralai/Mistral-Nemo-Instruct-2407', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'Qwen/Qwen2.5-14B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'CohereForAI/aya-expanse-32b', 'tiiuae/Falcon3-7B-Instruct', 'google/gemma-3-12b-pt', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'Qwen/Qwen2.5-7B', 'tiiuae/Falcon3-10B-Instruct', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'tiiuae/Falcon3-10B-Base', 'google/gemma-2-9b-it', '01-ai/Yi-1.5-34B', 'mistralai/Mixtral-8x22B-v0.1', 'google/gemma-2-27b', 'Qwen/Qwen2.5-14B', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1', 'Qwen/Qwen2-72B-Instruct', 'Qwen/Qwen2.5-32B', 'meta-llama/Meta-Llama-3.1-70B', 'rinna/llama-3-youko-70b', 'tokyotech-llm/Llama-3-Swallow-70B-v0.1', 'microsoft/phi-4', 'google/gemma-3-27b-pt', 'tokyotech-llm/Llama-3.1-Swallow-70B-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'meta-llama/Meta-Llama-3-70B', 'Qwen/Qwen2.5-72B-Instruct', 'Qwen/Qwen2-72B', 'google/gemma-2-27b-it', 'rinna/llama-3-youko-70b-instruct', 'Qwen/Qwen2.5-72B', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'tokyotech-llm/Llama-3.3-Swallow-70B-v0.4', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'google/gemma-3-12b-it', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'meta-llama/Meta-Llama-3-70B-Instruct', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'google/gemma-3-27b-it', 'meta-llama/Llama-3.3-70B-Instruct'];
+      var ids = ['pfnet/plamo-2-1b', 'llm-jp/llm-jp-3-1.8b', 'stockmark/stockmark-100b', 'google/gemma-3-1b-pt', 'llm-jp/llm-jp-3-1.8b-instruct', 'llm-jp/llm-jp-3-3.7b', 'sbintuitions/sarashina2.2-0.5b-instruct-v0.1', 'Qwen/Qwen2.5-0.5B-Instruct', 'sbintuitions/sarashina2.2-0.5b', 'meta-llama/Llama-3.2-1B', 'llm-jp/llm-jp-3-3.7b-instruct', 'rinna/gemma-2-baku-2b-it', 'tokyotech-llm/Swallow-7b-hf', 'Qwen/Qwen2.5-0.5B', 'tokyotech-llm/Swallow-7b-instruct-v0.1', 'tiiuae/Falcon3-1B-Base', 'tiiuae/Falcon3-1B-Instruct', 'sbintuitions/sarashina2-7b', 'google/gemma-3-1b-it', 'llm-jp/llm-jp-3-13b', 'rinna/gemma-2-baku-2b', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Llama-3.2-1B-Instruct', 'SakanaAI/TinySwallow-1.5B-Instruct', 'tokyotech-llm/Swallow-13b-hf', 'SakanaAI/TinySwallow-1.5B', 'sbintuitions/sarashina2.2-1b-instruct-v0.1', 'sbintuitions/sarashina2.2-1b', 'sbintuitions/sarashina2-13b', 'Qwen/Qwen2.5-1.5B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'llm-jp/llm-jp-3-13b-instruct', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'google/gemma-2-2b', 'meta-llama/Llama-3.2-3B', 'tokyotech-llm/Swallow-MS-7b-v0.1', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'google/gemma-2-2b-jpn-it', 'Qwen/Qwen2.5-3B-Instruct', 'pfnet/plamo-2-8b', 'rinna/llama-3-youko-8b', 'google/gemma-2-2b-it', 'Qwen/Qwen2.5-1.5B', 'sbintuitions/sarashina2-70b', 'elyza/Llama-3-ELYZA-JP-8B', 'tiiuae/Falcon3-3B-Base', 'google/gemma-3-4b-pt', 'mistralai/Mistral-7B-v0.3', 'rinna/llama-3-youko-8b-instruct', 'tokyotech-llm/Llama-3-Swallow-8B-v0.1', 'tiiuae/Falcon3-3B-Instruct', 'cyberagent/calm3-22b-chat', 'sbintuitions/sarashina2.2-3b', 'Qwen/Qwen2.5-3B', 'sbintuitions/sarashina2.2-3b-instruct-v0.1', 'meta-llama/Llama-3.2-3B-Instruct', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-v0.2', 'CohereForAI/aya-expanse-8b', '01-ai/Yi-1.5-6B', 'mistralai/Mistral-7B-Instruct-v0.3', 'meta-llama/Meta-Llama-3-8B', 'tokyotech-llm/Swallow-70b-hf', 'meta-llama/Meta-Llama-3.1-8B', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'mistralai/Mistral-Nemo-Base-2407', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'google/gemma-3-4b-it', 'nvidia/Mistral-NeMo-Minitron-8B-Base', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'Qwen/Qwen2-7B-Instruct', 'Qwen/Qwen2.5-32B-Instruct', 'tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1', '01-ai/Yi-1.5-9B', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1', 'tiiuae/Falcon3-7B-Base', 'google/gemma-2-9b', 'Qwen/Qwen2-7B', 'Qwen/Qwen2.5-7B-Instruct', 'meta-llama/Meta-Llama-3-8B-Instruct', 'mistralai/Mistral-Nemo-Instruct-2407', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'Qwen/Qwen2.5-14B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'CohereForAI/aya-expanse-32b', 'tiiuae/Falcon3-7B-Instruct', 'google/gemma-3-12b-pt', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'Qwen/Qwen2.5-7B', 'tiiuae/Falcon3-10B-Instruct', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'tiiuae/Falcon3-10B-Base', 'google/gemma-2-9b-it', '01-ai/Yi-1.5-34B', 'mistralai/Mixtral-8x22B-v0.1', 'google/gemma-2-27b', 'Qwen/Qwen2.5-14B', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1', 'Qwen/Qwen2-72B-Instruct', 'Qwen/Qwen2.5-32B', 'meta-llama/Meta-Llama-3.1-70B', 'rinna/llama-3-youko-70b', 'tokyotech-llm/Llama-3-Swallow-70B-v0.1', 'microsoft/phi-4', 'google/gemma-3-27b-pt', 'tokyotech-llm/Llama-3.1-Swallow-70B-v0.1', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'meta-llama/Meta-Llama-3-70B', 'Qwen/Qwen2.5-72B-Instruct', 'Qwen/Qwen2-72B', 'google/gemma-2-27b-it', 'rinna/llama-3-youko-70b-instruct', 'Qwen/Qwen2.5-72B', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'tokyotech-llm/Llama-3.3-Swallow-70B-v0.4', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'google/gemma-3-12b-it', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'meta-llama/Meta-Llama-3-70B-Instruct', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'google/gemma-3-27b-it', 'meta-llama/Llama-3.3-70B-Instruct'];
 
       var colors = new Array(ids.length);
       for (let i = 0; i < ids.length; ++i) {
@@ -359,7 +359,7 @@
       return colors;
     }
 
-    var series = [0.274, 0.293, 0.302, 0.31, 0.313, 0.324, 0.336, 0.339, 0.347, 0.361, 0.363, 0.365, 0.376, 0.376, 0.381, 0.383, 0.392, 0.399, 0.4, 0.406, 0.408, 0.411, 0.412, 0.413, 0.418, 0.424, 0.426, 0.431, 0.432, 0.436, 0.439, 0.45, 0.461, 0.464, 0.471, 0.472, 0.474, 0.486, 0.489, 0.49, 0.491, 0.495, 0.495, 0.501, 0.507, 0.507, 0.523, 0.526, 0.527, 0.534, 0.537, 0.538, 0.539, 0.539, 0.54, 0.541, 0.542, 0.543, 0.545, 0.551, 0.556, 0.559, 0.56, 0.563, 0.566, 0.566, 0.572, 0.574, 0.582, 0.588, 0.589, 0.592, 0.595, 0.596, 0.597, 0.602, 0.604, 0.605, 0.608, 0.611, 0.614, 0.614, 0.614, 0.618, 0.619, 0.627, 0.63, 0.633, 0.634, 0.639, 0.649, 0.65, 0.652, 0.655, 0.66, 0.665, 0.669, 0.67, 0.671, 0.671, 0.672, 0.677, 0.677, 0.679, 0.687, 0.689, 0.691, 0.702, 0.703, 0.708, 0.709, 0.71, 0.71, 0.711, 0.715, 0.716, 0.717, 0.72, 0.725, 0.729, 0.736, 0.738, 0.758, 0.762];
+    var series = [0.274, 0.293, 0.302, 0.31, 0.313, 0.324, 0.331, 0.336, 0.339, 0.339, 0.347, 0.361, 0.363, 0.365, 0.376, 0.376, 0.381, 0.383, 0.392, 0.399, 0.4, 0.406, 0.408, 0.411, 0.412, 0.413, 0.415, 0.415, 0.418, 0.424, 0.426, 0.431, 0.432, 0.436, 0.439, 0.45, 0.461, 0.464, 0.471, 0.472, 0.474, 0.486, 0.489, 0.49, 0.491, 0.495, 0.495, 0.501, 0.507, 0.507, 0.523, 0.526, 0.527, 0.532, 0.534, 0.536, 0.537, 0.538, 0.539, 0.539, 0.54, 0.541, 0.542, 0.543, 0.545, 0.551, 0.556, 0.559, 0.56, 0.563, 0.566, 0.566, 0.572, 0.574, 0.582, 0.588, 0.589, 0.592, 0.595, 0.596, 0.597, 0.602, 0.604, 0.605, 0.608, 0.611, 0.614, 0.614, 0.614, 0.618, 0.619, 0.627, 0.63, 0.633, 0.634, 0.639, 0.649, 0.65, 0.652, 0.655, 0.66, 0.665, 0.669, 0.67, 0.671, 0.671, 0.672, 0.677, 0.677, 0.679, 0.687, 0.689, 0.691, 0.702, 0.703, 0.708, 0.709, 0.71, 0.71, 0.711, 0.715, 0.716, 0.717, 0.72, 0.725, 0.729, 0.736, 0.738, 0.758, 0.762];
     var colors = build();
     window.ApexCharts && (new ApexCharts(document.getElementById('rank-en_avg'), {
       chart: {
@@ -414,7 +414,7 @@
           padding: 4
         },
       },
-      labels: ['PLaMo 2 1B', 'llm-jp-3-1.8b', 'Stockmark-100b', 'Gemma 3 1B', 'llm-jp-3-1.8b-instruct', 'llm-jp-3-3.7b', 'Qwen2.5-0.5B-Instruct', 'Llama 3.2 1B', 'llm-jp-3-3.7b-instruct', 'Gemma 2 Baku 2B IT', 'Swallow 7B', 'Qwen2.5-0.5B', 'Swallow-7b-instruct-v0.1', 'Falcon3-1B-Base', 'Falcon3-1B-Instruct', 'Sarashina2-7B', 'Gemma 3 1B IT', 'llm-jp-3-13b', 'Gemma 2 Baku 2B', 'Tanuki-8B-dpo-v1.0', 'Llama 3.2 1B Instruct', 'TinySwallow-1.5B-Instruct', 'Swallow 13B', 'TinySwallow-1.5B', 'Sarashina2-13B', 'Qwen2.5-1.5B-Instruct', 'Gemma2-Llama Swallow 2B', 'Gemma-2-Llama Swallow 2B IT', 'llm-jp-3-13b-instruct', 'Swallow-MS-7b-instruct-v0.1', 'Gemma 2 2B', 'Llama 3.2 3B', 'Swallow-MS 7B v0.1', 'Tanuki-8x8B-dpo-v1.0', 'Gemma 2 JPN', 'Qwen2.5-3B-Instruct', 'PLaMo 2 8B', 'Llama 3 Youko 8B', 'Gemma 2 2B IT', 'Qwen2.5-1.5B', 'Sarashina2-70B', 'Llama-3-ELYZA-JP-8B', 'Falcon3-3B-Base', 'Gemma 3 4B', 'Mistral-7B-v0.3', 'Llama 3 Youko 8B Instruct', 'Llama 3 Swallow 8B', 'Falcon3-3B-Instruct', 'CyberAgentLM3-22B-chat', 'Qwen2.5-3B', 'Llama 3.2 3B Instruct', 'Llama 3.1 Swallow 8B v0.1', 'Llama 3.1 Swallow 8B v0.2', 'Aya Expanse 8B', 'Yi-1.5 6B', 'Mistral-7B-Instruct-v0.3', 'Llama 3 8B', 'Swallow 70B', 'Llama 3.1 8B', 'Llama 3 heron brain 8B v0.3', 'Swallow-70b-instruct-v0.1', 'Mistral-Nemo-Base-2407 (12B)', 'Llama 3 Swallow 8B Instruct', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Gemma 3 4B IT', 'Mistral-NeMo-Minitron 8B', 'Llama 3.1 Swallow 8B Instruct v0.2', 'Qwen2-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Swallow-MX 8x7B v0.1', 'Yi-1.5 9B', 'Gemma2-Llama Swallow 9B', 'Falcon3-7B-Base', 'Gemma 2 9B', 'Qwen2-7B', 'Qwen2.5-7B-Instruct', 'Llama 3 8B Instruct', 'Mistral-NeMo-Instruct-2407 (12B)', 'Gemma-2-Llama Swallow 9B IT', 'Qwen2.5-14B-Instruct', 'Phi-3-Mini-128K-Instruct', 'Aya Expanse 32B', 'Falcon3-7B-Instruct', 'Gemma 3 12B', 'Llama 3.1 8B Instruct', 'Qwen2.5-7B', 'Falcon3-10B-Instruct', 'Mistral-NeMo-Minitron 8B Instruct', 'Falcon3-10B-Base', 'Gemma 2 9B IT', 'Yi-1.5 34B', 'Mixtral-8x22B-v0.1', 'Gemma 2 27B', 'Qwen2.5-14B', 'Gemma2-Llama Swallow 27B', 'Qwen2-72B-Instruct', 'Qwen2.5-32B', 'Llama 3.1 70B', 'Llama 3 Youko 70B', 'Llama 3 Swallow 70B', 'Phi-4', 'Gemma 3 27B', 'Llama 3.1 Swallow 70B v0.1', 'Gemma-2-Llama Swallow 27B IT', 'Llama 3 70B', 'Qwen2.5-72B-Instruct', 'Qwen2-72B', 'Gemma 2 27B IT', 'Llama 3 Youko 70B Instruct', 'Qwen2.5-72B', 'Llama 3.1 Swallow 70B Instruct v0.3', 'Llama 3.1 Swallow 70B Instruct v0.1', 'Llama 3.3 Swallow 70B v0.4', 'Llama 3 heron brain 70B v0.3', 'Llama 3 Swallow 70B Instruct', 'Gemma 3 12B IT', 'Mixtral-8x22B-Instruct-v0.1', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Llama 3 70B Instruct', 'Llama 3.3 Swallow 70B Instruct v0.4', 'Llama 3.1 70B Instruct', 'Gemma 3 27B IT', 'Llama 3.3 70B Instruct'],
+      labels: ['PLaMo 2 1B', 'llm-jp-3-1.8b', 'Stockmark-100b', 'Gemma 3 1B', 'llm-jp-3-1.8b-instruct', 'llm-jp-3-3.7b', 'Sarashina2.2 0.5B Instruct v0.1', 'Qwen2.5-0.5B-Instruct', 'Sarashina2.2 0.5B', 'Llama 3.2 1B', 'llm-jp-3-3.7b-instruct', 'Gemma 2 Baku 2B IT', 'Swallow 7B', 'Qwen2.5-0.5B', 'Swallow-7b-instruct-v0.1', 'Falcon3-1B-Base', 'Falcon3-1B-Instruct', 'Sarashina2-7B', 'Gemma 3 1B IT', 'llm-jp-3-13b', 'Gemma 2 Baku 2B', 'Tanuki-8B-dpo-v1.0', 'Llama 3.2 1B Instruct', 'TinySwallow-1.5B-Instruct', 'Swallow 13B', 'TinySwallow-1.5B', 'Sarashina2.2 1B Instruct v0.1', 'Sarashina2.2 1B', 'Sarashina2-13B', 'Qwen2.5-1.5B-Instruct', 'Gemma2-Llama Swallow 2B', 'Gemma-2-Llama Swallow 2B IT', 'llm-jp-3-13b-instruct', 'Swallow-MS-7b-instruct-v0.1', 'Gemma 2 2B', 'Llama 3.2 3B', 'Swallow-MS 7B v0.1', 'Tanuki-8x8B-dpo-v1.0', 'Gemma 2 JPN', 'Qwen2.5-3B-Instruct', 'PLaMo 2 8B', 'Llama 3 Youko 8B', 'Gemma 2 2B IT', 'Qwen2.5-1.5B', 'Sarashina2-70B', 'Llama-3-ELYZA-JP-8B', 'Falcon3-3B-Base', 'Gemma 3 4B', 'Mistral-7B-v0.3', 'Llama 3 Youko 8B Instruct', 'Llama 3 Swallow 8B', 'Falcon3-3B-Instruct', 'CyberAgentLM3-22B-chat', 'Sarashina2.2 3B', 'Qwen2.5-3B', 'Sarashina2.2 3B Instruct v0.1', 'Llama 3.2 3B Instruct', 'Llama 3.1 Swallow 8B v0.1', 'Llama 3.1 Swallow 8B v0.2', 'Aya Expanse 8B', 'Yi-1.5 6B', 'Mistral-7B-Instruct-v0.3', 'Llama 3 8B', 'Swallow 70B', 'Llama 3.1 8B', 'Llama 3 heron brain 8B v0.3', 'Swallow-70b-instruct-v0.1', 'Mistral-Nemo-Base-2407 (12B)', 'Llama 3 Swallow 8B Instruct', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Gemma 3 4B IT', 'Mistral-NeMo-Minitron 8B', 'Llama 3.1 Swallow 8B Instruct v0.2', 'Qwen2-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Swallow-MX 8x7B v0.1', 'Yi-1.5 9B', 'Gemma2-Llama Swallow 9B', 'Falcon3-7B-Base', 'Gemma 2 9B', 'Qwen2-7B', 'Qwen2.5-7B-Instruct', 'Llama 3 8B Instruct', 'Mistral-NeMo-Instruct-2407 (12B)', 'Gemma-2-Llama Swallow 9B IT', 'Qwen2.5-14B-Instruct', 'Phi-3-Mini-128K-Instruct', 'Aya Expanse 32B', 'Falcon3-7B-Instruct', 'Gemma 3 12B', 'Llama 3.1 8B Instruct', 'Qwen2.5-7B', 'Falcon3-10B-Instruct', 'Mistral-NeMo-Minitron 8B Instruct', 'Falcon3-10B-Base', 'Gemma 2 9B IT', 'Yi-1.5 34B', 'Mixtral-8x22B-v0.1', 'Gemma 2 27B', 'Qwen2.5-14B', 'Gemma2-Llama Swallow 27B', 'Qwen2-72B-Instruct', 'Qwen2.5-32B', 'Llama 3.1 70B', 'Llama 3 Youko 70B', 'Llama 3 Swallow 70B', 'Phi-4', 'Gemma 3 27B', 'Llama 3.1 Swallow 70B v0.1', 'Gemma-2-Llama Swallow 27B IT', 'Llama 3 70B', 'Qwen2.5-72B-Instruct', 'Qwen2-72B', 'Gemma 2 27B IT', 'Llama 3 Youko 70B Instruct', 'Qwen2.5-72B', 'Llama 3.1 Swallow 70B Instruct v0.3', 'Llama 3.1 Swallow 70B Instruct v0.1', 'Llama 3.3 Swallow 70B v0.4', 'Llama 3 heron brain 70B v0.3', 'Llama 3 Swallow 70B Instruct', 'Gemma 3 12B IT', 'Mixtral-8x22B-Instruct-v0.1', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Llama 3 70B Instruct', 'Llama 3.3 Swallow 70B Instruct v0.4', 'Llama 3.1 70B Instruct', 'Gemma 3 27B IT', 'Llama 3.3 70B Instruct'],
       colors: colors,
       legend: {
         show: false,
@@ -450,7 +450,7 @@
       <div class="h1 mb-0 me-2">0.713</div>
       <div class="me-auto">
         <span class="text-danger d-inline-flex align-items-center lh-1">#25</span>
-        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 72</span>
+        <span class="text-secondary d-inline-flex align-items-center lh-1"> / 75</span>
       </div>
     </div>
     
@@ -465,7 +465,7 @@
     var build = function() {
       const theme_color_other = "#78909C";
       const theme_colors = ["#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0"];
-      var ids = ['tiiuae/Falcon3-1B-Instruct', 'tiiuae/Falcon3-3B-Instruct', 'meta-llama/Llama-3.2-1B-Instruct', 'Qwen/Qwen2.5-0.5B-Instruct', 'tiiuae/Falcon3-7B-Instruct', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'meta-llama/Llama-3.2-3B-Instruct', 'tiiuae/Falcon3-10B-Instruct', 'tokyotech-llm/Swallow-7b-instruct-v0.1', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'mistralai/Mistral-7B-Instruct-v0.3', 'Qwen/Qwen2.5-1.5B-Instruct', 'llm-jp/llm-jp-3-1.8b-instruct', 'llm-jp/llm-jp-3-3.7b-instruct', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'google/gemma-3-1b-it', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Meta-Llama-3-8B-Instruct', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'google/gemma-2-2b-jpn-it', 'SakanaAI/TinySwallow-1.5B-Instruct', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'google/gemma-2-2b-it', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'elyza/Llama-3-ELYZA-JP-8B', 'llm-jp/llm-jp-3-13b-instruct', 'rinna/gemma-2-baku-2b-it', 'Qwen/Qwen2.5-3B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'mistralai/Mistral-Nemo-Instruct-2407', 'rinna/llama-3-youko-8b-instruct', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'CohereForAI/aya-expanse-8b', 'meta-llama/Meta-Llama-3-70B-Instruct', 'Qwen/Qwen2-7B-Instruct', 'Qwen/Qwen2.5-7B-Instruct', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'gpt-3.5-turbo-0125', 'cyberagent/calm3-22b-chat', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'CohereForAI/aya-expanse-32b', 'google/gemma-3-4b-it', 'google/gemma-2-9b-it', 'meta-llama/Llama-3.3-70B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'rinna/llama-3-youko-70b-instruct', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen/Qwen2-72B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'Qwen/Qwen2.5-14B-Instruct', 'google/gemma-2-27b-it', 'microsoft/phi-4', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'gpt-4-0613', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'o1-2024-12-17', 'Qwen/Qwen2.5-32B-Instruct', 'google/gemma-3-12b-it', 'gpt-4o-mini-2024-07-18', 'Qwen/Qwen2.5-72B-Instruct', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-08-06', 'gpt-4o-2024-05-13', 'google/gemma-3-27b-it', 'gpt-4.5-preview-2025-02-27'];
+      var ids = ['tiiuae/Falcon3-1B-Instruct', 'tiiuae/Falcon3-3B-Instruct', 'meta-llama/Llama-3.2-1B-Instruct', 'Qwen/Qwen2.5-0.5B-Instruct', 'tiiuae/Falcon3-7B-Instruct', 'tokyotech-llm/Swallow-MS-7b-instruct-v0.1', 'meta-llama/Llama-3.2-3B-Instruct', 'tiiuae/Falcon3-10B-Instruct', 'tokyotech-llm/Swallow-7b-instruct-v0.1', 'sbintuitions/sarashina2.2-0.5b-instruct-v0.1', 'tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1', 'mistralai/Mistral-7B-Instruct-v0.3', 'Qwen/Qwen2.5-1.5B-Instruct', 'llm-jp/llm-jp-3-1.8b-instruct', 'llm-jp/llm-jp-3-3.7b-instruct', 'turing-motors/Llama-3-heron-brain-8B-v0.3', 'tokyotech-llm/Swallow-70b-instruct-v0.1', 'google/gemma-3-1b-it', 'sbintuitions/sarashina2.2-1b-instruct-v0.1', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'microsoft/Phi-3-mini-128k-instruct', 'weblab-GENIAC/Tanuki-8B-dpo-v1.0', 'meta-llama/Meta-Llama-3-8B-Instruct', 'weblab-GENIAC/Tanuki-8x8B-dpo-v1.0', 'google/gemma-2-2b-jpn-it', 'SakanaAI/TinySwallow-1.5B-Instruct', 'nvidia/Mistral-NeMo-Minitron-8B-Instruct', 'google/gemma-2-2b-it', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1', 'elyza/Llama-3-ELYZA-JP-8B', 'llm-jp/llm-jp-3-13b-instruct', 'rinna/gemma-2-baku-2b-it', 'Qwen/Qwen2.5-3B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2', 'mistralai/Mistral-Nemo-Instruct-2407', 'rinna/llama-3-youko-8b-instruct', 'tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'sbintuitions/sarashina2.2-3b-instruct-v0.1', 'CohereForAI/aya-expanse-8b', 'meta-llama/Meta-Llama-3-70B-Instruct', 'Qwen/Qwen2-7B-Instruct', 'Qwen/Qwen2.5-7B-Instruct', 'turing-motors/Llama-3-heron-brain-70B-v0.3', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1', 'gpt-3.5-turbo-0125', 'cyberagent/calm3-22b-chat', 'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3', 'meta-llama/Meta-Llama-3.1-70B-Instruct', 'CohereForAI/aya-expanse-32b', 'google/gemma-3-4b-it', 'google/gemma-2-9b-it', 'meta-llama/Llama-3.3-70B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1', 'rinna/llama-3-youko-70b-instruct', 'cyberagent/Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen/Qwen2-72B-Instruct', 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1', 'Qwen/Qwen2.5-14B-Instruct', 'google/gemma-2-27b-it', 'microsoft/phi-4', 'tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3', 'gpt-4-0613', 'tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4', 'o1-2024-12-17', 'Qwen/Qwen2.5-32B-Instruct', 'google/gemma-3-12b-it', 'gpt-4o-mini-2024-07-18', 'Qwen/Qwen2.5-72B-Instruct', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-08-06', 'gpt-4o-2024-05-13', 'google/gemma-3-27b-it', 'gpt-4.5-preview-2025-02-27'];
 
       var colors = new Array(ids.length);
       for (let i = 0; i < ids.length; ++i) {
@@ -483,7 +483,7 @@
       return colors;
     }
 
-    var series = [0.161, 0.26, 0.273, 0.294, 0.377, 0.4, 0.405, 0.413, 0.419, 0.427, 0.428, 0.45, 0.451, 0.485, 0.497, 0.509, 0.51, 0.519, 0.524, 0.529, 0.529, 0.546, 0.55, 0.565, 0.567, 0.569, 0.581, 0.587, 0.588, 0.59, 0.593, 0.597, 0.612, 0.616, 0.616, 0.618, 0.622, 0.637, 0.64, 0.646, 0.665, 0.683, 0.691, 0.691, 0.691, 0.705, 0.706, 0.713, 0.724, 0.736, 0.737, 0.749, 0.75, 0.751, 0.756, 0.759, 0.762, 0.768, 0.769, 0.769, 0.771, 0.772, 0.807, 0.809, 0.821, 0.824, 0.835, 0.837, 0.848, 0.848, 0.855, 0.884];
+    var series = [0.161, 0.26, 0.273, 0.294, 0.377, 0.4, 0.405, 0.413, 0.419, 0.424, 0.427, 0.428, 0.45, 0.451, 0.485, 0.497, 0.509, 0.51, 0.511, 0.519, 0.524, 0.529, 0.529, 0.546, 0.55, 0.565, 0.567, 0.569, 0.581, 0.587, 0.588, 0.59, 0.593, 0.597, 0.612, 0.616, 0.616, 0.618, 0.622, 0.629, 0.637, 0.64, 0.646, 0.665, 0.683, 0.691, 0.691, 0.691, 0.705, 0.706, 0.713, 0.724, 0.736, 0.737, 0.749, 0.75, 0.751, 0.756, 0.759, 0.762, 0.768, 0.769, 0.769, 0.771, 0.772, 0.807, 0.809, 0.821, 0.824, 0.835, 0.837, 0.848, 0.848, 0.855, 0.884];
     var colors = build();
     window.ApexCharts && (new ApexCharts(document.getElementById('rank-ja_mtb'), {
       chart: {
@@ -538,7 +538,7 @@
           padding: 4
         },
       },
-      labels: ['Falcon3-1B-Instruct', 'Falcon3-3B-Instruct', 'Llama 3.2 1B Instruct', 'Qwen2.5-0.5B-Instruct', 'Falcon3-7B-Instruct', 'Swallow-MS-7b-instruct-v0.1', 'Llama 3.2 3B Instruct', 'Falcon3-10B-Instruct', 'Swallow-7b-instruct-v0.1', 'Llama 3 Swallow 8B Instruct', 'Mistral-7B-Instruct-v0.3', 'Qwen2.5-1.5B-Instruct', 'llm-jp-3-1.8b-instruct', 'llm-jp-3-3.7b-instruct', 'Llama 3 heron brain 8B v0.3', 'Swallow-70b-instruct-v0.1', 'Gemma 3 1B IT', 'Llama 3.1 8B Instruct', 'Phi-3-Mini-128K-Instruct', 'Tanuki-8B-dpo-v1.0', 'Llama 3 8B Instruct', 'Tanuki-8x8B-dpo-v1.0', 'Gemma 2 JPN', 'TinySwallow-1.5B-Instruct', 'Mistral-NeMo-Minitron 8B Instruct', 'Gemma 2 2B IT', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Llama-3-ELYZA-JP-8B', 'llm-jp-3-13b-instruct', 'Gemma 2 Baku 2B IT', 'Qwen2.5-3B-Instruct', 'Gemma-2-Llama Swallow 2B IT', 'Llama 3.1 Swallow 8B Instruct v0.2', 'Mistral-NeMo-Instruct-2407 (12B)', 'Llama 3 Youko 8B Instruct', 'Llama 3 Swallow 70B Instruct', 'Mixtral-8x22B-Instruct-v0.1', 'Aya Expanse 8B', 'Llama 3 70B Instruct', 'Qwen2-7B-Instruct', 'Qwen2.5-7B-Instruct', 'Llama 3 heron brain 70B v0.3', 'Llama 3.1 Swallow 70B Instruct v0.1', 'GPT-3.5 (gpt-3.5-turbo-0125)', 'CyberAgentLM3-22B-chat', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Llama 3.1 70B Instruct', 'Aya Expanse 32B', 'Gemma 3 4B IT', 'Gemma 2 9B IT', 'Llama 3.3 70B Instruct', 'Gemma-2-Llama Swallow 9B IT', 'Llama 3 Youko 70B Instruct', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen2-72B-Instruct', 'Gemma-2-Llama Swallow 27B IT', 'Qwen2.5-14B-Instruct', 'Gemma 2 27B IT', 'Phi-4', 'Llama 3.1 Swallow 70B Instruct v0.3', 'GPT-4 (gpt-4-0613)', 'Llama 3.3 Swallow 70B Instruct v0.4', 'o1 (o1-2024-12-17)', 'Qwen2.5-32B-Instruct', 'Gemma 3 12B IT', 'GPT-4o-mini (gpt-4o-mini-2024-07-18)', 'Qwen2.5-72B-Instruct', 'GPT-4-turbo (gpt-4-turbo-2024-04-09)', 'GPT-4o (gpt-4o-2024-08-06)', 'GPT-4o (gpt-4o-2024-05-13)', 'Gemma 3 27B IT', 'GPT-4.5 (gpt-4.5-preview-2025-02-27)'],
+      labels: ['Falcon3-1B-Instruct', 'Falcon3-3B-Instruct', 'Llama 3.2 1B Instruct', 'Qwen2.5-0.5B-Instruct', 'Falcon3-7B-Instruct', 'Swallow-MS-7b-instruct-v0.1', 'Llama 3.2 3B Instruct', 'Falcon3-10B-Instruct', 'Swallow-7b-instruct-v0.1', 'Sarashina2.2 0.5B Instruct v0.1', 'Llama 3 Swallow 8B Instruct', 'Mistral-7B-Instruct-v0.3', 'Qwen2.5-1.5B-Instruct', 'llm-jp-3-1.8b-instruct', 'llm-jp-3-3.7b-instruct', 'Llama 3 heron brain 8B v0.3', 'Swallow-70b-instruct-v0.1', 'Gemma 3 1B IT', 'Sarashina2.2 1B Instruct v0.1', 'Llama 3.1 8B Instruct', 'Phi-3-Mini-128K-Instruct', 'Tanuki-8B-dpo-v1.0', 'Llama 3 8B Instruct', 'Tanuki-8x8B-dpo-v1.0', 'Gemma 2 JPN', 'TinySwallow-1.5B-Instruct', 'Mistral-NeMo-Minitron 8B Instruct', 'Gemma 2 2B IT', 'Llama 3.1 Swallow 8B Instruct v0.1', 'Llama-3-ELYZA-JP-8B', 'llm-jp-3-13b-instruct', 'Gemma 2 Baku 2B IT', 'Qwen2.5-3B-Instruct', 'Gemma-2-Llama Swallow 2B IT', 'Llama 3.1 Swallow 8B Instruct v0.2', 'Mistral-NeMo-Instruct-2407 (12B)', 'Llama 3 Youko 8B Instruct', 'Llama 3 Swallow 70B Instruct', 'Mixtral-8x22B-Instruct-v0.1', 'Sarashina2.2 3B Instruct v0.1', 'Aya Expanse 8B', 'Llama 3 70B Instruct', 'Qwen2-7B-Instruct', 'Qwen2.5-7B-Instruct', 'Llama 3 heron brain 70B v0.3', 'Llama 3.1 Swallow 70B Instruct v0.1', 'GPT-3.5 (gpt-3.5-turbo-0125)', 'CyberAgentLM3-22B-chat', 'Llama 3.1 Swallow 8B Instruct v0.3', 'Llama 3.1 70B Instruct', 'Aya Expanse 32B', 'Gemma 3 4B IT', 'Gemma 2 9B IT', 'Llama 3.3 70B Instruct', 'Gemma-2-Llama Swallow 9B IT', 'Llama 3 Youko 70B Instruct', 'Llama-3.1-70B-Japanese-Instruct-2407', 'Qwen2-72B-Instruct', 'Gemma-2-Llama Swallow 27B IT', 'Qwen2.5-14B-Instruct', 'Gemma 2 27B IT', 'Phi-4', 'Llama 3.1 Swallow 70B Instruct v0.3', 'GPT-4 (gpt-4-0613)', 'Llama 3.3 Swallow 70B Instruct v0.4', 'o1 (o1-2024-12-17)', 'Qwen2.5-32B-Instruct', 'Gemma 3 12B IT', 'GPT-4o-mini (gpt-4o-mini-2024-07-18)', 'Qwen2.5-72B-Instruct', 'GPT-4-turbo (gpt-4-turbo-2024-04-09)', 'GPT-4o (gpt-4o-2024-08-06)', 'GPT-4o (gpt-4o-2024-05-13)', 'Gemma 3 27B IT', 'GPT-4.5 (gpt-4.5-preview-2025-02-27)'],
       colors: colors,
       legend: {
         show: false,
@@ -5349,6 +5349,240 @@
         
         
         <td class="text-end">0.235</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b.ja.html">Sarashina2.2 0.5B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.296</td>
+        
+        
+        <td class="text-end">0.211</td>
+        
+        
+        <td class="text-end">0.472</td>
+        
+        
+        <td class="text-end">0.451</td>
+        
+        
+        <td class="text-end">0.824</td>
+        
+        
+        <td class="text-end">0.091</td>
+        
+        
+        <td class="text-end">0.196</td>
+        
+        
+        <td class="text-end">0.201</td>
+        
+        
+        <td class="text-end">0.111</td>
+        
+        
+        <td class="text-end">0.253</td>
+        
+        
+        <td class="text-end">0.148</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b.ja.html">Sarashina2.2 1B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.392</td>
+        
+        
+        <td class="text-end">0.649</td>
+        
+        
+        <td class="text-end">0.462</td>
+        
+        
+        <td class="text-end">0.523</td>
+        
+        
+        <td class="text-end">0.858</td>
+        
+        
+        <td class="text-end">0.100</td>
+        
+        
+        <td class="text-end">0.388</td>
+        
+        
+        <td class="text-end">0.219</td>
+        
+        
+        <td class="text-end">0.136</td>
+        
+        
+        <td class="text-end">0.371</td>
+        
+        
+        <td class="text-end">0.215</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b.ja.html">Sarashina2.2 3B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.516</td>
+        
+        
+        <td class="text-end">0.911</td>
+        
+        
+        <td class="text-end">0.563</td>
+        
+        
+        <td class="text-end">0.642</td>
+        
+        
+        <td class="text-end">0.906</td>
+        
+        
+        <td class="text-end">0.162</td>
+        
+        
+        <td class="text-end">0.596</td>
+        
+        
+        <td class="text-end">0.273</td>
+        
+        
+        <td class="text-end">0.202</td>
+        
+        
+        <td class="text-end">0.541</td>
+        
+        
+        <td class="text-end">0.360</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b-instruct-v0.1.ja.html">Sarashina2.2 0.5B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.283</td>
+        
+        
+        <td class="text-end">0.350</td>
+        
+        
+        <td class="text-end">0.370</td>
+        
+        
+        <td class="text-end">0.363</td>
+        
+        
+        <td class="text-end">0.756</td>
+        
+        
+        <td class="text-end">0.077</td>
+        
+        
+        <td class="text-end">0.228</td>
+        
+        
+        <td class="text-end">0.161</td>
+        
+        
+        <td class="text-end">0.112</td>
+        
+        
+        <td class="text-end">0.267</td>
+        
+        
+        <td class="text-end">0.143</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b-instruct-v0.1.ja.html">Sarashina2.2 1B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.376</td>
+        
+        
+        <td class="text-end">0.794</td>
+        
+        
+        <td class="text-end">0.450</td>
+        
+        
+        <td class="text-end">0.395</td>
+        
+        
+        <td class="text-end">0.795</td>
+        
+        
+        <td class="text-end">0.081</td>
+        
+        
+        <td class="text-end">0.312</td>
+        
+        
+        <td class="text-end">0.182</td>
+        
+        
+        <td class="text-end">0.129</td>
+        
+        
+        <td class="text-end">0.369</td>
+        
+        
+        <td class="text-end">0.250</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b-instruct-v0.1.ja.html">Sarashina2.2 3B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.485</td>
+        
+        
+        <td class="text-end">0.921</td>
+        
+        
+        <td class="text-end">0.352</td>
+        
+        
+        <td class="text-end">0.560</td>
+        
+        
+        <td class="text-end">0.874</td>
+        
+        
+        <td class="text-end">0.105</td>
+        
+        
+        <td class="text-end">0.616</td>
+        
+        
+        <td class="text-end">0.256</td>
+        
+        
+        <td class="text-end">0.182</td>
+        
+        
+        <td class="text-end">0.543</td>
+        
+        
+        <td class="text-end">0.437</td>
         
       </tr>
       
@@ -10541,6 +10775,240 @@
       </tr>
       
       <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b.ja.html">Sarashina2.2 0.5B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.339</td>
+        
+        
+        <td class="text-end">0.302</td>
+        
+        
+        <td class="text-end">0.203</td>
+        
+        
+        <td class="text-end">0.420</td>
+        
+        
+        <td class="text-end">0.501</td>
+        
+        
+        <td class="text-end">0.794</td>
+        
+        
+        <td class="text-end">0.262</td>
+        
+        
+        <td class="text-end">0.246</td>
+        
+        
+        <td class="text-end">0.130</td>
+        
+        
+        <td class="text-end">0.312</td>
+        
+        
+        <td class="text-end">0.223</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b.ja.html">Sarashina2.2 1B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.415</td>
+        
+        
+        <td class="text-end">0.324</td>
+        
+        
+        <td class="text-end">0.289</td>
+        
+        
+        <td class="text-end">0.469</td>
+        
+        
+        <td class="text-end">0.502</td>
+        
+        
+        <td class="text-end">0.827</td>
+        
+        
+        <td class="text-end">0.400</td>
+        
+        
+        <td class="text-end">0.403</td>
+        
+        
+        <td class="text-end">0.206</td>
+        
+        
+        <td class="text-end">0.385</td>
+        
+        
+        <td class="text-end">0.342</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b.ja.html">Sarashina2.2 3B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.532</td>
+        
+        
+        <td class="text-end">0.362</td>
+        
+        
+        <td class="text-end">0.447</td>
+        
+        
+        <td class="text-end">0.538</td>
+        
+        
+        <td class="text-end">0.513</td>
+        
+        
+        <td class="text-end">0.877</td>
+        
+        
+        <td class="text-end">0.572</td>
+        
+        
+        <td class="text-end">0.624</td>
+        
+        
+        <td class="text-end">0.310</td>
+        
+        
+        <td class="text-end">0.551</td>
+        
+        
+        <td class="text-end">0.530</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b-instruct-v0.1.ja.html">Sarashina2.2 0.5B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.331</td>
+        
+        
+        <td class="text-end">0.294</td>
+        
+        
+        <td class="text-end">0.173</td>
+        
+        
+        <td class="text-end">0.426</td>
+        
+        
+        <td class="text-end">0.502</td>
+        
+        
+        <td class="text-end">0.773</td>
+        
+        
+        <td class="text-end">0.335</td>
+        
+        
+        <td class="text-end">0.221</td>
+        
+        
+        <td class="text-end">0.146</td>
+        
+        
+        <td class="text-end">0.280</td>
+        
+        
+        <td class="text-end">0.163</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b-instruct-v0.1.ja.html">Sarashina2.2 1B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.415</td>
+        
+        
+        <td class="text-end">0.324</td>
+        
+        
+        <td class="text-end">0.246</td>
+        
+        
+        <td class="text-end">0.487</td>
+        
+        
+        <td class="text-end">0.501</td>
+        
+        
+        <td class="text-end">0.797</td>
+        
+        
+        <td class="text-end">0.435</td>
+        
+        
+        <td class="text-end">0.444</td>
+        
+        
+        <td class="text-end">0.286</td>
+        
+        
+        <td class="text-end">0.332</td>
+        
+        
+        <td class="text-end">0.301</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b-instruct-v0.1.ja.html">Sarashina2.2 3B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.536</td>
+        
+        
+        <td class="text-end">0.378</td>
+        
+        
+        <td class="text-end">0.388</td>
+        
+        
+        <td class="text-end">0.590</td>
+        
+        
+        <td class="text-end">0.534</td>
+        
+        
+        <td class="text-end">0.855</td>
+        
+        
+        <td class="text-end">0.582</td>
+        
+        
+        <td class="text-end">0.672</td>
+        
+        
+        <td class="text-end">0.474</td>
+        
+        
+        <td class="text-end">0.400</td>
+        
+        
+        <td class="text-end">0.489</td>
+        
+      </tr>
+      
+      <tr>
         <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="stockmark/stockmark-100b"></td>
         <td><a href="stockmark_stockmark-100b.ja.html">Stockmark-100b</a> <a href="https://huggingface.co/stockmark/stockmark-100b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
         
@@ -14575,6 +15043,177 @@
         <td></td>
         
         <td></td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b.ja.html">Sarashina2.2 0.5B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b.ja.html">Sarashina2.2 1B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b.ja.html">Sarashina2.2 3B</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+        <td></td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-0.5b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-0.5b-instruct-v0.1.ja.html">Sarashina2.2 0.5B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-0.5b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.424</td>
+        
+        
+        <td class="text-end">0.338</td>
+        
+        
+        <td class="text-end">0.364</td>
+        
+        
+        <td class="text-end">0.596</td>
+        
+        
+        <td class="text-end">0.450</td>
+        
+        
+        <td class="text-end">0.283</td>
+        
+        
+        <td class="text-end">0.482</td>
+        
+        
+        <td class="text-end">0.386</td>
+        
+        
+        <td class="text-end">0.490</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-1b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-1b-instruct-v0.1.ja.html">Sarashina2.2 1B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-1b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.511</td>
+        
+        
+        <td class="text-end">0.414</td>
+        
+        
+        <td class="text-end">0.429</td>
+        
+        
+        <td class="text-end">0.724</td>
+        
+        
+        <td class="text-end">0.472</td>
+        
+        
+        <td class="text-end">0.321</td>
+        
+        
+        <td class="text-end">0.607</td>
+        
+        
+        <td class="text-end">0.549</td>
+        
+        
+        <td class="text-end">0.568</td>
+        
+      </tr>
+      
+      <tr>
+        <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="sbintuitions/sarashina2.2-3b-instruct-v0.1"></td>
+        <td><a href="sbintuitions_sarashina2.2-3b-instruct-v0.1.ja.html">Sarashina2.2 3B Instruct v0.1</a> <a href="https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+        
+        
+        <td class="text-end">0.629</td>
+        
+        
+        <td class="text-end">0.548</td>
+        
+        
+        <td class="text-end">0.779</td>
+        
+        
+        <td class="text-end">0.816</td>
+        
+        
+        <td class="text-end">0.514</td>
+        
+        
+        <td class="text-end">0.373</td>
+        
+        
+        <td class="text-end">0.714</td>
+        
+        
+        <td class="text-end">0.629</td>
+        
+        
+        <td class="text-end">0.659</td>
         
       </tr>
       
