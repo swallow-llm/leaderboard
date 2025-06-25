@@ -10,6 +10,22 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2025-06-25
+      text:
+        - ja: Llama 3.1 Swallow 8B v0.5の評価結果を追加しました。
+          en: Added evaluation results of Llama 3.1 Swallow 8B v0.5.
+        - ja: Llama 4 Scoutの評価結果を追加しました。
+          en: Added evaluation results of Llama 4 Scout.
+        - ja: llm-jp-3-7.2bの評価結果を追加しました。
+          en: Added evaluation results of llm-jp-3-7.2b.
+        - ja: llm-jp-3-1.8b-instruct3, llm-jp-3-3.7b-instruct3, llm-jp-3-7.2b-instruct3, llm-jp-3-13b-instruct3の評価結果を追加しました。
+          en: Added evaluation results of llm-jp-3-1.8b-instruct3, llm-jp-3-3.7b-instruct3, llm-jp-3-7.2b-instruct3, llm-jp-3-13b-instruct3.
+        - ja: llm-jp-3.1-1.8b-instruct4, llm-jp-3.1-13b-instruct4の評価結果を追加しました。
+          en: Added evaluation results of llm-jp-3.1-1.8b-instruct4, llm-jp-3.1-13b-instruct4.
+        - ja: Qwen2.5-32Bの評価結果を追加しました。
+          en: Added evaluation results of Qwen2.5-32B.
+        - ja: Qwen3-1.7B-Base, Qwen3-4B-Base, Qwen3-8B-Base, Qwen3-14B-Base, Qwen3-30B-A3B-Baseの評価結果を追加しました。
+          en: Added evaluation results of Qwen3-1.7B-Base, Qwen3-4B-Base, Qwen3-8B-Base, Qwen3-14B-Base, Qwen3-30B-A3B-Base.
     - date: 2025-05-21
       text:
         - ja: Sarashina2.2 0.5B, 1B, 3Bの評価結果を追加しました。
