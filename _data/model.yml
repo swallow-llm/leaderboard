@@ -3657,11 +3657,12 @@
     other:
       GPQA: 0.185
 - id: llm-jp/llm-jp-3.1-1.8b-instruct4
-  name: llm-jp-3.1-1.8b-instruct4
+  name: llm-jp-3.1-1.8b-instruct4 *
   date: '2025-05-30'
   params: 1.8
   base_model: llm-jp-3.1-1.8b
-  sortkey: llm jp 3.1 4
+  sortkey: llm jp 3.1 4 *
+  remark: in-domain-evaluation
   url: https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4
   results:
     ja_basic:
@@ -3701,11 +3702,12 @@
     other:
       GPQA: 0.145
 - id: llm-jp/llm-jp-3.1-13b-instruct4
-  name: llm-jp-3.1-13b-instruct4
+  name: llm-jp-3.1-13b-instruct4 *
   date: '2025-05-30'
   params: 13
   base_model: llm-jp-3.1-13b
-  sortkey: llm jp 3.1 4
+  sortkey: llm jp 3.1 4 *
+  remark: in-domain-evaluation
   url: https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4
   results:
     ja_basic:

@@ -70,3 +70,11 @@ reference:
 unknown_size:
   ja: パラメータ数不明
   en: Unknown size
+
+remark:
+  ja: 注釈
+  en: note
+
+in_domain_evaluation:
+  ja: このモデルはドメイン内評価となっているため、他のモデルのスコアと比較可能ではありません。
+  en: Since this model is evaluated in-domain, its scores are not directly comparable to those of other models.

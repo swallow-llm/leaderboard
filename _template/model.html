@@ -1,8 +1,8 @@
 {% extends "site.html" %}
 
 {% block content_title %}
-<h2 class="page-title">{{ models[model_id].name }}</h2>
-<div class="text-secondary mt-1">{% if 0 < models[model_id].params %}{{ models[model_id].params }}B{% else %}{{ ui.unknown_size }}{% endif %} ({{ models[model_id].date }}) <a href="{{ models[model_id].url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></div>
+<h2 class="page-title">{{ models[model_id].name }} {% if models[model_id].remark %}(<a href="about.{{ lang }}.html#{{ models[model_id].remark }}">{{ ui.remark }}</a>){% endif %}</h2>
+<div class="text-secondary mt-1">{% if 0 < models[model_id].params %}{{ models[model_id].params }}B{% else %}{{ ui.unknown_size }}{% endif %} ({{ models[model_id].date }}) <a href="{{ models[model_id].url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>{% if models[model_id].remark == "in-domain-evaluation" %} <strong>{{ ui.in_domain_evaluation }}</strong>{% endif %}</div>
 {% endblock %}
 
 {% block content %}
