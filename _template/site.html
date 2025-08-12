@@ -27,12 +27,10 @@
   <link rel="manifest" href="./static/site.webmanifest" />
 
   <!-- CSS files -->
-  <link href="./dist/css/tabler.min.css?1692870487" rel="stylesheet"/>
-  <link href="./dist/css/tabler-flags.min.css?1692870487" rel="stylesheet"/>
-  <link href="./dist/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
-  <link href="./dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
-  <link href="./dist/css/demo.min.css?1692870487" rel="stylesheet"/>
-  <link href="./dist/css/leaderboard.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler-flags.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/demo.min.css" />
+  <link href="./static/leaderboard.css" rel="stylesheet"/>
   <style>
     @import url('https://rsms.me/inter/inter.css');
     :root {
@@ -44,7 +42,6 @@
   </style>
 </head>
 <body >
-  <script src="./dist/js/demo-theme.min.js?1692870487"></script>
   {% if datajs %}
   <script src="{{ datajs }}"></script>
   <script>
@@ -181,10 +178,9 @@
     </footer>
   </div>
   <!-- Libs JS -->
-  <script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1692870487" defer></script>
-  <!-- Tabler Core -->
-  <script src="./dist/js/tabler.min.js?1692870487" defer></script>
-  <script src="./dist/js/demo.min.js?1692870487" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/demo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script>
     // @formatter:off
     function update()
