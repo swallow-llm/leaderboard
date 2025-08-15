@@ -7,6 +7,9 @@ model:
   params:
     ja: パラメータ数 [B]
     en: "# Parameters [B]"
+  active_params:
+    ja: 有効パラメータ数 [B]
+    en: "# Active parameters [B]"
   date:
     ja: 公開日
     en: Release date
@@ -78,3 +81,157 @@ remark:
 in_domain_evaluation:
   ja: このモデルはドメイン内評価となっているため、他のモデルのスコアと比較可能ではありません。
   en: Since this model is evaluated in-domain, its scores are not directly comparable to those of other models.
+
+select:
+  ja: モデルを一括選択
+  en: Select models
+
+nav:
+  - name: bar
+    title:
+      ja: 総合
+      en: Overall
+    svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-bar-popular"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M9 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M15 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M4 20h14" /></svg>
+    children:
+      - name: bar-post
+        title:
+          ja: 事後学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
+        path: bar-post
+      - name: bar-pre
+        path: bar-pre
+        title:
+          ja: 事前学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></svg>
+        path: bar-pre
+  - name: radar
+    title:
+      ja: タスク毎
+      en: Tasks
+    svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-radar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l9.5 7l-3.5 11h-12l-3.5 -11z" /><path d="M12 7.5l5.5 4l-2.5 5.5h-6.5l-2 -5.5z" /><path d="M2.5 10l9.5 3l9.5 -3" /><path d="M12 3v10l6 8" /><path d="M6 21l6 -8" /></svg>
+    children:
+      - name: radar-post
+        title:
+          ja: 事後学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
+        path: radar-post
+      - name: radar-pre
+        path: radar-pre
+        title:
+          ja: 事前学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></svg>
+        path: radar-pre
+  - name: scatter
+    title:
+      ja: 散布図
+      en: scatter
+    svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-scatter"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3v18h18" /><path d="M8 15.015v.015" /><path d="M16 16.015v.015" /><path d="M8 7.03v.015" /><path d="M12 11.03v.015" /><path d="M19 11.03v.015" /></svg>
+    children:
+      - name: scatter-post
+        title:
+          ja: 事後学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
+        path: scatter-post
+      - name: scatter-pre
+        path: scatter-pre
+        title:
+          ja: 事前学習モデル
+          en: Post-trained models
+        svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></svg>
+        path: scatter-pre
+    
+
+model_selection:
+  - name: all
+    title:
+      ja: 全て
+      en: All
+    query: {}
+  - name: tiny
+    title:
+      ja: 超小型 (5B未満)
+      en: Tiny (under 5B)
+    query: {minp: 0.1, maxp: 5}
+  - name: small
+    title:
+      ja: 小型 (5B-15B)
+      en: Small (5B-15B)
+    query: {minp: 5, maxp: 15}
+  - name: middle
+    title:
+      ja: 中型 (15B-100B)
+      en: Middle (15B-100B)
+    query: {minp: 15, maxp: 100}
+  - name: large
+    title:
+      ja: 大型 (100B以上)
+      en: Large (over 100B)
+    query: {minp: 100, maxp: 1000}
+
+pre_title:
+  ja: 事前学習済みモデル
+  en: Pre-trained models
+
+post_title:
+  ja: 事後学習済みモデル
+  en: Post-trained models
+
+pre:
+  - name: ja_pre
+    title:
+      ja: 日本語タスク
+      en: Japanese tasks
+    columns:
+      - ['ja_pre', 'avg']
+      - ['ja_pre', '*']
+  - name: en_pre
+    title:
+      ja: 英語タスク
+      en: English tasks
+    columns:
+      - ['en_pre', 'avg']
+      - ['en_pre', '*']
+
+post:
+  - name: general
+    title:
+      ja: 全般
+      en: general
+    columns:
+      - ['ja_post', 'avg']
+      - ['en_post', 'avg']
+      - ['ja_mtb', 'avg']
+      - ['en_mtb', 'avg']
+  - name: ja_post
+    title:
+      ja: 日本語タスク
+      en: Japanese tasks
+    columns:
+      - ['ja_post', 'avg']
+      - ['ja_post', '*']
+  - name: en_post
+    title:
+      ja: 英語タスク
+      en: English tasks
+    columns:
+      - ['en_post', 'avg']
+      - ['en_post', '*']
+  - name: ja_mtb
+    title:
+      ja: 日本語MT-Bench
+      en: Japanese MT-Bench
+    columns:
+      - ['ja_mtb', 'avg']
+      - ['ja_mtb', '*']
+  - name: en_post
+    title:
+      ja: 英語MT-Bench
+      en: English MT-Bench
+    columns:
+      - ['en_mtb', 'avg']
+      - ['en_mtb', '*']

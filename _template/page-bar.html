@@ -1,0 +1,50 @@
+{% extends "site.html" %}
+
+{% block content_title %}
+<h2 class="page-title">{% if is_post %}{{ ui.post_title }}{% else %}{{ ui.pre_title }}{% endif %}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="row row-deck row-cards">
+
+  <!-- Bar chart -->
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div id="bar" class="chart-lg"></div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        swallow_leaderboard_chart(
+          "bar",
+          {
+            type: "bar",
+            models: {models: {includes: g_filter}},
+            sort: 0,
+            {% if is_post %}
+            tasks: [["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]],
+            {% else %}
+            tasks: [["ja_pre", "avg"], ["en_pre", "avg"]],
+            {% endif %}
+          }
+        );
+      });
+    </script>
+  </div>
+
+  <div class="col-12">
+    {% if is_post %}
+    {% with _tabs=ui.post, _select_all=True %}
+    {% include "table.html" %}
+    {% endwith %}
+    {% else %}
+    {% with _tabs=ui.pre, _select_all=True %}
+    {% include "table.html" %}
+    {% endwith %}
+    {% endif %}
+</div>
+
+</div>
+
+{% endblock %}

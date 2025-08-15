@@ -1,0 +1,791 @@
+# Task definition of post-trained models in Swallow LLM Leaderboard
+# Copyright (c) 2025 Swallow LLM team
+# This file is distributed under Creative Commons Attribution 4.0 (CC-BY 4.0) License
+
+ja_post:
+  for: ['post']
+  title:
+    ja: 事後学習（日本語）
+    en: Post-trained (Japanese)
+  description:
+    ja: 日本語のベンチマークデータで推論型モデルを含む事後学習済みモデルの能力を測定します。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: This benchmark evaluates post-trained LLMs including reasoning models on Japanese benchmark datasets. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: ja_post_avg
+      collective: true
+      title:
+        ja: 事後学習（日本語）平均
+        en: Post-trained (Japanese) average
+      short:
+        ja: 事後（日）平均
+        en: Post (ja) avg
+      description:
+        ja: 事後学習モデル向けの日本語タスクの平均スコア
+        en: Average score of Japanese datasets for post-trained models
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: JEMHopQA
+      field: jemhopqa_cot_f1_score_quasi
+      title: JEMHopQA
+      short: JEMHopQA
+      description:
+        ja: 説明可能なマルチホップ日本語質問応答
+        en: Japanese explainable multi-hop question answering
+      version: v1.2
+      category:
+        ja: 多段階推論
+        en: Multihop reasoning
+      metric:
+        ja: 文字F1 (柔軟)
+        en: Character F1 (lenient)
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://aclanthology.org/2024.lrec-main.831/
+        author: Ishii et al.
+        year: 2024
+    - name: MMLU-ProX
+      field: mmlu_prox_japanese
+      title:
+        ja: MMLU-ProX (日本語)
+        en: MMLU-ProX (Japanese)
+      short:
+        ja: MMLU-ProX (日)
+        en: MMLU-ProX (ja)
+      description:
+        ja: 多分野にわたる高度な言語理解と推論能力
+        en: Proficient-level multi-discipline language understanding and reasoning
+      category:
+        ja: 大学レベルの試験問題
+        en: College-level exam
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 多肢選択
+        en: Multiple choice
+      link:
+        href: https://arxiv.org/abs/2503.10497
+        author: Xuan et al.
+        year: 2025
+    - name: GPQA
+      field: gpqa_main_ja
+      title:
+        ja: GPQA (日本語)
+        en: GPQA (Japanese)
+      short:
+        ja: GPQA (日)
+        en: GPQA (ja)
+      description:
+        ja: 検索では解けない大学院レベルの日本語質問応答
+        en: Graduate-level Google-proof question answering
+      category:
+        ja: 科学
+        en: Science
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 多肢選択
+        en: Multiple choice
+      link:
+        href: https://arxiv.org/abs/2502.07346
+        author: Huang et al.
+        year: 2025
+    - name: MATH100
+      field: mclm_math_100_japanese
+      title:
+        ja: MATH-100 (日本語)
+        en: MATH-100 (Japanese)
+      short:
+        ja: MATH-100 (日)
+        en: MATH-100 (ja)
+      description:
+        ja: コンテストレベルの数学
+        en: Competition-level mathmatics
+      category:
+        ja: 数学
+        en: Mathematics
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://aclanthology.org/2025.acl-long.699/
+        author: Son et al.
+        year: 2025
+    - name: JHumanEval
+      field: jhumaneval_pass@1
+      title: JHumanEval
+      short: JHumanEval
+      description:
+        ja: コード生成能力のベンチマークHumanEvalの日本語訳
+        en: Japanese translation of HumanEval (code genration benchmark)
+      category:
+        ja: コーディング
+        en: Coding
+      metric: Pass@1 (n=10)
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P10-9.pdf
+        author:
+          ja: 佐藤ら
+          en: Sato et al.
+        year: 2024
+    - name: __MIFEvalJa
+      field: mifeval_ja_inst_level_strict_acc
+      title: M-IFEval-Ja
+      short: M-IFEval-Ja
+      exclude_from_avg: true
+      description:
+        ja: 指示追従能力の制御性
+        en: Controllability of instruction following
+      category:
+        ja: 指示追従
+        en: Instruction following
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://aclanthology.org/2025.findings-naacl.344/
+        author: Dussolle et al.
+        year: 2025
+
+en_post:
+  for: ['post']
+  title:
+    ja: 事後学習（英語）
+    en: Post-trained (English)
+  description:
+    ja: 英語のベンチマークデータで推論型モデルを含む事後学習済みモデルの能力を測定します。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: This benchmark evaluates post-trained LLMs including reasoning models on English benchmark datasets. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: en_post_avg
+      collective: true
+      title:
+        ja: 事後学習（英語）平均
+        en: Post-trained (English) average
+      short:
+        ja: 事後（英）平均
+        en: Post (en) avg
+      description:
+        ja: 事後学習モデル向けの英語タスクの平均スコア
+        en: Average score of English datasets for post-trained models
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: HellaSwag
+      field: swallow_hellaswag
+      title: HellaSwag
+      short: HellaSwag
+      description:
+        ja: 次に起こる出来事を予測する4択の選択式問題
+        en: Four-choice questions to predict the next event
+      category:
+        ja: 自然言語推論
+        en: Natural language inference
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 多肢選択
+        en: Multiple choice
+      link:
+        href: https://aclanthology.org/P19-1472/
+        author: Zellers et al.
+        year: 2019
+    - name: MMLU-Pro
+      field: mmlu_pro_english
+      title:
+        ja: MMLU-Pro (英語)
+        en: MMLU-Pro (English)
+      short:
+        ja: MMLU-Pro (英)
+        en: MMLU-Pro (en)
+      description:
+        ja: 多分野にわたる高度な言語理解と推論能力
+        en: Proficient-level multi-discipline language understanding and reasoning
+      category:
+        ja: 大学レベルの試験問題
+        en: College-level exam
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 多肢選択
+        en: Multiple choice
+      link:
+        href: https://neurips.cc/virtual/2024/poster/97435
+        author: Wang et al.
+        year: 2024
+    - name: GPQA
+      field: gpqa_diamond
+      title:
+        ja: GPQA (英語)
+        en: GPQA (English)
+      short:
+        ja: GPQA (英)
+        en: GPQA (en)
+      description:
+        ja: 検索では解けない大学院レベルの質問応答
+        en: Graduate-level Google-proof question answering
+      category:
+        ja: 科学
+        en: Science
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 多肢選択
+        en: Multiple choice
+      link:
+        href: https://openreview.net/forum?id=Ti67584b98
+        author: Rein et al.
+        year: 2024
+    - name: MATH500
+      field: math_500
+      title:
+        ja: MATH-500 (英語)
+        en: MATH-500 (English)
+      short:
+        ja: MATH-500 (英)
+        en: MATH-500 (en)
+      description:
+        ja: コンテストレベルの数学
+        en: Competition-level mathmatics
+      category:
+        ja: 数学
+        en: Mathematics
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html
+        author: Hendrycks et al.
+        year: 2021
+    - name: AIME
+      field: aime_2024_2025
+      title: AIME 2024-2025
+      short: AIME 24-25
+      description:
+        ja: 米国数学オリンピック (USAMO) の予選
+        en: Qualification for the United States Mathematical Olympiad (USAMO)
+      category:
+        ja: 数学
+        en: Mathematics
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット、思考の連鎖プロンプト
+        en: zero-shot, chain-of-thought prompt
+      format:
+        ja: 自由記述
+        en: Free text
+    - name: LCB
+      field: livecodebench_v5_v6_pass@1
+      title: LiveCodeBench
+      short: LCB
+      description:
+        ja: 競技プログラミング (LeetCode, AtCoder, CodeForces)
+        en: Contests across competition platforms (LeetCode, AtCoder, and CodeForces)
+      category:
+        ja: コーディング
+        en: Coding
+      metric: Pass@1 (n=10)
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 自由記述
+        en: Free text
+
+ja_mtb:
+  for: ['post']
+  title:
+    ja: 日本語 MT-Bench
+    en: Japanese MT-Bench
+  description:
+    ja: マルチターン対話能力を測定するMT-Benchの日本語版（Nejumi LLMリーダーボード版）を用いました。設問はv4を、模範回答はv2の誤答を修正したものを採用しています。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: The Japanese version of MT-Bench (Nejumi LLM Leaderboard edition) evaluates multi-turn dialogue capabilities. The test questions are based on v4, and the reference answers are derived from v2 with corrections to incorrect responses. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: japanese_mtbench_average
+      collective: true
+      title:
+        ja: 日本語 MT-Bench 平均
+        en: Average of Japanese MT-Bench
+      short:
+        ja: MTB (日) 平均
+        en: MTB (ja) avg
+      description:
+        ja: 日本語 MT-Bench 8タスクの平均スコア
+        en: Average score of eight tasks of Japanese MT-bench
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: coding
+      field: japanese_mtbench_coding
+      title:
+        ja: コーディング
+        en: Coding
+      short:
+        ja: コード
+        en: Code
+      description:
+        ja: PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する
+        en: Implementing algorithms in Python or C++, and creating websites using HTML.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: extraction
+      field: japanese_mtbench_extraction
+      title:
+        ja: 情報抽出
+        en: Extraction
+      short:
+        ja: 抽出
+        en: Ext
+      description:
+        ja: 文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する
+        en: Extracting named entities (such as author names and numerical values) and sentiment (e.g., positive or negative) from text.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: humanities
+      field: japanese_mtbench_humanities
+      title: 
+        ja: 人文科学
+        en: Humanities
+      short:
+        ja: 人文
+        en: Human
+      description:
+        ja: 法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する
+        en: Creating essays and strategies on topics related to law, economics, history, philosophy, and education.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: math
+      field: japanese_mtbench_math
+      title:
+        ja: 数学
+        en: Math
+      short:
+        ja: 数学
+        en: Math
+      description:
+        ja: 代数、幾何、確率、整数などの問題や文章題に対する解答を作成する
+        en: Generating solutions for problems and word problems in algebra, geometry, probability, and number theory.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: reasoning
+      field: japanese_mtbench_reasoning
+      title:
+        ja: 推論
+        en: Reasoning
+      short:
+        ja: 推論
+        en: Reason
+      description:
+        ja: 常識や推論力を活用して問題に対する解答を作成する
+        en: Generating answers to questions by leveraging common knowledge and reasoning skills.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: roleplay
+      field: japanese_mtbench_roleplay
+      title:
+        ja: ロールプレイ
+        en: Roleplay
+      short:
+        ja: ロール
+        en: Role
+      description:
+        ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
+        en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: stem
+      field: japanese_mtbench_stem
+      title:
+        ja: 科学・技術・工学・数学
+        en: STEM
+      short:
+        ja: STEM
+        en: STEM
+      description:
+        ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する
+        en: Generating answers and explanations on topics related to physics, chemistry, biology, geography, architecture, and machine learning.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: writing
+      field: japanese_mtbench_writing
+      title:
+        ja: 執筆
+        en: Writing
+      short:
+        ja: 執筆
+        en: Write
+      description:
+        ja: ブログ記事やメール文面、フィクションの文章などを執筆するタスク
+        en: Writing blog articles, email drafts, and fictional narratives.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+
+en_mtb:
+  for: ['post']
+  title:
+    ja: 英語 MT-Bench
+    en: 英語 MT-Bench
+  description:
+    ja: マルチターン対話能力を測定する英語 MT-Bench。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: English MT-Bench evaluates multi-turn dialogue capabilities. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: english_mtbench_average
+      collective: true
+      title:
+        ja: 英語 MT-Bench 平均
+        en: Average of English MT-Bench
+      short:
+        ja: MTB (英) 平均
+        en: MTB (en) avg
+      description:
+        ja: 英語 MT-Bench 8タスクの平均スコア
+        en: Average score of eight tasks of English MT-bench
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: coding
+      field: english_mtbench_coding
+      title:
+        ja: コーディング
+        en: Coding
+      short:
+        js: コード
+        en: Code
+      description:
+        ja: PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する
+        en: Implementing algorithms in Python or C++, and creating websites using HTML.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: extraction
+      field: english_mtbench_extraction
+      title:
+        ja: 情報抽出
+        en: Extraction
+      short:
+        ja: 抽出
+        en: Ext
+      description:
+        ja: 文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する
+        en: Extracting named entities (such as author names and numerical values) and sentiment (e.g., positive or negative) from text.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: humanities
+      field: english_mtbench_humanities
+      title: 
+        ja: 人文科学
+        en: Humanities
+      short:
+        ja: 人文
+        en: Human
+      description:
+        ja: 法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する
+        en: Creating essays and strategies on topics related to law, economics, history, philosophy, and education.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: math
+      field: english_mtbench_math
+      title:
+        ja: 数学
+        en: Math
+      short:
+        ja: 数学
+        en: Math
+      description:
+        ja: 代数、幾何、確率、整数などの問題や文章題に対する解答を作成する
+        en: Generating solutions for problems and word problems in algebra, geometry, probability, and number theory.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: reasoning
+      field: english_mtbench_reasoning
+      title:
+        ja: 推論
+        en: Reasoning
+      short:
+        ja: 推論
+        en: Reason
+      description:
+        ja: 常識や推論力を活用して問題に対する解答を作成する
+        en: Generating answers to questions by leveraging common knowledge and reasoning skills.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: roleplay
+      field: english_mtbench_roleplay
+      title:
+        ja: ロールプレイ
+        en: Roleplay
+      short:
+        ja: ロール
+        en: Role
+      description:
+        ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
+        en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: stem
+      field: english_mtbench_stem
+      title:
+        ja: 科学・技術・工学・数学
+        en: STEM
+      short:
+        ja: STEM
+        en: STEM
+      description:
+        ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する
+        en: Generating answers and explanations on topics related to physics, chemistry, biology, geography, architecture, and machine learning.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: writing
+      field: english_mtbench_writing
+      title:
+        ja: 執筆
+        en: Writing
+      short:
+        ja: 執筆
+        en: Write
+      description:
+        ja: ブログ記事やメール文面、フィクションの文章などを執筆するタスク
+        en: Writing blog articles, email drafts, and fictional narratives.
+      metric:
+        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
+        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+      link:
+        href:
+          ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+          en: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
+        author:
+          ja: Zheng et al.
+          en: Zheng et al.
+        year:
+          ja: 2023
+          en: 2023

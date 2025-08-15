@@ -3,132 +3,15 @@
     <div id="bar-{{ _id }}" class="chart-lg"></div>
   </div>
 </div>
-
 <script>
-  // @formatter:off
   document.addEventListener("DOMContentLoaded", function () {
-    // Implement a function to build data for the bar chart.
-    var build = function() {
-      let tasks = {{ _modelcat.tasks | tojson }};
-      let sortcat = {{ _modelcat.sort[0] | tojson }};
-      let sorttask = {{ _modelcat.sort[1] | tojson }};
-
-      // Build an array of models and sort them by the sort key.
-      let models = [];
-      for (let key in g_models) {
-        if (g_filter === null || g_filter.includes(g_models[key]['id'])) {
-          models.push(g_models[key]);
-        }
+    swallow_leaderboard_chart(
+      "bar-{{ _id }}",
+      {
+        type: "bar",
+        models: {type: "post", maxp: 10, sortkey: ["ja_mtb", "avg"]},
+        tasks: [["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]],
       }
-
-      // Sort the models.
-      models.sort((a, b) => a.results[sortcat][sorttask] - b.results[sortcat][sorttask]);
-
-      // Build series.
-      let series = [];
-      let labels = [];
-      for (var task of tasks) {
-        let data = [];
-        for (var model of models) {
-          data.push(model.results[task[0]][task[1]]);
-        }
-        series.push({name: g_taskcats[task[0]].tasks[task[1]].title, data: data});
-      }
-
-      // Build labels.
-      for (var model of models) {
-        labels.push(model.name);
-      }
-
-      return [series, labels];
-    };
-
-    var get_option = function(series, labels) {
-      // Determine the orientation.
-      const horizontal = (window.outerWidth < window.outerHeight);
-      const height = horizontal ? Math.max(480, labels.length * 16 + 64) : 480;
-      const padding = horizontal ? {} : { left: 48, right: 48, top: 0, bottom: 64 };
-      return {
-        chart: {
-          type: "bar",
-          id: "bar-{{ _id }}",
-          fontFamily: 'inherit',
-          height: height,
-          parentHeightOffset: 0,
-          animations: {
-            enabled: true
-          },
-        },
-        plotOptions: {
-          bar: {
-            horizontal: horizontal,
-          },
-        },
-        grid: {
-          padding: padding,
-        },
-        series: series,
-        xaxis: {
-          categories: labels,
-          labels: {
-            hideOverlappingLabels: false,
-            style: {
-  //            fontSize: '9px',
-            }
-          }
-        },
-        yaxis: {
-          tickAmount: 5,
-          min: 0.,
-          max: 1.,
-          labels: {
-            formatter: function(val) {
-              return typeof val == "string" ? val : parseFloat(val).toFixed(1);
-            }
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        legend: {
-          position: 'top',
-        },
-        tooltip: {
-          marker: {
-            show: false,
-          },
-          y: {
-            formatter: function(val) {
-              return typeof val == "string" ? val : parseFloat(val).toFixed(4);
-            }
-          },
-        },
-      }
-    };
-
-    // Build the data for the first time.
-    D = build();
-    series = D[0];
-    labels = D[1];
-    option = get_option(series, labels);
-
-    // Create the bar chart.
-    window.ApexCharts && (new ApexCharts(document.getElementById('bar-{{ _id }}'), option)).render();
-
-    // Register an update function.
-    g_updater.push(function() {
-      D = build();
-      series = D[0];
-      labels = D[1];
-      option = get_option(series, labels);
-
-      ApexCharts.exec("bar-{{ _id }}", 'updateOptions', option, false, true);
-    });
+    );
   });
-  // @formatter:on
 </script>

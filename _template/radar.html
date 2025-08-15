@@ -1,67 +1,20 @@
-{% set cat = taskcats[_category] %}
-
 <div class="card">
   <div class="card-body">
-    <h3 class="card-title">{{ cat.title }}</h3>
-    <div id="radar-{{ _category }}" class="chart-lg"></div>
+    <h3 class="card-title">{{ taskspec[_category].title }}</h3>
+    <div id="{{ _id }}" class="chart-lg"></div>
   </div>
 </div>
 
 <script>
-  // @formatter:off
   document.addEventListener("DOMContentLoaded", function () {
-    var build = function() {
-      let series = [];
-      let tasks = null;
-
-      for (let i = 0; i < g_filter.length; ++i) {
-        const m = g_models[g_filter[i]];
-        series.push({
-          name: m.name,
-          data: m.radar["{{ _category }}"].series,
-        });
-        tasks = m.radar["{{ _category }}"].tasks;
-      }
-      return [series, tasks];
-    }
-
-    D = build();
-    var series = D[0];
-    var tasks = D[1];
-
-    window.ApexCharts && (new ApexCharts(document.getElementById('radar-{{ _category }}'), {
-      chart: {
+    swallow_leaderboard_chart(
+      "{{ _id }}",
+      {
         type: "radar",
-        id: "radar-{{ _category }}",
-        fontFamily: 'inherit',
-        height: {{ _height }},
-        parentHeightOffset: 0,
-      },
-      series: series,
-      xaxis: {
-        categories: tasks,
-      },
-      yaxis: {
-        show: false,
-        tickAmount: 5,
-        min: 0.,
-        max: 1.,
-      },
-      tooltip: {
-        marker: {
-          show: false,
-        },
-      },
-    })).render();
-
-    // Register an update function.
-    g_updater.push(function() {
-      D = build();
-      series = D[0];
-      labels = D[1];
-
-      ApexCharts.exec("radar-{{ _category }}", 'updateSeries', series, true);
-    });
+        models: {includes: g_filter},
+        tasks: [["{{ _category }}", "*"]],
+        height: "{{ _height }}",
+      }
+    );
   });
-  // @formatter:on
 </script>
