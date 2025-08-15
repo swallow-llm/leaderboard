@@ -133,3 +133,15 @@ if __name__ == '__main__':
             uri = model['id'].replace('/', '_')
             args['select'] = model['id']
             generate(env, 'page-radar.html', f'{uri}.{lang}.html', args)
+
+        # About page.
+        about = load_yaml('_data/about.yml', lang)
+        about['issues']['content'] = md.render(about['issues']['content'])
+        args = dict(
+            about=about,
+            models={m['id']: m for m in models},
+            taskspec=taskspec_pre | taskspec_post,
+            ui=ui,
+            lang=lang,
+        )
+        generate(env, 'about.html', f'about.{lang}.html', args)

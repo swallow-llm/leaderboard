@@ -2018,7 +2018,7 @@
   name: Llama 4 Scout
   date: '2025-04-04'
   params: 109
-  active_params: 109
+  active_params: 17
   base: －
   sortkey: llama 4 scout
   is_post: false

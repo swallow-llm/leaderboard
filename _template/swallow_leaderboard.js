@@ -168,6 +168,9 @@ var swallow_leaderboard_chart_bar = function(element, config) {
       noData: {
         text: "モデルを選択してください (Select a model)",
       },
+      theme: {
+        mode: document.documentElement.getAttribute("data-bs-theme") == "dark" ? "dark" : "light",
+      },
     }
   };
 
@@ -235,7 +238,10 @@ var swallow_leaderboard_chart_radar = function(element, config) {
       },
       noData: {
         text: "モデルを選択してください (Select a model)",
-      }
+      },
+      theme: {
+        mode: document.documentElement.getAttribute("data-bs-theme") == "dark" ? "dark" : "light",
+      },
     };
   };
   
@@ -349,6 +355,9 @@ var swallow_leaderboard_chart_scatter = function(element, config) {
         marker: {show: false},
         x: {formatter: (xcat == "params" || xcat == "active_params") ? format_params : format_value},
         y: {formatter: (ycat == "params" || ycat == "active_params") ? format_params : format_value},
+      },
+      theme: {
+        mode: document.documentElement.getAttribute("data-bs-theme") == "dark" ? "dark" : "light",
       },
     };
   };
