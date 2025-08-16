@@ -43,23 +43,23 @@
 </head>
 <body >
   <script>
-    var themeStorageKey = "tablerTheme";
-    var defaultTheme = "light";
-    var selectedTheme;
     var params = new Proxy(new URLSearchParams(window.location.search), {
       get: function get(searchParams, prop) {
         return searchParams.get(prop);
       }
     });
 
+    // 
+    var selectedTheme;
     if (!!params.theme) {
-      localStorage.setItem(themeStorageKey, params.theme);
+      localStorage.setItem("theme", params.theme);
       selectedTheme = params.theme;
     } else {
-      var storedTheme = localStorage.getItem(themeStorageKey);
-      selectedTheme = storedTheme ? storedTheme : defaultTheme;
+      var storedTheme = localStorage.getItem("theme");
+      selectedTheme = storedTheme ? storedTheme : "light";
     }
     document.documentElement.setAttribute("data-bs-theme", selectedTheme);
+
   </script>
   <div class="page">
     <!-- Navbar -->
@@ -76,12 +76,12 @@
         </h1>
         <div class="navbar-nav flex-row order-md-last">
           <div class="nav-item dropdown">
-            <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
+            <a id="link-dark" href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
             data-bs-placement="bottom" aria-label="Enable dark mode" data-bs-original-title="Enable dark mode">
               <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
             </a>
-            <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip"
+            <a id="link-light" href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip"
             data-bs-placement="bottom" aria-label="Enable light mode" data-bs-original-title="Enable light mode">
               <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
@@ -104,7 +104,12 @@
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
                         {% for child in item.children %}
-                        <a class="dropdown-item" href="{{ child.path }}.{{ lang }}.html">{{ child.svg }} {{ child.title }}</a>
+                        {% if "break" in child %}
+                        </div>
+                        <div class="dropdown-menu-column">
+                        {% else %}
+                        <a class="dropdown-item" href="{{ child.path }}.{{ lang }}.html{% if child.query %}?{{ child.query }}{% endif %}">{{ child.svg }} {{ child.title }}</a>
+                        {% endif %}
                         {% endfor %}
                       </div>
                     </div>
@@ -188,13 +193,48 @@
   <script src="{{ jspath }}"></script>
   <script>
     var g_filter = [];
-    {% if select == "__ALL__" %}
-    for (let key in g_models) {
-      g_filter.push(g_models[key].id);
+
+    var params = new Proxy(new URLSearchParams(window.location.search), {
+      get: function get(searchParams, prop) {
+        return searchParams.get(prop);
+      }
+    });
+
+    if (!!params.category) {
+      const category = params.category;
+      const selections = {{ ui.model_selection | tojson }};
+
+      var e = document.getElementById('link-dark');
+      var old = e.getAttribute('href');
+      e.setAttribute('href', old+ "&category=" + category);
+
+      e = document.getElementById('link-light');
+      old = e.getAttribute('href');
+      e.setAttribute('href', old+ "&category=" + category);
+
+      for (selection of selections) {
+        if (selection.name == category) {
+          const query = selection.query;
+          console.log(query);
+          const models = swallow_leaderboard_models(query);
+
+          g_filter = [];
+          for (let model of models) {
+            g_filter.push(model.id);
+          }
+        }
+      }
+
+    } else {
+      {% if select == "__ALL__" %}
+      for (let key in g_models) {
+        g_filter.push(g_models[key].id);
+      }
+      {% elif select != "" %}
+        g_filter.push("{{ select }}");
+      {% endif %}
     }
-    {% elif select != "" %}
-      g_filter.push("{{ select }}");
-    {% endif %}
+
   </script>
 </body>
 </html>

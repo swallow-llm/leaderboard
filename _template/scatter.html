@@ -42,7 +42,7 @@
       "scatter-{{ _id }}",
       {
         type: "scatter",
-        models: {},
+        models: {includes: g_filter},
         xaxis: ["params", ""],
         yaxis: ["{{ _ycat }}", "{{ _yname }}"],
       }

@@ -99,6 +99,55 @@ nav:
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
         path: index-post
+      - name: bar-post-openai
+        title:
+          ja: OpenAI系統
+          en: OpenAI family
+        path: index-post
+        query: category=openai
+      - name: bar-post-llama
+        title:
+          ja: Llama系統
+          en: Llama family
+        path: index-post
+        query: category=llama
+      - name: bar-post-gemma
+        title:
+          ja: Gemma系統
+          en: Gemma family
+        path: index-post
+        query: category=gemma
+      - name: bar-post-qwen
+        title:
+          ja: Qwen系統
+          en: Qwen family
+        path: index-post
+        query: category=qwen
+      - name: bar-post-tiny
+        title:
+          ja: 超小型 (5B未満)
+          en: Tiny (under 5B)
+        path: index-post
+        query: category=tiny
+      - name: bar-post-small
+        title:
+          ja: 小型 (5B-15B)
+          en: Small (5B-15B)
+        path: index-post
+        query: category=small
+      - name: bar-post-middle
+        title:
+          ja: 中型 (15B-100B)
+          en: Middle (15B-100B)
+        path: index-post
+        query: category=middle
+      - name: bar-post-large
+        title:
+          ja: 大型 (100B以上)
+          en: Large (over 100B)
+        path: index-post
+        query: category=large
+      - break: true
       - name: bar-pre
         path: bar-pre
         title:
@@ -106,6 +155,54 @@ nav:
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></svg>
         path: index-pre
+      - name: bar-pre-openai
+        title:
+          ja: OpenAI系統
+          en: OpenAI family
+        path: index-pre
+        query: category=openai
+      - name: bar-pre-llama
+        title:
+          ja: Llama系統
+          en: Llama family
+        path: index-pre
+        query: category=llama
+      - name: bar-pre-gemma
+        title:
+          ja: Gemma系統
+          en: Gemma family
+        path: index-pre
+        query: category=gemma
+      - name: bar-pre-qwen
+        title:
+          ja: Qwen系統
+          en: Qwen family
+        path: index-pre
+        query: category=qwen
+      - name: bar-pre-tiny
+        title:
+          ja: 超小型 (5B未満)
+          en: Tiny (under 5B)
+        path: index-pre
+        query: category=tiny
+      - name: bar-pre-small
+        title:
+          ja: 小型 (5B-15B)
+          en: Small (5B-15B)
+        path: index-pre
+        query: category=small
+      - name: bar-pre-middle
+        title:
+          ja: 中型 (15B-100B)
+          en: Middle (15B-100B)
+        path: index-pre
+        query: category=middle
+      - name: bar-pre-large
+        title:
+          ja: 大型 (100B以上)
+          en: Large (over 100B)
+        path: index-pre
+        query: category=large
   - name: radar
     title:
       ja: タスク毎
@@ -118,6 +215,19 @@ nav:
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
         path: radar-post
+      - name: radar-post-sota
+        title:
+          ja: 最先端モデル
+          en: State of the art
+        path: radar-post
+        query: category=post-sota
+      - name: radar-post-sota-open
+        title:
+          ja: 最先端オープンモデル
+          en: State-of-the-art open
+        path: radar-post
+        query: category=post-sota-open
+      - break: true
       - name: radar-pre
         path: radar-pre
         title:
@@ -137,6 +247,7 @@ nav:
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
         path: scatter-post
+      - break: true
       - name: scatter-pre
         path: scatter-pre
         title:
@@ -177,6 +288,36 @@ model_selection:
       ja: 大型 (100B以上)
       en: Large (over 100B)
     query: {minp: 100, maxp: 1000}
+  - name: openai
+    title:
+      ja: OpenAI系統
+      en: OpenAI family
+    query: {family: ["gpt", "o3"]}
+  - name: llama
+    title:
+      ja: Llama系統
+      en: Llama family
+    query: {family: "llama"}
+  - name: gemma
+    title:
+      ja: Gemma系統
+      en: Gemma family
+    query: {family: ["gemma", "medgemma"]}
+  - name: qwen
+    title:
+      ja: Qwen系統
+      en: Qwen family
+    query: {family: "qwen"}
+  - name: post-sota
+    title:
+      ja: 最先端事後学習モデル
+      en: State of the art
+    query: {includes: ["gpt-5-2025-08-07", "openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507"]}
+  - name: post-sota-open
+    title:
+      ja: 最先端オープン事後学習モデル
+      en: State-of-the-art open
+    query: {includes: ["openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507", "meta-llama/Llama-4-Scout-17B-16E-Instruct", "google/gemma-3-27b-it"]}
 
 pre_title:
   ja: 事前学習済みモデル

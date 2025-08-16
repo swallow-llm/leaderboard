@@ -16,11 +16,12 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        console.log(g_filter);
         swallow_leaderboard_chart(
           "bar",
           {
             type: "bar",
-            models: {models: {includes: g_filter}},
+            models: {includes: g_filter},
             sort: 0,
             {% if is_post %}
             tasks: [["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]],

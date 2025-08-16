@@ -20,6 +20,27 @@ var swallow_leaderboard_models = function(query, sortkey) {
         continue;
       }
 
+      // Filter by the model family.
+      if ("family" in query) {
+        const family = model.family.toLowerCase();
+        if (Array.isArray(query.family)) {
+          let m = false;
+          for (let f of query.family) {
+            if (family.startsWith(f.toLowerCase())) {
+              m = true;
+              break;
+            }
+          }
+          if (!m) {
+            continue;
+          }
+        } else {
+          if (!family.startsWith(query.family.toLowerCase())) {
+            continue;
+          }
+        }
+      }
+
       // Filter by the model size.
       if ("minp" in query && model['params'] < query.minp) {
         continue;
