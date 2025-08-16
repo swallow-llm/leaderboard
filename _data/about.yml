@@ -2,7 +2,7 @@ description:
   ja: 日本語理解・生成タスクとして10件のデータセット、英語理解・生成タスクとして10件のデータセット、日本語マルチターン対話タスクとして日本語MT-Benchを用い、LLMの自動評価を行っています
   en: We are conducting LLM evaluation experiments using 10 datasets for the Japanese understanding and generation tasks, 10 datasets for the English understanding and generation tasks, and MT-Bench for the Japanese multi-turn dialogue task.
 about:
-  ja: <p><a href="https://swallow-llm.github.io/">Swallowプロジェクト</a>では、日本語に強い大規模言語モデル (LLM) の開発と並行して、主要なLLMの評価実験を独自に進めています。日本国内のみならず、世界中で開発されたLLMと比較することで、Swallowプロジェクトの「現在地」を知ることができます。各LLMの独自仕様（トークン化やシステムプロンプトなど）を加味しながら公平な条件で評価を行い、各LLMの開発方法と照らし合わせることで、高性能なLLMを開発するための「レシピ」を模索できます。このサイトでは、Swallowプロジェクト内で実施されたLLMの評価結果を棒グラフやレーダーチャート、散布図などで閲覧できます。高性能なLLMを選択するための情報としてだけでなく、日本語に強いLLM開発の参考情報としてもお役に立てると幸いです。</p><p>このリーダーボードのコンテンツ（データやグラフ等）はクリエイティブ・コモンズ 表示 4.0 (CC-BY 4.0) ライセンスで、評価ソフトウェア（<a href="https://github.com/swallow-llm/swallow-evaluation">swallow-evaluation</a>）はMITライセンスで、この<a href="https://github.com/swallow-llm/leaderboard">ウェブサイトのソースコード</a>はMITライセンスで提供しています。</p>
+  ja: <p><a href="https://swallow-llm.github.io/">Swallowプロジェクト</a>では、日本語に強い大規模言語モデル (LLM) の開発と並行して、主要なLLMの評価実験を独自に進めています。日本国内のみならず、世界中で開発されたLLMと比較することで、Swallowプロジェクトの「現在地」を知ることができます。各LLMの独自仕様（トークン化やシステムプロンプトなど）を加味しながら公平な条件で評価を行い、各LLMの開発方法と照らし合わせることで、高性能なLLMを開発するための「レシピ」を模索できます。このサイトでは、Swallowプロジェクト内で実施されたLLMの評価結果を棒グラフやレーダーチャート、散布図などで閲覧できます。高性能なLLMを選択するための情報としてだけでなく、日本語に強いLLM開発の参考情報としてもお役に立てると幸いです。</p><p>このリーダーボードのコンテンツ（データやグラフ等）はクリエイティブ・コモンズ 表示 4.0 (CC-BY 4.0) ライセンスで、評価ソフトウェア（<a href="https://github.com/swallow-llm/swallow-evaluation-instruct">swallow-evaluation-instruct</a>と<a href="https://github.com/swallow-llm/swallow-evaluation">swallow-evaluation</a>）はMITライセンスで、この<a href="https://github.com/swallow-llm/leaderboard">ウェブサイトのソースコード</a>はMITライセンスで提供しています。</p>
   en: <p>The <a href="https://swallow-llm.github.io/">Swallow Project</a> is conducting independent evaluation experiments on major large language models (LLMs) in parallel with the development of a high-performance LLM specialized in Japanese. By comparing LLMs developed not only in Japan but also worldwide, we can better understand the current level of the Swallow Project. We conduct evaluations under fair conditions while considering the unique specifications of each LLM, such as tokenization and system prompts. By analyzing these evaluations in relation to the development methods of each LLM, we aim to explore the "recipe" for creating a high-performance LLM. This website visualizes the evaluation results of LLMs tested within the Swallow Project in bar charts, radar charts, and scatter plots. We hope this website serves not only as a guide for selecting high-performance LLMs but also as a reference for developing LLMs with strong Japanese language capabilities.</p><p>The content of this leaderboard (including data and graphs) is provided under a Creative Commons Attribution 4.0 (CC-BY 4.0) License, the evaluation software (<a href="https://github.com/swallow-llm/swallow-evaluation">swallow-evaluation</a>) is distributed under the MIT License, and the <a href="https://github.com/swallow-llm/leaderboard">source code of this website</a> is also provided under the MIT License.</p>
 
 changelog:
@@ -10,6 +10,26 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2025-08-18
+      text:
+        - ja: Swallow LLM Leaderboard v2を公開しました。
+          en: Released Swallow LLM Leaderboard v2.
+        - ja: 推論型モデルなどの新しい大規模言語モデルの能力を正しく測定するため、事後学習済みモデル向けの評価ベンチマーク・評価方法を刷新しました。日本語ベンチマーク6件（JEMHopQA, MMLU-ProX, GPQA, MATH-100, JHumanEval, M-IFEval-Ja）、英語ベンチマーク6件（HellaSwag, MMLU-Pro, GPQA, MATH-500, AIME 2024-2025, LiveCodeBench）を採用し、評価方法をzero-shot推論（以前はfew-shot推論）に変更しました。なお、開発した評価フレームワークは<a href="https://github.com/swallow-llm/swallow-evaluation-instruct">swallow-evaluation-instruct</a>として公開しました。
+          en: 
+        - ja: ABEJA-QwQ32b-Reasoning-Japanese-v1.0、DeepSeek-R1-Distillシリーズ、ELYZA-Thinking-1.0-Qwen-32B、GPT-5 (gpt-5-2025-08-07)、gpt-oss-20b、gpt-oss-120b、Llama-3.1-Nemotronシリーズ、Llama 4 Scout Instruct、MedGemma 27B IT、o3 (o3-2025-04-16)、o3-mini (o3-mini-2025-01-31)、Phi-4-reasoning-plus、Qwen3シリーズの評価結果を追加しました。
+          en: 
+        - ja: 総合（平均スコアの棒グラフ）、タスク毎（レーダーチャート）、散布図の3種類のページからなる構成に変更しました。それぞれ、事前学習済みモデル（事後学習なし）、または事後学習済みモデルの評価結果が可視化されます。
+          en: 
+        - ja: 各ページに表示されるモデルの一覧（表）の右側に、規模やカテゴリでモデルを一括選択する機能を実装しました。
+          en: 
+        - ja: 総合ページの棒グラフでいずれかのモデル名をクリックすると、モデルの整列順が切り替わる機能を実装しました。
+          en: 
+        - ja: 専門家の混合（MoE; Mixture of Experts）のモデルに対して、有効パラメータ数を表示するようにしました。
+          en: 
+        - ja: 散布図のプロットの色をモデルの系統別（OpenAI系、Llama系、Gemma系、Qwen系、その他）で色分けするようにしました。
+          en: 
+        - ja: 以前のバージョンを<a href="https://swallow-llm.github.io/leaderboard-v1/">https://swallow-llm.github.io/leaderboard-v1/</a>に移動しました。
+          en: The old version was moved to <a href="https://swallow-llm.github.io/leaderboard-v1/">https://swallow-llm.github.io/leaderboard-v1/</a>.
     - date: 2025-06-27
       text:
         - ja: llm-jp-3.1-*-instruct4のドメイン内評価（in-domain評価）に関して注釈を追加しました。

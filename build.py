@@ -96,7 +96,7 @@ if __name__ == '__main__':
             is_post=False,
             select='__ALL__',
         )
-        generate(env, 'page-bar.html', f'bar-pre.{lang}.html', args)
+        generate(env, 'page-bar.html', f'index-pre.{lang}.html', args)
         generate(env, 'page-scatter.html', f'scatter-pre.{lang}.html', args)
         args['select'] = ''
         generate(env, 'page-radar.html', f'radar-pre.{lang}.html', args)
@@ -125,7 +125,7 @@ if __name__ == '__main__':
             select='__ALL__',
         )
 
-        generate(env, 'page-bar.html', f'bar-post.{lang}.html', args)
+        generate(env, 'page-bar.html', f'index-post.{lang}.html', args)
         generate(env, 'page-scatter.html', f'scatter-post.{lang}.html', args)
         args['select'] = ''
         generate(env, 'page-radar.html', f'radar-post.{lang}.html', args)

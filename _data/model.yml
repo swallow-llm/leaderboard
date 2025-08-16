@@ -487,6 +487,7 @@
   date: '2024-12-19'
   params: 1.7
   active_params: 1.7
+  family: Falcon3
   base: Falcon3-3B-Base
   sortkey: falcon3
   is_post: false
@@ -521,6 +522,7 @@
   date: '2024-12-19'
   params: 3.2
   active_params: 3.2
+  family: Falcon3
   base: Falcon3-7B-Base
   sortkey: falcon3
   is_post: false
@@ -555,6 +557,7 @@
   date: '2024-12-19'
   params: 7.5
   active_params: 7.5
+  family: Falcon3
   base: －
   sortkey: falcon3
   is_post: false
@@ -589,6 +592,7 @@
   date: '2024-12-19'
   params: 10
   active_params: 10
+  family: Falcon3
   base: Falcon3-7B-Base
   sortkey: falcon3
   is_post: false
@@ -623,6 +627,7 @@
   date: '2024-06-27'
   params: 2.6
   active_params: 2.6
+  family: Gemma 2
   base: －
   sortkey: gemma 2
   is_post: false
@@ -705,6 +710,7 @@
   date: '2024-06-27'
   params: 9.2
   active_params: 9.2
+  family: Gemma 2
   base: －
   sortkey: gemma 2
   is_post: false
@@ -787,6 +793,7 @@
   date: '2024-06-27'
   params: 27
   active_params: 27
+  family: Gemma 2
   base: －
   sortkey: gemma 2
   is_post: false
@@ -1013,6 +1020,7 @@
   date: '2025-03-12'
   params: 1
   active_params: 1
+  family: Gemma 3
   base: －
   sortkey: gemma 3
   is_post: false
@@ -1095,6 +1103,7 @@
   date: '2025-03-12'
   params: 4.3
   active_params: 4.3
+  family: Gemma 3
   base: －
   sortkey: gemma 3
   is_post: false
@@ -1177,6 +1186,7 @@
   date: '2025-03-12'
   params: 12
   active_params: 12
+  family: Gemma 3
   base: －
   sortkey: gemma 3
   is_post: false
@@ -1547,6 +1557,7 @@
   date: '2024-07-23'
   params: 8.0
   active_params: 8.0
+  family: Llama 3.1
   base: －
   sortkey: llama 3.1
   is_post: false
@@ -1629,6 +1640,7 @@
   date: '2024-07-23'
   params: 70
   active_params: 70
+  family: Llama 3.1
   base: －
   sortkey: llama 3.1
   is_post: false
@@ -1807,6 +1819,7 @@
   date: '2024-09-25'
   params: 1.2
   active_params: 1.2
+  family: Llama 3.2
   base: －
   sortkey: llama 3.2
   is_post: false
@@ -1841,6 +1854,7 @@
   date: '2024-09-25'
   params: 3.2
   active_params: 3.2
+  family: Llama 3.2
   base: －
   sortkey: llama 3.2
   is_post: false
@@ -2019,6 +2033,7 @@
   date: '2025-04-04'
   params: 109
   active_params: 17
+  family: Llama 4
   base: －
   sortkey: llama 4 scout
   is_post: false
@@ -2101,6 +2116,7 @@
   date: '2024-09-25'
   params: 1.8
   active_params: 1.8
+  family: llm-jp-3
   base: －
   sortkey: llm jp 3
   is_post: false
@@ -2135,6 +2151,7 @@
   date: '2024-09-25'
   params: 3.7
   active_params: 3.7
+  family: llm-jp-3
   base: －
   sortkey: llm jp 3
   is_post: false
@@ -2169,6 +2186,7 @@
   date: '2025-02-05'
   params: 7.3
   active_params: 7.3
+  family: llm-jp-3
   base: －
   sortkey: llm jp 3
   is_post: false
@@ -2203,6 +2221,7 @@
   date: '2024-09-25'
   params: 13
   active_params: 13
+  family: llm-jp-3
   base: －
   sortkey: llm jp 3
   is_post: false
@@ -2573,6 +2592,7 @@
   date: '2025-02-21'
   params: 1.3
   active_params: 1.3
+  family: PLaMo 2
   base: －
   sortkey: plamo 2
   is_post: false
@@ -2607,6 +2627,7 @@
   date: '2025-02-21'
   params: 9.1
   active_params: 9.1
+  family: PLaMo 2
   base: －
   sortkey: plamo 2
   is_post: false
@@ -2641,6 +2662,7 @@
   date: '2024-09-19'
   params: 1.5
   active_params: 1.5
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -2675,6 +2697,7 @@
   date: '2024-09-19'
   params: 3.1
   active_params: 3.1
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -2709,6 +2732,7 @@
   date: '2024-09-19'
   params: 7.6
   active_params: 7.6
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -2791,6 +2815,7 @@
   date: '2024-09-19'
   params: 14
   active_params: 14
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -2873,6 +2898,7 @@
   date: '2024-09-19'
   params: 33
   active_params: 33
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -2955,6 +2981,7 @@
   date: '2024-09-19'
   params: 72
   active_params: 72
+  family: Qwen2.5
   base: －
   sortkey: qwen2.5
   is_post: false
@@ -3037,6 +3064,7 @@
   date: '2025-04-29'
   params: 0.6
   active_params: 0.6
+  family: Qwen3
   base: －
   sortkey: qwen3
   is_post: false
@@ -3119,6 +3147,7 @@
   date: '2025-04-29'
   params: 1.7
   active_params: 1.7
+  family: Qwen3
   base: －
   sortkey: qwen3
   is_post: false
@@ -3201,6 +3230,7 @@
   date: '2025-04-29'
   params: 4.0
   active_params: 4.0
+  family: Qwen3
   base: －
   sortkey: qwen3
   is_post: false
@@ -3235,6 +3265,7 @@
   date: '2025-04-29'
   params: 8.2
   active_params: 8.2
+  family: Qwen3
   base: －
   sortkey: qwen3
   is_post: false
@@ -3317,6 +3348,7 @@
   date: '2025-04-29'
   params: 15
   active_params: 15
+  family: Qwen3
   base: －
   sortkey: qwen3
   is_post: false
@@ -3447,6 +3479,7 @@
   date: '2025-04-29'
   params: 31
   active_params: 3.3
+  family: Qwen3
   base: －
   sortkey: qwen3 a
   is_post: false
@@ -3577,6 +3610,7 @@
   date: '2024-06-14'
   params: 7.3
   active_params: 7.3
+  family: Sarashina2
   base: －
   sortkey: sarashina2
   is_post: false
@@ -3611,6 +3645,7 @@
   date: '2024-06-14'
   params: 13
   active_params: 13
+  family: Sarashina2
   base: －
   sortkey: sarashina2
   is_post: false
@@ -3645,6 +3680,7 @@
   date: '2024-06-14'
   params: 70
   active_params: 70
+  family: Sarashina2
   base: －
   sortkey: sarashina2
   is_post: false
@@ -3679,6 +3715,7 @@
   date: '2025-03-07'
   params: 0.8
   active_params: 0.8
+  family: Sarashina2
   base: －
   sortkey: sarashina2.2
   is_post: false
@@ -3713,6 +3750,7 @@
   date: '2025-03-07'
   params: 1.4
   active_params: 1.4
+  family: Sarashina2
   base: －
   sortkey: sarashina2.2
   is_post: false
@@ -3747,6 +3785,7 @@
   date: '2025-03-07'
   params: 3.4
   active_params: 3.4
+  family: Sarashina2
   base: －
   sortkey: sarashina2.2
   is_post: false
@@ -3829,6 +3868,7 @@
   date: '2025-01-30'
   params: 1.5
   active_params: 1.5
+  family: Qwen2.5
   base: Qwen2.5-1.5B-Instruct
   sortkey: tinyswallow
   is_post: false

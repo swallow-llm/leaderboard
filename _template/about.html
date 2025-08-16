@@ -14,12 +14,13 @@
   <div class="col-sm-6 col-lg-3">
     <div class="card">
       <div class="card-body">
-        {% if item.subtitle %}<div class="subheader">{{ item.subtitle }}</div>{% endif %}
+        {% if item.category %}<div class="subheader">{{ item.category }}</div>{% endif %}
         <h5 class="card-title mb-3">{{ item.title }}</h5>
         {% if item.description %}<p class="text-secondary">{{ item.description }}</p>{% endif %}
         {% if item.metric %}<div>{{ ui.metric }}: <span class="text-secondary">{{ item.metric }}</span></div>{% endif %}
         {% if item.setting %}<div>{{ ui.setting }}: <span class="text-secondary">{{ item.setting }}</span></div>{% endif %}
         {% if item.link %}<div>{{ ui.reference }}: <span class="text-secondary"><a href="{{ item.link.href }}">{{ item.link.author }} ({{ item.link.year }})</a></span></div>{% endif %}
+        {% if item.remark %}<p class="text-warning">{{ item.remark }}</p>{% endif %}
       </div>
     </div>
   </div>

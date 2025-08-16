@@ -36,8 +36,6 @@ var swallow_leaderboard_models = function(query, sortkey) {
       models.push(model);
     }
 
-    console.log(models);
-
     // Sort models.
     if (sortkey !== undefined) {
       models.sort((a, b) => a.results[sortkey[0]][sortkey[1]] - b.results[sortkey[0]][sortkey[1]]);
@@ -60,7 +58,6 @@ var swallow_leaderboard_tasks = function(queries) {
   let tasks = [];
 
   for (let query of queries) {
-    console.log(query);
     for (task of g_tasks[query[0]].tasks) {
       if (task.name == query[1] || (query[1] == "__ALL__" && !task.collective)) {
         tasks.push(task);
@@ -266,6 +263,11 @@ var swallow_leaderboard_chart_scatter = function(element, config) {
     const xname = config.xaxis[1]
     const ycat = config.yaxis[0];
     const yname = config.yaxis[1];
+    // There seems to be no way to obtain a color palette from ApexCharts,
+    // so these colors are hard coded.
+    const theme_colors = document.documentElement.getAttribute("data-bs-theme") == "dark" ? 
+      ['#4ECDC4', '#C7F464', '#81D4FA', '#FD6A6A', '#546E7A']: 
+      ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0'];
 
     var format_params = function(val) {
       const v = Math.pow(2, parseFloat(val));
@@ -315,7 +317,18 @@ var swallow_leaderboard_chart_scatter = function(element, config) {
     for (let model of models) {
       const x = (xcat == "params" || xcat == "active_params") ? Math.log2(model[xcat]) : model.results[xcat][xname];
       const y = (ycat == "params" || ycat == "active_params") ? Math.log2(model[ycat]) : model.results[ycat][yname];
-      series.push({name: model.name, data: [[x, y]]})
+      const family = model.family.toLowerCase();
+      let color_index = 4;
+      if (family.startsWith("gpt") || family.startsWith("o3") || family.startsWith("o4")) {
+        color_index = 0;
+      } else if (family.startsWith("llama")) {
+        color_index = 1;
+      } else if (family.startsWith("gemma")) {
+        color_index = 2;
+      } else if (family.startsWith("qwen")) {
+        color_index = 3;
+      }
+      series.push({name: model.name, data: [[x, y]], color: theme_colors[color_index]});
     }
     const xaxis = build_axis(xcat, xname);
     const yaxis = build_axis(ycat, yname);
@@ -365,6 +378,7 @@ var swallow_leaderboard_chart_scatter = function(element, config) {
   // Create the radar chart.
   option = get_option(element, config);
   let obj_scatter = new ApexCharts(document.getElementById(element), option);
+  console.log(obj_scatter);
   obj_scatter.render();
 
   // Register an update function.
@@ -372,7 +386,6 @@ var swallow_leaderboard_chart_scatter = function(element, config) {
     if (target == "" || target == element) {
       Object.assign(config, updates);
       option = get_option(element, config);
-      console.log(config);
       obj_scatter.updateOptions(option, false, true);
     }
   });

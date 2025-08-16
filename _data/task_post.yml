@@ -165,6 +165,9 @@ ja_post:
       description:
         ja: 指示追従能力の制御性
         en: Controllability of instruction following
+      remark:
+        ja: このタスクの評価結果は平均の算出から除外されます
+        en: Evaluation results of this task are excluded from average calculation.
       category:
         ja: 指示追従
         en: Instruction following

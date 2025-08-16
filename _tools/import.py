@@ -206,6 +206,7 @@ if __name__ == '__main__':
             ('date', 'date', str),
             ('params', 'params', read_float),
             ('active_params', 'active_params', read_float),
+            ('family', 'family', str),
             ('base', 'base', read_base),
         ]
         with open('Swallow実験結果 - (Llama-3.x,Gemma-2,3)-Swallow-base-v0.x.csv') as fi:
