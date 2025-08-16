@@ -222,8 +222,14 @@
           for (let model of models) {
             g_filter.push(model.id);
           }
+
+          document.querySelectorAll('#title').forEach(function(e) {
+            e.innerHTML += (" - " + selection.title);
+          });
         }
       }
+
+
 
     } else {
       {% if select == "__ALL__" %}

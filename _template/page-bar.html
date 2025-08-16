@@ -1,7 +1,7 @@
 {% extends "site.html" %}
 
 {% block content_title %}
-<h2 class="page-title">{% if is_post %}{{ ui.post_title }}{% else %}{{ ui.pre_title }}{% endif %}</h2>
+<h2 id="title" class="page-title">{% if is_post %}{{ ui.post_title }}{% else %}{{ ui.pre_title }}{% endif %}</h2>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,6 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        console.log(g_filter);
         swallow_leaderboard_chart(
           "bar",
           {
