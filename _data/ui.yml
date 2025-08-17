@@ -16,9 +16,18 @@ model:
   id:
     ja: ID
     en: ID
-  type:
-    ja: 種別
-    en: Type
+  post_training:
+    ja: 事後学習
+    en: Post-training
+  pre:
+    ja: なし
+    en: "No"
+  post:
+    ja: あり
+    en: "Yes"
+  reasoning:
+    ja: 推論モード
+    en: Reasoning mode
   missing:
     ja: 未評価タスク
     en: Missing scores

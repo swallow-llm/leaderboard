@@ -111,7 +111,8 @@
                 <th class="text-center">{{ ui.model.name }}</th>
                 <th class="text-center">{{ ui.model.params }}</th>
                 <th class="text-center">{{ ui.model.date }}</th>
-                <th class="text-center">{{ ui.model.type }}</th>
+                <th class="text-center">{{ ui.model.post_training }}</th>
+                <th class="text-center">{{ ui.model.reasoning }}</th>
                 <th class="text-center">{{ ui.model.missing }}</th>
               </tr>
             </thead>
@@ -121,7 +122,8 @@
                 <td><a href="{{ model.id | replace('/', '_') }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>{% if model.remark %} (<a href="about.{{ lang }}.html#{{ model.remark }}">{{ ui.remark }}</a>){% endif %}</td>
                 <td class="text-right">{{ model.params }}{% if model.active_params != model.params %} ({{ model.active_params }}){% endif %}</td>
                 <td>{{ model.date }}</td>
-                <td>{% if model.is_post %}post{% else %}pre{% endif %}</td>
+                <td>{% if model.is_post %}{{ ui.model.post }}{% else %}{{ ui.model.pre }}{% endif %}</td>
+                <td>{{ model.reasoning }}</td>
                 <td>
                   {% for tastcat, tasks in model.results.items() %}{% for name, value in tasks.items() %}
                   {% if value < 0 %}{{ name }}{% endif %}
