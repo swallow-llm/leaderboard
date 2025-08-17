@@ -172,11 +172,15 @@ def read_data(fi, F, T, is_post=False, includes=None, excludes=None):
         inst = {}
         results = {}
         for c, f, i, func in I:
+            # Reserve the position of 'id' field.
+            if f == 'model_id':
+                inst['id'] = ''
             if c is not None:
                 results.setdefault(c, {})
                 results[c][f] = func(row[i]) if i != -1 else func
             else:
                 inst[f] = func(row[i]) if i != -1 else func
+        inst['id'] = inst['model_id']
         inst['is_post'] = is_post
         inst['sortkey'] = get_sortkey(inst)
         inst['url'] = get_url(inst)
@@ -202,7 +206,7 @@ if __name__ == '__main__':
     with open('../_data/task_pre.yml') as fi:
         T = yaml.safe_load(fi)
         F = [
-            ('id', 'id', read_model_id),
+            ('model_id', 'id', read_model_id),
             ('name', 'name', str),
             ('date', 'date', str),
             ('params', 'params', read_float),
@@ -217,7 +221,7 @@ if __name__ == '__main__':
     with open('../_data/task_post.yml') as fi:
         T = yaml.safe_load(fi)
         F = [
-            ('id', 'id', read_model_id),
+            ('model_id', 'id', read_model_id),
             ('name', 'name', str),
             ('date', 'date', str),
             ('params', 'params', read_float),

@@ -14,7 +14,7 @@ changelog:
       text:
         - ja: Swallow LLM Leaderboard v2を公開しました。
           en: Swallow LLM Leaderboard v2.
-        - ja: 推論型モデルなどの新しい大規模言語モデルの能力を正しく測定するため、事後学習済みモデル向けの評価ベンチマーク・評価方法を刷新しました。日本語ベンチマーク6件（JEMHopQA, MMLU-ProX, GPQA, MATH-100, JHumanEval, M-IFEval-Ja）、英語ベンチマーク6件（HellaSwag, MMLU-Pro, GPQA, MATH-500, AIME 2024-2025, LiveCodeBench）を採用し、評価方法をzero-shot推論（以前はfew-shot推論）に変更しました。なお、開発した評価フレームワークは<a href="https://github.com/swallow-llm/swallow-evaluation-instruct">swallow-evaluation-instruct</a>として公開しました。
+        - ja: 推論型モデルなどの新しい大規模言語モデルの能力を正しく測定するため、事後学習済みモデル向けの評価ベンチマーク・評価方法を刷新しました。日本語ベンチマーク6件（JEMHopQA, MMLU-ProX, GPQA, MATH-100, JHumanEval, M-IFEval-Ja）、英語ベンチマーク6件（HellaSwag, MMLU-Pro, GPQA, MATH-500, AIME 2024-2025, LiveCodeBench）を採用し、評価方法をzero-shot推論（以前はfew-shot推論）に変更しました。なお、開発した評価フレームワークは <a href="https://github.com/swallow-llm/swallow-evaluation-instruct">swallow-evaluation-instruct</a> として公開しました。
           en: We have revamped evaluation benchmarks and methods for post-trained models in order to properly measure the capabilities of new large language models, such as reasoning models. We adopted six Japanese benchmarks (JEMHopQA, MMLU-ProX, GPQA, MATH-100, JHumanEval, M-IFEval-Ja) and six English benchmarks (HellaSwag, MMLU-Pro, GPQA, MATH-500, AIME 2024-2025, LiveCodeBench), and changed the evaluation method to zero-shot reasoning (previously few-shot reasoning). In addition, we have released the developed evaluation framework as <a href="https://github.com/swallow-llm/swallow-evaluation-instruct">swallow-evaluation-instruct</a>.
         - ja: ABEJA-QwQ32b-Reasoning-Japanese-v1.0、DeepSeek-R1-Distillシリーズ、ELYZA-Thinking-1.0-Qwen-32B、GPT-5 (gpt-5-2025-08-07)、gpt-oss-20b、gpt-oss-120b、Llama-3.1-Nemotronシリーズ、Llama 4 Scout Instruct、MedGemma 27B IT、o3 (o3-2025-04-16)、o3-mini (o3-mini-2025-01-31)、Phi-4-reasoning-plus、Qwen3シリーズの評価結果を追加しました。
           en: We added evaluation results of ABEJA-QwQ32b-Reasoning-Japanese-v1.0, DeepSeek-R1-Distill series, ELYZA-Thinking-1.0-Qwen-32B, GPT-5 (gpt-5-2025-08-07), gpt-oss-20b, gpt-oss-120b, Llama-3.1-Nemotron series, Llama 4 Scout Instruct, MedGemma 27B IT, o3 (o3-2025-04-16), o3-mini (o3-mini-2025-01-31), Phi-4-reasoning-plus, Qwen3 series.
@@ -28,7 +28,7 @@ changelog:
           en: We added functionality to display the number of active parameters for Mixture of Experts (MoE) models.
         - ja: 散布図のプロットの色をモデルの系統別（OpenAI系、Llama系、Gemma系、Qwen系、その他）で色分けするようにしました。
           en: We updated the scatter plot so that the plotted points are color-coded by model family (OpenAI, Llama, Gemma, Qwen, and others).
-        - ja: 以前のバージョンを<a href="https://swallow-llm.github.io/leaderboard-v1/">https://swallow-llm.github.io/leaderboard-v1/</a>に移動しました。
+        - ja: 以前のバージョンを <a href="https://swallow-llm.github.io/leaderboard-v1/">https://swallow-llm.github.io/leaderboard-v1/</a> に移動しました。
           en: The old version was moved to <a href="https://swallow-llm.github.io/leaderboard-v1/">https://swallow-llm.github.io/leaderboard-v1/</a>.
     - date: 2025-06-27
       text:
