@@ -10,16 +10,17 @@
       </div>
     </div>
   </div>
-  {% for item in taskcat.tasks.values() %}{% if not item.collective %}
+  {% for item in taskcat.tasks %}{% if not item.collective %}
   <div class="col-sm-6 col-lg-3">
     <div class="card">
       <div class="card-body">
-        {% if item.subtitle %}<div class="subheader">{{ item.subtitle }}</div>{% endif %}
+        {% if item.category %}<div class="subheader">{{ item.category }}</div>{% endif %}
         <h5 class="card-title mb-3">{{ item.title }}</h5>
         {% if item.description %}<p class="text-secondary">{{ item.description }}</p>{% endif %}
         {% if item.metric %}<div>{{ ui.metric }}: <span class="text-secondary">{{ item.metric }}</span></div>{% endif %}
         {% if item.setting %}<div>{{ ui.setting }}: <span class="text-secondary">{{ item.setting }}</span></div>{% endif %}
         {% if item.link %}<div>{{ ui.reference }}: <span class="text-secondary"><a href="{{ item.link.href }}">{{ item.link.author }} ({{ item.link.year }})</a></span></div>{% endif %}
+        {% if item.remark %}<p class="text-warning">{{ item.remark }}</p>{% endif %}
       </div>
     </div>
   </div>
@@ -74,9 +75,12 @@
 
 <h2 class="pt-6">{{ about.task.title }}</h2>
 
-{{ task_description(taskcats.ja_basic) }}
-{{ task_description(taskcats.en_basic) }}
-{{ task_description(taskcats.ja_mtb) }}
+{{ task_description(taskspec.ja_post) }}
+{{ task_description(taskspec.en_post) }}
+{{ task_description(taskspec.ja_mtb) }}
+{{ task_description(taskspec.en_mtb) }}
+{{ task_description(taskspec.ja_pre) }}
+{{ task_description(taskspec.en_pre) }}
 
 <h2 class="pt-6">{{ about.tools.title }}</h2>
 
@@ -107,17 +111,19 @@
                 <th class="text-center">{{ ui.model.name }}</th>
                 <th class="text-center">{{ ui.model.params }}</th>
                 <th class="text-center">{{ ui.model.date }}</th>
-                <th class="text-center">{{ ui.model.type }}</th>
+                <th class="text-center">{{ ui.model.post_training }}</th>
+                <th class="text-center">{{ ui.model.reasoning }}</th>
                 <th class="text-center">{{ ui.model.missing }}</th>
               </tr>
             </thead>
             <tbody>
               {% for id, model in models.items() %}
               <tr>
-                <td><a href="{{ model.uri }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>{% if model.remark %} (<a href="about.{{ lang }}.html#{{ model.remark }}">{{ ui.remark }}</a>){% endif %}</td>
-                <td>{{ model.params }}</td>
+                <td><a href="{{ model.id | replace('/', '_') }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>{% if model.remark %} (<a href="about.{{ lang }}.html#{{ model.remark }}">{{ ui.remark }}</a>){% endif %}</td>
+                <td class="text-right">{{ model.params }}{% if model.active_params != model.params %} ({{ model.active_params }}){% endif %}</td>
                 <td>{{ model.date }}</td>
-                <td>{% if model.base_model == "" %}base{% else %}chat{% endif %}</td>
+                <td>{% if model.is_post %}{{ ui.model.post }}{% else %}{{ ui.model.pre }}{% endif %}</td>
+                <td>{{ model.reasoning }}</td>
                 <td>
                   {% for tastcat, tasks in model.results.items() %}{% for name, value in tasks.items() %}
                   {% if value < 0 %}{{ name }}{% endif %}

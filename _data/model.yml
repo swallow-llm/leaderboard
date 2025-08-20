@@ -2,160 +2,522 @@
 # Copyright (c) 2025 Swallow LLM team
 # This file is distributed under Creative Commons Attribution 4.0 (CC-BY 4.0) License
 
-- id: CohereForAI/aya-expanse-8b
-  name: Aya Expanse 8B
-  date: '2024-10-24'
-  params: 8.0
-  base_model: (private)
-  sortkey: aya expanse
-  url: https://huggingface.co/CohereForAI/aya-expanse-8b
+- id: abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0
+  model_id: abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0
+  name: ABEJA-QwQ32b-Reasoning-Japanese-v1.0
+  date: '2025-04-25'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: ABEJA-Qwen2.5-32b-Japanese-v0.1
+  reasoning: 'on'
+  sortkey: abeja qwq reasoning japanese v1.0
+  is_post: true
+  url: https://huggingface.co/abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0
   results:
-    ja_basic:
-      Ja Avg: 0.445
-      JComQA: 0.922
-      JEMHopQA: 0.467
-      NIILC: 0.385
-      JSQuAD: 0.867
-      XL-Sum: 0.211
-      MGSM: 0.608
-      WMT20-en-ja: 0.261
-      WMT20-ja-en: 0.206
-      JMMLU: 0.521
-      JHumanEval: 0.001
+    ja_post:
+      avg: 0.73
+      JEMHopQA: 0.644
+      MMLU-ProX: 0.712
+      GPQA: 0.527
+      MATH100: 0.899
+      JHumanEval: 0.866
+      __MIFEvalJa: 0.619
+    en_post:
+      avg: 0.739
+      HellaSwag: 0.906
+      MMLU-Pro: 0.78
+      GPQA: 0.606
+      MATH500: 0.964
+      AIME: 0.617
+      LCB: 0.563
     ja_mtb:
-      JMT Avg: 0.637
-      coding: 0.494
-      extraction: 0.718
-      humanities: 0.855
-      math: 0.398
-      reasoning: 0.433
-      roleplay: 0.737
-      stem: 0.677
-      writing: 0.787
-    en_basic:
-      En Avg: 0.539
-      OpenBookQA: 0.384
-      TriviaQA: 0.591
-      HellaSwag: 0.605
-      SQuAD2: 0.664
-      XWINO: 0.892
-      MMLU: 0.629
-      GSM8K: 0.756
-      MATH: 0.284
-      BBH: 0.59
-      HumanEval: 0.0
-    other:
-      GPQA: 0.259
-- id: CohereForAI/aya-expanse-32b
-  name: Aya Expanse 32B
-  date: '2024-10-24'
-  params: 32
-  base_model: (private)
-  sortkey: aya expanse
-  url: https://huggingface.co/CohereForAI/aya-expanse-32b
-  results:
-    ja_basic:
-      Ja Avg: 0.512
-      JComQA: 0.965
-      JEMHopQA: 0.554
-      NIILC: 0.586
-      JSQuAD: 0.812
-      XL-Sum: 0.295
-      MGSM: 0.716
-      WMT20-en-ja: 0.287
-      WMT20-ja-en: 0.245
-      JMMLU: 0.655
-      JHumanEval: 0.001
-    ja_mtb:
-      JMT Avg: 0.713
-      coding: 0.548
-      extraction: 0.72
-      humanities: 0.846
-      math: 0.657
-      reasoning: 0.602
-      roleplay: 0.824
-      stem: 0.712
-      writing: 0.794
-    en_basic:
-      En Avg: 0.614
-      OpenBookQA: 0.42
-      TriviaQA: 0.757
-      HellaSwag: 0.668
-      SQuAD2: 0.68
-      XWINO: 0.912
-      MMLU: 0.743
-      GSM8K: 0.857
-      MATH: 0.344
-      BBH: 0.757
-      HumanEval: 0.005
-    other:
-      GPQA: 0.152
+      avg: 0.843
+      coding: 0.868
+      extraction: 0.893
+      humanities: 0.885
+      math: 0.889
+      reasoning: 0.694
+      roleplay: 0.848
+      stem: 0.85
+      writing: 0.821
+    en_mtb:
+      avg: 0.866
+      coding: 0.808
+      extraction: 0.878
+      humanities: 0.899
+      math: 0.951
+      reasoning: 0.757
+      roleplay: 0.872
+      stem: 0.882
+      writing: 0.881
 - id: cyberagent/calm3-22b-chat
+  model_id: cyberagent/calm3-22b-chat
   name: CyberAgentLM3-22B-chat
   date: '2024-07-09'
   params: 22
-  base_model: (private)
+  active_params: 22
+  family: CyberAgentLM3
+  pre_training: (private)
+  reasoning: N/A
   sortkey: cyberagentlm3
+  is_post: true
   url: https://huggingface.co/cyberagent/calm3-22b-chat
   results:
-    ja_basic:
-      Ja Avg: 0.471
-      JComQA: 0.934
-      JEMHopQA: 0.51
-      NIILC: 0.648
-      JSQuAD: 0.911
-      XL-Sum: 0.104
-      MGSM: 0.576
-      WMT20-en-ja: 0.275
-      WMT20-ja-en: 0.215
-      JMMLU: 0.541
-      JHumanEval: 0.001
+    ja_post:
+      avg: 0.397
+      JEMHopQA: 0.612
+      MMLU-ProX: 0.31
+      GPQA: 0.266
+      MATH100: 0.354
+      JHumanEval: 0.443
+      __MIFEvalJa: 0.429
+    en_post:
+      avg: 0.28
+      HellaSwag: 0.77
+      MMLU-Pro: 0.26
+      GPQA: 0.288
+      MATH500: 0.298
+      AIME: 0.017
+      LCB: 0.045
     ja_mtb:
-      JMT Avg: 0.691
-      coding: 0.519
-      extraction: 0.744
+      avg: 0.697
+      coding: 0.5
+      extraction: 0.733
       humanities: 0.859
-      math: 0.605
-      reasoning: 0.548
-      roleplay: 0.784
+      math: 0.591
+      reasoning: 0.611
+      roleplay: 0.791
+      stem: 0.721
+      writing: 0.769
+    en_mtb:
+      avg: 0.621
+      coding: 0.467
+      extraction: 0.695
+      humanities: 0.828
+      math: 0.479
+      reasoning: 0.429
+      roleplay: 0.678
+      stem: 0.647
+      writing: 0.747
+- id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+  model_id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+  name: DeepSeek-R1-Distill-Llama-8B
+  date: '2025-01-20'
+  params: 8.0
+  active_params: 8.0
+  family: Llama 3
+  pre_training: Llama 3.1 8B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill llama
+  is_post: true
+  url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+  results:
+    ja_post:
+      avg: 0.451
+      JEMHopQA: 0.348
+      MMLU-ProX: 0.319
+      GPQA: 0.31
+      MATH100: 0.556
+      JHumanEval: 0.721
+      __MIFEvalJa: 0.319
+    en_post:
+      avg: 0.549
+      HellaSwag: 0.688
+      MMLU-Pro: 0.549
+      GPQA: 0.46
+      MATH500: 0.866
+      AIME: 0.367
+      LCB: 0.364
+    ja_mtb:
+      avg: 0.526
+      coding: 0.376
+      extraction: 0.625
+      humanities: 0.681
+      math: 0.595
+      reasoning: 0.496
+      roleplay: 0.483
+      stem: 0.51
+      writing: 0.442
+    en_mtb:
+      avg: 0.704
+      coding: 0.398
+      extraction: 0.745
+      humanities: 0.825
+      math: 0.827
+      reasoning: 0.562
+      roleplay: 0.768
+      stem: 0.731
+      writing: 0.775
+- id: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+  model_id: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+  name: DeepSeek-R1-Distill-Llama-70B
+  date: '2025-01-20'
+  params: 70
+  active_params: 70
+  family: Llama 3
+  pre_training: Llama 3.3 70B Instruct
+  reasoning: N/A
+  sortkey: deepseek r1 distill llama
+  is_post: true
+  url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+  results:
+    ja_post:
+      avg: 0.683
+      JEMHopQA: 0.567
+      MMLU-ProX: 0.642
+      GPQA: 0.538
+      MATH100: 0.859
+      JHumanEval: 0.812
+      __MIFEvalJa: 0.558
+    en_post:
+      avg: 0.73
+      HellaSwag: 0.891
+      MMLU-Pro: 0.776
+      GPQA: 0.626
+      MATH500: 0.936
+      AIME: 0.617
+      LCB: 0.534
+    ja_mtb:
+      avg: 0.707
+      coding: 0.551
+      extraction: 0.778
+      humanities: 0.838
+      math: 0.78
+      reasoning: 0.525
+      roleplay: 0.768
+      stem: 0.733
+      writing: 0.681
+    en_mtb:
+      avg: 0.842
+      coding: 0.787
+      extraction: 0.931
+      humanities: 0.862
+      math: 0.919
+      reasoning: 0.723
+      roleplay: 0.85
+      stem: 0.806
+      writing: 0.854
+- id: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+  model_id: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+  name: DeepSeek-R1-Distill-Qwen-7B
+  date: '2025-01-20'
+  params: 7.6
+  active_params: 7.6
+  family: Qwen2
+  pre_training: Qwen2.5-Math-7B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill qwen
+  is_post: true
+  url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+  results:
+    ja_post:
+      avg: 0.514
+      JEMHopQA: 0.279
+      MMLU-ProX: 0.438
+      GPQA: 0.4
+      MATH100: 0.778
+      JHumanEval: 0.674
+      __MIFEvalJa: 0.341
+    en_post:
+      avg: 0.546
+      HellaSwag: 0.564
+      MMLU-Pro: 0.547
+      GPQA: 0.495
+      MATH500: 0.902
+      AIME: 0.417
+      LCB: 0.351
+    ja_mtb:
+      avg: 0.411
+      coding: 0.371
+      extraction: 0.572
+      humanities: 0.347
+      math: 0.804
+      reasoning: 0.346
+      roleplay: 0.275
+      stem: 0.341
+      writing: 0.228
+    en_mtb:
+      avg: 0.649
+      coding: 0.481
+      extraction: 0.656
+      humanities: 0.708
+      math: 0.762
+      reasoning: 0.52
+      roleplay: 0.686
       stem: 0.7
-      writing: 0.772
-    en_basic:
-      En Avg: 0.527
-      OpenBookQA: 0.372
-      TriviaQA: 0.619
-      HellaSwag: 0.597
-      SQuAD2: 0.603
-      XWINO: 0.905
-      MMLU: 0.602
-      GSM8K: 0.697
-      MATH: 0.274
-      BBH: 0.599
-      HumanEval: 0.0
-    other:
-      GPQA: 0.257
+      writing: 0.677
+- id: deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+  model_id: deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+  name: DeepSeek-R1-Distill-Qwen-14B
+  date: '2025-01-20'
+  params: 15
+  active_params: 15
+  family: Qwen2.5
+  pre_training: Qwen2.5-14B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill qwen
+  is_post: true
+  url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+  results:
+    ja_post:
+      avg: 0.638
+      JEMHopQA: 0.508
+      MMLU-ProX: 0.591
+      GPQA: 0.496
+      MATH100: 0.737
+      JHumanEval: 0.859
+      __MIFEvalJa: 0.496
+    en_post:
+      avg: 0.672
+      HellaSwag: 0.841
+      MMLU-Pro: 0.707
+      GPQA: 0.525
+      MATH500: 0.908
+      AIME: 0.567
+      LCB: 0.486
+    ja_mtb:
+      avg: 0.7
+      coding: 0.632
+      extraction: 0.803
+      humanities: 0.739
+      math: 0.857
+      reasoning: 0.563
+      roleplay: 0.72
+      stem: 0.631
+      writing: 0.658
+    en_mtb:
+      avg: 0.775
+      coding: 0.512
+      extraction: 0.851
+      humanities: 0.815
+      math: 0.886
+      reasoning: 0.745
+      roleplay: 0.841
+      stem: 0.75
+      writing: 0.803
+- id: deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+  model_id: deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+  name: DeepSeek-R1-Distill-Qwen-32B
+  date: '2025-01-20'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5-32B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill qwen
+  is_post: true
+  url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+  results:
+    ja_post:
+      avg: 0.692
+      JEMHopQA: 0.572
+      MMLU-ProX: 0.66
+      GPQA: 0.536
+      MATH100: 0.838
+      JHumanEval: 0.855
+      __MIFEvalJa: 0.509
+    en_post:
+      avg: 0.701
+      HellaSwag: 0.885
+      MMLU-Pro: 0.737
+      GPQA: 0.571
+      MATH500: 0.926
+      AIME: 0.567
+      LCB: 0.523
+    ja_mtb:
+      avg: 0.753
+      coding: 0.669
+      extraction: 0.874
+      humanities: 0.764
+      math: 0.867
+      reasoning: 0.606
+      roleplay: 0.79
+      stem: 0.738
+      writing: 0.716
+    en_mtb:
+      avg: 0.822
+      coding: 0.619
+      extraction: 0.901
+      humanities: 0.869
+      math: 0.918
+      reasoning: 0.793
+      roleplay: 0.861
+      stem: 0.768
+      writing: 0.85
+- id: cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese
+  model_id: cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese
+  name: DeepSeek-R1-Distill-Qwen-14B-Japanese
+  date: '2025-01-27'
+  params: 15
+  active_params: 15
+  family: Qwen2.5
+  pre_training: DeepSeek-R1-Distill-Qwen-14B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill qwen japanese
+  is_post: true
+  url: https://huggingface.co/cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese
+  results:
+    ja_post:
+      avg: 0.575
+      JEMHopQA: 0.545
+      MMLU-ProX: 0.525
+      GPQA: 0.4
+      MATH100: 0.788
+      JHumanEval: 0.62
+      __MIFEvalJa: 0.513
+    en_post:
+      avg: 0.629
+      HellaSwag: 0.823
+      MMLU-Pro: 0.679
+      GPQA: 0.47
+      MATH500: 0.916
+      AIME: 0.433
+      LCB: 0.451
+    ja_mtb:
+      avg: 0.771
+      coding: 0.557
+      extraction: 0.777
+      humanities: 0.88
+      math: 0.871
+      reasoning: 0.664
+      roleplay: 0.801
+      stem: 0.859
+      writing: 0.758
+    en_mtb:
+      avg: 0.835
+      coding: 0.724
+      extraction: 0.884
+      humanities: 0.87
+      math: 0.907
+      reasoning: 0.771
+      roleplay: 0.867
+      stem: 0.817
+      writing: 0.838
+- id: cyberagent/DeepSeek-R1-Distill-Qwen-32B-Japanese
+  model_id: cyberagent/DeepSeek-R1-Distill-Qwen-32B-Japanese
+  name: DeepSeek-R1-Distill-Qwen-32B-Japanese
+  date: '2025-01-27'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: DeepSeek-R1-Distill-Qwen-32B
+  reasoning: 'on'
+  sortkey: deepseek r1 distill qwen japanese
+  is_post: true
+  url: https://huggingface.co/cyberagent/DeepSeek-R1-Distill-Qwen-32B-Japanese
+  results:
+    ja_post:
+      avg: 0.649
+      JEMHopQA: 0.654
+      MMLU-ProX: 0.606
+      GPQA: 0.464
+      MATH100: 0.838
+      JHumanEval: 0.68
+      __MIFEvalJa: 0.544
+    en_post:
+      avg: 0.697
+      HellaSwag: 0.872
+      MMLU-Pro: 0.737
+      GPQA: 0.576
+      MATH500: 0.94
+      AIME: 0.55
+      LCB: 0.508
+    ja_mtb:
+      avg: 0.808
+      coding: 0.639
+      extraction: 0.813
+      humanities: 0.917
+      math: 0.924
+      reasoning: 0.652
+      roleplay: 0.842
+      stem: 0.872
+      writing: 0.802
+    en_mtb:
+      avg: 0.857
+      coding: 0.73
+      extraction: 0.893
+      humanities: 0.894
+      math: 0.964
+      reasoning: 0.77
+      roleplay: 0.871
+      stem: 0.872
+      writing: 0.861
+- id: elyza/ELYZA-Thinking-1.0-Qwen-32B
+  model_id: elyza/ELYZA-Thinking-1.0-Qwen-32B
+  name: ELYZA-Thinking-1.0-Qwen-32B
+  date: '2025-05-01'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5-32B-Instruct
+  reasoning: 'on'
+  sortkey: elyza thinking 1.0 qwen
+  is_post: true
+  url: https://huggingface.co/elyza/ELYZA-Thinking-1.0-Qwen-32B
+  results:
+    ja_post:
+      avg: 0.526
+      JEMHopQA: 0.601
+      MMLU-ProX: 0.623
+      GPQA: 0.455
+      MATH100: 0.788
+      JHumanEval: 0.162
+      __MIFEvalJa: 0.566
+    en_post:
+      avg: 0.571
+      HellaSwag: 0.888
+      MMLU-Pro: 0.708
+      GPQA: 0.576
+      MATH500: 0.86
+      AIME: 0.3
+      LCB: 0.093
+    ja_mtb:
+      avg: 0.694
+      coding: 0.687
+      extraction: 0.824
+      humanities: 0.688
+      math: 0.927
+      reasoning: 0.641
+      roleplay: 0.583
+      stem: 0.656
+      writing: 0.542
+    en_mtb:
+      avg: 0.748
+      coding: 0.77
+      extraction: 0.913
+      humanities: 0.754
+      math: 0.912
+      reasoning: 0.775
+      roleplay: 0.617
+      stem: 0.639
+      writing: 0.606
 - id: tiiuae/Falcon3-1B-Base
+  model_id: tiiuae/Falcon3-1B-Base
   name: Falcon3-1B-Base
   date: '2024-12-19'
   params: 1.7
-  base_model: ''
+  active_params: 1.7
+  family: Falcon3
+  base: Falcon3-3B-Base
   sortkey: falcon3
+  is_post: false
   url: https://huggingface.co/tiiuae/Falcon3-1B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.129
+    ja_pre:
+      avg: 0.129
       JComQA: 0.216
       JEMHopQA: 0.251
       NIILC: 0.062
       JSQuAD: 0.281
-      XL-Sum: 0.085
+      XLSum: 0.085
       MGSM: 0.008
-      WMT20-en-ja: 0.012
-      WMT20-ja-en: 0.02
+      WMT20enja: 0.012
+      WMT20jaen: 0.02
       JMMLU: 0.264
       JHumanEval: 0.088
-    en_basic:
-      En Avg: 0.376
+    en_pre:
+      avg: 0.376
       OpenBookQA: 0.316
       TriviaQA: 0.296
       HellaSwag: 0.458
@@ -166,74 +528,32 @@
       MATH: 0.14
       BBH: 0.323
       HumanEval: 0.125
-    other:
-      GPQA: 0.025
-- id: tiiuae/Falcon3-1B-Instruct
-  name: Falcon3-1B-Instruct
-  date: '2024-12-19'
-  params: 1.7
-  base_model: Falcon3-1B-Base
-  sortkey: falcon3
-  url: https://huggingface.co/tiiuae/Falcon3-1B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.169
-      JComQA: 0.24
-      JEMHopQA: 0.312
-      NIILC: 0.132
-      JSQuAD: 0.454
-      XL-Sum: 0.101
-      MGSM: 0.02
-      WMT20-en-ja: 0.028
-      WMT20-ja-en: 0.032
-      JMMLU: 0.281
-      JHumanEval: 0.089
-    ja_mtb:
-      JMT Avg: 0.161
-      coding: 0.176
-      extraction: 0.178
-      humanities: 0.121
-      math: 0.161
-      reasoning: 0.224
-      roleplay: 0.154
-      stem: 0.124
-      writing: 0.148
-    en_basic:
-      En Avg: 0.381
-      OpenBookQA: 0.344
-      TriviaQA: 0.261
-      HellaSwag: 0.48
-      SQuAD2: 0.501
-      XWINO: 0.815
-      MMLU: 0.459
-      GSM8K: 0.391
-      MATH: 0.13
-      BBH: 0.33
-      HumanEval: 0.101
-    other:
-      GPQA: 0.013
 - id: tiiuae/Falcon3-3B-Base
+  model_id: tiiuae/Falcon3-3B-Base
   name: Falcon3-3B-Base
   date: '2024-12-19'
   params: 3.2
-  base_model: ''
+  active_params: 3.2
+  family: Falcon3
+  base: Falcon3-7B-Base
   sortkey: falcon3
+  is_post: false
   url: https://huggingface.co/tiiuae/Falcon3-3B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.209
+    ja_pre:
+      avg: 0.209
       JComQA: 0.281
       JEMHopQA: 0.333
       NIILC: 0.113
       JSQuAD: 0.517
-      XL-Sum: 0.12
+      XLSum: 0.12
       MGSM: 0.096
-      WMT20-en-ja: 0.031
-      WMT20-ja-en: 0.051
+      WMT20enja: 0.031
+      WMT20jaen: 0.051
       JMMLU: 0.319
       JHumanEval: 0.229
-    en_basic:
-      En Avg: 0.495
+    en_pre:
+      avg: 0.495
       OpenBookQA: 0.312
       TriviaQA: 0.346
       HellaSwag: 0.492
@@ -244,74 +564,32 @@
       MATH: 0.344
       BBH: 0.553
       HumanEval: 0.348
-    other:
-      GPQA: 0.179
-- id: tiiuae/Falcon3-3B-Instruct
-  name: Falcon3-3B-Instruct
-  date: '2024-12-19'
-  params: 3.2
-  base_model: Falcon3-3B-Base
-  sortkey: falcon3
-  url: https://huggingface.co/tiiuae/Falcon3-3B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.232
-      JComQA: 0.421
-      JEMHopQA: 0.16
-      NIILC: 0.113
-      JSQuAD: 0.632
-      XL-Sum: 0.141
-      MGSM: 0.092
-      WMT20-en-ja: 0.062
-      WMT20-ja-en: 0.058
-      JMMLU: 0.331
-      JHumanEval: 0.308
-    ja_mtb:
-      JMT Avg: 0.26
-      coding: 0.329
-      extraction: 0.392
-      humanities: 0.219
-      math: 0.199
-      reasoning: 0.267
-      roleplay: 0.234
-      stem: 0.229
-      writing: 0.208
-    en_basic:
-      En Avg: 0.526
-      OpenBookQA: 0.372
-      TriviaQA: 0.286
-      HellaSwag: 0.541
-      SQuAD2: 0.513
-      XWINO: 0.818
-      MMLU: 0.562
-      GSM8K: 0.712
-      MATH: 0.44
-      BBH: 0.562
-      HumanEval: 0.454
-    other:
-      GPQA: 0.208
 - id: tiiuae/Falcon3-7B-Base
+  model_id: tiiuae/Falcon3-7B-Base
   name: Falcon3-7B-Base
   date: '2024-12-19'
   params: 7.5
-  base_model: ''
+  active_params: 7.5
+  family: Falcon3
+  base: －
   sortkey: falcon3
+  is_post: false
   url: https://huggingface.co/tiiuae/Falcon3-7B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.337
+    ja_pre:
+      avg: 0.337
       JComQA: 0.634
       JEMHopQA: 0.412
       NIILC: 0.18
       JSQuAD: 0.788
-      XL-Sum: 0.173
+      XLSum: 0.173
       MGSM: 0.244
-      WMT20-en-ja: 0.078
-      WMT20-ja-en: 0.119
+      WMT20enja: 0.078
+      WMT20jaen: 0.119
       JMMLU: 0.385
       JHumanEval: 0.361
-    en_basic:
-      En Avg: 0.596
+    en_pre:
+      avg: 0.596
       OpenBookQA: 0.354
       TriviaQA: 0.552
       HellaSwag: 0.566
@@ -322,74 +600,32 @@
       MATH: 0.438
       BBH: 0.692
       HumanEval: 0.476
-    other:
-      GPQA: 0.252
-- id: tiiuae/Falcon3-7B-Instruct
-  name: Falcon3-7B-Instruct
-  date: '2024-12-19'
-  params: 7.5
-  base_model: Falcon3-7B-Base
-  sortkey: falcon3
-  url: https://huggingface.co/tiiuae/Falcon3-7B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.364
-      JComQA: 0.684
-      JEMHopQA: 0.436
-      NIILC: 0.152
-      JSQuAD: 0.816
-      XL-Sum: 0.177
-      MGSM: 0.32
-      WMT20-en-ja: 0.094
-      WMT20-ja-en: 0.126
-      JMMLU: 0.415
-      JHumanEval: 0.416
-    ja_mtb:
-      JMT Avg: 0.377
-      coding: 0.549
-      extraction: 0.506
-      humanities: 0.34
-      math: 0.406
-      reasoning: 0.257
-      roleplay: 0.299
-      stem: 0.34
-      writing: 0.317
-    en_basic:
-      En Avg: 0.618
-      OpenBookQA: 0.394
-      TriviaQA: 0.517
-      HellaSwag: 0.611
-      SQuAD2: 0.525
-      XWINO: 0.855
-      MMLU: 0.705
-      GSM8K: 0.773
-      MATH: 0.542
-      BBH: 0.711
-      HumanEval: 0.551
-    other:
-      GPQA: 0.277
 - id: tiiuae/Falcon3-10B-Base
+  model_id: tiiuae/Falcon3-10B-Base
   name: Falcon3-10B-Base
   date: '2024-12-19'
   params: 10
-  base_model: ''
+  active_params: 10
+  family: Falcon3
+  base: Falcon3-7B-Base
   sortkey: falcon3
+  is_post: false
   url: https://huggingface.co/tiiuae/Falcon3-10B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.383
+    ja_pre:
+      avg: 0.383
       JComQA: 0.68
       JEMHopQA: 0.443
       NIILC: 0.187
       JSQuAD: 0.854
-      XL-Sum: 0.187
+      XLSum: 0.187
       MGSM: 0.376
-      WMT20-en-ja: 0.103
-      WMT20-ja-en: 0.139
+      WMT20enja: 0.103
+      WMT20jaen: 0.139
       JMMLU: 0.435
       JHumanEval: 0.426
-    en_basic:
-      En Avg: 0.639
+    en_pre:
+      avg: 0.639
       OpenBookQA: 0.368
       TriviaQA: 0.579
       HellaSwag: 0.596
@@ -400,74 +636,32 @@
       MATH: 0.492
       BBH: 0.776
       HumanEval: 0.543
-    other:
-      GPQA: 0.259
-- id: tiiuae/Falcon3-10B-Instruct
-  name: Falcon3-10B-Instruct
-  date: '2024-12-19'
-  params: 10
-  base_model: Falcon3-10B-Base
-  sortkey: falcon3
-  url: https://huggingface.co/tiiuae/Falcon3-10B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.367
-      JComQA: 0.69
-      JEMHopQA: 0.221
-      NIILC: 0.122
-      JSQuAD: 0.853
-      XL-Sum: 0.192
-      MGSM: 0.392
-      WMT20-en-ja: 0.108
-      WMT20-ja-en: 0.135
-      JMMLU: 0.442
-      JHumanEval: 0.515
-    ja_mtb:
-      JMT Avg: 0.413
-      coding: 0.509
-      extraction: 0.545
-      humanities: 0.382
-      math: 0.48
-      reasoning: 0.356
-      roleplay: 0.335
-      stem: 0.373
-      writing: 0.324
-    en_basic:
-      En Avg: 0.633
-      OpenBookQA: 0.424
-      TriviaQA: 0.504
-      HellaSwag: 0.64
-      SQuAD2: 0.549
-      XWINO: 0.875
-      MMLU: 0.73
-      GSM8K: 0.793
-      MATH: 0.462
-      BBH: 0.729
-      HumanEval: 0.627
-    other:
-      GPQA: 0.335
 - id: google/gemma-2-2b
+  model_id: google/gemma-2-2b
   name: Gemma 2 2B
   date: '2024-06-27'
   params: 2.6
-  base_model: ''
+  active_params: 2.6
+  family: Gemma 2
+  base: －
   sortkey: gemma 2
+  is_post: false
   url: https://huggingface.co/google/gemma-2-2b
   results:
-    ja_basic:
-      Ja Avg: 0.348
+    ja_pre:
+      avg: 0.348
       JComQA: 0.721
       JEMHopQA: 0.472
       NIILC: 0.316
       JSQuAD: 0.81
-      XL-Sum: 0.083
+      XLSum: 0.083
       MGSM: 0.124
-      WMT20-en-ja: 0.203
-      WMT20-ja-en: 0.19
+      WMT20enja: 0.203
+      WMT20jaen: 0.19
       JMMLU: 0.388
       JHumanEval: 0.177
-    en_basic:
-      En Avg: 0.439
+    en_pre:
+      avg: 0.439
       OpenBookQA: 0.342
       TriviaQA: 0.552
       HellaSwag: 0.552
@@ -478,74 +672,81 @@
       MATH: 0.176
       BBH: 0.415
       HumanEval: 0.188
-    other:
-      GPQA: 0.049
 - id: google/gemma-2-2b-it
+  model_id: google/gemma-2-2b-it
   name: Gemma 2 2B IT
   date: '2024-06-27'
   params: 2.6
-  base_model: Gemma 2 2B
+  active_params: 2.6
+  family: Gemma 2
+  pre_training: Gemma 2 2B
+  reasoning: N/A
   sortkey: gemma 2
+  is_post: true
   url: https://huggingface.co/google/gemma-2-2b-it
   results:
-    ja_basic:
-      Ja Avg: 0.392
-      JComQA: 0.862
-      JEMHopQA: 0.348
-      NIILC: 0.315
-      JSQuAD: 0.879
-      XL-Sum: 0.117
-      MGSM: 0.252
-      WMT20-en-ja: 0.207
-      WMT20-ja-en: 0.183
-      JMMLU: 0.437
-      JHumanEval: 0.321
+    ja_post:
+      avg: 0.269
+      JEMHopQA: 0.321
+      MMLU-ProX: 0.214
+      GPQA: 0.248
+      MATH100: 0.202
+      JHumanEval: 0.359
+      __MIFEvalJa: 0.416
+    en_post:
+      avg: 0.256
+      HellaSwag: 0.596
+      MMLU-Pro: 0.287
+      GPQA: 0.359
+      MATH500: 0.262
+      AIME: 0.0
+      LCB: 0.034
     ja_mtb:
-      JMT Avg: 0.569
-      coding: 0.454
-      extraction: 0.587
-      humanities: 0.693
-      math: 0.524
-      reasoning: 0.445
-      roleplay: 0.654
-      stem: 0.567
-      writing: 0.63
-    en_basic:
-      En Avg: 0.489
-      OpenBookQA: 0.354
-      TriviaQA: 0.502
-      HellaSwag: 0.52
-      SQuAD2: 0.548
-      XWINO: 0.878
-      MMLU: 0.569
-      GSM8K: 0.44
-      MATH: 0.23
-      BBH: 0.464
-      HumanEval: 0.382
-    other:
-      GPQA: 0.08
+      avg: 0.555
+      coding: 0.46
+      extraction: 0.585
+      humanities: 0.673
+      math: 0.448
+      reasoning: 0.422
+      roleplay: 0.641
+      stem: 0.571
+      writing: 0.639
+    en_mtb:
+      avg: 0.718
+      coding: 0.543
+      extraction: 0.687
+      humanities: 0.868
+      math: 0.659
+      reasoning: 0.609
+      roleplay: 0.78
+      stem: 0.78
+      writing: 0.816
 - id: google/gemma-2-9b
+  model_id: google/gemma-2-9b
   name: Gemma 2 9B
   date: '2024-06-27'
   params: 9.2
-  base_model: ''
+  active_params: 9.2
+  family: Gemma 2
+  base: －
   sortkey: gemma 2
+  is_post: false
   url: https://huggingface.co/google/gemma-2-9b
   results:
-    ja_basic:
-      Ja Avg: 0.5
+    ja_pre:
+      avg: 0.5
       JComQA: 0.904
       JEMHopQA: 0.573
       NIILC: 0.524
       JSQuAD: 0.898
-      XL-Sum: 0.168
+      XLSum: 0.168
       MGSM: 0.456
-      WMT20-en-ja: 0.269
-      WMT20-ja-en: 0.236
+      WMT20enja: 0.269
+      WMT20jaen: 0.236
       JMMLU: 0.623
       JHumanEval: 0.345
-    en_basic:
-      En Avg: 0.597
+    en_pre:
+      avg: 0.597
       OpenBookQA: 0.382
       TriviaQA: 0.718
       HellaSwag: 0.626
@@ -556,74 +757,81 @@
       MATH: 0.338
       BBH: 0.704
       HumanEval: 0.39
-    other:
-      GPQA: 0.221
 - id: google/gemma-2-9b-it
+  model_id: google/gemma-2-9b-it
   name: Gemma 2 9B IT
   date: '2024-06-27'
   params: 9.2
-  base_model: Gemma 2 9B
+  active_params: 9.2
+  family: Gemma 2
+  pre_training: Gemma 2 9B
+  reasoning: N/A
   sortkey: gemma 2
+  is_post: true
   url: https://huggingface.co/google/gemma-2-9b-it
   results:
-    ja_basic:
-      Ja Avg: 0.535
-      JComQA: 0.931
-      JEMHopQA: 0.532
-      NIILC: 0.527
-      JSQuAD: 0.876
-      XL-Sum: 0.149
-      MGSM: 0.636
-      WMT20-en-ja: 0.273
-      WMT20-ja-en: 0.239
-      JMMLU: 0.623
-      JHumanEval: 0.559
+    ja_post:
+      avg: 0.447
+      JEMHopQA: 0.506
+      MMLU-ProX: 0.423
+      GPQA: 0.277
+      MATH100: 0.444
+      JHumanEval: 0.583
+      __MIFEvalJa: 0.558
+    en_post:
+      avg: 0.392
+      HellaSwag: 0.829
+      MMLU-Pro: 0.503
+      GPQA: 0.369
+      MATH500: 0.488
+      AIME: 0.017
+      LCB: 0.146
     ja_mtb:
-      JMT Avg: 0.736
-      coding: 0.652
-      extraction: 0.765
-      humanities: 0.857
-      math: 0.614
-      reasoning: 0.673
-      roleplay: 0.811
-      stem: 0.713
-      writing: 0.8
-    en_basic:
-      En Avg: 0.649
-      OpenBookQA: 0.432
-      TriviaQA: 0.658
-      HellaSwag: 0.605
-      SQuAD2: 0.659
-      XWINO: 0.904
-      MMLU: 0.723
-      GSM8K: 0.779
-      MATH: 0.394
-      BBH: 0.719
-      HumanEval: 0.613
-    other:
-      GPQA: 0.065
+      avg: 0.743
+      coding: 0.635
+      extraction: 0.816
+      humanities: 0.865
+      math: 0.686
+      reasoning: 0.649
+      roleplay: 0.784
+      stem: 0.734
+      writing: 0.773
+    en_mtb:
+      avg: 0.761
+      coding: 0.624
+      extraction: 0.799
+      humanities: 0.893
+      math: 0.682
+      reasoning: 0.61
+      roleplay: 0.832
+      stem: 0.808
+      writing: 0.841
 - id: google/gemma-2-27b
+  model_id: google/gemma-2-27b
   name: Gemma 2 27B
   date: '2024-06-27'
   params: 27
-  base_model: ''
+  active_params: 27
+  family: Gemma 2
+  base: －
   sortkey: gemma 2
+  is_post: false
   url: https://huggingface.co/google/gemma-2-27b
   results:
-    ja_basic:
-      Ja Avg: 0.546
+    ja_pre:
+      avg: 0.546
       JComQA: 0.936
       JEMHopQA: 0.553
       NIILC: 0.573
       JSQuAD: 0.916
-      XL-Sum: 0.194
+      XLSum: 0.194
       MGSM: 0.596
-      WMT20-en-ja: 0.295
-      WMT20-ja-en: 0.251
+      WMT20enja: 0.295
+      WMT20jaen: 0.251
       JMMLU: 0.659
       JHumanEval: 0.49
-    en_basic:
-      En Avg: 0.655
+    en_pre:
+      avg: 0.655
       OpenBookQA: 0.412
       TriviaQA: 0.78
       HellaSwag: 0.675
@@ -634,196 +842,81 @@
       MATH: 0.438
       BBH: 0.76
       HumanEval: 0.508
-    other:
-      GPQA: 0.125
 - id: google/gemma-2-27b-it
+  model_id: google/gemma-2-27b-it
   name: Gemma 2 27B IT
   date: '2024-06-27'
   params: 27
-  base_model: Gemma 2 27B
+  active_params: 27
+  family: Gemma 2
+  pre_training: Gemma 2 27B
+  reasoning: N/A
   sortkey: gemma 2
+  is_post: true
   url: https://huggingface.co/google/gemma-2-27b-it
   results:
-    ja_basic:
-      Ja Avg: 0.567
-      JComQA: 0.956
-      JEMHopQA: 0.541
-      NIILC: 0.576
-      JSQuAD: 0.883
-      XL-Sum: 0.166
-      MGSM: 0.704
-      WMT20-en-ja: 0.29
-      WMT20-ja-en: 0.249
-      JMMLU: 0.67
-      JHumanEval: 0.638
+    ja_post:
+      avg: 0.506
+      JEMHopQA: 0.561
+      MMLU-ProX: 0.462
+      GPQA: 0.304
+      MATH100: 0.505
+      JHumanEval: 0.7
+      __MIFEvalJa: 0.588
+    en_post:
+      avg: 0.441
+      HellaSwag: 0.846
+      MMLU-Pro: 0.572
+      GPQA: 0.404
+      MATH500: 0.56
+      AIME: 0.033
+      LCB: 0.23
     ja_mtb:
-      JMT Avg: 0.768
-      coding: 0.727
-      extraction: 0.809
+      avg: 0.762
+      coding: 0.76
+      extraction: 0.825
       humanities: 0.874
-      math: 0.719
-      reasoning: 0.639
-      roleplay: 0.81
-      stem: 0.74
-      writing: 0.826
-    en_basic:
-      En Avg: 0.703
-      OpenBookQA: 0.458
-      TriviaQA: 0.766
-      HellaSwag: 0.655
-      SQuAD2: 0.669
-      XWINO: 0.909
-      MMLU: 0.762
-      GSM8K: 0.851
-      MATH: 0.466
-      BBH: 0.79
-      HumanEval: 0.707
-    other:
-      GPQA: 0.087
-- id: rinna/gemma-2-baku-2b
-  name: Gemma 2 Baku 2B
-  date: '2024-10-03'
-  params: 2.6
-  base_model: ''
-  sortkey: gemma 2 baku
-  url: https://huggingface.co/rinna/gemma-2-baku-2b
-  results:
-    ja_basic:
-      Ja Avg: 0.372
-      JComQA: 0.76
-      JEMHopQA: 0.475
-      NIILC: 0.443
-      JSQuAD: 0.843
-      XL-Sum: 0.121
-      MGSM: 0.124
-      WMT20-en-ja: 0.255
-      WMT20-ja-en: 0.187
-      JMMLU: 0.376
-      JHumanEval: 0.137
-    en_basic:
-      En Avg: 0.4
-      OpenBookQA: 0.314
-      TriviaQA: 0.475
-      HellaSwag: 0.533
-      SQuAD2: 0.501
-      XWINO: 0.881
-      MMLU: 0.493
-      GSM8K: 0.168
-      MATH: 0.11
-      BBH: 0.376
-      HumanEval: 0.15
-    other:
-      GPQA: 0.029
-- id: rinna/gemma-2-baku-2b-it
-  name: Gemma 2 Baku 2B IT
-  date: '2024-10-03'
-  params: 2.6
-  base_model: Gemma 2 Baku 2B
-  sortkey: gemma 2 baku
-  url: https://huggingface.co/rinna/gemma-2-baku-2b-it
-  results:
-    ja_basic:
-      Ja Avg: 0.366
-      JComQA: 0.855
-      JEMHopQA: 0.228
-      NIILC: 0.39
-      JSQuAD: 0.877
-      XL-Sum: 0.115
-      MGSM: 0.172
-      WMT20-en-ja: 0.255
-      WMT20-ja-en: 0.19
-      JMMLU: 0.415
-      JHumanEval: 0.165
-    ja_mtb:
-      JMT Avg: 0.59
-      coding: 0.47
-      extraction: 0.625
-      humanities: 0.81
-      math: 0.414
-      reasoning: 0.382
-      roleplay: 0.713
-      stem: 0.609
-      writing: 0.697
-    en_basic:
-      En Avg: 0.361
-      OpenBookQA: 0.342
-      TriviaQA: 0.416
-      HellaSwag: 0.511
-      SQuAD2: 0.522
-      XWINO: 0.871
-      MMLU: 0.526
-      GSM8K: 0.027
-      MATH: 0.174
-      BBH: 0.063
-      HumanEval: 0.158
-    other:
-      GPQA: 0.051
-- id: google/gemma-2-2b-jpn-it
-  name: Gemma 2 JPN
-  date: '2024-06-27'
-  params: 2.6
-  base_model: Gemma 2 2B
-  sortkey: gemma 2 jpn
-  url: https://huggingface.co/google/gemma-2-2b-jpn-it
-  results:
-    ja_basic:
-      Ja Avg: 0.377
-      JComQA: 0.845
-      JEMHopQA: 0.321
-      NIILC: 0.291
-      JSQuAD: 0.877
-      XL-Sum: 0.131
-      MGSM: 0.192
-      WMT20-en-ja: 0.204
-      WMT20-ja-en: 0.18
-      JMMLU: 0.418
-      JHumanEval: 0.311
-    ja_mtb:
-      JMT Avg: 0.55
-      coding: 0.467
-      extraction: 0.488
-      humanities: 0.741
-      math: 0.379
-      reasoning: 0.406
-      roleplay: 0.66
-      stem: 0.589
-      writing: 0.672
-    en_basic:
-      En Avg: 0.471
-      OpenBookQA: 0.37
-      TriviaQA: 0.503
-      HellaSwag: 0.532
-      SQuAD2: 0.539
-      XWINO: 0.879
-      MMLU: 0.557
-      GSM8K: 0.351
-      MATH: 0.132
-      BBH: 0.451
-      HumanEval: 0.392
-    other:
-      GPQA: 0.033
+      math: 0.697
+      reasoning: 0.578
+      roleplay: 0.818
+      stem: 0.745
+      writing: 0.796
+    en_mtb:
+      avg: 0.8
+      coding: 0.701
+      extraction: 0.855
+      humanities: 0.891
+      math: 0.724
+      reasoning: 0.702
+      roleplay: 0.843
+      stem: 0.827
+      writing: 0.858
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1
   name: Gemma-2-Llama Swallow 2B
   date: '2025-05-19'
   params: 2.6
-  base_model: ''
+  active_params: 2.6
+  family: Gemma 2
+  base: －
   sortkey: gemma 2 llama swallow
+  is_post: false
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-2b-pt-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.421
+    ja_pre:
+      avg: 0.421
       JComQA: 0.83
       JEMHopQA: 0.509
       NIILC: 0.549
       JSQuAD: 0.863
-      XL-Sum: 0.119
+      XLSum: 0.119
       MGSM: 0.172
-      WMT20-en-ja: 0.261
-      WMT20-ja-en: 0.195
+      WMT20enja: 0.261
+      WMT20jaen: 0.195
       JMMLU: 0.461
       JHumanEval: 0.251
-    en_basic:
-      En Avg: 0.426
+    en_pre:
+      avg: 0.426
       OpenBookQA: 0.312
       TriviaQA: 0.435
       HellaSwag: 0.516
@@ -834,74 +927,81 @@
       MATH: 0.144
       BBH: 0.384
       HumanEval: 0.286
-    other:
-      GPQA: 0.051
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
   name: Gemma-2-Llama Swallow 2B IT
   date: '2025-05-19'
   params: 2.6
-  base_model: Gemma2-Llama Swallow 2B
+  active_params: 2.6
+  family: Gemma 2
+  pre_training: Gemma2-Llama Swallow 2B
+  reasoning: N/A
   sortkey: gemma 2 llama swallow
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.424
-      JComQA: 0.862
-      JEMHopQA: 0.367
-      NIILC: 0.483
-      JSQuAD: 0.881
-      XL-Sum: 0.145
-      MGSM: 0.288
-      WMT20-en-ja: 0.258
-      WMT20-ja-en: 0.2
-      JMMLU: 0.485
-      JHumanEval: 0.267
+    ja_post:
+      avg: 0.245
+      JEMHopQA: 0.274
+      MMLU-ProX: 0.19
+      GPQA: 0.259
+      MATH100: 0.263
+      JHumanEval: 0.241
+      __MIFEvalJa: 0.363
+    en_post:
+      avg: 0.184
+      HellaSwag: 0.495
+      MMLU-Pro: 0.169
+      GPQA: 0.268
+      MATH500: 0.138
+      AIME: 0.0
+      LCB: 0.036
     ja_mtb:
-      JMT Avg: 0.597
-      coding: 0.438
-      extraction: 0.533
-      humanities: 0.781
-      math: 0.557
-      reasoning: 0.404
-      roleplay: 0.706
-      stem: 0.674
-      writing: 0.682
-    en_basic:
-      En Avg: 0.431
-      OpenBookQA: 0.332
-      TriviaQA: 0.417
-      HellaSwag: 0.529
-      SQuAD2: 0.506
-      XWINO: 0.856
-      MMLU: 0.53
-      GSM8K: 0.284
-      MATH: 0.15
-      BBH: 0.405
-      HumanEval: 0.301
-    other:
-      GPQA: 0.141
+      avg: 0.583
+      coding: 0.408
+      extraction: 0.551
+      humanities: 0.774
+      math: 0.42
+      reasoning: 0.418
+      roleplay: 0.725
+      stem: 0.655
+      writing: 0.709
+    en_mtb:
+      avg: 0.584
+      coding: 0.461
+      extraction: 0.534
+      humanities: 0.758
+      math: 0.376
+      reasoning: 0.452
+      roleplay: 0.728
+      stem: 0.646
+      writing: 0.715
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1
   name: Gemma-2-Llama Swallow 9B
   date: '2025-05-19'
   params: 9.2
-  base_model: ''
+  active_params: 9.2
+  family: Gemma 2
+  base: Gemma 2 9B
   sortkey: gemma 2 llama swallow
+  is_post: false
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.558
+    ja_pre:
+      avg: 0.558
       JComQA: 0.95
       JEMHopQA: 0.643
       NIILC: 0.677
       JSQuAD: 0.897
-      XL-Sum: 0.187
+      XLSum: 0.187
       MGSM: 0.56
-      WMT20-en-ja: 0.304
-      WMT20-ja-en: 0.247
+      WMT20enja: 0.304
+      WMT20jaen: 0.247
       JMMLU: 0.65
       JHumanEval: 0.462
-    en_basic:
-      En Avg: 0.595
+    en_pre:
+      avg: 0.595
       OpenBookQA: 0.362
       TriviaQA: 0.659
       HellaSwag: 0.602
@@ -912,74 +1012,81 @@
       MATH: 0.33
       BBH: 0.664
       HumanEval: 0.529
-    other:
-      GPQA: 0.232
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
   name: Gemma-2-Llama Swallow 9B IT
   date: '2025-05-19'
   params: 9.2
-  base_model: Gemma 2 9B
+  active_params: 9.2
+  family: Gemma 2
+  pre_training: Gemma 2 9B
+  reasoning: N/A
   sortkey: gemma 2 llama swallow
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.546
-      JComQA: 0.946
-      JEMHopQA: 0.606
-      NIILC: 0.643
-      JSQuAD: 0.852
-      XL-Sum: 0.17
-      MGSM: 0.624
-      WMT20-en-ja: 0.296
-      WMT20-ja-en: 0.238
-      JMMLU: 0.639
-      JHumanEval: 0.446
+    ja_post:
+      avg: 0.402
+      JEMHopQA: 0.465
+      MMLU-ProX: 0.372
+      GPQA: 0.283
+      MATH100: 0.374
+      JHumanEval: 0.518
+      __MIFEvalJa: 0.54
+    en_post:
+      avg: 0.323
+      HellaSwag: 0.801
+      MMLU-Pro: 0.296
+      GPQA: 0.283
+      MATH500: 0.438
+      AIME: 0.017
+      LCB: 0.106
     ja_mtb:
-      JMT Avg: 0.749
-      coding: 0.592
-      extraction: 0.796
-      humanities: 0.872
-      math: 0.742
-      reasoning: 0.638
-      roleplay: 0.802
-      stem: 0.745
-      writing: 0.803
-    en_basic:
-      En Avg: 0.611
-      OpenBookQA: 0.404
-      TriviaQA: 0.64
-      HellaSwag: 0.609
-      SQuAD2: 0.623
-      XWINO: 0.9
-      MMLU: 0.68
-      GSM8K: 0.71
-      MATH: 0.392
-      BBH: 0.663
-      HumanEval: 0.491
-    other:
-      GPQA: 0.08
+      avg: 0.729
+      coding: 0.579
+      extraction: 0.787
+      humanities: 0.88
+      math: 0.661
+      reasoning: 0.616
+      roleplay: 0.788
+      stem: 0.735
+      writing: 0.783
+    en_mtb:
+      avg: 0.734
+      coding: 0.523
+      extraction: 0.831
+      humanities: 0.886
+      math: 0.72
+      reasoning: 0.518
+      roleplay: 0.789
+      stem: 0.786
+      writing: 0.819
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1
   name: Gemma-2-Llama Swallow 27B
   date: '2025-05-19'
   params: 27
-  base_model: ''
+  active_params: 27
+  family: Gemma 2
+  base: Gemma 2 27B
   sortkey: gemma 2 llama swallow
+  is_post: false
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.594
+    ja_pre:
+      avg: 0.594
       JComQA: 0.958
       JEMHopQA: 0.66
       NIILC: 0.671
       JSQuAD: 0.924
-      XL-Sum: 0.2
+      XLSum: 0.2
       MGSM: 0.644
-      WMT20-en-ja: 0.321
-      WMT20-ja-en: 0.255
+      WMT20enja: 0.321
+      WMT20jaen: 0.255
       JMMLU: 0.679
       JHumanEval: 0.629
-    en_basic:
-      En Avg: 0.665
+    en_pre:
+      avg: 0.665
       OpenBookQA: 0.414
       TriviaQA: 0.756
       HellaSwag: 0.652
@@ -990,74 +1097,81 @@
       MATH: 0.416
       BBH: 0.765
       HumanEval: 0.658
-    other:
-      GPQA: 0.279
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
+  model_id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
   name: Gemma-2-Llama Swallow 27B IT
   date: '2025-05-19'
   params: 27
-  base_model: Gemma 2 27B
+  active_params: 27
+  family: Gemma 2
+  pre_training: Gemma 2 27B
+  reasoning: N/A
   sortkey: gemma 2 llama swallow
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.602
-      JComQA: 0.969
-      JEMHopQA: 0.654
-      NIILC: 0.658
-      JSQuAD: 0.891
-      XL-Sum: 0.194
-      MGSM: 0.764
-      WMT20-en-ja: 0.316
-      WMT20-ja-en: 0.258
-      JMMLU: 0.686
-      JHumanEval: 0.635
+    ja_post:
+      avg: 0.517
+      JEMHopQA: 0.681
+      MMLU-ProX: 0.452
+      GPQA: 0.333
+      MATH100: 0.465
+      JHumanEval: 0.656
+      __MIFEvalJa: 0.54
+    en_post:
+      avg: 0.393
+      HellaSwag: 0.786
+      MMLU-Pro: 0.436
+      GPQA: 0.343
+      MATH500: 0.544
+      AIME: 0.033
+      LCB: 0.218
     ja_mtb:
-      JMT Avg: 0.759
-      coding: 0.618
-      extraction: 0.839
-      humanities: 0.873
-      math: 0.741
-      reasoning: 0.608
-      roleplay: 0.814
-      stem: 0.739
-      writing: 0.836
-    en_basic:
-      En Avg: 0.687
-      OpenBookQA: 0.424
-      TriviaQA: 0.747
-      HellaSwag: 0.663
-      SQuAD2: 0.664
-      XWINO: 0.911
-      MMLU: 0.749
-      GSM8K: 0.821
-      MATH: 0.442
-      BBH: 0.772
-      HumanEval: 0.682
-    other:
-      GPQA: 0.259
+      avg: 0.759
+      coding: 0.627
+      extraction: 0.846
+      humanities: 0.868
+      math: 0.767
+      reasoning: 0.548
+      roleplay: 0.796
+      stem: 0.785
+      writing: 0.833
+    en_mtb:
+      avg: 0.771
+      coding: 0.626
+      extraction: 0.789
+      humanities: 0.883
+      math: 0.751
+      reasoning: 0.622
+      roleplay: 0.824
+      stem: 0.821
+      writing: 0.853
 - id: google/gemma-3-1b-pt
+  model_id: google/gemma-3-1b-pt
   name: Gemma 3 1B
   date: '2025-03-12'
   params: 1
-  base_model: ''
+  active_params: 1
+  family: Gemma 3
+  base: －
   sortkey: gemma 3
+  is_post: false
   url: https://huggingface.co/google/gemma-3-1b-pt
   results:
-    ja_basic:
-      Ja Avg: 0.223
+    ja_pre:
+      avg: 0.223
       JComQA: 0.237
       JEMHopQA: 0.41
       NIILC: 0.252
       JSQuAD: 0.631
-      XL-Sum: 0.079
+      XLSum: 0.079
       MGSM: 0.024
-      WMT20-en-ja: 0.15
-      WMT20-ja-en: 0.136
+      WMT20enja: 0.15
+      WMT20jaen: 0.136
       JMMLU: 0.239
       JHumanEval: 0.073
-    en_basic:
-      En Avg: 0.31
+    en_pre:
+      avg: 0.31
       OpenBookQA: 0.304
       TriviaQA: 0.358
       HellaSwag: 0.471
@@ -1068,74 +1182,81 @@
       MATH: 0.008
       BBH: 0.276
       HumanEval: 0.07
-    other:
-      GPQA: 0.02
 - id: google/gemma-3-1b-it
+  model_id: google/gemma-3-1b-it
   name: Gemma 3 1B IT
   date: '2025-03-12'
-  params: 1
-  base_model: Gemma 3 1B
+  params: 1.0
+  active_params: 1.0
+  family: Gemma 3
+  pre_training: Gemma 3 1B
+  reasoning: N/A
   sortkey: gemma 3
+  is_post: true
   url: https://huggingface.co/google/gemma-3-1b-it
   results:
-    ja_basic:
-      Ja Avg: 0.285
-      JComQA: 0.526
-      JEMHopQA: 0.33
-      NIILC: 0.237
-      JSQuAD: 0.7
-      XL-Sum: 0.113
-      MGSM: 0.088
-      WMT20-en-ja: 0.166
-      WMT20-ja-en: 0.115
-      JMMLU: 0.332
-      JHumanEval: 0.245
+    ja_post:
+      avg: 0.17
+      JEMHopQA: 0.168
+      MMLU-ProX: 0.148
+      GPQA: 0.248
+      MATH100: 0.172
+      JHumanEval: 0.112
+      __MIFEvalJa: 0.323
+    en_post:
+      avg: 0.201
+      HellaSwag: 0.357
+      MMLU-Pro: 0.171
+      GPQA: 0.237
+      MATH500: 0.438
+      AIME: 0.0
+      LCB: 0.002
     ja_mtb:
-      JMT Avg: 0.51
-      coding: 0.379
-      extraction: 0.497
-      humanities: 0.68
-      math: 0.385
-      reasoning: 0.322
-      roleplay: 0.628
-      stem: 0.54
-      writing: 0.651
-    en_basic:
-      En Avg: 0.392
-      OpenBookQA: 0.272
-      TriviaQA: 0.229
-      HellaSwag: 0.421
-      SQuAD2: 0.501
-      XWINO: 0.786
-      MMLU: 0.398
-      GSM8K: 0.256
-      MATH: 0.34
-      BBH: 0.379
-      HumanEval: 0.335
-    other:
-      GPQA: 0.167
+      avg: 0.434
+      coding: 0.396
+      extraction: 0.484
+      humanities: 0.519
+      math: 0.343
+      reasoning: 0.337
+      roleplay: 0.519
+      stem: 0.434
+      writing: 0.436
+    en_mtb:
+      avg: 0.578
+      coding: 0.503
+      extraction: 0.453
+      humanities: 0.719
+      math: 0.709
+      reasoning: 0.366
+      roleplay: 0.634
+      stem: 0.686
+      writing: 0.553
 - id: google/gemma-3-4b-pt
+  model_id: google/gemma-3-4b-pt
   name: Gemma 3 4B
   date: '2025-03-12'
   params: 4.3
-  base_model: ''
+  active_params: 4.3
+  family: Gemma 3
+  base: －
   sortkey: gemma 3
+  is_post: false
   url: https://huggingface.co/google/gemma-3-4b-pt
   results:
-    ja_basic:
-      Ja Avg: 0.417
+    ja_pre:
+      avg: 0.417
       JComQA: 0.851
       JEMHopQA: 0.432
       NIILC: 0.41
       JSQuAD: 0.887
-      XL-Sum: 0.139
+      XLSum: 0.139
       MGSM: 0.248
-      WMT20-en-ja: 0.23
-      WMT20-ja-en: 0.205
+      WMT20enja: 0.23
+      WMT20jaen: 0.205
       JMMLU: 0.499
       JHumanEval: 0.273
-    en_basic:
-      En Avg: 0.501
+    en_pre:
+      avg: 0.501
       OpenBookQA: 0.36
       TriviaQA: 0.603
       HellaSwag: 0.576
@@ -1146,74 +1267,81 @@
       MATH: 0.258
       BBH: 0.495
       HumanEval: 0.351
-    other:
-      GPQA: 0.156
 - id: google/gemma-3-4b-it
+  model_id: google/gemma-3-4b-it
   name: Gemma 3 4B IT
   date: '2025-03-12'
   params: 4.3
-  base_model: Gemma 3 4B
+  active_params: 4.3
+  family: Gemma 3
+  pre_training: Gemma 3 4B
+  reasoning: N/A
   sortkey: gemma 3
+  is_post: true
   url: https://huggingface.co/google/gemma-3-4b-it
   results:
-    ja_basic:
-      Ja Avg: 0.416
-      JComQA: 0.818
-      JEMHopQA: 0.444
-      NIILC: 0.404
-      JSQuAD: 0.801
-      XL-Sum: 0.134
-      MGSM: 0.332
-      WMT20-en-ja: 0.217
-      WMT20-ja-en: 0.169
-      JMMLU: 0.477
-      JHumanEval: 0.365
+    ja_post:
+      avg: 0.448
+      JEMHopQA: 0.45
+      MMLU-ProX: 0.335
+      GPQA: 0.246
+      MATH100: 0.606
+      JHumanEval: 0.604
+      __MIFEvalJa: 0.473
+    en_post:
+      avg: 0.405
+      HellaSwag: 0.62
+      MMLU-Pro: 0.44
+      GPQA: 0.354
+      MATH500: 0.748
+      AIME: 0.117
+      LCB: 0.151
     ja_mtb:
-      JMT Avg: 0.724
-      coding: 0.603
-      extraction: 0.724
-      humanities: 0.798
-      math: 0.767
-      reasoning: 0.498
-      roleplay: 0.803
-      stem: 0.775
-      writing: 0.822
-    en_basic:
-      En Avg: 0.566
-      OpenBookQA: 0.412
-      TriviaQA: 0.5
-      HellaSwag: 0.56
-      SQuAD2: 0.552
-      XWINO: 0.872
-      MMLU: 0.583
-      GSM8K: 0.769
-      MATH: 0.306
-      BBH: 0.598
-      HumanEval: 0.513
-    other:
-      GPQA: 0.25
+      avg: 0.735
+      coding: 0.727
+      extraction: 0.65
+      humanities: 0.814
+      math: 0.826
+      reasoning: 0.482
+      roleplay: 0.787
+      stem: 0.796
+      writing: 0.802
+    en_mtb:
+      avg: 0.793
+      coding: 0.704
+      extraction: 0.762
+      humanities: 0.901
+      math: 0.855
+      reasoning: 0.553
+      roleplay: 0.869
+      stem: 0.845
+      writing: 0.857
 - id: google/gemma-3-12b-pt
+  model_id: google/gemma-3-12b-pt
   name: Gemma 3 12B
   date: '2025-03-12'
   params: 12
-  base_model: ''
+  active_params: 12
+  family: Gemma 3
+  base: －
   sortkey: gemma 3
+  is_post: false
   url: https://huggingface.co/google/gemma-3-12b-pt
   results:
-    ja_basic:
-      Ja Avg: 0.518
+    ja_pre:
+      avg: 0.518
       JComQA: 0.787
       JEMHopQA: 0.563
       NIILC: 0.569
       JSQuAD: 0.911
-      XL-Sum: 0.194
+      XLSum: 0.194
       MGSM: 0.584
-      WMT20-en-ja: 0.288
-      WMT20-ja-en: 0.244
+      WMT20enja: 0.288
+      WMT20jaen: 0.244
       JMMLU: 0.659
       JHumanEval: 0.385
-    en_basic:
-      En Avg: 0.619
+    en_pre:
+      avg: 0.619
       OpenBookQA: 0.398
       TriviaQA: 0.747
       HellaSwag: 0.637
@@ -1224,74 +1352,81 @@
       MATH: 0.398
       BBH: 0.683
       HumanEval: 0.445
-    other:
-      GPQA: 0.004
 - id: google/gemma-3-12b-it
+  model_id: google/gemma-3-12b-it
   name: Gemma 3 12B IT
   date: '2025-03-12'
   params: 12
-  base_model: Gemma 3 12B
+  active_params: 12
+  family: Gemma 3
+  pre_training: Gemma 3 12B
+  reasoning: N/A
   sortkey: gemma 3
+  is_post: true
   url: https://huggingface.co/google/gemma-3-12b-it
   results:
-    ja_basic:
-      Ja Avg: 0.553
-      JComQA: 0.935
-      JEMHopQA: 0.566
-      NIILC: 0.542
-      JSQuAD: 0.808
-      XL-Sum: 0.148
-      MGSM: 0.724
-      WMT20-en-ja: 0.289
-      WMT20-ja-en: 0.239
-      JMMLU: 0.645
-      JHumanEval: 0.637
+    ja_post:
+      avg: 0.597
+      JEMHopQA: 0.525
+      MMLU-ProX: 0.527
+      GPQA: 0.373
+      MATH100: 0.798
+      JHumanEval: 0.763
+      __MIFEvalJa: 0.619
+    en_post:
+      avg: 0.524
+      HellaSwag: 0.816
+      MMLU-Pro: 0.617
+      GPQA: 0.389
+      MATH500: 0.862
+      AIME: 0.217
+      LCB: 0.247
     ja_mtb:
-      JMT Avg: 0.821
-      coding: 0.807
-      extraction: 0.814
-      humanities: 0.871
-      math: 0.886
-      reasoning: 0.623
-      roleplay: 0.847
-      stem: 0.858
-      writing: 0.863
-    en_basic:
-      En Avg: 0.717
-      OpenBookQA: 0.422
-      TriviaQA: 0.665
-      HellaSwag: 0.639
-      SQuAD2: 0.649
-      XWINO: 0.901
-      MMLU: 0.721
-      GSM8K: 0.867
-      MATH: 0.796
-      BBH: 0.802
-      HumanEval: 0.712
-    other:
-      GPQA: 0.315
+      avg: 0.811
+      coding: 0.784
+      extraction: 0.807
+      humanities: 0.88
+      math: 0.858
+      reasoning: 0.582
+      roleplay: 0.856
+      stem: 0.878
+      writing: 0.844
+    en_mtb:
+      avg: 0.86
+      coding: 0.741
+      extraction: 0.862
+      humanities: 0.917
+      math: 0.932
+      reasoning: 0.758
+      roleplay: 0.891
+      stem: 0.899
+      writing: 0.879
 - id: google/gemma-3-27b-pt
+  model_id: google/gemma-3-27b-pt
   name: Gemma 3 27B
   date: '2025-03-12'
   params: 27
-  base_model: ''
+  active_params: 27
+  family: Gemma 3
+  base: －
   sortkey: gemma 3
+  is_post: false
   url: https://huggingface.co/google/gemma-3-27b-pt
   results:
-    ja_basic:
-      Ja Avg: 0.574
+    ja_pre:
+      avg: 0.574
       JComQA: 0.944
       JEMHopQA: 0.582
       NIILC: 0.627
       JSQuAD: 0.915
-      XL-Sum: 0.21
+      XLSum: 0.21
       MGSM: 0.704
-      WMT20-en-ja: 0.301
-      WMT20-ja-en: 0.255
+      WMT20enja: 0.301
+      WMT20jaen: 0.255
       JMMLU: 0.724
       JHumanEval: 0.473
-    en_basic:
-      En Avg: 0.677
+    en_pre:
+      avg: 0.677
       OpenBookQA: 0.414
       TriviaQA: 0.809
       HellaSwag: 0.667
@@ -1302,982 +1437,326 @@
       MATH: 0.52
       BBH: 0.732
       HumanEval: 0.507
-    other:
-      GPQA: 0.022
 - id: google/gemma-3-27b-it
+  model_id: google/gemma-3-27b-it
   name: Gemma 3 27B IT
   date: '2025-03-12'
   params: 27
-  base_model: Gemma 3 27B
+  active_params: 27
+  family: Gemma 3
+  pre_training: Gemma 3 27B
+  reasoning: N/A
   sortkey: gemma 3
+  is_post: true
   url: https://huggingface.co/google/gemma-3-27b-it
   results:
-    ja_basic:
-      Ja Avg: 0.591
-      JComQA: 0.946
-      JEMHopQA: 0.592
-      NIILC: 0.584
-      JSQuAD: 0.867
-      XL-Sum: 0.142
-      MGSM: 0.764
-      WMT20-en-ja: 0.307
-      WMT20-ja-en: 0.253
-      JMMLU: 0.716
-      JHumanEval: 0.736
+    ja_post:
+      avg: 0.658
+      JEMHopQA: 0.607
+      MMLU-ProX: 0.609
+      GPQA: 0.417
+      MATH100: 0.859
+      JHumanEval: 0.796
+      __MIFEvalJa: 0.597
+    en_post:
+      avg: 0.571
+      HellaSwag: 0.861
+      MMLU-Pro: 0.681
+      GPQA: 0.475
+      MATH500: 0.88
+      AIME: 0.233
+      LCB: 0.298
     ja_mtb:
-      JMT Avg: 0.855
-      coding: 0.804
-      extraction: 0.927
-      humanities: 0.879
-      math: 0.876
-      reasoning: 0.774
-      roleplay: 0.846
-      stem: 0.848
-      writing: 0.882
-    en_basic:
-      En Avg: 0.758
-      OpenBookQA: 0.418
-      TriviaQA: 0.744
-      HellaSwag: 0.661
-      SQuAD2: 0.687
-      XWINO: 0.906
-      MMLU: 0.774
-      GSM8K: 0.916
-      MATH: 0.852
-      BBH: 0.793
-      HumanEval: 0.829
-    other:
-      GPQA: 0.444
-- id: gpt-3.5-turbo-0125
-  name: GPT-3.5 (gpt-3.5-turbo-0125)
-  date: '2024-01-25'
+      avg: 0.83
+      coding: 0.747
+      extraction: 0.942
+      humanities: 0.878
+      math: 0.808
+      reasoning: 0.733
+      roleplay: 0.849
+      stem: 0.853
+      writing: 0.831
+    en_mtb:
+      avg: 0.88
+      coding: 0.767
+      extraction: 0.919
+      humanities: 0.92
+      math: 0.924
+      reasoning: 0.797
+      roleplay: 0.908
+      stem: 0.917
+      writing: 0.888
+- id: gpt-4.1-2025-04-14
+  model_id: gpt-4.1-2025-04-14
+  name: GPT-4.1 (gpt-4.1-2025-04-14)
+  date: '2025-04-14'
   params: 0
-  base_model: (private)
-  sortkey: gpt 3.5 (gpt 3.5 turbo 0125)
+  active_params: 0
+  family: GPT-4.1
+  pre_training: (private)
+  reasoning: N/A
+  sortkey: gpt 4.1 (gpt 4.1 2025 04 14)
+  is_post: true
   url: https://platform.openai.com/docs/models
   results:
-    ja_basic:
-      Ja Avg: 0.515
-      JComQA: 0.922
-      JEMHopQA: 0.456
-      NIILC: 0.447
-      JSQuAD: 0.893
-      XL-Sum: 0.215
-      MGSM: 0.572
-      WMT20-en-ja: 0.287
-      WMT20-ja-en: 0.243
-      JMMLU: 0.499
-      JHumanEval: 0.616
+    ja_post:
+      avg: 0.808
+      JEMHopQA: 0.856
+      MMLU-ProX: 0.772
+      GPQA: 0.603
+      MATH100: 0.899
+      JHumanEval: 0.911
+      __MIFEvalJa: 0.81
+    en_post:
+      avg: 0.685
+      HellaSwag: 0.94
+      MMLU-Pro: 0.813
+      GPQA: 0.667
+      MATH500: 0.906
+      AIME: 0.4
+      LCB: 0.387
     ja_mtb:
-      JMT Avg: 0.691
-      coding: 0.693
-      extraction: 0.789
-      humanities: 0.773
-      math: 0.665
-      reasoning: 0.462
-      roleplay: 0.728
-      stem: 0.644
-      writing: 0.775
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: 0.29
-- id: gpt-4-0613
-  name: GPT-4 (gpt-4-0613)
-  date: '2023-06-13'
-  params: 0
-  base_model: (private)
-  sortkey: gpt 4 (gpt 4 0613)
-  url: https://platform.openai.com/docs/models
-  results:
-    ja_basic:
-      Ja Avg: 0.621
-      JComQA: 0.966
-      JEMHopQA: 0.651
-      NIILC: 0.616
-      JSQuAD: 0.927
-      XL-Sum: 0.22
-      MGSM: 0.832
-      WMT20-en-ja: 0.286
-      WMT20-ja-en: 0.263
-      JMMLU: 0.768
-      JHumanEval: 0.68
-    ja_mtb:
-      JMT Avg: 0.771
-      coding: 0.645
-      extraction: 0.913
-      humanities: 0.838
-      math: 0.698
-      reasoning: 0.666
-      roleplay: 0.81
-      stem: 0.764
-      writing: 0.834
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: -0.001
-- id: gpt-4-turbo-2024-04-09
-  name: GPT-4-turbo (gpt-4-turbo-2024-04-09)
-  date: '2024-04-09'
-  params: 0
-  base_model: (private)
-  sortkey: gpt 4 turbo (gpt 4 turbo 2024 04 09)
-  url: https://platform.openai.com/docs/models
-  results:
-    ja_basic:
-      Ja Avg: 0.626
-      JComQA: 0.971
-      JEMHopQA: 0.69
-      NIILC: 0.615
-      JSQuAD: 0.878
-      XL-Sum: 0.201
-      MGSM: 0.848
-      WMT20-en-ja: 0.295
-      WMT20-ja-en: 0.239
-      JMMLU: 0.753
-      JHumanEval: 0.773
-    ja_mtb:
-      JMT Avg: 0.837
-      coding: 0.842
-      extraction: 0.891
-      humanities: 0.863
-      math: 0.865
-      reasoning: 0.673
-      roleplay: 0.861
-      stem: 0.844
-      writing: 0.854
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: 0.304
-- id: gpt-4.5-preview-2025-02-27
-  name: GPT-4.5 (gpt-4.5-preview-2025-02-27)
-  date: '2025-02-27'
-  params: 0
-  base_model: (private)
-  sortkey: gpt 4.5 (gpt 4.5 preview 2025 02 27)
-  url: https://platform.openai.com/docs/models
-  results:
-    ja_basic:
-      Ja Avg: -0.01
-      JComQA: -0.01
-      JEMHopQA: -0.01
-      NIILC: -0.01
-      JSQuAD: -0.01
-      XL-Sum: -0.01
-      MGSM: -0.01
-      WMT20-en-ja: -0.01
-      WMT20-ja-en: -0.01
-      JMMLU: -0.01
-      JHumanEval: -0.01
-    ja_mtb:
-      JMT Avg: 0.884
-      coding: 0.859
-      extraction: 0.93
-      humanities: 0.898
+      avg: 0.892
+      coding: 0.917
+      extraction: 0.911
+      humanities: 0.885
       math: 0.98
-      reasoning: 0.747
-      roleplay: 0.859
-      stem: 0.906
-      writing: 0.893
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: -0.001
-- id: gpt-4o-2024-05-13
-  name: GPT-4o (gpt-4o-2024-05-13)
-  date: '2024-05-13'
-  params: 0
-  base_model: (private)
-  sortkey: gpt 4o (gpt 4o 2024 05 13)
-  url: https://platform.openai.com/docs/models
-  results:
-    ja_basic:
-      Ja Avg: 0.649
-      JComQA: 0.979
-      JEMHopQA: 0.737
-      NIILC: 0.722
-      JSQuAD: 0.892
-      XL-Sum: 0.14
-      MGSM: 0.86
-      WMT20-en-ja: 0.314
-      WMT20-ja-en: 0.237
-      JMMLU: 0.794
-      JHumanEval: 0.813
-    ja_mtb:
-      JMT Avg: 0.848
-      coding: 0.859
-      extraction: 0.93
-      humanities: 0.882
-      math: 0.917
-      reasoning: 0.631
-      roleplay: 0.858
-      stem: 0.858
-      writing: 0.851
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: 0.306
+      reasoning: 0.819
+      roleplay: 0.879
+      stem: 0.887
+      writing: 0.858
+    en_mtb:
+      avg: 0.908
+      coding: 0.898
+      extraction: 0.936
+      humanities: 0.903
+      math: 0.942
+      reasoning: 0.863
+      roleplay: 0.901
+      stem: 0.925
+      writing: 0.898
 - id: gpt-4o-2024-08-06
+  model_id: gpt-4o-2024-08-06
   name: GPT-4o (gpt-4o-2024-08-06)
   date: '2024-08-06'
   params: 0
-  base_model: (private)
+  active_params: 0
+  family: GPT-4o
+  pre_training: (private)
+  reasoning: N/A
   sortkey: gpt 4o (gpt 4o 2024 08 06)
+  is_post: true
   url: https://platform.openai.com/docs/models
   results:
-    ja_basic:
-      Ja Avg: 0.646
-      JComQA: 0.982
-      JEMHopQA: 0.731
-      NIILC: 0.709
-      JSQuAD: 0.889
-      XL-Sum: 0.17
-      MGSM: 0.864
-      WMT20-en-ja: 0.314
-      WMT20-ja-en: 0.254
-      JMMLU: 0.797
-      JHumanEval: 0.752
+    ja_post:
+      avg: 0.71
+      JEMHopQA: 0.813
+      MMLU-ProX: 0.685
+      GPQA: 0.453
+      MATH100: 0.758
+      JHumanEval: 0.844
+      __MIFEvalJa: 0.704
+    en_post:
+      avg: 0.56
+      HellaSwag: 0.93
+      MMLU-Pro: 0.749
+      GPQA: 0.556
+      MATH500: 0.792
+      AIME: 0.083
+      LCB: 0.25
     ja_mtb:
-      JMT Avg: 0.848
-      coding: 0.855
-      extraction: 0.926
-      humanities: 0.88
-      math: 0.872
-      reasoning: 0.706
-      roleplay: 0.862
-      stem: 0.838
-      writing: 0.849
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: 0.317
-- id: gpt-4o-mini-2024-07-18
-  name: GPT-4o-mini (gpt-4o-mini-2024-07-18)
-  date: '2024-08-06'
+      avg: 0.865
+      coding: 0.896
+      extraction: 0.929
+      humanities: 0.874
+      math: 0.895
+      reasoning: 0.755
+      roleplay: 0.869
+      stem: 0.847
+      writing: 0.855
+    en_mtb:
+      avg: 0.922
+      coding: 0.943
+      extraction: 0.927
+      humanities: 0.896
+      math: 0.993
+      reasoning: 0.976
+      roleplay: 0.874
+      stem: 0.905
+      writing: 0.865
+- id: gpt-5-2025-08-07
+  model_id: gpt-5-2025-08-07
+  name: GPT-5 (gpt-5-2025-08-07)
+  date: '2025-08-07'
   params: 0
-  base_model: (private)
-  sortkey: gpt 4o mini (gpt 4o mini 2024 07 18)
+  active_params: 0
+  family: GPT-5
+  pre_training: (private)
+  reasoning: on (middle)
+  sortkey: gpt 5 (gpt 5 2025 08 07)
+  is_post: true
   url: https://platform.openai.com/docs/models
   results:
-    ja_basic:
-      Ja Avg: 0.58
-      JComQA: 0.961
-      JEMHopQA: 0.464
-      NIILC: 0.591
-      JSQuAD: 0.902
-      XL-Sum: 0.16
-      MGSM: 0.832
-      WMT20-en-ja: 0.299
-      WMT20-ja-en: 0.241
-      JMMLU: 0.679
-      JHumanEval: 0.675
+    ja_post:
+      avg: 0.891
+      JEMHopQA: 0.9
+      MMLU-ProX: 0.849
+      GPQA: 0.786
+      MATH100: 0.98
+      JHumanEval: 0.943
+      __MIFEvalJa: 0.907
+    en_post:
+      avg: 0.875
+      HellaSwag: 0.959
+      MMLU-Pro: 0.865
+      GPQA: 0.828
+      MATH500: 0.99
+      AIME: 0.933
+      LCB: 0.677
     ja_mtb:
-      JMT Avg: 0.824
-      coding: 0.825
-      extraction: 0.865
-      humanities: 0.857
+      avg: 0.882
+      coding: 0.893
+      extraction: 0.883
+      humanities: 0.928
+      math: 0.882
+      reasoning: 0.758
+      roleplay: 0.896
+      stem: 0.933
+      writing: 0.885
+    en_mtb:
+      avg: 0.888
+      coding: 0.876
+      extraction: 0.912
+      humanities: 0.923
       math: 0.843
-      reasoning: 0.665
-      roleplay: 0.846
-      stem: 0.855
-      writing: 0.84
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: 0.275
-- id: meta-llama/Meta-Llama-3-8B
-  name: Llama 3 8B
-  date: '2024-04-18'
-  params: 8.0
-  base_model: ''
-  sortkey: llama 3
-  url: https://huggingface.co/meta-llama/Meta-Llama-3-8B
+      reasoning: 0.811
+      roleplay: 0.906
+      stem: 0.927
+      writing: 0.904
+- id: openai/gpt-oss-20b
+  model_id: openai/gpt-oss-20b
+  name: gpt-oss-20b
+  date: '2025-08-05'
+  params: 22
+  active_params: 3.6
+  family: gpt-oss
+  pre_training: (private)
+  reasoning: on (middle)
+  sortkey: gpt oss
+  is_post: true
+  url: https://huggingface.co/openai/gpt-oss-20b
   results:
-    ja_basic:
-      Ja Avg: 0.429
-      JComQA: 0.835
-      JEMHopQA: 0.436
-      NIILC: 0.41
-      JSQuAD: 0.892
-      XL-Sum: 0.177
-      MGSM: 0.312
-      WMT20-en-ja: 0.221
-      WMT20-ja-en: 0.206
-      JMMLU: 0.455
-      JHumanEval: 0.344
-    en_basic:
-      En Avg: 0.542
-      OpenBookQA: 0.38
-      TriviaQA: 0.712
-      HellaSwag: 0.612
-      SQuAD2: 0.502
-      XWINO: 0.905
-      MMLU: 0.651
-      GSM8K: 0.487
-      MATH: 0.18
-      BBH: 0.62
-      HumanEval: 0.376
-    other:
-      GPQA: 0.136
-- id: meta-llama/Meta-Llama-3-8B-Instruct
-  name: Llama 3 8B Instruct
-  date: '2024-04-18'
-  params: 8.0
-  base_model: Llama 3 8B
-  sortkey: llama 3
-  url: https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.43
-      JComQA: 0.88
-      JEMHopQA: 0.417
-      NIILC: 0.385
-      JSQuAD: 0.891
-      XL-Sum: 0.126
-      MGSM: 0.424
-      WMT20-en-ja: 0.214
-      WMT20-ja-en: 0.202
-      JMMLU: 0.468
-      JHumanEval: 0.296
+    ja_post:
+      avg: 0.727
+      JEMHopQA: 0.506
+      MMLU-ProX: 0.702
+      GPQA: 0.571
+      MATH100: 0.929
+      JHumanEval: 0.927
+      __MIFEvalJa: 0.549
+    en_post:
+      avg: 0.737
+      HellaSwag: 0.847
+      MMLU-Pro: 0.741
+      GPQA: 0.636
+      MATH500: 0.944
+      AIME: 0.617
+      LCB: 0.635
     ja_mtb:
-      JMT Avg: 0.529
-      coding: 0.467
-      extraction: 0.706
-      humanities: 0.692
-      math: 0.31
-      reasoning: 0.433
-      roleplay: 0.542
-      stem: 0.532
-      writing: 0.546
-    en_basic:
-      En Avg: 0.605
-      OpenBookQA: 0.388
-      TriviaQA: 0.67
-      HellaSwag: 0.583
-      SQuAD2: 0.611
-      XWINO: 0.892
-      MMLU: 0.657
-      GSM8K: 0.745
-      MATH: 0.306
-      BBH: 0.646
-      HumanEval: 0.554
-    other:
-      GPQA: 0.257
-- id: meta-llama/Meta-Llama-3-70B
-  name: Llama 3 70B
-  date: '2024-04-18'
-  params: 70
-  base_model: ''
-  sortkey: llama 3
-  url: https://huggingface.co/meta-llama/Meta-Llama-3-70B
+      avg: 0.869
+      coding: 0.914
+      extraction: 0.917
+      humanities: 0.853
+      math: 0.994
+      reasoning: 0.772
+      roleplay: 0.772
+      stem: 0.909
+      writing: 0.824
+    en_mtb:
+      avg: 0.889
+      coding: 0.913
+      extraction: 0.881
+      humanities: 0.935
+      math: 0.913
+      reasoning: 0.779
+      roleplay: 0.88
+      stem: 0.939
+      writing: 0.869
+- id: openai/gpt-oss-120b
+  model_id: openai/gpt-oss-120b
+  name: gpt-oss-120b
+  date: '2025-08-05'
+  params: 120
+  active_params: 5.1
+  family: gpt-oss
+  pre_training: (private)
+  reasoning: on (middle)
+  sortkey: gpt oss
+  is_post: true
+  url: https://huggingface.co/openai/gpt-oss-120b
   results:
-    ja_basic:
-      Ja Avg: 0.569
-      JComQA: 0.946
-      JEMHopQA: 0.606
-      NIILC: 0.589
-      JSQuAD: 0.922
-      XL-Sum: 0.228
-      MGSM: 0.664
-      WMT20-en-ja: 0.286
-      WMT20-ja-en: 0.252
-      JMMLU: 0.705
-      JHumanEval: 0.491
-    en_basic:
-      En Avg: 0.689
-      OpenBookQA: 0.44
-      TriviaQA: 0.826
-      HellaSwag: 0.69
-      SQuAD2: 0.618
-      XWINO: 0.92
-      MMLU: 0.787
-      GSM8K: 0.801
-      MATH: 0.446
-      BBH: 0.829
-      HumanEval: 0.527
-    other:
-      GPQA: 0.268
-- id: meta-llama/Meta-Llama-3-70B-Instruct
-  name: Llama 3 70B Instruct
-  date: '2024-04-18'
-  params: 70
-  base_model: Llama 3 70B
-  sortkey: llama 3
-  url: https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.578
-      JComQA: 0.94
-      JEMHopQA: 0.615
-      NIILC: 0.557
-      JSQuAD: 0.913
-      XL-Sum: 0.191
-      MGSM: 0.716
-      WMT20-en-ja: 0.269
-      WMT20-ja-en: 0.234
-      JMMLU: 0.68
-      JHumanEval: 0.662
+    ja_post:
+      avg: 0.79
+      JEMHopQA: 0.635
+      MMLU-ProX: 0.756
+      GPQA: 0.663
+      MATH100: 0.97
+      JHumanEval: 0.925
+      __MIFEvalJa: 0.735
+    en_post:
+      avg: 0.794
+      HellaSwag: 0.878
+      MMLU-Pro: 0.79
+      GPQA: 0.727
+      MATH500: 0.966
+      AIME: 0.733
+      LCB: 0.67
     ja_mtb:
-      JMT Avg: 0.64
-      coding: 0.588
-      extraction: 0.884
-      humanities: 0.715
-      math: 0.637
-      reasoning: 0.487
-      roleplay: 0.594
-      stem: 0.598
-      writing: 0.619
-    en_basic:
-      En Avg: 0.729
-      OpenBookQA: 0.438
-      TriviaQA: 0.8
-      HellaSwag: 0.655
-      SQuAD2: 0.696
-      XWINO: 0.914
-      MMLU: 0.8
-      GSM8K: 0.909
-      MATH: 0.474
-      BBH: 0.833
-      HumanEval: 0.774
-    other:
-      GPQA: 0.036
-- id: elyza/Llama-3-ELYZA-JP-8B
-  name: Llama-3-ELYZA-JP-8B
-  date: '2024-06-26'
-  params: 8.0
-  base_model: (private)
-  sortkey: llama 3 elyza jp
-  url: https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B
-  results:
-    ja_basic:
-      Ja Avg: 0.471
-      JComQA: 0.897
-      JEMHopQA: 0.498
-      NIILC: 0.496
-      JSQuAD: 0.906
-      XL-Sum: 0.168
-      MGSM: 0.436
-      WMT20-en-ja: 0.25
-      WMT20-ja-en: 0.185
-      JMMLU: 0.487
-      JHumanEval: 0.388
-    ja_mtb:
-      JMT Avg: 0.587
-      coding: 0.389
-      extraction: 0.706
-      humanities: 0.647
-      math: 0.426
-      reasoning: 0.613
-      roleplay: 0.684
-      stem: 0.533
-      writing: 0.697
-    en_basic:
-      En Avg: 0.495
-      OpenBookQA: 0.318
-      TriviaQA: 0.551
-      HellaSwag: 0.523
-      SQuAD2: 0.6
-      XWINO: 0.882
-      MMLU: 0.587
-      GSM8K: 0.558
-      MATH: 0.164
-      BBH: 0.321
-      HumanEval: 0.449
-    other:
-      GPQA: 0.221
-- id: turing-motors/Llama-3-heron-brain-8B-v0.3
-  name: Llama 3 heron brain 8B v0.3
-  date: '2024-07-01'
-  params: 8.0
-  base_model: Llama 3 Swallow 8B
-  sortkey: llama 3 heron brain v0.3
-  url: https://huggingface.co/turing-motors/Llama-3-heron-brain-8B-v0.3
-  results:
-    ja_basic:
-      Ja Avg: 0.488
-      JComQA: 0.923
-      JEMHopQA: 0.493
-      NIILC: 0.569
-      JSQuAD: 0.906
-      XL-Sum: 0.218
-      MGSM: 0.456
-      WMT20-en-ja: 0.277
-      WMT20-ja-en: 0.217
-      JMMLU: 0.499
-      JHumanEval: 0.318
-    ja_mtb:
-      JMT Avg: 0.497
-      coding: 0.362
-      extraction: 0.566
-      humanities: 0.602
-      math: 0.315
-      reasoning: 0.426
-      roleplay: 0.586
-      stem: 0.567
-      writing: 0.55
-    en_basic:
-      En Avg: 0.551
-      OpenBookQA: 0.362
-      TriviaQA: 0.656
-      HellaSwag: 0.569
-      SQuAD2: 0.581
-      XWINO: 0.901
-      MMLU: 0.621
-      GSM8K: 0.578
-      MATH: 0.222
-      BBH: 0.641
-      HumanEval: 0.38
-    other:
-      GPQA: 0.0
-- id: turing-motors/Llama-3-heron-brain-70B-v0.3
-  name: Llama 3 heron brain 70B v0.3
-  date: '2024-07-01'
-  params: 70
-  base_model: Llama 3 Swallow 70B
-  sortkey: llama 3 heron brain v0.3
-  url: https://huggingface.co/turing-motors/Llama-3-heron-brain-70B-v0.3
-  results:
-    ja_basic:
-      Ja Avg: 0.615
-      JComQA: 0.965
-      JEMHopQA: 0.652
-      NIILC: 0.679
-      JSQuAD: 0.922
-      XL-Sum: 0.261
-      MGSM: 0.772
-      WMT20-en-ja: 0.309
-      WMT20-ja-en: 0.258
-      JMMLU: 0.707
-      JHumanEval: 0.623
-    ja_mtb:
-      JMT Avg: 0.683
-      coding: 0.51
-      extraction: 0.87
-      humanities: 0.776
-      math: 0.68
-      reasoning: 0.513
-      roleplay: 0.727
-      stem: 0.692
-      writing: 0.693
-    en_basic:
-      En Avg: 0.715
-      OpenBookQA: 0.446
-      TriviaQA: 0.811
-      HellaSwag: 0.668
-      SQuAD2: 0.706
-      XWINO: 0.919
-      MMLU: 0.79
-      GSM8K: 0.877
-      MATH: 0.508
-      BBH: 0.759
-      HumanEval: 0.668
-    other:
-      GPQA: 0.346
-- id: tokyotech-llm/Llama-3-Swallow-8B-v0.1
-  name: Llama 3 Swallow 8B
-  date: '2024-07-01'
-  params: 8.0
-  base_model: ''
-  sortkey: llama 3 swallow
-  url: https://huggingface.co/tokyotech-llm/Llama-3-Swallow-8B-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.471
-      JComQA: 0.896
-      JEMHopQA: 0.478
-      NIILC: 0.546
-      JSQuAD: 0.9
-      XL-Sum: 0.198
-      MGSM: 0.44
-      WMT20-en-ja: 0.276
-      WMT20-ja-en: 0.222
-      JMMLU: 0.471
-      JHumanEval: 0.282
-    en_basic:
-      En Avg: 0.523
-      OpenBookQA: 0.35
-      TriviaQA: 0.656
-      HellaSwag: 0.59
-      SQuAD2: 0.519
-      XWINO: 0.901
-      MMLU: 0.615
-      GSM8K: 0.483
-      MATH: 0.182
-      BBH: 0.598
-      HumanEval: 0.337
-    other:
-      GPQA: 0.188
-- id: tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1
-  name: Llama 3 Swallow 8B Instruct
-  date: '2024-07-01'
-  params: 8.0
-  base_model: Llama 3 Swallow 8B
-  sortkey: llama 3 swallow
-  url: https://huggingface.co/tokyotech-llm/Llama-3-Swallow-8B-Instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.481
-      JComQA: 0.912
-      JEMHopQA: 0.496
-      NIILC: 0.517
-      JSQuAD: 0.905
-      XL-Sum: 0.128
-      MGSM: 0.492
-      WMT20-en-ja: 0.253
-      WMT20-ja-en: 0.227
-      JMMLU: 0.481
-      JHumanEval: 0.394
-    ja_mtb:
-      JMT Avg: 0.427
-      coding: 0.411
-      extraction: 0.575
-      humanities: 0.476
-      math: 0.309
-      reasoning: 0.305
-      roleplay: 0.499
-      stem: 0.438
-      writing: 0.406
-    en_basic:
-      En Avg: 0.56
-      OpenBookQA: 0.37
-      TriviaQA: 0.655
-      HellaSwag: 0.585
-      SQuAD2: 0.567
-      XWINO: 0.899
-      MMLU: 0.633
-      GSM8K: 0.592
-      MATH: 0.244
-      BBH: 0.639
-      HumanEval: 0.42
-    other:
-      GPQA: 0.257
-- id: tokyotech-llm/Llama-3-Swallow-70B-v0.1
-  name: Llama 3 Swallow 70B
-  date: '2024-07-01'
-  params: 70
-  base_model: ''
-  sortkey: llama 3 swallow
-  url: https://huggingface.co/tokyotech-llm/Llama-3-Swallow-70B-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.594
-      JComQA: 0.968
-      JEMHopQA: 0.675
-      NIILC: 0.684
-      JSQuAD: 0.923
-      XL-Sum: 0.239
-      MGSM: 0.708
-      WMT20-en-ja: 0.307
-      WMT20-ja-en: 0.255
-      JMMLU: 0.706
-      JHumanEval: 0.477
-    en_basic:
-      En Avg: 0.672
-      OpenBookQA: 0.43
-      TriviaQA: 0.823
-      HellaSwag: 0.682
-      SQuAD2: 0.628
-      XWINO: 0.923
-      MMLU: 0.774
-      GSM8K: 0.817
-      MATH: 0.414
-      BBH: 0.734
-      HumanEval: 0.499
-    other:
-      GPQA: 0.319
-- id: tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1
-  name: Llama 3 Swallow 70B Instruct
-  date: '2024-07-01'
-  params: 70
-  base_model: Llama 3 Swallow 70B
-  sortkey: llama 3 swallow
-  url: https://huggingface.co/tokyotech-llm/Llama-3-Swallow-70B-Instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.571
-      JComQA: 0.963
-      JEMHopQA: 0.627
-      NIILC: 0.598
-      JSQuAD: 0.921
-      XL-Sum: 0.139
-      MGSM: 0.672
-      WMT20-en-ja: 0.272
-      WMT20-ja-en: 0.255
-      JMMLU: 0.657
-      JHumanEval: 0.608
-    ja_mtb:
-      JMT Avg: 0.618
-      coding: 0.633
-      extraction: 0.823
-      humanities: 0.601
-      math: 0.521
-      reasoning: 0.482
-      roleplay: 0.622
-      stem: 0.635
-      writing: 0.63
-    en_basic:
-      En Avg: 0.716
-      OpenBookQA: 0.446
-      TriviaQA: 0.818
-      HellaSwag: 0.676
-      SQuAD2: 0.681
-      XWINO: 0.923
-      MMLU: 0.789
-      GSM8K: 0.868
-      MATH: 0.46
-      BBH: 0.816
-      HumanEval: 0.68
-    other:
-      GPQA: 0.357
-- id: rinna/llama-3-youko-8b
-  name: Llama 3 Youko 8B
-  date: '2024-05-07'
-  params: 8.0
-  base_model: ''
-  sortkey: llama 3 youko
-  url: https://huggingface.co/rinna/llama-3-youko-8b
-  results:
-    ja_basic:
-      Ja Avg: 0.442
-      JComQA: 0.87
-      JEMHopQA: 0.493
-      NIILC: 0.513
-      JSQuAD: 0.895
-      XL-Sum: 0.213
-      MGSM: 0.276
-      WMT20-en-ja: 0.276
-      WMT20-ja-en: 0.219
-      JMMLU: 0.449
-      JHumanEval: 0.222
-    en_basic:
-      En Avg: 0.486
-      OpenBookQA: 0.348
-      TriviaQA: 0.625
-      HellaSwag: 0.589
-      SQuAD2: 0.502
-      XWINO: 0.896
-      MMLU: 0.601
-      GSM8K: 0.355
-      MATH: 0.096
-      BBH: 0.571
-      HumanEval: 0.281
-    other:
-      GPQA: 0.063
-- id: rinna/llama-3-youko-8b-instruct
-  name: Llama 3 Youko 8B Instruct
-  date: '2024-05-07'
-  params: 8.0
-  base_model: Llama 3 Youko 8B
-  sortkey: llama 3 youko
-  url: https://huggingface.co/rinna/llama-3-youko-8b-instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.468
-      JComQA: 0.921
-      JEMHopQA: 0.481
-      NIILC: 0.517
-      JSQuAD: 0.899
-      XL-Sum: 0.209
-      MGSM: 0.472
-      WMT20-en-ja: 0.256
-      WMT20-ja-en: 0.191
-      JMMLU: 0.469
-      JHumanEval: 0.262
-    ja_mtb:
-      JMT Avg: 0.616
-      coding: 0.464
-      extraction: 0.757
-      humanities: 0.769
-      math: 0.414
-      reasoning: 0.487
-      roleplay: 0.695
-      stem: 0.583
-      writing: 0.753
-    en_basic:
-      En Avg: 0.507
-      OpenBookQA: 0.406
-      TriviaQA: 0.613
-      HellaSwag: 0.599
-      SQuAD2: 0.559
-      XWINO: 0.897
-      MMLU: 0.596
-      GSM8K: 0.563
-      MATH: 0.152
-      BBH: 0.401
-      HumanEval: 0.287
-    other:
-      GPQA: 0.29
-- id: rinna/llama-3-youko-70b
-  name: Llama 3 Youko 70B
-  date: '2024-07-25'
-  params: 70
-  base_model: ''
-  sortkey: llama 3 youko
-  url: https://huggingface.co/rinna/llama-3-youko-70b
-  results:
-    ja_basic:
-      Ja Avg: 0.571
-      JComQA: 0.946
-      JEMHopQA: 0.602
-      NIILC: 0.61
-      JSQuAD: 0.923
-      XL-Sum: 0.242
-      MGSM: 0.684
-      WMT20-en-ja: 0.292
-      WMT20-ja-en: 0.25
-      JMMLU: 0.704
-      JHumanEval: 0.463
-    en_basic:
-      En Avg: 0.671
-      OpenBookQA: 0.436
-      TriviaQA: 0.829
-      HellaSwag: 0.69
-      SQuAD2: 0.61
-      XWINO: 0.922
-      MMLU: 0.785
-      GSM8K: 0.797
-      MATH: 0.408
-      BBH: 0.826
-      HumanEval: 0.412
-    other:
-      GPQA: 0.25
-- id: rinna/llama-3-youko-70b-instruct
-  name: Llama 3 Youko 70B Instruct
-  date: '2024-07-25'
-  params: 70
-  base_model: Llama 3 Youko 70B
-  sortkey: llama 3 youko
-  url: https://huggingface.co/rinna/llama-3-youko-70b-instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.582
-      JComQA: 0.952
-      JEMHopQA: 0.625
-      NIILC: 0.584
-      JSQuAD: 0.921
-      XL-Sum: 0.198
-      MGSM: 0.72
-      WMT20-en-ja: 0.263
-      WMT20-ja-en: 0.226
-      JMMLU: 0.718
-      JHumanEval: 0.61
-    ja_mtb:
-      JMT Avg: 0.75
-      coding: 0.607
-      extraction: 0.894
-      humanities: 0.834
-      math: 0.609
-      reasoning: 0.673
-      roleplay: 0.79
-      stem: 0.764
-      writing: 0.829
-    en_basic:
-      En Avg: 0.708
-      OpenBookQA: 0.454
-      TriviaQA: 0.797
-      HellaSwag: 0.686
-      SQuAD2: 0.659
-      XWINO: 0.915
-      MMLU: 0.805
-      GSM8K: 0.892
-      MATH: 0.434
-      BBH: 0.78
-      HumanEval: 0.662
-    other:
-      GPQA: 0.304
+      avg: 0.907
+      coding: 0.898
+      extraction: 0.924
+      humanities: 0.915
+      math: 0.999
+      reasoning: 0.862
+      roleplay: 0.855
+      stem: 0.948
+      writing: 0.852
+    en_mtb:
+      avg: 0.918
+      coding: 0.947
+      extraction: 0.892
+      humanities: 0.915
+      math: 0.989
+      reasoning: 0.871
+      roleplay: 0.886
+      stem: 0.96
+      writing: 0.886
 - id: meta-llama/Meta-Llama-3.1-8B
+  model_id: meta-llama/Meta-Llama-3.1-8B
   name: Llama 3.1 8B
   date: '2024-07-23'
   params: 8.0
-  base_model: ''
+  active_params: 8.0
+  family: Llama 3.1
+  base: －
   sortkey: llama 3.1
+  is_post: false
   url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B
   results:
-    ja_basic:
-      Ja Avg: 0.437
+    ja_pre:
+      avg: 0.437
       JComQA: 0.845
       JEMHopQA: 0.461
       NIILC: 0.405
       JSQuAD: 0.895
-      XL-Sum: 0.179
+      XLSum: 0.179
       MGSM: 0.356
-      WMT20-en-ja: 0.221
-      WMT20-ja-en: 0.21
+      WMT20enja: 0.221
+      WMT20jaen: 0.21
       JMMLU: 0.479
       JHumanEval: 0.32
-    en_basic:
-      En Avg: 0.545
+    en_pre:
+      avg: 0.545
       OpenBookQA: 0.38
       TriviaQA: 0.702
       HellaSwag: 0.609
@@ -2288,74 +1767,81 @@
       MATH: 0.214
       BBH: 0.616
       HumanEval: 0.364
-    other:
-      GPQA: 0.17
 - id: meta-llama/Meta-Llama-3.1-8B-Instruct
+  model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
   name: Llama 3.1 8B Instruct
   date: '2024-07-23'
   params: 8.0
-  base_model: Llama 3.1 8B
+  active_params: 8.0
+  family: Llama 3
+  pre_training: Llama 3.1 8B
+  reasoning: N/A
   sortkey: llama 3.1
+  is_post: true
   url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.47
-      JComQA: 0.88
-      JEMHopQA: 0.447
-      NIILC: 0.407
-      JSQuAD: 0.886
-      XL-Sum: 0.148
-      MGSM: 0.516
-      WMT20-en-ja: 0.218
-      WMT20-ja-en: 0.2
-      JMMLU: 0.509
-      JHumanEval: 0.488
+    ja_post:
+      avg: 0.403
+      JEMHopQA: 0.482
+      MMLU-ProX: 0.306
+      GPQA: 0.261
+      MATH100: 0.384
+      JHumanEval: 0.58
+      __MIFEvalJa: 0.381
+    en_post:
+      avg: 0.387
+      HellaSwag: 0.769
+      MMLU-Pro: 0.489
+      GPQA: 0.374
+      MATH500: 0.526
+      AIME: 0.033
+      LCB: 0.131
     ja_mtb:
-      JMT Avg: 0.519
-      coding: 0.42
-      extraction: 0.83
-      humanities: 0.55
-      math: 0.514
-      reasoning: 0.349
-      roleplay: 0.502
-      stem: 0.479
-      writing: 0.504
-    en_basic:
-      En Avg: 0.627
-      OpenBookQA: 0.366
-      TriviaQA: 0.699
-      HellaSwag: 0.592
-      SQuAD2: 0.6
-      XWINO: 0.904
-      MMLU: 0.68
-      GSM8K: 0.743
-      MATH: 0.376
-      BBH: 0.69
-      HumanEval: 0.624
-    other:
-      GPQA: 0.283
+      avg: 0.592
+      coding: 0.528
+      extraction: 0.848
+      humanities: 0.585
+      math: 0.6
+      reasoning: 0.465
+      roleplay: 0.569
+      stem: 0.562
+      writing: 0.577
+    en_mtb:
+      avg: 0.737
+      coding: 0.556
+      extraction: 0.816
+      humanities: 0.871
+      math: 0.697
+      reasoning: 0.522
+      roleplay: 0.821
+      stem: 0.765
+      writing: 0.85
 - id: meta-llama/Meta-Llama-3.1-70B
+  model_id: meta-llama/Meta-Llama-3.1-70B
   name: Llama 3.1 70B
   date: '2024-07-23'
   params: 70
-  base_model: ''
+  active_params: 70
+  family: Llama 3.1
+  base: －
   sortkey: llama 3.1
+  is_post: false
   url: https://huggingface.co/meta-llama/Meta-Llama-3.1-70B
   results:
-    ja_basic:
-      Ja Avg: 0.566
+    ja_pre:
+      avg: 0.566
       JComQA: 0.946
       JEMHopQA: 0.616
       NIILC: 0.603
       JSQuAD: 0.925
-      XL-Sum: 0.228
+      XLSum: 0.228
       MGSM: 0.672
-      WMT20-en-ja: 0.287
-      WMT20-ja-en: 0.257
+      WMT20enja: 0.287
+      WMT20jaen: 0.257
       JMMLU: 0.669
       JHumanEval: 0.462
-    en_basic:
-      En Avg: 0.671
+    en_pre:
+      avg: 0.671
       OpenBookQA: 0.45
       TriviaQA: 0.829
       HellaSwag: 0.69
@@ -2366,440 +1852,130 @@
       MATH: 0.434
       BBH: 0.655
       HumanEval: 0.546
-    other:
-      GPQA: 0.188
-- id: meta-llama/Meta-Llama-3.1-70B-Instruct
-  name: Llama 3.1 70B Instruct
-  date: '2024-07-23'
-  params: 70
-  base_model: Llama 3.1 70B
-  sortkey: llama 3.1
-  url: https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.595
-      JComQA: 0.95
-      JEMHopQA: 0.635
-      NIILC: 0.579
-      JSQuAD: 0.921
-      XL-Sum: 0.178
-      MGSM: 0.732
-      WMT20-en-ja: 0.279
-      WMT20-ja-en: 0.247
-      JMMLU: 0.733
-      JHumanEval: 0.696
-    ja_mtb:
-      JMT Avg: 0.706
-      coding: 0.691
-      extraction: 0.848
-      humanities: 0.73
-      math: 0.669
-      reasoning: 0.618
-      roleplay: 0.699
-      stem: 0.699
-      writing: 0.694
-    en_basic:
-      En Avg: 0.738
-      OpenBookQA: 0.426
-      TriviaQA: 0.821
-      HellaSwag: 0.662
-      SQuAD2: 0.66
-      XWINO: 0.917
-      MMLU: 0.822
-      GSM8K: 0.876
-      MATH: 0.56
-      BBH: 0.842
-      HumanEval: 0.794
-    other:
-      GPQA: 0.435
-- id: cyberagent/Llama-3.1-70B-Japanese-Instruct-2407
-  name: Llama-3.1-70B-Japanese-Instruct-2407
-  date: '2024-07-23'
-  params: 70
-  base_model: Llama 3.1 70B Instruct
-  sortkey: llama 3.1 japanese 2407
-  url: https://huggingface.co/cyberagent/Llama-3.1-70B-Japanese-Instruct-2407
-  results:
-    ja_basic:
-      Ja Avg: 0.597
-      JComQA: 0.956
-      JEMHopQA: 0.647
-      NIILC: 0.66
-      JSQuAD: 0.919
-      XL-Sum: 0.156
-      MGSM: 0.748
-      WMT20-en-ja: 0.29
-      WMT20-ja-en: 0.241
-      JMMLU: 0.723
-      JHumanEval: 0.627
-    ja_mtb:
-      JMT Avg: 0.751
-      coding: 0.683
-      extraction: 0.827
-      humanities: 0.824
-      math: 0.749
-      reasoning: 0.643
-      roleplay: 0.818
-      stem: 0.715
-      writing: 0.751
-    en_basic:
-      En Avg: 0.725
-      OpenBookQA: 0.422
-      TriviaQA: 0.81
-      HellaSwag: 0.647
-      SQuAD2: 0.663
-      XWINO: 0.917
-      MMLU: 0.807
-      GSM8K: 0.889
-      MATH: 0.528
-      BBH: 0.823
-      HumanEval: 0.746
-    other:
-      GPQA: 0.444
-- id: tokyotech-llm/Llama-3.1-Swallow-8B-v0.1
-  name: Llama 3.1 Swallow 8B v0.1
-  date: '2024-10-08'
+- id: nvidia/Llama-3.1-Nemotron-Nano-8B-v1
+  model_id: nvidia/Llama-3.1-Nemotron-Nano-8B-v1
+  name: Llama-3.1-Nemotron-Nano-8B-v1
+  date: '2025-03-18'
   params: 8.0
-  base_model: ''
-  sortkey: llama 3.1 swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-v0.1
+  active_params: 8.0
+  family: Llama 3
+  pre_training: Llama 3.1 8B
+  reasoning: 'on'
+  sortkey: llama 3.1 nemotron nano v1
+  is_post: true
+  url: https://huggingface.co/nvidia/Llama-3.1-Nemotron-Nano-8B-v1
   results:
-    ja_basic:
-      Ja Avg: 0.49
-      JComQA: 0.912
-      JEMHopQA: 0.509
-      NIILC: 0.601
-      JSQuAD: 0.899
-      XL-Sum: 0.202
-      MGSM: 0.46
-      WMT20-en-ja: 0.291
-      WMT20-ja-en: 0.231
-      JMMLU: 0.518
-      JHumanEval: 0.276
-    en_basic:
-      En Avg: 0.538
-      OpenBookQA: 0.378
-      TriviaQA: 0.671
-      HellaSwag: 0.605
-      SQuAD2: 0.502
-      XWINO: 0.905
-      MMLU: 0.624
-      GSM8K: 0.511
-      MATH: 0.224
-      BBH: 0.615
-      HumanEval: 0.348
-    other:
-      GPQA: 0.234
-- id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1
-  name: Llama 3.1 Swallow 8B Instruct v0.1
-  date: '2024-10-08'
-  params: 8.0
-  base_model: Llama 3.1 Swallow 8B v0.1
-  sortkey: llama 3.1 swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.505
-      JComQA: 0.924
-      JEMHopQA: 0.587
-      NIILC: 0.574
-      JSQuAD: 0.917
-      XL-Sum: 0.138
-      MGSM: 0.508
-      WMT20-en-ja: 0.282
-      WMT20-ja-en: 0.228
-      JMMLU: 0.53
-      JHumanEval: 0.366
+    ja_post:
+      avg: 0.55
+      JEMHopQA: 0.202
+      MMLU-ProX: 0.489
+      GPQA: 0.339
+      MATH100: 0.919
+      JHumanEval: 0.802
+      __MIFEvalJa: 0.186
+    en_post:
+      avg: 0.588
+      HellaSwag: 0.518
+      MMLU-Pro: 0.566
+      GPQA: 0.47
+      MATH500: 0.948
+      AIME: 0.55
+      LCB: 0.478
     ja_mtb:
-      JMT Avg: 0.581
-      coding: 0.427
-      extraction: 0.738
-      humanities: 0.675
-      math: 0.527
-      reasoning: 0.453
-      roleplay: 0.615
-      stem: 0.593
-      writing: 0.624
-    en_basic:
-      En Avg: 0.563
-      OpenBookQA: 0.388
-      TriviaQA: 0.649
-      HellaSwag: 0.615
-      SQuAD2: 0.598
-      XWINO: 0.891
-      MMLU: 0.624
-      GSM8K: 0.605
-      MATH: 0.236
-      BBH: 0.642
-      HumanEval: 0.379
-    other:
-      GPQA: 0.281
-- id: tokyotech-llm/Llama-3.1-Swallow-70B-v0.1
-  name: Llama 3.1 Swallow 70B v0.1
-  date: '2024-10-08'
-  params: 70
-  base_model: ''
-  sortkey: llama 3.1 swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-70B-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.593
-      JComQA: 0.955
-      JEMHopQA: 0.645
-      NIILC: 0.678
-      JSQuAD: 0.923
-      XL-Sum: 0.272
-      MGSM: 0.684
-      WMT20-en-ja: 0.32
-      WMT20-ja-en: 0.259
-      JMMLU: 0.709
-      JHumanEval: 0.487
-    en_basic:
-      En Avg: 0.679
-      OpenBookQA: 0.428
-      TriviaQA: 0.826
-      HellaSwag: 0.69
-      SQuAD2: 0.612
-      XWINO: 0.927
-      MMLU: 0.772
-      GSM8K: 0.809
-      MATH: 0.38
-      BBH: 0.806
-      HumanEval: 0.54
-    other:
-      GPQA: 0.288
-- id: tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1
-  name: Llama 3.1 Swallow 70B Instruct v0.1
-  date: '2024-10-08'
-  params: 70
-  base_model: Llama 3.1 Swallow 70B v0.1
-  sortkey: llama 3.1 swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.588
-      JComQA: 0.962
-      JEMHopQA: 0.621
-      NIILC: 0.66
-      JSQuAD: 0.924
-      XL-Sum: 0.192
-      MGSM: 0.776
-      WMT20-en-ja: 0.312
-      WMT20-ja-en: 0.259
-      JMMLU: 0.711
-      JHumanEval: 0.468
-    ja_mtb:
-      JMT Avg: 0.691
-      coding: 0.654
-      extraction: 0.792
-      humanities: 0.768
-      math: 0.704
-      reasoning: 0.573
-      roleplay: 0.682
-      stem: 0.653
-      writing: 0.704
-    en_basic:
-      En Avg: 0.71
-      OpenBookQA: 0.446
-      TriviaQA: 0.815
-      HellaSwag: 0.683
-      SQuAD2: 0.681
-      XWINO: 0.917
-      MMLU: 0.787
-      GSM8K: 0.884
-      MATH: 0.474
-      BBH: 0.848
-      HumanEval: 0.568
-    other:
-      GPQA: 0.395
-- id: tokyotech-llm/Llama-3.1-Swallow-8B-v0.2
-  name: Llama 3.1 Swallow 8B v0.2
-  date: '2024-11-11'
-  params: 8.0
-  base_model: ''
-  sortkey: llama 3.1 swallow v0.2
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-v0.2
-  results:
-    ja_basic:
-      Ja Avg: 0.499
-      JComQA: 0.911
-      JEMHopQA: 0.51
-      NIILC: 0.627
-      JSQuAD: 0.892
-      XL-Sum: 0.198
-      MGSM: 0.464
-      WMT20-en-ja: 0.296
-      WMT20-ja-en: 0.233
-      JMMLU: 0.525
-      JHumanEval: 0.336
-    en_basic:
-      En Avg: 0.539
-      OpenBookQA: 0.382
-      TriviaQA: 0.651
-      HellaSwag: 0.596
-      SQuAD2: 0.513
-      XWINO: 0.904
-      MMLU: 0.622
-      GSM8K: 0.521
-      MATH: 0.228
-      BBH: 0.605
-      HumanEval: 0.366
-    other:
-      GPQA: 0.225
-- id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2
-  name: Llama 3.1 Swallow 8B Instruct v0.2
-  date: '2024-11-11'
-  params: 8.0
-  base_model: Llama 3.1 Swallow 8B v0.2
-  sortkey: llama 3.1 swallow v0.2
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.2
-  results:
-    ja_basic:
-      Ja Avg: 0.514
-      JComQA: 0.929
-      JEMHopQA: 0.56
-      NIILC: 0.599
-      JSQuAD: 0.915
-      XL-Sum: 0.137
-      MGSM: 0.528
-      WMT20-en-ja: 0.288
-      WMT20-ja-en: 0.227
-      JMMLU: 0.55
-      JHumanEval: 0.408
-    ja_mtb:
-      JMT Avg: 0.612
-      coding: 0.534
-      extraction: 0.748
-      humanities: 0.705
-      math: 0.565
-      reasoning: 0.475
-      roleplay: 0.646
-      stem: 0.579
-      writing: 0.646
-    en_basic:
-      En Avg: 0.574
-      OpenBookQA: 0.38
-      TriviaQA: 0.625
-      HellaSwag: 0.603
-      SQuAD2: 0.607
-      XWINO: 0.887
-      MMLU: 0.634
-      GSM8K: 0.62
-      MATH: 0.264
-      BBH: 0.649
-      HumanEval: 0.474
-    other:
-      GPQA: 0.301
+      avg: 0.363
+      coding: 0.374
+      extraction: 0.503
+      humanities: 0.311
+      math: 0.564
+      reasoning: 0.27
+      roleplay: 0.289
+      stem: 0.301
+      writing: 0.293
+    en_mtb:
+      avg: 0.701
+      coding: 0.658
+      extraction: 0.654
+      humanities: 0.696
+      math: 0.906
+      reasoning: 0.526
+      roleplay: 0.712
+      stem: 0.738
+      writing: 0.72
 - id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
+  model_id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
   name: Llama 3.1 Swallow 8B Instruct v0.3
   date: '2024-12-23'
   params: 8.0
-  base_model: Llama 3.1 Swallow 8B v0.2
+  active_params: 8.0
+  family: Llama 3
+  pre_training: Llama 3.1 Swallow 8B v0.2
+  reasoning: N/A
   sortkey: llama 3.1 swallow v0.3
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
   results:
-    ja_basic:
-      Ja Avg: 0.51
-      JComQA: 0.924
-      JEMHopQA: 0.528
-      NIILC: 0.583
-      JSQuAD: 0.896
-      XL-Sum: 0.191
-      MGSM: 0.532
-      WMT20-en-ja: 0.281
-      WMT20-ja-en: 0.229
-      JMMLU: 0.544
-      JHumanEval: 0.394
+    ja_post:
+      avg: 0.389
+      JEMHopQA: 0.549
+      MMLU-ProX: 0.306
+      GPQA: 0.239
+      MATH100: 0.364
+      JHumanEval: 0.488
+      __MIFEvalJa: 0.491
+    en_post:
+      avg: 0.291
+      HellaSwag: 0.725
+      MMLU-Pro: 0.287
+      GPQA: 0.293
+      MATH500: 0.338
+      AIME: 0.0
+      LCB: 0.102
     ja_mtb:
-      JMT Avg: 0.705
-      coding: 0.562
-      extraction: 0.756
+      avg: 0.709
+      coding: 0.57
+      extraction: 0.783
       humanities: 0.869
-      math: 0.61
-      reasoning: 0.512
-      roleplay: 0.783
-      stem: 0.748
-      writing: 0.803
-    en_basic:
-      En Avg: 0.566
-      OpenBookQA: 0.396
-      TriviaQA: 0.629
-      HellaSwag: 0.593
-      SQuAD2: 0.57
-      XWINO: 0.884
-      MMLU: 0.629
-      GSM8K: 0.622
-      MATH: 0.266
-      BBH: 0.626
-      HumanEval: 0.445
-    other:
-      GPQA: 0.201
-- id: tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
-  name: Llama 3.1 Swallow 70B Instruct v0.3
-  date: '2024-12-30'
-  params: 70
-  base_model: Llama 3.1 Swallow 70B v0.1
-  sortkey: llama 3.1 swallow v0.3
-  url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
-  results:
-    ja_basic:
-      Ja Avg: 0.598
-      JComQA: 0.964
-      JEMHopQA: 0.632
-      NIILC: 0.654
-      JSQuAD: 0.911
-      XL-Sum: 0.196
-      MGSM: 0.772
-      WMT20-en-ja: 0.305
-      WMT20-ja-en: 0.257
-      JMMLU: 0.69
-      JHumanEval: 0.596
-    ja_mtb:
-      JMT Avg: 0.769
-      coding: 0.678
-      extraction: 0.82
-      humanities: 0.867
-      math: 0.776
-      reasoning: 0.57
-      roleplay: 0.816
-      stem: 0.769
-      writing: 0.852
-    en_basic:
-      En Avg: 0.71
-      OpenBookQA: 0.454
-      TriviaQA: 0.825
-      HellaSwag: 0.692
-      SQuAD2: 0.647
-      XWINO: 0.919
-      MMLU: 0.777
-      GSM8K: 0.872
-      MATH: 0.458
-      BBH: 0.816
-      HumanEval: 0.643
-    other:
-      GPQA: 0.259
+      math: 0.631
+      reasoning: 0.506
+      roleplay: 0.782
+      stem: 0.716
+      writing: 0.813
+    en_mtb:
+      avg: 0.691
+      coding: 0.528
+      extraction: 0.714
+      humanities: 0.886
+      math: 0.562
+      reasoning: 0.458
+      roleplay: 0.773
+      stem: 0.768
+      writing: 0.838
 - id: tokyotech-llm/Llama-3.3-Swallow-8B-v0.5
+  model_id: tokyotech-llm/Llama-3.3-Swallow-8B-v0.5
   name: Llama 3.1 Swallow 8B v0.5
   date: '2025-06-25'
   params: 8.0
-  base_model: ''
+  active_params: 8.0
+  family: Llama 3.1
+  base: Llama 3.1 8B
   sortkey: llama 3.1 swallow v0.5
+  is_post: false
   url: https://huggingface.co/tokyotech-llm/Llama-3.3-Swallow-8B-v0.5
   results:
-    ja_basic:
-      Ja Avg: 0.543
+    ja_pre:
+      avg: 0.543
       JComQA: 0.952
       JEMHopQA: 0.513
       NIILC: 0.657
       JSQuAD: 0.91
-      XL-Sum: 0.217
+      XLSum: 0.217
       MGSM: 0.572
-      WMT20-en-ja: 0.294
-      WMT20-ja-en: 0.232
+      WMT20enja: 0.294
+      WMT20jaen: 0.232
       JMMLU: 0.59
       JHumanEval: 0.491
-    en_basic:
-      En Avg: 0.597
+    en_pre:
+      avg: 0.597
       OpenBookQA: 0.372
       TriviaQA: 0.665
       HellaSwag: 0.597
@@ -2810,74 +1986,81 @@
       MATH: 0.39
       BBH: 0.589
       HumanEval: 0.557
-    other:
-      GPQA: 0.125
 - id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
+  model_id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
   name: Llama 3.1 Swallow 8B Instruct v0.5
   date: '2025-06-25'
   params: 8.0
-  base_model: Llama 3.1 Swallow 8B v0.2
+  active_params: 8.0
+  family: Llama 3
+  pre_training: Llama 3.1 Swallow 8B v0.2
+  reasoning: N/A
   sortkey: llama 3.1 swallow v0.5
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
   results:
-    ja_basic:
-      Ja Avg: 0.533
-      JComQA: 0.937
-      JEMHopQA: 0.511
-      NIILC: 0.606
-      JSQuAD: 0.9
-      XL-Sum: 0.174
-      MGSM: 0.604
-      WMT20-en-ja: 0.293
-      WMT20-ja-en: 0.23
-      JMMLU: 0.581
-      JHumanEval: 0.496
+    ja_post:
+      avg: 0.451
+      JEMHopQA: 0.602
+      MMLU-ProX: 0.369
+      GPQA: 0.295
+      MATH100: 0.404
+      JHumanEval: 0.584
+      __MIFEvalJa: 0.496
+    en_post:
+      avg: 0.315
+      HellaSwag: 0.648
+      MMLU-Pro: 0.399
+      GPQA: 0.318
+      MATH500: 0.452
+      AIME: 0.0
+      LCB: 0.072
     ja_mtb:
-      JMT Avg: 0.719
-      coding: 0.551
-      extraction: 0.814
-      humanities: 0.847
-      math: 0.568
-      reasoning: 0.577
-      roleplay: 0.796
-      stem: 0.77
-      writing: 0.832
-    en_basic:
-      En Avg: 0.604
-      OpenBookQA: 0.396
-      TriviaQA: 0.638
-      HellaSwag: 0.603
-      SQuAD2: 0.581
-      XWINO: 0.889
-      MMLU: 0.663
-      GSM8K: 0.717
-      MATH: 0.368
-      BBH: 0.628
-      HumanEval: 0.554
-    other:
-      GPQA: 0.304
+      avg: 0.726
+      coding: 0.59
+      extraction: 0.843
+      humanities: 0.884
+      math: 0.47
+      reasoning: 0.618
+      roleplay: 0.78
+      stem: 0.799
+      writing: 0.822
+    en_mtb:
+      avg: 0.753
+      coding: 0.576
+      extraction: 0.801
+      humanities: 0.9
+      math: 0.769
+      reasoning: 0.499
+      roleplay: 0.848
+      stem: 0.796
+      writing: 0.833
 - id: meta-llama/Llama-3.2-1B
+  model_id: meta-llama/Llama-3.2-1B
   name: Llama 3.2 1B
   date: '2024-09-25'
   params: 1.2
-  base_model: ''
+  active_params: 1.2
+  family: Llama 3.2
+  base: －
   sortkey: llama 3.2
+  is_post: false
   url: https://huggingface.co/meta-llama/Llama-3.2-1B
   results:
-    ja_basic:
-      Ja Avg: 0.201
+    ja_pre:
+      avg: 0.201
       JComQA: 0.208
       JEMHopQA: 0.404
       NIILC: 0.188
       JSQuAD: 0.525
-      XL-Sum: 0.081
+      XLSum: 0.081
       MGSM: 0.024
-      WMT20-en-ja: 0.079
-      WMT20-ja-en: 0.092
+      WMT20enja: 0.079
+      WMT20jaen: 0.092
       JMMLU: 0.26
       JHumanEval: 0.15
-    en_basic:
-      En Avg: 0.339
+    en_pre:
+      avg: 0.339
       OpenBookQA: 0.3
       TriviaQA: 0.388
       HellaSwag: 0.477
@@ -2888,74 +2071,32 @@
       MATH: 0.02
       BBH: 0.303
       HumanEval: 0.193
-    other:
-      GPQA: 0.018
-- id: meta-llama/Llama-3.2-1B-Instruct
-  name: Llama 3.2 1B Instruct
-  date: '2024-09-25'
-  params: 1.2
-  base_model: Llama 3.2 1B
-  sortkey: llama 3.2
-  url: https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.239
-      JComQA: 0.397
-      JEMHopQA: 0.346
-      NIILC: 0.179
-      JSQuAD: 0.57
-      XL-Sum: 0.075
-      MGSM: 0.164
-      WMT20-en-ja: 0.07
-      WMT20-ja-en: 0.091
-      JMMLU: 0.287
-      JHumanEval: 0.207
-    ja_mtb:
-      JMT Avg: 0.273
-      coding: 0.254
-      extraction: 0.376
-      humanities: 0.218
-      math: 0.307
-      reasoning: 0.267
-      roleplay: 0.262
-      stem: 0.246
-      writing: 0.258
-    en_basic:
-      En Avg: 0.408
-      OpenBookQA: 0.274
-      TriviaQA: 0.375
-      HellaSwag: 0.44
-      SQuAD2: 0.501
-      XWINO: 0.837
-      MMLU: 0.454
-      GSM8K: 0.318
-      MATH: 0.172
-      BBH: 0.362
-      HumanEval: 0.347
-    other:
-      GPQA: 0.051
 - id: meta-llama/Llama-3.2-3B
+  model_id: meta-llama/Llama-3.2-3B
   name: Llama 3.2 3B
   date: '2024-09-25'
   params: 3.2
-  base_model: ''
+  active_params: 3.2
+  family: Llama 3.2
+  base: －
   sortkey: llama 3.2
+  is_post: false
   url: https://huggingface.co/meta-llama/Llama-3.2-3B
   results:
-    ja_basic:
-      Ja Avg: 0.337
+    ja_pre:
+      avg: 0.337
       JComQA: 0.605
       JEMHopQA: 0.443
       NIILC: 0.324
       JSQuAD: 0.816
-      XL-Sum: 0.129
+      XLSum: 0.129
       MGSM: 0.136
-      WMT20-en-ja: 0.161
-      WMT20-ja-en: 0.167
+      WMT20enja: 0.161
+      WMT20jaen: 0.167
       JMMLU: 0.352
       JHumanEval: 0.235
-    en_basic:
-      En Avg: 0.45
+    en_pre:
+      avg: 0.45
       OpenBookQA: 0.326
       TriviaQA: 0.586
       HellaSwag: 0.558
@@ -2966,118 +2107,130 @@
       MATH: 0.07
       BBH: 0.466
       HumanEval: 0.285
-    other:
-      GPQA: 0.042
-- id: meta-llama/Llama-3.2-3B-Instruct
-  name: Llama 3.2 3B Instruct
-  date: '2024-09-25'
-  params: 3.2
-  base_model: Llama 3.2 3B
-  sortkey: llama 3.2
-  url: https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.38
-      JComQA: 0.783
-      JEMHopQA: 0.304
-      NIILC: 0.268
-      JSQuAD: 0.846
-      XL-Sum: 0.112
-      MGSM: 0.372
-      WMT20-en-ja: 0.173
-      WMT20-ja-en: 0.155
-      JMMLU: 0.404
-      JHumanEval: 0.387
-    ja_mtb:
-      JMT Avg: 0.405
-      coding: 0.426
-      extraction: 0.593
-      humanities: 0.431
-      math: 0.389
-      reasoning: 0.292
-      roleplay: 0.35
-      stem: 0.38
-      writing: 0.38
-    en_basic:
-      En Avg: 0.537
-      OpenBookQA: 0.306
-      TriviaQA: 0.556
-      HellaSwag: 0.524
-      SQuAD2: 0.54
-      XWINO: 0.874
-      MMLU: 0.597
-      GSM8K: 0.629
-      MATH: 0.324
-      BBH: 0.512
-      HumanEval: 0.511
-    other:
-      GPQA: 0.259
 - id: meta-llama/Llama-3.3-70B-Instruct
+  model_id: meta-llama/Llama-3.3-70B-Instruct
   name: Llama 3.3 70B Instruct
   date: '2024-12-06'
   params: 70
-  base_model: Llama 3.1 70B
+  active_params: 70
+  family: Llama 3
+  pre_training: Llama 3.1 70B
+  reasoning: N/A
   sortkey: llama 3.3
+  is_post: true
   url: https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.601
-      JComQA: 0.941
-      JEMHopQA: 0.64
-      NIILC: 0.57
-      JSQuAD: 0.893
-      XL-Sum: 0.179
-      MGSM: 0.784
-      WMT20-en-ja: 0.278
-      WMT20-ja-en: 0.243
-      JMMLU: 0.735
-      JHumanEval: 0.744
+    ja_post:
+      avg: 0.603
+      JEMHopQA: 0.557
+      MMLU-ProX: 0.607
+      GPQA: 0.453
+      MATH100: 0.646
+      JHumanEval: 0.752
+      __MIFEvalJa: 0.65
+    en_post:
+      avg: 0.545
+      HellaSwag: 0.911
+      MMLU-Pro: 0.717
+      GPQA: 0.48
+      MATH500: 0.746
+      AIME: 0.117
+      LCB: 0.303
     ja_mtb:
-      JMT Avg: 0.737
-      coding: 0.707
-      extraction: 0.865
-      humanities: 0.757
-      math: 0.72
-      reasoning: 0.635
-      roleplay: 0.773
-      stem: 0.706
-      writing: 0.733
-    en_basic:
-      En Avg: 0.762
-      OpenBookQA: 0.426
-      TriviaQA: 0.817
-      HellaSwag: 0.667
-      SQuAD2: 0.684
-      XWINO: 0.917
-      MMLU: 0.824
-      GSM8K: 0.89
-      MATH: 0.706
-      BBH: 0.853
-      HumanEval: 0.834
-    other:
-      GPQA: 0.592
+      avg: 0.735
+      coding: 0.672
+      extraction: 0.878
+      humanities: 0.751
+      math: 0.742
+      reasoning: 0.638
+      roleplay: 0.762
+      stem: 0.735
+      writing: 0.7
+    en_mtb:
+      avg: 0.863
+      coding: 0.795
+      extraction: 0.935
+      humanities: 0.891
+      math: 0.895
+      reasoning: 0.861
+      roleplay: 0.858
+      stem: 0.822
+      writing: 0.847
+- id: nvidia/Llama-3_3-Nemotron-Super-49B-v1
+  model_id: nvidia/Llama-3_3-Nemotron-Super-49B-v1
+  name: Llama-3.3-Nemotron-Super-49B-v1
+  date: '2025-03-18'
+  params: 50
+  active_params: 50
+  family: Llama 3
+  pre_training: Llama 3.3 70B Instruct
+  reasoning: N/A
+  sortkey: llama 3.3 nemotron super v1
+  is_post: true
+  url: https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1
+  results:
+    ja_post:
+      avg: 0.716
+      JEMHopQA: 0.541
+      MMLU-ProX: 0.687
+      GPQA: 0.531
+      MATH100: 0.919
+      JHumanEval: 0.9
+      __MIFEvalJa: 0.558
+    en_post:
+      avg: 0.711
+      HellaSwag: 0.885
+      MMLU-Pro: 0.783
+      GPQA: 0.667
+      MATH500: 0.96
+      AIME: 0.567
+      LCB: 0.408
+    ja_mtb:
+      avg: 0.806
+      coding: 0.731
+      extraction: 0.898
+      humanities: 0.821
+      math: 0.801
+      reasoning: 0.755
+      roleplay: 0.804
+      stem: 0.809
+      writing: 0.828
+    en_mtb:
+      avg: 0.881
+      coding: 0.782
+      extraction: 0.915
+      humanities: 0.91
+      math: 0.963
+      reasoning: 0.8
+      roleplay: 0.878
+      stem: 0.908
+      writing: 0.893
 - id: tokyotech-llm/Llama-3.3-Swallow-70B-v0.4
+  model_id: tokyotech-llm/Llama-3.3-Swallow-70B-v0.4
   name: Llama 3.3 Swallow 70B v0.4
   date: '2025-03-14'
   params: 70
-  base_model: ''
+  active_params: 70
+  family: Llama 3.1
+  base: Llama 3.3 70B Instruct
   sortkey: llama 3.3 swallow v0.4
+  is_post: false
   url: https://huggingface.co/tokyotech-llm/Llama-3.3-Swallow-70B-v0.4
   results:
-    ja_basic:
-      Ja Avg: 0.629
+    ja_pre:
+      avg: 0.629
       JComQA: 0.967
       JEMHopQA: 0.671
       NIILC: 0.732
       JSQuAD: 0.924
-      XL-Sum: 0.283
+      XLSum: 0.283
       MGSM: 0.776
-      WMT20-en-ja: 0.327
-      WMT20-ja-en: 0.26
+      WMT20enja: 0.327
+      WMT20jaen: 0.26
       JMMLU: 0.742
       JHumanEval: 0.604
-    en_basic:
-      En Avg: 0.711
+    en_pre:
+      avg: 0.711
       OpenBookQA: 0.424
       TriviaQA: 0.817
       HellaSwag: 0.683
@@ -3088,74 +2241,81 @@
       MATH: 0.496
       BBH: 0.754
       HumanEval: 0.709
-    other:
-      GPQA: 0.163
 - id: tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
+  model_id: tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
   name: Llama 3.3 Swallow 70B Instruct v0.4
   date: '2025-03-10'
   params: 70
-  base_model: Llama 3.3 Swallow 70B v0.4
+  active_params: 70
+  family: Llama 3
+  pre_training: Llama 3.3 Swallow 70B v0.4
+  reasoning: N/A
   sortkey: llama 3.3 swallow v0.4
+  is_post: true
   url: https://huggingface.co/tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
   results:
-    ja_basic:
-      Ja Avg: 0.613
-      JComQA: 0.981
-      JEMHopQA: 0.618
-      NIILC: 0.662
-      JSQuAD: 0.907
-      XL-Sum: 0.162
-      MGSM: 0.812
-      WMT20-en-ja: 0.319
-      WMT20-ja-en: 0.261
-      JMMLU: 0.707
-      JHumanEval: 0.7
+    ja_post:
+      avg: 0.594
+      JEMHopQA: 0.658
+      MMLU-ProX: 0.533
+      GPQA: 0.355
+      MATH100: 0.697
+      JHumanEval: 0.727
+      __MIFEvalJa: 0.593
+    en_post:
+      avg: 0.47
+      HellaSwag: 0.884
+      MMLU-Pro: 0.57
+      GPQA: 0.409
+      MATH500: 0.642
+      AIME: 0.083
+      LCB: 0.232
     ja_mtb:
-      JMT Avg: 0.772
-      coding: 0.705
-      extraction: 0.82
-      humanities: 0.87
-      math: 0.73
-      reasoning: 0.623
-      roleplay: 0.811
-      stem: 0.781
-      writing: 0.832
-    en_basic:
-      En Avg: 0.736
-      OpenBookQA: 0.448
-      TriviaQA: 0.817
-      HellaSwag: 0.686
-      SQuAD2: 0.654
-      XWINO: 0.912
-      MMLU: 0.803
-      GSM8K: 0.908
-      MATH: 0.566
-      BBH: 0.812
-      HumanEval: 0.75
-    other:
-      GPQA: 0.402
+      avg: 0.791
+      coding: 0.696
+      extraction: 0.856
+      humanities: 0.881
+      math: 0.807
+      reasoning: 0.664
+      roleplay: 0.827
+      stem: 0.772
+      writing: 0.822
+    en_mtb:
+      avg: 0.816
+      coding: 0.672
+      extraction: 0.902
+      humanities: 0.888
+      math: 0.839
+      reasoning: 0.706
+      roleplay: 0.828
+      stem: 0.838
+      writing: 0.855
 - id: meta-llama/Llama-4-Scout-17B-16E
+  model_id: meta-llama/Llama-4-Scout-17B-16E
   name: Llama 4 Scout
   date: '2025-04-04'
   params: 109
-  base_model: ''
+  active_params: 17
+  family: Llama 4
+  base: －
   sortkey: llama 4 scout
+  is_post: false
   url: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E
   results:
-    ja_basic:
-      Ja Avg: 0.565
+    ja_pre:
+      avg: 0.565
       JComQA: 0.958
       JEMHopQA: 0.595
       NIILC: 0.616
       JSQuAD: 0.915
-      XL-Sum: 0.178
+      XLSum: 0.178
       MGSM: 0.76
-      WMT20-en-ja: 0.3
-      WMT20-ja-en: 0.258
+      WMT20enja: 0.3
+      WMT20jaen: 0.258
       JMMLU: 0.736
       JHumanEval: 0.33
-    en_basic:
-      En Avg: 0.639
+    en_pre:
+      avg: 0.639
       OpenBookQA: 0.432
       TriviaQA: 0.75
       HellaSwag: 0.689
@@ -3166,74 +2326,81 @@
       MATH: 0.522
       BBH: 0.618
       HumanEval: 0.359
-    other:
-      GPQA: 0.031
 - id: meta-llama/Llama-4-Scout-17B-16E-Instruct
+  model_id: meta-llama/Llama-4-Scout-17B-16E-Instruct
   name: Llama 4 Scout Instruct
   date: '2025-04-04'
   params: 109
-  base_model: Llama 4 Scout
+  active_params: 17
+  family: Llama 4
+  pre_training: Llama 4 Scout
+  reasoning: N/A
   sortkey: llama 4 scout
+  is_post: true
   url: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.55
-      JComQA: 0.946
-      JEMHopQA: 0.537
-      NIILC: 0.548
-      JSQuAD: 0.888
-      XL-Sum: 0.196
-      MGSM: 0.448
-      WMT20-en-ja: 0.271
-      WMT20-ja-en: 0.228
-      JMMLU: 0.726
-      JHumanEval: 0.708
+    ja_post:
+      avg: 0.663
+      JEMHopQA: 0.512
+      MMLU-ProX: 0.687
+      GPQA: 0.54
+      MATH100: 0.758
+      JHumanEval: 0.82
+      __MIFEvalJa: 0.611
+    en_post:
+      avg: 0.594
+      HellaSwag: 0.891
+      MMLU-Pro: 0.744
+      GPQA: 0.606
+      MATH500: 0.834
+      AIME: 0.183
+      LCB: 0.309
     ja_mtb:
-      JMT Avg: 0.738
-      coding: 0.569
-      extraction: 0.902
-      humanities: 0.798
-      math: 0.769
-      reasoning: 0.731
-      roleplay: 0.75
-      stem: 0.671
-      writing: 0.718
-    en_basic:
-      En Avg: 0.726
-      OpenBookQA: 0.41
-      TriviaQA: 0.71
-      HellaSwag: 0.649
-      SQuAD2: 0.712
-      XWINO: 0.887
-      MMLU: 0.803
-      GSM8K: 0.896
-      MATH: 0.754
-      BBH: 0.646
-      HumanEval: 0.79
-    other:
-      GPQA: 0.529
+      avg: 0.789
+      coding: 0.763
+      extraction: 0.923
+      humanities: 0.816
+      math: 0.879
+      reasoning: 0.615
+      roleplay: 0.787
+      stem: 0.752
+      writing: 0.778
+    en_mtb:
+      avg: 0.857
+      coding: 0.722
+      extraction: 0.911
+      humanities: 0.86
+      math: 0.92
+      reasoning: 0.904
+      roleplay: 0.836
+      stem: 0.84
+      writing: 0.862
 - id: llm-jp/llm-jp-3-1.8b
+  model_id: llm-jp/llm-jp-3-1.8b
   name: llm-jp-3-1.8b
   date: '2024-09-25'
   params: 1.8
-  base_model: ''
+  active_params: 1.8
+  family: llm-jp-3
+  base: －
   sortkey: llm jp 3
+  is_post: false
   url: https://huggingface.co/llm-jp/llm-jp-3-1.8b
   results:
-    ja_basic:
-      Ja Avg: 0.251
+    ja_pre:
+      avg: 0.251
       JComQA: 0.209
       JEMHopQA: 0.463
       NIILC: 0.449
       JSQuAD: 0.703
-      XL-Sum: 0.1
+      XLSum: 0.1
       MGSM: 0.012
-      WMT20-en-ja: 0.198
-      WMT20-ja-en: 0.134
+      WMT20enja: 0.198
+      WMT20jaen: 0.134
       JMMLU: 0.242
       JHumanEval: 0.001
-    en_basic:
-      En Avg: 0.293
+    en_pre:
+      avg: 0.293
       OpenBookQA: 0.244
       TriviaQA: 0.301
       HellaSwag: 0.462
@@ -3244,74 +2411,32 @@
       MATH: 0.018
       BBH: 0.276
       HumanEval: 0.008
-    other:
-      GPQA: 0.0
-- id: llm-jp/llm-jp-3-1.8b-instruct
-  name: llm-jp-3-1.8b-instruct
-  date: '2024-09-25'
-  params: 1.8
-  base_model: llm-jp-3-1.8b
-  sortkey: llm jp 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-1.8b-instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.293
-      JComQA: 0.324
-      JEMHopQA: 0.413
-      NIILC: 0.466
-      JSQuAD: 0.837
-      XL-Sum: 0.105
-      MGSM: 0.08
-      WMT20-en-ja: 0.206
-      WMT20-ja-en: 0.142
-      JMMLU: 0.292
-      JHumanEval: 0.061
-    ja_mtb:
-      JMT Avg: 0.451
-      coding: 0.274
-      extraction: 0.321
-      humanities: 0.68
-      math: 0.281
-      reasoning: 0.301
-      roleplay: 0.628
-      stem: 0.504
-      writing: 0.617
-    en_basic:
-      En Avg: 0.313
-      OpenBookQA: 0.286
-      TriviaQA: 0.296
-      HellaSwag: 0.485
-      SQuAD2: 0.502
-      XWINO: 0.847
-      MMLU: 0.277
-      GSM8K: 0.043
-      MATH: 0.016
-      BBH: 0.29
-      HumanEval: 0.087
-    other:
-      GPQA: 0.123
 - id: llm-jp/llm-jp-3-3.7b
+  model_id: llm-jp/llm-jp-3-3.7b
   name: llm-jp-3-3.7b
   date: '2024-09-25'
   params: 3.7
-  base_model: ''
+  active_params: 3.7
+  family: llm-jp-3
+  base: －
   sortkey: llm jp 3
+  is_post: false
   url: https://huggingface.co/llm-jp/llm-jp-3-3.7b
   results:
-    ja_basic:
-      Ja Avg: 0.281
+    ja_pre:
+      avg: 0.281
       JComQA: 0.203
       JEMHopQA: 0.431
       NIILC: 0.541
       JSQuAD: 0.804
-      XL-Sum: 0.142
+      XLSum: 0.142
       MGSM: 0.06
-      WMT20-en-ja: 0.223
-      WMT20-ja-en: 0.159
+      WMT20enja: 0.223
+      WMT20jaen: 0.159
       JMMLU: 0.249
       JHumanEval: 0.0
-    en_basic:
-      En Avg: 0.324
+    en_pre:
+      avg: 0.324
       OpenBookQA: 0.28
       TriviaQA: 0.421
       HellaSwag: 0.506
@@ -3322,74 +2447,32 @@
       MATH: 0.016
       BBH: 0.309
       HumanEval: 0.019
-    other:
-      GPQA: 0.007
-- id: llm-jp/llm-jp-3-3.7b-instruct
-  name: llm-jp-3-3.7b-instruct
-  date: '2024-09-25'
-  params: 3.7
-  base_model: llm-jp-3-3.7b
-  sortkey: llm jp 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.35
-      JComQA: 0.533
-      JEMHopQA: 0.464
-      NIILC: 0.529
-      JSQuAD: 0.847
-      XL-Sum: 0.139
-      MGSM: 0.152
-      WMT20-en-ja: 0.224
-      WMT20-ja-en: 0.17
-      JMMLU: 0.359
-      JHumanEval: 0.085
-    ja_mtb:
-      JMT Avg: 0.485
-      coding: 0.311
-      extraction: 0.418
-      humanities: 0.73
-      math: 0.311
-      reasoning: 0.339
-      roleplay: 0.618
-      stem: 0.551
-      writing: 0.6
-    en_basic:
-      En Avg: 0.347
-      OpenBookQA: 0.31
-      TriviaQA: 0.398
-      HellaSwag: 0.534
-      SQuAD2: 0.503
-      XWINO: 0.862
-      MMLU: 0.349
-      GSM8K: 0.071
-      MATH: 0.022
-      BBH: 0.324
-      HumanEval: 0.099
-    other:
-      GPQA: 0.112
 - id: llm-jp/llm-jp-3-7.2b
+  model_id: llm-jp/llm-jp-3-7.2b
   name: llm-jp-3-7.2b
   date: '2025-02-05'
   params: 7.3
-  base_model: ''
+  active_params: 7.3
+  family: llm-jp-3
+  base: －
   sortkey: llm jp 3
+  is_post: false
   url: https://huggingface.co/llm-jp/llm-jp-3-7.2b
   results:
-    ja_basic:
-      Ja Avg: 0.35
+    ja_pre:
+      avg: 0.35
       JComQA: 0.509
       JEMHopQA: 0.481
       NIILC: 0.601
       JSQuAD: 0.863
-      XL-Sum: 0.152
+      XLSum: 0.152
       MGSM: 0.088
-      WMT20-en-ja: 0.249
-      WMT20-ja-en: 0.19
+      WMT20enja: 0.249
+      WMT20jaen: 0.19
       JMMLU: 0.344
       JHumanEval: 0.021
-    en_basic:
-      En Avg: 0.363
+    en_pre:
+      avg: 0.363
       OpenBookQA: 0.312
       TriviaQA: 0.522
       HellaSwag: 0.544
@@ -3400,30 +2483,32 @@
       MATH: 0.022
       BBH: 0.362
       HumanEval: 0.02
-    other:
-      GPQA: 0.02
 - id: llm-jp/llm-jp-3-13b
+  model_id: llm-jp/llm-jp-3-13b
   name: llm-jp-3-13b
   date: '2024-09-25'
   params: 13
-  base_model: ''
+  active_params: 13
+  family: llm-jp-3
+  base: －
   sortkey: llm jp 3
+  is_post: false
   url: https://huggingface.co/llm-jp/llm-jp-3-13b
   results:
-    ja_basic:
-      Ja Avg: 0.393
+    ja_pre:
+      avg: 0.393
       JComQA: 0.65
       JEMHopQA: 0.525
       NIILC: 0.649
       JSQuAD: 0.882
-      XL-Sum: 0.164
+      XLSum: 0.164
       MGSM: 0.16
-      WMT20-en-ja: 0.273
-      WMT20-ja-en: 0.21
+      WMT20enja: 0.273
+      WMT20jaen: 0.21
       JMMLU: 0.399
       JHumanEval: 0.023
-    en_basic:
-      En Avg: 0.399
+    en_pre:
+      avg: 0.399
       OpenBookQA: 0.332
       TriviaQA: 0.602
       HellaSwag: 0.57
@@ -3434,784 +2519,375 @@
       MATH: 0.026
       BBH: 0.402
       HumanEval: 0.032
-    other:
-      GPQA: 0.094
-- id: llm-jp/llm-jp-3-13b-instruct
-  name: llm-jp-3-13b-instruct
-  date: '2024-09-25'
-  params: 13
-  base_model: llm-jp-3-13b
-  sortkey: llm jp 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-13b-instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.436
-      JComQA: 0.894
-      JEMHopQA: 0.339
-      NIILC: 0.638
-      JSQuAD: 0.901
-      XL-Sum: 0.151
-      MGSM: 0.324
-      WMT20-en-ja: 0.252
-      WMT20-ja-en: 0.203
-      JMMLU: 0.468
-      JHumanEval: 0.188
-    ja_mtb:
-      JMT Avg: 0.588
-      coding: 0.373
-      extraction: 0.556
-      humanities: 0.816
-      math: 0.371
-      reasoning: 0.526
-      roleplay: 0.73
-      stem: 0.614
-      writing: 0.715
-    en_basic:
-      En Avg: 0.432
-      OpenBookQA: 0.342
-      TriviaQA: 0.534
-      HellaSwag: 0.594
-      SQuAD2: 0.516
-      XWINO: 0.892
-      MMLU: 0.506
-      GSM8K: 0.243
-      MATH: 0.046
-      BBH: 0.438
-      HumanEval: 0.205
-    other:
-      GPQA: 0.201
-- id: llm-jp/llm-jp-3-1.8b-instruct3
-  name: llm-jp-3-1.8b-instruct3
-  date: '2025-02-05'
-  params: 1.8
-  base_model: llm-jp-3-1.8b
-  sortkey: llm jp 3 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-1.8b-instruct3
-  results:
-    ja_basic:
-      Ja Avg: 0.29
-      JComQA: 0.279
-      JEMHopQA: 0.42
-      NIILC: 0.467
-      JSQuAD: 0.789
-      XL-Sum: 0.097
-      MGSM: 0.104
-      WMT20-en-ja: 0.211
-      WMT20-ja-en: 0.147
-      JMMLU: 0.26
-      JHumanEval: 0.124
-    ja_mtb:
-      JMT Avg: 0.451
-      coding: 0.323
-      extraction: 0.361
-      humanities: 0.636
-      math: 0.287
-      reasoning: 0.307
-      roleplay: 0.599
-      stem: 0.499
-      writing: 0.601
-    en_basic:
-      En Avg: 0.313
-      OpenBookQA: 0.266
-      TriviaQA: 0.278
-      HellaSwag: 0.479
-      SQuAD2: 0.501
-      XWINO: 0.834
-      MMLU: 0.269
-      GSM8K: 0.058
-      MATH: 0.02
-      BBH: 0.294
-      HumanEval: 0.136
-    other:
-      GPQA: 0.06
-- id: llm-jp/llm-jp-3-3.7b-instruct3
-  name: llm-jp-3-3.7b-instruct3
-  date: '2025-02-05'
-  params: 3.7
-  base_model: llm-jp-3-3.7b
-  sortkey: llm jp 3 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct3
-  results:
-    ja_basic:
-      Ja Avg: 0.35
-      JComQA: 0.533
-      JEMHopQA: 0.432
-      NIILC: 0.475
-      JSQuAD: 0.847
-      XL-Sum: 0.131
-      MGSM: 0.208
-      WMT20-en-ja: 0.228
-      WMT20-ja-en: 0.171
-      JMMLU: 0.338
-      JHumanEval: 0.135
-    ja_mtb:
-      JMT Avg: 0.525
-      coding: 0.353
-      extraction: 0.498
-      humanities: 0.7
-      math: 0.346
-      reasoning: 0.432
-      roleplay: 0.657
-      stem: 0.592
-      writing: 0.62
-    en_basic:
-      En Avg: 0.362
-      OpenBookQA: 0.296
-      TriviaQA: 0.395
-      HellaSwag: 0.52
-      SQuAD2: 0.501
-      XWINO: 0.868
-      MMLU: 0.363
-      GSM8K: 0.149
-      MATH: 0.044
-      BBH: 0.348
-      HumanEval: 0.132
-    other:
-      GPQA: 0.141
-- id: llm-jp/llm-jp-3-7.2b-instruct3
-  name: llm-jp-3-7.2b-instruct3
-  date: '2025-02-05'
-  params: 7.3
-  base_model: llm-jp-3-7.2b
-  sortkey: llm jp 3 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-7.2b-instruct3
-  results:
-    ja_basic:
-      Ja Avg: 0.406
-      JComQA: 0.78
-      JEMHopQA: 0.297
-      NIILC: 0.57
-      JSQuAD: 0.882
-      XL-Sum: 0.132
-      MGSM: 0.344
-      WMT20-en-ja: 0.251
-      WMT20-ja-en: 0.189
-      JMMLU: 0.422
-      JHumanEval: 0.196
-    ja_mtb:
-      JMT Avg: 0.588
-      coding: 0.358
-      extraction: 0.597
-      humanities: 0.812
-      math: 0.386
-      reasoning: 0.438
-      roleplay: 0.766
-      stem: 0.622
-      writing: 0.721
-    en_basic:
-      En Avg: 0.414
-      OpenBookQA: 0.328
-      TriviaQA: 0.479
-      HellaSwag: 0.563
-      SQuAD2: 0.501
-      XWINO: 0.876
-      MMLU: 0.462
-      GSM8K: 0.264
-      MATH: 0.028
-      BBH: 0.42
-      HumanEval: 0.219
-    other:
-      GPQA: 0.123
-- id: llm-jp/llm-jp-3-13b-instruct3
-  name: llm-jp-3-13b-instruct3
-  date: '2025-02-05'
-  params: 13
-  base_model: llm-jp-3-13b
-  sortkey: llm jp 3 3
-  url: https://huggingface.co/llm-jp/llm-jp-3-13b-instruct3
-  results:
-    ja_basic:
-      Ja Avg: 0.452
-      JComQA: 0.855
-      JEMHopQA: 0.462
-      NIILC: 0.613
-      JSQuAD: 0.901
-      XL-Sum: 0.139
-      MGSM: 0.392
-      WMT20-en-ja: 0.272
-      WMT20-ja-en: 0.214
-      JMMLU: 0.478
-      JHumanEval: 0.198
-    ja_mtb:
-      JMT Avg: 0.619
-      coding: 0.401
-      extraction: 0.539
-      humanities: 0.836
-      math: 0.428
-      reasoning: 0.558
-      roleplay: 0.755
-      stem: 0.676
-      writing: 0.755
-    en_basic:
-      En Avg: 0.456
-      OpenBookQA: 0.356
-      TriviaQA: 0.551
-      HellaSwag: 0.59
-      SQuAD2: 0.501
-      XWINO: 0.881
-      MMLU: 0.518
-      GSM8K: 0.399
-      MATH: 0.03
-      BBH: 0.465
-      HumanEval: 0.269
-    other:
-      GPQA: 0.185
 - id: llm-jp/llm-jp-3.1-1.8b-instruct4
-  name: llm-jp-3.1-1.8b-instruct4 *
+  model_id: llm-jp/llm-jp-3.1-1.8b-instruct4
+  name: llm-jp-3.1-1.8b-instruct4
   date: '2025-05-30'
   params: 1.8
-  base_model: llm-jp-3.1-1.8b
-  sortkey: llm jp 3.1 4 *
-  remark: in-domain-evaluation
+  active_params: 1.8
+  family: llm-jp-3
+  pre_training: llm-jp-3.1-1.8b
+  reasoning: N/A
+  sortkey: llm jp 3.1 4
+  is_post: true
   url: https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4
   results:
-    ja_basic:
-      Ja Avg: 0.458
-      JComQA: 0.93
-      JEMHopQA: 0.549
-      NIILC: 0.537
-      JSQuAD: 0.924
-      XL-Sum: 0.086
-      MGSM: 0.404
-      WMT20-en-ja: 0.243
-      WMT20-ja-en: 0.175
-      JMMLU: 0.433
-      JHumanEval: 0.293
+    ja_post:
+      avg: 0.271
+      JEMHopQA: 0.342
+      MMLU-ProX: 0.195
+      GPQA: 0.239
+      MATH100: 0.212
+      JHumanEval: 0.365
+      __MIFEvalJa: 0.288
+    en_post:
+      avg: 0.178
+      HellaSwag: 0.45
+      MMLU-Pro: 0.163
+      GPQA: 0.278
+      MATH500: 0.146
+      AIME: 0.0
+      LCB: 0.03
     ja_mtb:
-      JMT Avg: 0.648
-      coding: 0.556
-      extraction: 0.579
-      humanities: 0.824
-      math: 0.59
-      reasoning: 0.461
-      roleplay: 0.78
-      stem: 0.691
-      writing: 0.702
-    en_basic:
-      En Avg: 0.413
-      OpenBookQA: 0.278
-      TriviaQA: 0.322
-      HellaSwag: 0.476
-      SQuAD2: 0.6
-      XWINO: 0.837
-      MMLU: 0.449
-      GSM8K: 0.387
-      MATH: 0.09
-      BBH: 0.352
-      HumanEval: 0.342
-    other:
-      GPQA: 0.145
+      avg: 0.657
+      coding: 0.574
+      extraction: 0.601
+      humanities: 0.809
+      math: 0.672
+      reasoning: 0.446
+      roleplay: 0.767
+      stem: 0.697
+      writing: 0.693
+    en_mtb:
+      avg: 0.548
+      coding: 0.454
+      extraction: 0.482
+      humanities: 0.662
+      math: 0.521
+      reasoning: 0.364
+      roleplay: 0.665
+      stem: 0.563
+      writing: 0.673
 - id: llm-jp/llm-jp-3.1-13b-instruct4
-  name: llm-jp-3.1-13b-instruct4 *
+  model_id: llm-jp/llm-jp-3.1-13b-instruct4
+  name: llm-jp-3.1-13b-instruct4
   date: '2025-05-30'
-  params: 13
-  base_model: llm-jp-3.1-13b
-  sortkey: llm jp 3.1 4 *
-  remark: in-domain-evaluation
+  params: 14
+  active_params: 14
+  family: llm-jp-3
+  pre_training: llm-jp-3.1-13b
+  reasoning: N/A
+  sortkey: llm jp 3.1 4
+  is_post: true
   url: https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4
   results:
-    ja_basic:
-      Ja Avg: 0.535
-      JComQA: 0.961
-      JEMHopQA: 0.646
-      NIILC: 0.635
-      JSQuAD: 0.943
-      XL-Sum: 0.137
-      MGSM: 0.652
-      WMT20-en-ja: 0.268
-      WMT20-ja-en: 0.205
-      JMMLU: 0.532
-      JHumanEval: 0.375
+    ja_post:
+      avg: 0.384
+      JEMHopQA: 0.698
+      MMLU-ProX: 0.296
+      GPQA: 0.23
+      MATH100: 0.232
+      JHumanEval: 0.463
+      __MIFEvalJa: 0.372
+    en_post:
+      avg: 0.244
+      HellaSwag: 0.717
+      MMLU-Pro: 0.252
+      GPQA: 0.227
+      MATH500: 0.188
+      AIME: 0.0
+      LCB: 0.082
     ja_mtb:
-      JMT Avg: 0.733
-      coding: 0.615
-      extraction: 0.711
-      humanities: 0.866
-      math: 0.727
-      reasoning: 0.557
-      roleplay: 0.816
-      stem: 0.766
-      writing: 0.805
-    en_basic:
-      En Avg: 0.541
-      OpenBookQA: 0.382
-      TriviaQA: 0.562
-      HellaSwag: 0.593
-      SQuAD2: 0.694
-      XWINO: 0.876
-      MMLU: 0.568
-      GSM8K: 0.529
-      MATH: 0.182
-      BBH: 0.6
-      HumanEval: 0.422
-    other:
-      GPQA: 0.232
-- id: mistralai/Mistral-Nemo-Base-2407
-  name: Mistral-Nemo-Base-2407 (12B)
-  date: '2024-07-18'
-  params: 12
-  base_model: ''
-  sortkey: mistral nemo 2407 ()
-  url: https://huggingface.co/mistralai/Mistral-Nemo-Base-2407
+      avg: 0.733
+      coding: 0.587
+      extraction: 0.7
+      humanities: 0.87
+      math: 0.731
+      reasoning: 0.559
+      roleplay: 0.831
+      stem: 0.775
+      writing: 0.807
+    en_mtb:
+      avg: 0.682
+      coding: 0.562
+      extraction: 0.681
+      humanities: 0.844
+      math: 0.625
+      reasoning: 0.512
+      roleplay: 0.736
+      stem: 0.715
+      writing: 0.779
+- id: google/medgemma-27b-it
+  model_id: google/medgemma-27b-it
+  name: MedGemma 27B IT
+  date: '2025-07-09'
+  params: 27
+  active_params: 27
+  family: Gemma 3
+  pre_training: Gemma 3 27B
+  reasoning: N/A
+  sortkey: medgemma
+  is_post: true
+  url: https://huggingface.co/google/medgemma-27b-it
   results:
-    ja_basic:
-      Ja Avg: 0.46
-      JComQA: 0.911
-      JEMHopQA: 0.516
-      NIILC: 0.475
-      JSQuAD: 0.904
-      XL-Sum: 0.192
-      MGSM: 0.416
-      WMT20-en-ja: 0.244
-      WMT20-ja-en: 0.212
-      JMMLU: 0.538
-      JHumanEval: 0.194
-    en_basic:
-      En Avg: 0.559
-      OpenBookQA: 0.422
-      TriviaQA: 0.741
-      HellaSwag: 0.647
-      SQuAD2: 0.528
-      XWINO: 0.914
-      MMLU: 0.69
-      GSM8K: 0.55
-      MATH: 0.184
-      BBH: 0.657
-      HumanEval: 0.259
-    other:
-      GPQA: 0.007
-- id: mistralai/Mistral-Nemo-Instruct-2407
-  name: Mistral-NeMo-Instruct-2407 (12B)
-  date: '2024-07-18'
-  params: 12
-  base_model: Mistral-Nemo-Base-2407 (12B)
-  sortkey: mistral nemo 2407 ()
-  url: https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407
-  results:
-    ja_basic:
-      Ja Avg: 0.5
-      JComQA: 0.927
-      JEMHopQA: 0.497
-      NIILC: 0.484
-      JSQuAD: 0.905
-      XL-Sum: 0.176
-      MGSM: 0.552
-      WMT20-en-ja: 0.24
-      WMT20-ja-en: 0.205
-      JMMLU: 0.548
-      JHumanEval: 0.47
+    ja_post:
+      avg: 0.463
+      JEMHopQA: 0.537
+      MMLU-ProX: 0.606
+      GPQA: 0.35
+      MATH100: 0.818
+      JHumanEval: 0.001
+      __MIFEvalJa: 0.624
+    en_post:
+      avg: 0.495
+      HellaSwag: 0.859
+      MMLU-Pro: 0.654
+      GPQA: 0.434
+      MATH500: 0.824
+      AIME: 0.2
+      LCB: 0.001
     ja_mtb:
-      JMT Avg: 0.616
-      coding: 0.515
-      extraction: 0.698
-      humanities: 0.702
-      math: 0.512
-      reasoning: 0.481
-      roleplay: 0.669
-      stem: 0.66
-      writing: 0.691
-    en_basic:
-      En Avg: 0.608
-      OpenBookQA: 0.406
-      TriviaQA: 0.726
-      HellaSwag: 0.645
-      SQuAD2: 0.606
-      XWINO: 0.911
-      MMLU: 0.683
-      GSM8K: 0.721
-      MATH: 0.274
-      BBH: 0.537
-      HumanEval: 0.571
-    other:
-      GPQA: 0.208
-- id: nvidia/Mistral-NeMo-Minitron-8B-Base
-  name: Mistral-NeMo-Minitron 8B
-  date: '2024-08-21'
-  params: 8.4
-  base_model: ''
-  sortkey: mistral nemo minitron
-  url: https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base
-  results:
-    ja_basic:
-      Ja Avg: 0.444
-      JComQA: 0.887
-      JEMHopQA: 0.486
-      NIILC: 0.374
-      JSQuAD: 0.902
-      XL-Sum: 0.157
-      MGSM: 0.424
-      WMT20-en-ja: 0.186
-      WMT20-ja-en: 0.193
-      JMMLU: 0.494
-      JHumanEval: 0.332
-    en_basic:
-      En Avg: 0.572
-      OpenBookQA: 0.406
-      TriviaQA: 0.728
-      HellaSwag: 0.621
-      SQuAD2: 0.525
-      XWINO: 0.915
-      MMLU: 0.694
-      GSM8K: 0.585
-      MATH: 0.202
-      BBH: 0.658
-      HumanEval: 0.382
-    other:
-      GPQA: 0.179
-- id: nvidia/Mistral-NeMo-Minitron-8B-Instruct
-  name: Mistral-NeMo-Minitron 8B Instruct
-  date: '2024-08-21'
-  params: 8.4
-  base_model: Mistral-NeMo-Minitron 8B
-  sortkey: mistral nemo minitron
-  url: https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.446
-      JComQA: 0.892
-      JEMHopQA: 0.498
-      NIILC: 0.38
-      JSQuAD: 0.578
-      XL-Sum: 0.157
-      MGSM: 0.556
-      WMT20-en-ja: 0.199
-      WMT20-ja-en: 0.193
-      JMMLU: 0.51
-      JHumanEval: 0.496
-    ja_mtb:
-      JMT Avg: 0.567
-      coding: 0.547
-      extraction: 0.684
-      humanities: 0.649
-      math: 0.545
-      reasoning: 0.454
-      roleplay: 0.564
-      stem: 0.549
-      writing: 0.541
-    en_basic:
-      En Avg: 0.634
-      OpenBookQA: 0.452
-      TriviaQA: 0.719
-      HellaSwag: 0.639
-      SQuAD2: 0.624
-      XWINO: 0.909
-      MMLU: 0.701
-      GSM8K: 0.754
-      MATH: 0.274
-      BBH: 0.663
-      HumanEval: 0.601
-    other:
-      GPQA: 0.283
-- id: mistralai/Mistral-7B-v0.3
-  name: Mistral-7B-v0.3
-  date: '2024-05-22'
-  params: 7.2
-  base_model: ''
-  sortkey: mistral v0.3
-  url: https://huggingface.co/mistralai/Mistral-7B-v0.3
-  results:
-    ja_basic:
-      Ja Avg: 0.361
-      JComQA: 0.714
-      JEMHopQA: 0.474
-      NIILC: 0.245
-      JSQuAD: 0.847
-      XL-Sum: 0.212
-      MGSM: 0.156
-      WMT20-en-ja: 0.142
-      WMT20-ja-en: 0.171
-      JMMLU: 0.404
-      JHumanEval: 0.242
-    en_basic:
-      En Avg: 0.507
-      OpenBookQA: 0.374
-      TriviaQA: 0.695
-      HellaSwag: 0.622
-      SQuAD2: 0.511
-      XWINO: 0.909
-      MMLU: 0.623
-      GSM8K: 0.361
-      MATH: 0.116
-      BBH: 0.585
-      HumanEval: 0.273
-    other:
-      GPQA: 0.129
-- id: mistralai/Mistral-7B-Instruct-v0.3
-  name: Mistral-7B-Instruct-v0.3
-  date: '2024-05-22'
-  params: 7.2
-  base_model: Mistral-7B-v0.3
-  sortkey: mistral v0.3
-  url: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
-  results:
-    ja_basic:
-      Ja Avg: 0.378
-      JComQA: 0.754
-      JEMHopQA: 0.447
-      NIILC: 0.268
-      JSQuAD: 0.87
-      XL-Sum: 0.205
-      MGSM: 0.224
-      WMT20-en-ja: 0.163
-      WMT20-ja-en: 0.177
-      JMMLU: 0.403
-      JHumanEval: 0.266
-    ja_mtb:
-      JMT Avg: 0.428
-      coding: 0.488
-      extraction: 0.54
-      humanities: 0.435
-      math: 0.354
-      reasoning: 0.392
-      roleplay: 0.409
-      stem: 0.405
-      writing: 0.401
-    en_basic:
-      En Avg: 0.541
-      OpenBookQA: 0.408
-      TriviaQA: 0.677
-      HellaSwag: 0.652
-      SQuAD2: 0.576
-      XWINO: 0.905
-      MMLU: 0.621
-      GSM8K: 0.5
-      MATH: 0.16
-      BBH: 0.563
-      HumanEval: 0.346
-    other:
-      GPQA: 0.277
-- id: mistralai/Mixtral-8x22B-v0.1
-  name: Mixtral-8x22B-v0.1
-  date: '2024-04-17'
-  params: 141
-  base_model: ''
-  sortkey: mixtral v0.1
-  url: https://huggingface.co/mistralai/Mixtral-8x22B-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.496
-      JComQA: 0.895
-      JEMHopQA: 0.512
-      NIILC: 0.42
-      JSQuAD: 0.914
-      XL-Sum: 0.241
-      MGSM: 0.544
-      WMT20-en-ja: 0.229
-      WMT20-ja-en: 0.229
-      JMMLU: 0.604
-      JHumanEval: 0.371
-    en_basic:
-      En Avg: 0.652
-      OpenBookQA: 0.42
-      TriviaQA: 0.833
-      HellaSwag: 0.696
-      SQuAD2: 0.593
-      XWINO: 0.919
-      MMLU: 0.772
-      GSM8K: 0.754
-      MATH: 0.414
-      BBH: 0.811
-      HumanEval: 0.309
-    other:
-      GPQA: 0.19
-- id: mistralai/Mixtral-8x22B-Instruct-v0.1
-  name: Mixtral-8x22B-Instruct-v0.1
-  date: '2024-04-17'
-  params: 141
-  base_model: Mixtral-8x22B-v0.1
-  sortkey: mixtral v0.1
-  url: https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.532
-      JComQA: 0.903
-      JEMHopQA: 0.498
-      NIILC: 0.446
-      JSQuAD: 0.918
-      XL-Sum: 0.207
-      MGSM: 0.696
-      WMT20-en-ja: 0.233
-      WMT20-ja-en: 0.232
-      JMMLU: 0.602
-      JHumanEval: 0.588
-    ja_mtb:
-      JMT Avg: 0.622
-      coding: 0.591
-      extraction: 0.797
-      humanities: 0.606
-      math: 0.585
-      reasoning: 0.557
-      roleplay: 0.618
-      stem: 0.565
-      writing: 0.658
-    en_basic:
-      En Avg: 0.72
-      OpenBookQA: 0.45
-      TriviaQA: 0.827
-      HellaSwag: 0.708
-      SQuAD2: 0.676
-      XWINO: 0.92
-      MMLU: 0.774
-      GSM8K: 0.832
-      MATH: 0.456
-      BBH: 0.83
-      HumanEval: 0.723
-    other:
-      GPQA: 0.335
-- id: o1-2024-12-17
-  name: o1 (o1-2024-12-17)
-  date: '2024-08-06'
+      avg: 0.778
+      coding: 0.799
+      extraction: 0.926
+      humanities: 0.805
+      math: 0.883
+      reasoning: 0.646
+      roleplay: 0.718
+      stem: 0.758
+      writing: 0.686
+    en_mtb:
+      avg: 0.83
+      coding: 0.722
+      extraction: 0.914
+      humanities: 0.884
+      math: 0.97
+      reasoning: 0.735
+      roleplay: 0.819
+      stem: 0.858
+      writing: 0.737
+- id: o3-2025-04-16
+  model_id: o3-2025-04-16
+  name: o3 (o3-2025-04-16)
+  date: '2025-04-16'
   params: 0
-  base_model: (private)
-  sortkey: o1 (o1 2024 12 17)
-  url: https://huggingface.co/o1-2024-12-17
+  active_params: 0
+  family: o3
+  pre_training: (private)
+  reasoning: on (middle)
+  sortkey: o3 (o3 2025 04 16)
+  is_post: true
+  url: https://platform.openai.com/docs/models
   results:
-    ja_basic:
-      Ja Avg: -0.01
-      JComQA: -0.01
-      JEMHopQA: -0.01
-      NIILC: -0.01
-      JSQuAD: -0.01
-      XL-Sum: -0.01
-      MGSM: -0.01
-      WMT20-en-ja: -0.01
-      WMT20-ja-en: -0.01
-      JMMLU: -0.01
-      JHumanEval: -0.01
+    ja_post:
+      avg: 0.87
+      JEMHopQA: 0.852
+      MMLU-ProX: 0.835
+      GPQA: 0.766
+      MATH100: 0.97
+      JHumanEval: 0.929
+      __MIFEvalJa: 0.85
+    en_post:
+      avg: 0.846
+      HellaSwag: 0.956
+      MMLU-Pro: 0.857
+      GPQA: 0.818
+      MATH500: 0.978
+      AIME: 0.817
+      LCB: 0.649
     ja_mtb:
-      JMT Avg: 0.807
-      coding: 0.784
-      extraction: 0.782
-      humanities: 0.853
-      math: 0.973
-      reasoning: 0.618
-      roleplay: 0.828
-      stem: 0.798
-      writing: 0.817
-    en_basic:
-      En Avg: -0.01
-      OpenBookQA: -0.01
-      TriviaQA: -0.01
-      HellaSwag: -0.01
-      SQuAD2: -0.01
-      XWINO: -0.01
-      MMLU: -0.01
-      GSM8K: -0.01
-      MATH: -0.01
-      BBH: -0.01
-      HumanEval: -0.01
-    other:
-      GPQA: -0.001
-- id: microsoft/Phi-3-mini-128k-instruct
-  name: Phi-3-Mini-128K-Instruct
-  date: '2024-04-23'
-  params: 3.8
-  base_model: (private)
-  sortkey: phi 3 mini 128k
-  url: https://huggingface.co/microsoft/Phi-3-mini-128k-instruct
+      avg: 0.903
+      coding: 0.935
+      extraction: 0.898
+      humanities: 0.888
+      math: 0.995
+      reasoning: 0.809
+      roleplay: 0.889
+      stem: 0.941
+      writing: 0.867
+    en_mtb:
+      avg: 0.917
+      coding: 0.929
+      extraction: 0.931
+      humanities: 0.945
+      math: 0.964
+      reasoning: 0.836
+      roleplay: 0.9
+      stem: 0.938
+      writing: 0.892
+- id: o3-mini-2025-01-31
+  model_id: o3-mini-2025-01-31
+  name: o3-mini (o3-mini-2025-01-31)
+  date: '2025-01-31'
+  params: 0
+  active_params: 0
+  family: o3
+  pre_training: (private)
+  reasoning: on (middle)
+  sortkey: o3 mini (o3 mini 2025 01 31)
+  is_post: true
+  url: https://platform.openai.com/docs/models
   results:
-    ja_basic:
-      Ja Avg: 0.382
-      JComQA: 0.72
-      JEMHopQA: 0.394
-      NIILC: 0.208
-      JSQuAD: 0.832
-      XL-Sum: 0.132
-      MGSM: 0.408
-      WMT20-en-ja: 0.15
-      WMT20-ja-en: 0.136
-      JMMLU: 0.409
-      JHumanEval: 0.428
+    ja_post:
+      avg: 0.785
+      JEMHopQA: 0.607
+      MMLU-ProX: 0.76
+      GPQA: 0.685
+      MATH100: 0.939
+      JHumanEval: 0.934
+      __MIFEvalJa: 0.841
+    en_post:
+      avg: 0.767
+      HellaSwag: 0.869
+      MMLU-Pro: 0.792
+      GPQA: 0.747
+      MATH500: 0.958
+      AIME: 0.733
+      LCB: 0.503
     ja_mtb:
-      JMT Avg: 0.524
-      coding: 0.535
-      extraction: 0.68
-      humanities: 0.553
-      math: 0.514
-      reasoning: 0.416
-      roleplay: 0.505
-      stem: 0.465
-      writing: 0.525
-    en_basic:
-      En Avg: 0.614
-      OpenBookQA: 0.422
-      TriviaQA: 0.526
-      HellaSwag: 0.605
-      SQuAD2: 0.559
-      XWINO: 0.871
-      MMLU: 0.695
-      GSM8K: 0.759
-      MATH: 0.368
-      BBH: 0.711
-      HumanEval: 0.627
-    other:
-      GPQA: 0.275
+      avg: 0.88
+      coding: 0.868
+      extraction: 0.937
+      humanities: 0.86
+      math: 0.952
+      reasoning: 0.802
+      roleplay: 0.863
+      stem: 0.893
+      writing: 0.868
+    en_mtb:
+      avg: 0.901
+      coding: 0.876
+      extraction: 0.913
+      humanities: 0.891
+      math: 0.969
+      reasoning: 0.865
+      roleplay: 0.895
+      stem: 0.914
+      writing: 0.882
 - id: microsoft/phi-4
+  model_id: microsoft/phi-4
   name: Phi-4
   date: '2024-12-13'
-  params: 14
-  base_model: (private)
+  params: 15
+  active_params: 15
+  family: Phi 4
+  pre_training: (private)
+  reasoning: N/A
   sortkey: phi 4
+  is_post: true
   url: https://huggingface.co/microsoft/phi-4
   results:
-    ja_basic:
-      Ja Avg: 0.58
-      JComQA: 0.945
-      JEMHopQA: 0.608
-      NIILC: 0.507
-      JSQuAD: 0.923
-      XL-Sum: 0.219
-      MGSM: 0.796
-      WMT20-en-ja: 0.283
-      WMT20-ja-en: 0.231
-      JMMLU: 0.689
-      JHumanEval: 0.598
+    ja_post:
+      avg: 0.646
+      JEMHopQA: 0.589
+      MMLU-ProX: 0.638
+      GPQA: 0.435
+      MATH100: 0.798
+      JHumanEval: 0.77
+      __MIFEvalJa: 0.438
+    en_post:
+      avg: 0.547
+      HellaSwag: 0.859
+      MMLU-Pro: 0.63
+      GPQA: 0.551
+      MATH500: 0.8
+      AIME: 0.217
+      LCB: 0.227
     ja_mtb:
-      JMT Avg: 0.769
-      coding: 0.692
-      extraction: 0.929
-      humanities: 0.795
-      math: 0.914
-      reasoning: 0.544
-      roleplay: 0.754
-      stem: 0.688
-      writing: 0.84
-    en_basic:
-      En Avg: 0.677
-      OpenBookQA: 0.378
-      TriviaQA: 0.682
-      HellaSwag: 0.647
-      SQuAD2: 0.646
-      XWINO: 0.903
-      MMLU: 0.802
-      GSM8K: 0.899
-      MATH: 0.556
-      BBH: 0.654
-      HumanEval: 0.601
-    other:
-      GPQA: 0.0
+      avg: 0.822
+      coding: 0.752
+      extraction: 0.933
+      humanities: 0.862
+      math: 0.89
+      reasoning: 0.629
+      roleplay: 0.83
+      stem: 0.845
+      writing: 0.835
+    en_mtb:
+      avg: 0.881
+      coding: 0.771
+      extraction: 0.904
+      humanities: 0.876
+      math: 0.928
+      reasoning: 0.933
+      roleplay: 0.889
+      stem: 0.879
+      writing: 0.865
+- id: microsoft/phi-4-reasoning-plus
+  model_id: microsoft/phi-4-reasoning-plus
+  name: Phi-4-reasoning-plus
+  date: '2025-04-30'
+  params: 15
+  active_params: 15
+  family: Phi 4
+  pre_training: (private)
+  reasoning: 'on'
+  sortkey: phi 4 reasoning plus
+  is_post: true
+  url: https://huggingface.co/microsoft/phi-4-reasoning-plus
+  results:
+    ja_post:
+      avg: 0.437
+      JEMHopQA: 0.015
+      MMLU-ProX: 0.118
+      GPQA: 0.563
+      MATH100: 0.737
+      JHumanEval: 0.751
+      __MIFEvalJa: 0.221
+    en_post:
+      avg: 0.469
+      HellaSwag: 0.26
+      MMLU-Pro: 0.113
+      GPQA: 0.611
+      MATH500: 0.77
+      AIME: 0.583
+      LCB: 0.478
+    ja_mtb:
+      avg: 0.374
+      coding: 0.205
+      extraction: 0.376
+      humanities: 0.206
+      math: 0.379
+      reasoning: 0.283
+      roleplay: 0.643
+      stem: 0.162
+      writing: 0.741
+    en_mtb:
+      avg: 0.426
+      coding: 0.281
+      extraction: 0.384
+      humanities: 0.116
+      math: 0.437
+      reasoning: 0.322
+      roleplay: 0.769
+      stem: 0.299
+      writing: 0.8
 - id: pfnet/plamo-2-1b
+  model_id: pfnet/plamo-2-1b
   name: PLaMo 2 1B
   date: '2025-02-21'
   params: 1.3
-  base_model: ''
+  active_params: 1.3
+  family: PLaMo 2
+  base: －
   sortkey: plamo 2
+  is_post: false
   url: https://huggingface.co/pfnet/plamo-2-1b
   results:
-    ja_basic:
-      Ja Avg: 0.25
+    ja_pre:
+      avg: 0.25
       JComQA: 0.203
       JEMHopQA: 0.463
       NIILC: 0.434
       JSQuAD: 0.626
-      XL-Sum: 0.055
+      XLSum: 0.055
       MGSM: 0.052
-      WMT20-en-ja: 0.236
-      WMT20-ja-en: 0.119
+      WMT20enja: 0.236
+      WMT20jaen: 0.119
       JMMLU: 0.256
       JHumanEval: 0.057
-    en_basic:
-      En Avg: 0.274
+    en_pre:
+      avg: 0.274
       OpenBookQA: 0.28
       TriviaQA: 0.129
       HellaSwag: 0.425
@@ -4222,30 +2898,32 @@
       MATH: 0.034
       BBH: 0.122
       HumanEval: 0.08
-    other:
-      GPQA: 0.007
 - id: pfnet/plamo-2-8b
+  model_id: pfnet/plamo-2-8b
   name: PLaMo 2 8B
   date: '2025-02-21'
   params: 9.1
-  base_model: ''
+  active_params: 9.1
+  family: PLaMo 2
+  base: －
   sortkey: plamo 2
+  is_post: false
   url: https://huggingface.co/pfnet/plamo-2-8b
   results:
-    ja_basic:
-      Ja Avg: 0.481
+    ja_pre:
+      avg: 0.481
       JComQA: 0.909
       JEMHopQA: 0.474
       NIILC: 0.655
       JSQuAD: 0.91
-      XL-Sum: 0.12
+      XLSum: 0.12
       MGSM: 0.508
-      WMT20-en-ja: 0.28
-      WMT20-ja-en: 0.205
+      WMT20enja: 0.28
+      WMT20jaen: 0.205
       JMMLU: 0.536
       JHumanEval: 0.213
-    en_basic:
-      En Avg: 0.474
+    en_pre:
+      avg: 0.474
       OpenBookQA: 0.346
       TriviaQA: 0.584
       HellaSwag: 0.56
@@ -4256,264 +2934,32 @@
       MATH: 0.2
       BBH: 0.26
       HumanEval: 0.26
-    other:
-      GPQA: 0.022
-- id: Qwen/Qwen2-7B
-  name: Qwen2-7B
-  date: '2024-06-07'
-  params: 7.6
-  base_model: ''
-  sortkey: qwen2
-  url: https://huggingface.co/Qwen/Qwen2-7B
-  results:
-    ja_basic:
-      Ja Avg: 0.472
-      JComQA: 0.875
-      JEMHopQA: 0.463
-      NIILC: 0.372
-      JSQuAD: 0.899
-      XL-Sum: 0.172
-      MGSM: 0.524
-      WMT20-en-ja: 0.209
-      WMT20-ja-en: 0.195
-      JMMLU: 0.587
-      JHumanEval: 0.422
-    en_basic:
-      En Avg: 0.602
-      OpenBookQA: 0.374
-      TriviaQA: 0.61
-      HellaSwag: 0.602
-      SQuAD2: 0.574
-      XWINO: 0.891
-      MMLU: 0.705
-      GSM8K: 0.781
-      MATH: 0.492
-      BBH: 0.53
-      HumanEval: 0.46
-    other:
-      GPQA: 0.246
-- id: Qwen/Qwen2-7B-Instruct
-  name: Qwen2-7B-Instruct
-  date: '2024-06-07'
-  params: 7.6
-  base_model: Qwen2-7B
-  sortkey: qwen2
-  url: https://huggingface.co/Qwen/Qwen2-7B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.478
-      JComQA: 0.888
-      JEMHopQA: 0.39
-      NIILC: 0.379
-      JSQuAD: 0.897
-      XL-Sum: 0.126
-      MGSM: 0.576
-      WMT20-en-ja: 0.206
-      WMT20-ja-en: 0.19
-      JMMLU: 0.571
-      JHumanEval: 0.555
-    ja_mtb:
-      JMT Avg: 0.646
-      coding: 0.512
-      extraction: 0.771
-      humanities: 0.719
-      math: 0.687
-      reasoning: 0.514
-      roleplay: 0.683
-      stem: 0.563
-      writing: 0.717
-    en_basic:
-      En Avg: 0.582
-      OpenBookQA: 0.396
-      TriviaQA: 0.547
-      HellaSwag: 0.615
-      SQuAD2: 0.593
-      XWINO: 0.886
-      MMLU: 0.707
-      GSM8K: 0.626
-      MATH: 0.504
-      BBH: 0.304
-      HumanEval: 0.643
-    other:
-      GPQA: 0.105
-- id: Qwen/Qwen2-72B
-  name: Qwen2-72B
-  date: '2024-06-07'
-  params: 72
-  base_model: ''
-  sortkey: qwen2
-  url: https://huggingface.co/Qwen/Qwen2-72B
-  results:
-    ja_basic:
-      Ja Avg: 0.593
-      JComQA: 0.96
-      JEMHopQA: 0.62
-      NIILC: 0.561
-      JSQuAD: 0.926
-      XL-Sum: 0.238
-      MGSM: 0.768
-      WMT20-en-ja: 0.275
-      WMT20-ja-en: 0.241
-      JMMLU: 0.782
-      JHumanEval: 0.561
-    en_basic:
-      En Avg: 0.702
-      OpenBookQA: 0.418
-      TriviaQA: 0.79
-      HellaSwag: 0.677
-      SQuAD2: 0.673
-      XWINO: 0.915
-      MMLU: 0.842
-      GSM8K: 0.893
-      MATH: 0.56
-      BBH: 0.643
-      HumanEval: 0.608
-    other:
-      GPQA: 0.299
-- id: Qwen/Qwen2-72B-Instruct
-  name: Qwen2-72B-Instruct
-  date: '2024-06-07'
-  params: 72
-  base_model: Qwen2-72B
-  sortkey: qwen2
-  url: https://huggingface.co/Qwen/Qwen2-72B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.598
-      JComQA: 0.963
-      JEMHopQA: 0.628
-      NIILC: 0.557
-      JSQuAD: 0.92
-      XL-Sum: 0.166
-      MGSM: 0.78
-      WMT20-en-ja: 0.26
-      WMT20-ja-en: 0.232
-      JMMLU: 0.771
-      JHumanEval: 0.701
-    ja_mtb:
-      JMT Avg: 0.756
-      coding: 0.632
-      extraction: 0.8
-      humanities: 0.842
-      math: 0.688
-      reasoning: 0.616
-      roleplay: 0.824
-      stem: 0.797
-      writing: 0.846
-    en_basic:
-      En Avg: 0.669
-      OpenBookQA: 0.444
-      TriviaQA: 0.759
-      HellaSwag: 0.685
-      SQuAD2: 0.685
-      XWINO: 0.911
-      MMLU: 0.839
-      GSM8K: 0.848
-      MATH: 0.634
-      BBH: 0.193
-      HumanEval: 0.688
-    other:
-      GPQA: 0.402
-- id: Qwen/Qwen2.5-0.5B
-  name: Qwen2.5-0.5B
-  date: '2024-09-19'
-  params: 0.5
-  base_model: ''
-  sortkey: qwen2.5
-  url: https://huggingface.co/Qwen/Qwen2.5-0.5B
-  results:
-    ja_basic:
-      Ja Avg: 0.234
-      JComQA: 0.369
-      JEMHopQA: 0.389
-      NIILC: 0.139
-      JSQuAD: 0.635
-      XL-Sum: 0.101
-      MGSM: 0.076
-      WMT20-en-ja: 0.058
-      WMT20-ja-en: 0.064
-      JMMLU: 0.304
-      JHumanEval: 0.203
-    en_basic:
-      En Avg: 0.365
-      OpenBookQA: 0.266
-      TriviaQA: 0.19
-      HellaSwag: 0.399
-      SQuAD2: 0.501
-      XWINO: 0.768
-      MMLU: 0.479
-      GSM8K: 0.341
-      MATH: 0.148
-      BBH: 0.277
-      HumanEval: 0.277
-    other:
-      GPQA: 0.094
-- id: Qwen/Qwen2.5-0.5B-Instruct
-  name: Qwen2.5-0.5B-Instruct
-  date: '2024-09-19'
-  params: 0.5
-  base_model: Qwen2.5-0.5B
-  sortkey: qwen2.5
-  url: https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.243
-      JComQA: 0.382
-      JEMHopQA: 0.401
-      NIILC: 0.157
-      JSQuAD: 0.687
-      XL-Sum: 0.112
-      MGSM: 0.08
-      WMT20-en-ja: 0.095
-      WMT20-ja-en: 0.067
-      JMMLU: 0.318
-      JHumanEval: 0.135
-    ja_mtb:
-      JMT Avg: 0.294
-      coding: 0.335
-      extraction: 0.284
-      humanities: 0.285
-      math: 0.317
-      reasoning: 0.248
-      roleplay: 0.294
-      stem: 0.279
-      writing: 0.313
-    en_basic:
-      En Avg: 0.336
-      OpenBookQA: 0.272
-      TriviaQA: 0.184
-      HellaSwag: 0.398
-      SQuAD2: 0.501
-      XWINO: 0.767
-      MMLU: 0.471
-      GSM8K: 0.19
-      MATH: 0.236
-      BBH: 0.106
-      HumanEval: 0.24
-    other:
-      GPQA: 0.045
 - id: Qwen/Qwen2.5-1.5B
+  model_id: Qwen/Qwen2.5-1.5B
   name: Qwen2.5-1.5B
   date: '2024-09-19'
   params: 1.5
-  base_model: ''
+  active_params: 1.5
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-1.5B
   results:
-    ja_basic:
-      Ja Avg: 0.372
+    ja_pre:
+      avg: 0.372
       JComQA: 0.8
       JEMHopQA: 0.383
       NIILC: 0.241
       JSQuAD: 0.849
-      XL-Sum: 0.143
+      XLSum: 0.143
       MGSM: 0.292
-      WMT20-en-ja: 0.132
-      WMT20-ja-en: 0.134
+      WMT20enja: 0.132
+      WMT20jaen: 0.134
       JMMLU: 0.438
       JHumanEval: 0.308
-    en_basic:
-      En Avg: 0.49
+    en_pre:
+      avg: 0.49
       OpenBookQA: 0.342
       TriviaQA: 0.397
       HellaSwag: 0.499
@@ -4524,74 +2970,32 @@
       MATH: 0.314
       BBH: 0.413
       HumanEval: 0.356
-    other:
-      GPQA: 0.045
-- id: Qwen/Qwen2.5-1.5B-Instruct
-  name: Qwen2.5-1.5B-Instruct
-  date: '2024-09-19'
-  params: 1.5
-  base_model: Qwen2.5-1.5B
-  sortkey: qwen2.5
-  url: https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.355
-      JComQA: 0.812
-      JEMHopQA: 0.276
-      NIILC: 0.241
-      JSQuAD: 0.847
-      XL-Sum: 0.128
-      MGSM: 0.292
-      WMT20-en-ja: 0.147
-      WMT20-ja-en: 0.119
-      JMMLU: 0.447
-      JHumanEval: 0.242
-    ja_mtb:
-      JMT Avg: 0.45
-      coding: 0.408
-      extraction: 0.513
-      humanities: 0.456
-      math: 0.527
-      reasoning: 0.352
-      roleplay: 0.473
-      stem: 0.406
-      writing: 0.469
-    en_basic:
-      En Avg: 0.424
-      OpenBookQA: 0.334
-      TriviaQA: 0.378
-      HellaSwag: 0.503
-      SQuAD2: 0.501
-      XWINO: 0.844
-      MMLU: 0.604
-      GSM8K: 0.257
-      MATH: 0.272
-      BBH: 0.272
-      HumanEval: 0.277
-    other:
-      GPQA: 0.141
 - id: Qwen/Qwen2.5-3B
+  model_id: Qwen/Qwen2.5-3B
   name: Qwen2.5-3B
   date: '2024-09-19'
   params: 3.1
-  base_model: ''
+  active_params: 3.1
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-3B
   results:
-    ja_basic:
-      Ja Avg: 0.442
+    ja_pre:
+      avg: 0.442
       JComQA: 0.847
       JEMHopQA: 0.475
       NIILC: 0.306
       JSQuAD: 0.878
-      XL-Sum: 0.176
+      XLSum: 0.176
       MGSM: 0.46
-      WMT20-en-ja: 0.18
-      WMT20-ja-en: 0.167
+      WMT20enja: 0.18
+      WMT20jaen: 0.167
       JMMLU: 0.529
       JHumanEval: 0.404
-    en_basic:
-      En Avg: 0.534
+    en_pre:
+      avg: 0.534
       OpenBookQA: 0.36
       TriviaQA: 0.504
       HellaSwag: 0.553
@@ -4602,74 +3006,32 @@
       MATH: 0.44
       BBH: 0.442
       HumanEval: 0.387
-    other:
-      GPQA: 0.0
-- id: Qwen/Qwen2.5-3B-Instruct
-  name: Qwen2.5-3B-Instruct
-  date: '2024-09-19'
-  params: 3.1
-  base_model: Qwen2.5-3B
-  sortkey: qwen2.5
-  url: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.409
-      JComQA: 0.876
-      JEMHopQA: 0.304
-      NIILC: 0.293
-      JSQuAD: 0.866
-      XL-Sum: 0.144
-      MGSM: 0.228
-      WMT20-en-ja: 0.198
-      WMT20-ja-en: 0.168
-      JMMLU: 0.536
-      JHumanEval: 0.474
-    ja_mtb:
-      JMT Avg: 0.593
-      coding: 0.567
-      extraction: 0.647
-      humanities: 0.597
-      math: 0.665
-      reasoning: 0.457
-      roleplay: 0.649
-      stem: 0.526
-      writing: 0.637
-    en_basic:
-      En Avg: 0.472
-      OpenBookQA: 0.364
-      TriviaQA: 0.446
-      HellaSwag: 0.562
-      SQuAD2: 0.504
-      XWINO: 0.869
-      MMLU: 0.664
-      GSM8K: 0.096
-      MATH: 0.612
-      BBH: 0.128
-      HumanEval: 0.471
-    other:
-      GPQA: 0.304
 - id: Qwen/Qwen2.5-7B
+  model_id: Qwen/Qwen2.5-7B
   name: Qwen2.5-7B
   date: '2024-09-19'
   params: 7.6
-  base_model: ''
+  active_params: 7.6
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-7B
   results:
-    ja_basic:
-      Ja Avg: 0.512
+    ja_pre:
+      avg: 0.512
       JComQA: 0.924
       JEMHopQA: 0.459
       NIILC: 0.426
       JSQuAD: 0.907
-      XL-Sum: 0.216
+      XLSum: 0.216
       MGSM: 0.616
-      WMT20-en-ja: 0.229
-      WMT20-ja-en: 0.199
+      WMT20enja: 0.229
+      WMT20jaen: 0.199
       JMMLU: 0.634
       JHumanEval: 0.507
-    en_basic:
-      En Avg: 0.63
+    en_pre:
+      avg: 0.63
       OpenBookQA: 0.392
       TriviaQA: 0.601
       HellaSwag: 0.6
@@ -4680,74 +3042,81 @@
       MATH: 0.51
       BBH: 0.562
       HumanEval: 0.554
-    other:
-      GPQA: 0.295
 - id: Qwen/Qwen2.5-7B-Instruct
+  model_id: Qwen/Qwen2.5-7B-Instruct
   name: Qwen2.5-7B-Instruct
   date: '2024-09-19'
   params: 7.6
-  base_model: Qwen2.5-7B
+  active_params: 7.6
+  family: Qwen2
+  pre_training: Qwen2.5-7B
+  reasoning: N/A
   sortkey: qwen2.5
+  is_post: true
   url: https://huggingface.co/Qwen/Qwen2.5-7B-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.498
-      JComQA: 0.915
-      JEMHopQA: 0.429
-      NIILC: 0.391
-      JSQuAD: 0.891
-      XL-Sum: 0.168
-      MGSM: 0.632
-      WMT20-en-ja: 0.211
-      WMT20-ja-en: 0.192
-      JMMLU: 0.623
-      JHumanEval: 0.532
+    ja_post:
+      avg: 0.502
+      JEMHopQA: 0.372
+      MMLU-ProX: 0.452
+      GPQA: 0.315
+      MATH100: 0.636
+      JHumanEval: 0.737
+      __MIFEvalJa: 0.504
+    en_post:
+      avg: 0.454
+      HellaSwag: 0.82
+      MMLU-Pro: 0.554
+      GPQA: 0.348
+      MATH500: 0.742
+      AIME: 0.1
+      LCB: 0.158
     ja_mtb:
-      JMT Avg: 0.665
-      coding: 0.599
-      extraction: 0.741
-      humanities: 0.719
-      math: 0.637
-      reasoning: 0.541
-      roleplay: 0.744
-      stem: 0.624
-      writing: 0.713
-    en_basic:
-      En Avg: 0.604
-      OpenBookQA: 0.428
-      TriviaQA: 0.519
-      HellaSwag: 0.624
-      SQuAD2: 0.569
-      XWINO: 0.877
-      MMLU: 0.742
-      GSM8K: 0.739
-      MATH: 0.688
-      BBH: 0.217
-      HumanEval: 0.636
-    other:
-      GPQA: 0.31
+      avg: 0.688
+      coding: 0.638
+      extraction: 0.711
+      humanities: 0.782
+      math: 0.685
+      reasoning: 0.494
+      roleplay: 0.736
+      stem: 0.73
+      writing: 0.729
+    en_mtb:
+      avg: 0.797
+      coding: 0.656
+      extraction: 0.769
+      humanities: 0.893
+      math: 0.843
+      reasoning: 0.662
+      roleplay: 0.832
+      stem: 0.886
+      writing: 0.833
 - id: Qwen/Qwen2.5-14B
+  model_id: Qwen/Qwen2.5-14B
   name: Qwen2.5-14B
   date: '2024-09-19'
   params: 14
-  base_model: ''
+  active_params: 14
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-14B
   results:
-    ja_basic:
-      Ja Avg: 0.568
+    ja_pre:
+      avg: 0.568
       JComQA: 0.958
       JEMHopQA: 0.567
       NIILC: 0.537
       JSQuAD: 0.923
-      XL-Sum: 0.225
+      XLSum: 0.225
       MGSM: 0.74
-      WMT20-en-ja: 0.26
-      WMT20-ja-en: 0.23
+      WMT20enja: 0.26
+      WMT20jaen: 0.23
       JMMLU: 0.69
       JHumanEval: 0.55
-    en_basic:
-      En Avg: 0.66
+    en_pre:
+      avg: 0.66
       OpenBookQA: 0.412
       TriviaQA: 0.666
       HellaSwag: 0.642
@@ -4758,74 +3127,81 @@
       MATH: 0.53
       BBH: 0.686
       HumanEval: 0.544
-    other:
-      GPQA: 0.214
 - id: Qwen/Qwen2.5-14B-Instruct
+  model_id: Qwen/Qwen2.5-14B-Instruct
   name: Qwen2.5-14B-Instruct
-  date: '2024-09-25'
-  params: 14
-  base_model: Qwen2.5-14B
+  date: '2024-09-19'
+  params: 15
+  active_params: 15
+  family: Qwen2.5
+  pre_training: Qwen2.5-14B
+  reasoning: N/A
   sortkey: qwen2.5
+  is_post: true
   url: https://huggingface.co/Qwen/Qwen2.5-14B-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.553
-      JComQA: 0.953
-      JEMHopQA: 0.588
-      NIILC: 0.519
-      JSQuAD: 0.902
-      XL-Sum: 0.14
-      MGSM: 0.68
-      WMT20-en-ja: 0.192
-      WMT20-ja-en: 0.16
-      JMMLU: 0.708
-      JHumanEval: 0.691
+    ja_post:
+      avg: 0.596
+      JEMHopQA: 0.553
+      MMLU-ProX: 0.556
+      GPQA: 0.348
+      MATH100: 0.768
+      JHumanEval: 0.754
+      __MIFEvalJa: 0.606
+    en_post:
+      avg: 0.514
+      HellaSwag: 0.886
+      MMLU-Pro: 0.652
+      GPQA: 0.404
+      MATH500: 0.794
+      AIME: 0.133
+      LCB: 0.215
     ja_mtb:
-      JMT Avg: 0.762
-      coding: 0.673
-      extraction: 0.829
-      humanities: 0.798
-      math: 0.828
-      reasoning: 0.571
-      roleplay: 0.815
-      stem: 0.743
-      writing: 0.841
-    en_basic:
-      En Avg: 0.614
-      OpenBookQA: 0.438
-      TriviaQA: 0.592
-      HellaSwag: 0.656
-      SQuAD2: 0.68
-      XWINO: 0.89
-      MMLU: 0.8
-      GSM8K: 0.761
-      MATH: 0.666
-      BBH: 0.029
-      HumanEval: 0.632
-    other:
-      GPQA: 0.379
+      avg: 0.799
+      coding: 0.773
+      extraction: 0.882
+      humanities: 0.85
+      math: 0.796
+      reasoning: 0.646
+      roleplay: 0.829
+      stem: 0.795
+      writing: 0.822
+    en_mtb:
+      avg: 0.865
+      coding: 0.752
+      extraction: 0.873
+      humanities: 0.899
+      math: 0.932
+      reasoning: 0.861
+      roleplay: 0.87
+      stem: 0.894
+      writing: 0.839
 - id: Qwen/Qwen2.5-32B
+  model_id: Qwen/Qwen2.5-32B
   name: Qwen2.5-32B
   date: '2024-09-19'
   params: 33
-  base_model: ''
+  active_params: 33
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-32B
   results:
-    ja_basic:
-      Ja Avg: 0.591
+    ja_pre:
+      avg: 0.591
       JComQA: 0.961
       JEMHopQA: 0.561
       NIILC: 0.538
       JSQuAD: 0.925
-      XL-Sum: 0.228
+      XLSum: 0.228
       MGSM: 0.808
-      WMT20-en-ja: 0.271
-      WMT20-ja-en: 0.233
+      WMT20enja: 0.271
+      WMT20jaen: 0.233
       JMMLU: 0.751
       JHumanEval: 0.637
-    en_basic:
-      En Avg: 0.67
+    en_pre:
+      avg: 0.67
       OpenBookQA: 0.406
       TriviaQA: 0.664
       HellaSwag: 0.656
@@ -4836,74 +3212,81 @@
       MATH: 0.6
       BBH: 0.717
       HumanEval: 0.523
-    other:
-      GPQA: 0.317
 - id: Qwen/Qwen2.5-32B-Instruct
+  model_id: Qwen/Qwen2.5-32B-Instruct
   name: Qwen2.5-32B-Instruct
-  date: '2024-09-25'
+  date: '2024-09-19'
   params: 33
-  base_model: Qwen2.5-32B
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5-32B
+  reasoning: N/A
   sortkey: qwen2.5
+  is_post: true
   url: https://huggingface.co/Qwen/Qwen2.5-32B-Instruct
   results:
-    ja_basic:
-      Ja Avg: 0.571
-      JComQA: 0.959
-      JEMHopQA: 0.567
-      NIILC: 0.497
-      JSQuAD: 0.903
-      XL-Sum: 0.169
-      MGSM: 0.78
-      WMT20-en-ja: 0.228
-      WMT20-ja-en: 0.195
-      JMMLU: 0.757
-      JHumanEval: 0.651
+    ja_post:
+      avg: 0.642
+      JEMHopQA: 0.604
+      MMLU-ProX: 0.623
+      GPQA: 0.411
+      MATH100: 0.768
+      JHumanEval: 0.803
+      __MIFEvalJa: 0.673
+    en_post:
+      avg: 0.543
+      HellaSwag: 0.908
+      MMLU-Pro: 0.64
+      GPQA: 0.48
+      MATH500: 0.812
+      AIME: 0.15
+      LCB: 0.27
     ja_mtb:
-      JMT Avg: 0.809
-      coding: 0.724
-      extraction: 0.885
-      humanities: 0.816
-      math: 0.918
-      reasoning: 0.726
-      roleplay: 0.834
-      stem: 0.763
-      writing: 0.808
-    en_basic:
-      En Avg: 0.588
-      OpenBookQA: 0.424
-      TriviaQA: 0.534
-      HellaSwag: 0.671
-      SQuAD2: 0.536
-      XWINO: 0.893
-      MMLU: 0.834
-      GSM8K: 0.581
-      MATH: 0.802
-      BBH: 0.017
-      HumanEval: 0.589
-    other:
-      GPQA: 0.402
+      avg: 0.819
+      coding: 0.776
+      extraction: 0.913
+      humanities: 0.845
+      math: 0.863
+      reasoning: 0.706
+      roleplay: 0.839
+      stem: 0.802
+      writing: 0.811
+    en_mtb:
+      avg: 0.869
+      coding: 0.806
+      extraction: 0.862
+      humanities: 0.895
+      math: 0.954
+      reasoning: 0.817
+      roleplay: 0.876
+      stem: 0.89
+      writing: 0.851
 - id: Qwen/Qwen2.5-72B
+  model_id: Qwen/Qwen2.5-72B
   name: Qwen2.5-72B
   date: '2024-09-19'
   params: 72
-  base_model: ''
+  active_params: 72
+  family: Qwen2.5
+  base: －
   sortkey: qwen2.5
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen2.5-72B
   results:
-    ja_basic:
-      Ja Avg: 0.623
+    ja_pre:
+      avg: 0.623
       JComQA: 0.972
       JEMHopQA: 0.611
       NIILC: 0.619
       JSQuAD: 0.93
-      XL-Sum: 0.279
+      XLSum: 0.279
       MGSM: 0.828
-      WMT20-en-ja: 0.287
-      WMT20-ja-en: 0.252
+      WMT20enja: 0.287
+      WMT20jaen: 0.252
       JMMLU: 0.804
       JHumanEval: 0.648
-    en_basic:
-      En Avg: 0.709
+    en_pre:
+      avg: 0.709
       OpenBookQA: 0.416
       TriviaQA: 0.76
       HellaSwag: 0.685
@@ -4914,74 +3297,81 @@
       MATH: 0.626
       BBH: 0.727
       HumanEval: 0.554
-    other:
-      GPQA: 0.248
-- id: Qwen/Qwen2.5-72B-Instruct
-  name: Qwen2.5-72B-Instruct
-  date: '2024-09-19'
-  params: 72
-  base_model: Qwen2.5-72B
-  sortkey: qwen2.5
-  url: https://huggingface.co/Qwen/Qwen2.5-72B-Instruct
+- id: Qwen/Qwen3-0.6B
+  model_id: Qwen/Qwen3-0.6B
+  name: Qwen3-0.6B
+  date: '2025-04-29'
+  params: 0.5
+  active_params: 0.5
+  family: Qwen3
+  pre_training: Qwen3-0.6B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-0.6B
   results:
-    ja_basic:
-      Ja Avg: 0.574
-      JComQA: 0.97
-      JEMHopQA: 0.569
-      NIILC: 0.582
-      JSQuAD: 0.738
-      XL-Sum: 0.17
-      MGSM: 0.84
-      WMT20-en-ja: 0.227
-      WMT20-ja-en: 0.218
-      JMMLU: 0.789
-      JHumanEval: 0.634
+    ja_post:
+      avg: 0.353
+      JEMHopQA: 0.221
+      MMLU-ProX: 0.295
+      GPQA: 0.237
+      MATH100: 0.606
+      JHumanEval: 0.408
+      __MIFEvalJa: 0.438
+    en_post:
+      avg: 0.335
+      HellaSwag: 0.425
+      MMLU-Pro: 0.338
+      GPQA: 0.283
+      MATH500: 0.694
+      AIME: 0.133
+      LCB: 0.135
     ja_mtb:
-      JMT Avg: 0.835
-      coding: 0.795
-      extraction: 0.86
-      humanities: 0.865
-      math: 0.857
-      reasoning: 0.784
-      roleplay: 0.863
-      stem: 0.804
-      writing: 0.854
-    en_basic:
-      En Avg: 0.691
-      OpenBookQA: 0.454
-      TriviaQA: 0.676
-      HellaSwag: 0.706
-      SQuAD2: 0.677
-      XWINO: 0.889
-      MMLU: 0.848
-      GSM8K: 0.904
-      MATH: 0.77
-      BBH: 0.375
-      HumanEval: 0.614
-    other:
-      GPQA: 0.464
+      avg: 0.431
+      coding: 0.332
+      extraction: 0.423
+      humanities: 0.46
+      math: 0.626
+      reasoning: 0.346
+      roleplay: 0.418
+      stem: 0.445
+      writing: 0.402
+    en_mtb:
+      avg: 0.595
+      coding: 0.376
+      extraction: 0.678
+      humanities: 0.673
+      math: 0.803
+      reasoning: 0.408
+      roleplay: 0.551
+      stem: 0.633
+      writing: 0.637
 - id: Qwen/Qwen3-0.6B-Base
+  model_id: Qwen/Qwen3-0.6B-Base
   name: Qwen3-0.6B-Base
   date: '2025-04-29'
   params: 0.6
-  base_model: ''
+  active_params: 0.6
+  family: Qwen3
+  base: －
   sortkey: qwen3
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-0.6B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.322
+    ja_pre:
+      avg: 0.322
       JComQA: 0.705
       JEMHopQA: 0.344
       NIILC: 0.175
       JSQuAD: 0.807
-      XL-Sum: 0.111
+      XLSum: 0.111
       MGSM: 0.3
-      WMT20-en-ja: 0.096
-      WMT20-ja-en: 0.097
+      WMT20enja: 0.096
+      WMT20jaen: 0.097
       JMMLU: 0.373
       JHumanEval: 0.216
-    en_basic:
-      En Avg: 0.397
+    en_pre:
+      avg: 0.397
       OpenBookQA: 0.268
       TriviaQA: 0.2
       HellaSwag: 0.41
@@ -4992,30 +3382,81 @@
       MATH: 0.334
       BBH: 0.17
       HumanEval: 0.295
-    other:
-      GPQA: 0.058
+- id: Qwen/Qwen3-1.7B
+  model_id: Qwen/Qwen3-1.7B
+  name: Qwen3-1.7B
+  date: '2025-04-29'
+  params: 1.5
+  active_params: 1.5
+  family: Qwen3
+  pre_training: Qwen3-1.7B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-1.7B
+  results:
+    ja_post:
+      avg: 0.533
+      JEMHopQA: 0.23
+      MMLU-ProX: 0.514
+      GPQA: 0.315
+      MATH100: 0.859
+      JHumanEval: 0.747
+      __MIFEvalJa: 0.46
+    en_post:
+      avg: 0.531
+      HellaSwag: 0.626
+      MMLU-Pro: 0.56
+      GPQA: 0.394
+      MATH500: 0.904
+      AIME: 0.383
+      LCB: 0.315
+    ja_mtb:
+      avg: 0.662
+      coding: 0.574
+      extraction: 0.591
+      humanities: 0.715
+      math: 0.841
+      reasoning: 0.567
+      roleplay: 0.631
+      stem: 0.765
+      writing: 0.613
+    en_mtb:
+      avg: 0.779
+      coding: 0.642
+      extraction: 0.754
+      humanities: 0.83
+      math: 0.968
+      reasoning: 0.686
+      roleplay: 0.764
+      stem: 0.785
+      writing: 0.805
 - id: Qwen/Qwen3-1.7B-Base
+  model_id: Qwen/Qwen3-1.7B-Base
   name: Qwen3-1.7B-Base
   date: '2025-04-29'
   params: 1.7
-  base_model: ''
+  active_params: 1.7
+  family: Qwen3
+  base: －
   sortkey: qwen3
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-1.7B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.423
+    ja_pre:
+      avg: 0.423
       JComQA: 0.855
       JEMHopQA: 0.435
       NIILC: 0.3
       JSQuAD: 0.871
-      XL-Sum: 0.133
+      XLSum: 0.133
       MGSM: 0.472
-      WMT20-en-ja: 0.16
-      WMT20-ja-en: 0.154
+      WMT20enja: 0.16
+      WMT20jaen: 0.154
       JMMLU: 0.501
       JHumanEval: 0.35
-    en_basic:
-      En Avg: 0.516
+    en_pre:
+      avg: 0.516
       OpenBookQA: 0.348
       TriviaQA: 0.362
       HellaSwag: 0.493
@@ -5026,30 +3467,81 @@
       MATH: 0.456
       BBH: 0.431
       HumanEval: 0.462
-    other:
-      GPQA: 0.228
+- id: Qwen/Qwen3-4B
+  model_id: Qwen/Qwen3-4B
+  name: Qwen3-4B
+  date: '2025-04-29'
+  params: 3.1
+  active_params: 3.1
+  family: Qwen3
+  pre_training: Qwen3-4B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-4B
+  results:
+    ja_post:
+      avg: 0.646
+      JEMHopQA: 0.389
+      MMLU-ProX: 0.643
+      GPQA: 0.44
+      MATH100: 0.919
+      JHumanEval: 0.838
+      __MIFEvalJa: 0.562
+    en_post:
+      avg: 0.672
+      HellaSwag: 0.79
+      MMLU-Pro: 0.69
+      GPQA: 0.515
+      MATH500: 0.938
+      AIME: 0.6
+      LCB: 0.499
+    ja_mtb:
+      avg: 0.797
+      coding: 0.696
+      extraction: 0.818
+      humanities: 0.855
+      math: 0.947
+      reasoning: 0.729
+      roleplay: 0.747
+      stem: 0.826
+      writing: 0.76
+    en_mtb:
+      avg: 0.839
+      coding: 0.737
+      extraction: 0.831
+      humanities: 0.884
+      math: 0.947
+      reasoning: 0.735
+      roleplay: 0.87
+      stem: 0.861
+      writing: 0.845
 - id: Qwen/Qwen3-4B-Base
+  model_id: Qwen/Qwen3-4B-Base
   name: Qwen3-4B-Base
   date: '2025-04-29'
   params: 4.0
-  base_model: ''
+  active_params: 4.0
+  family: Qwen3
+  base: －
   sortkey: qwen3
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-4B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.511
+    ja_pre:
+      avg: 0.511
       JComQA: 0.91
       JEMHopQA: 0.477
       NIILC: 0.407
       JSQuAD: 0.908
-      XL-Sum: 0.169
+      XLSum: 0.169
       MGSM: 0.644
-      WMT20-en-ja: 0.214
-      WMT20-ja-en: 0.197
+      WMT20enja: 0.214
+      WMT20jaen: 0.197
       JMMLU: 0.649
       JHumanEval: 0.537
-    en_basic:
-      En Avg: 0.61
+    en_pre:
+      avg: 0.61
       OpenBookQA: 0.382
       TriviaQA: 0.508
       HellaSwag: 0.555
@@ -5060,30 +3552,32 @@
       MATH: 0.52
       BBH: 0.594
       HumanEval: 0.617
-    other:
-      GPQA: 0.319
 - id: Qwen/Qwen3-8B-Base
+  model_id: Qwen/Qwen3-8B-Base
   name: Qwen3-8B-Base
   date: '2025-04-29'
   params: 8.2
-  base_model: ''
+  active_params: 8.2
+  family: Qwen3
+  base: －
   sortkey: qwen3
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-8B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.551
+    ja_pre:
+      avg: 0.551
       JComQA: 0.927
       JEMHopQA: 0.537
       NIILC: 0.475
       JSQuAD: 0.912
-      XL-Sum: 0.207
+      XLSum: 0.207
       MGSM: 0.716
-      WMT20-en-ja: 0.241
-      WMT20-ja-en: 0.215
+      WMT20enja: 0.241
+      WMT20jaen: 0.215
       JMMLU: 0.689
       JHumanEval: 0.595
-    en_basic:
-      En Avg: 0.667
+    en_pre:
+      avg: 0.667
       OpenBookQA: 0.382
       TriviaQA: 0.618
       HellaSwag: 0.594
@@ -5094,30 +3588,81 @@
       MATH: 0.622
       BBH: 0.655
       HumanEval: 0.669
-    other:
-      GPQA: 0.337
+- id: Qwen/Qwen3-8B
+  model_id: Qwen/Qwen3-8B
+  name: Qwen3-8B
+  date: '2025-04-29'
+  params: 8.2
+  active_params: 8.2
+  family: Qwen3
+  pre_training: Qwen3-8B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-8B
+  results:
+    ja_post:
+      avg: 0.691
+      JEMHopQA: 0.468
+      MMLU-ProX: 0.696
+      GPQA: 0.491
+      MATH100: 0.929
+      JHumanEval: 0.869
+      __MIFEvalJa: 0.575
+    en_post:
+      avg: 0.715
+      HellaSwag: 0.851
+      MMLU-Pro: 0.713
+      GPQA: 0.561
+      MATH500: 0.942
+      AIME: 0.7
+      LCB: 0.525
+    ja_mtb:
+      avg: 0.845
+      coding: 0.757
+      extraction: 0.834
+      humanities: 0.89
+      math: 0.996
+      reasoning: 0.823
+      roleplay: 0.829
+      stem: 0.822
+      writing: 0.806
+    en_mtb:
+      avg: 0.851
+      coding: 0.804
+      extraction: 0.831
+      humanities: 0.892
+      math: 0.98
+      reasoning: 0.713
+      roleplay: 0.858
+      stem: 0.876
+      writing: 0.854
 - id: Qwen/Qwen3-14B-Base
+  model_id: Qwen/Qwen3-14B-Base
   name: Qwen3-14B-Base
   date: '2025-04-29'
   params: 15
-  base_model: ''
+  active_params: 15
+  family: Qwen3
+  base: －
   sortkey: qwen3
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-14B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.591
+    ja_pre:
+      avg: 0.591
       JComQA: 0.956
       JEMHopQA: 0.579
       NIILC: 0.502
       JSQuAD: 0.921
-      XL-Sum: 0.261
+      XLSum: 0.261
       MGSM: 0.768
-      WMT20-en-ja: 0.26
-      WMT20-ja-en: 0.229
+      WMT20enja: 0.26
+      WMT20jaen: 0.229
       JMMLU: 0.729
       JHumanEval: 0.709
-    en_basic:
-      En Avg: 0.66
+    en_pre:
+      avg: 0.66
       OpenBookQA: 0.416
       TriviaQA: 0.657
       HellaSwag: 0.625
@@ -5128,30 +3673,130 @@
       MATH: 0.548
       BBH: 0.466
       HumanEval: 0.709
-    other:
-      GPQA: 0.362
+- id: Qwen/Qwen3-14B
+  model_id: Qwen/Qwen3-14B
+  name: Qwen3-14B
+  date: '2025-04-29'
+  params: 15
+  active_params: 15
+  family: Qwen3
+  pre_training: Qwen3-14B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-14B
+  results:
+    ja_post:
+      avg: 0.75
+      JEMHopQA: 0.609
+      MMLU-ProX: 0.737
+      GPQA: 0.556
+      MATH100: 0.939
+      JHumanEval: 0.91
+      __MIFEvalJa: 0.624
+    en_post:
+      avg: 0.763
+      HellaSwag: 0.89
+      MMLU-Pro: 0.77
+      GPQA: 0.611
+      MATH500: 0.972
+      AIME: 0.75
+      LCB: 0.587
+    ja_mtb:
+      avg: 0.874
+      coding: 0.85
+      extraction: 0.839
+      humanities: 0.903
+      math: 0.994
+      reasoning: 0.824
+      roleplay: 0.839
+      stem: 0.919
+      writing: 0.827
+    en_mtb:
+      avg: 0.882
+      coding: 0.843
+      extraction: 0.849
+      humanities: 0.904
+      math: 0.971
+      reasoning: 0.805
+      roleplay: 0.878
+      stem: 0.919
+      writing: 0.89
+- id: Qwen/Qwen3-32B
+  model_id: Qwen/Qwen3-32B
+  name: Qwen3-32B
+  date: '2025-04-29'
+  params: 33
+  active_params: 33
+  family: Qwen3
+  pre_training: Qwen3-32B-Base
+  reasoning: 'on'
+  sortkey: qwen3
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-32B
+  results:
+    ja_post:
+      avg: 0.756
+      JEMHopQA: 0.588
+      MMLU-ProX: 0.746
+      GPQA: 0.571
+      MATH100: 0.949
+      JHumanEval: 0.923
+      __MIFEvalJa: 0.681
+    en_post:
+      avg: 0.768
+      HellaSwag: 0.901
+      MMLU-Pro: 0.779
+      GPQA: 0.646
+      MATH500: 0.964
+      AIME: 0.717
+      LCB: 0.602
+    ja_mtb:
+      avg: 0.875
+      coding: 0.794
+      extraction: 0.871
+      humanities: 0.871
+      math: 0.997
+      reasoning: 0.836
+      roleplay: 0.881
+      stem: 0.917
+      writing: 0.83
+    en_mtb:
+      avg: 0.892
+      coding: 0.86
+      extraction: 0.91
+      humanities: 0.905
+      math: 0.979
+      reasoning: 0.796
+      roleplay: 0.899
+      stem: 0.919
+      writing: 0.869
 - id: Qwen/Qwen3-30B-A3B-Base
+  model_id: Qwen/Qwen3-30B-A3B-Base
   name: Qwen3-30B-A3B-Base
   date: '2025-04-29'
   params: 31
-  base_model: ''
+  active_params: 3.3
+  family: Qwen3
+  base: －
   sortkey: qwen3 a
+  is_post: false
   url: https://huggingface.co/Qwen/Qwen3-30B-A3B-Base
   results:
-    ja_basic:
-      Ja Avg: 0.58
+    ja_pre:
+      avg: 0.58
       JComQA: 0.927
       JEMHopQA: 0.601
       NIILC: 0.525
       JSQuAD: 0.918
-      XL-Sum: 0.223
+      XLSum: 0.223
       MGSM: 0.74
-      WMT20-en-ja: 0.26
-      WMT20-ja-en: 0.224
+      WMT20enja: 0.26
+      WMT20jaen: 0.224
       JMMLU: 0.743
       JHumanEval: 0.641
-    en_basic:
-      En Avg: 0.691
+    en_pre:
+      avg: 0.691
       OpenBookQA: 0.414
       TriviaQA: 0.653
       HellaSwag: 0.631
@@ -5162,30 +3807,130 @@
       MATH: 0.634
       BBH: 0.72
       HumanEval: 0.694
-    other:
-      GPQA: 0.353
+- id: Qwen/Qwen3-235B-A22B-Instruct-2507
+  model_id: Qwen/Qwen3-235B-A22B-Instruct-2507
+  name: Qwen3-235B-A22B-Instruct-2507
+  date: '2025-07-23'
+  params: 235
+  active_params: 22
+  family: Qwen3
+  pre_training: (private)
+  reasoning: N/A
+  sortkey: qwen3 a 2507
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507
+  results:
+    ja_post:
+      avg: 0.821
+      JEMHopQA: 0.735
+      MMLU-ProX: 0.799
+      GPQA: 0.701
+      MATH100: 0.97
+      JHumanEval: 0.9
+      __MIFEvalJa: 0.73
+    en_post:
+      avg: 0.771
+      HellaSwag: 0.94
+      MMLU-Pro: 0.824
+      GPQA: 0.586
+      MATH500: 0.982
+      AIME: 0.767
+      LCB: 0.529
+    ja_mtb:
+      avg: 0.915
+      coding: 0.943
+      extraction: 0.938
+      humanities: 0.907
+      math: 0.987
+      reasoning: 0.826
+      roleplay: 0.893
+      stem: 0.933
+      writing: 0.891
+    en_mtb:
+      avg: 0.911
+      coding: 0.888
+      extraction: 0.859
+      humanities: 0.925
+      math: 0.99
+      reasoning: 0.873
+      roleplay: 0.911
+      stem: 0.94
+      writing: 0.905
+- id: Qwen/Qwen3-235B-A22B-Thinking-2507
+  model_id: Qwen/Qwen3-235B-A22B-Thinking-2507
+  name: Qwen3-235B-A22B-Thinking-2507
+  date: '2025-07-23'
+  params: 235
+  active_params: 22
+  family: Qwen3
+  pre_training: (private)
+  reasoning: 'on'
+  sortkey: qwen3 a thinking 2507
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507
+  results:
+    ja_post:
+      avg: 0.823
+      JEMHopQA: 0.651
+      MMLU-ProX: 0.819
+      GPQA: 0.739
+      MATH100: 0.97
+      JHumanEval: 0.938
+      __MIFEvalJa: 0.783
+    en_post:
+      avg: 0.856
+      HellaSwag: 0.931
+      MMLU-Pro: 0.845
+      GPQA: 0.803
+      MATH500: 0.98
+      AIME: 0.883
+      LCB: 0.692
+    ja_mtb:
+      avg: 0.904
+      coding: 0.896
+      extraction: 0.878
+      humanities: 0.933
+      math: 0.985
+      reasoning: 0.851
+      roleplay: 0.876
+      stem: 0.955
+      writing: 0.861
+    en_mtb:
+      avg: 0.922
+      coding: 0.877
+      extraction: 0.899
+      humanities: 0.945
+      math: 0.998
+      reasoning: 0.886
+      roleplay: 0.908
+      stem: 0.952
+      writing: 0.908
 - id: sbintuitions/sarashina2-7b
+  model_id: sbintuitions/sarashina2-7b
   name: Sarashina2-7B
   date: '2024-06-14'
   params: 7.3
-  base_model: ''
+  active_params: 7.3
+  family: Sarashina2
+  base: －
   sortkey: sarashina2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2-7b
   results:
-    ja_basic:
-      Ja Avg: 0.395
+    ja_pre:
+      avg: 0.395
       JComQA: 0.742
       JEMHopQA: 0.509
       NIILC: 0.634
       JSQuAD: 0.868
-      XL-Sum: 0.141
+      XLSum: 0.141
       MGSM: 0.08
-      WMT20-en-ja: 0.273
-      WMT20-ja-en: 0.201
+      WMT20enja: 0.273
+      WMT20jaen: 0.201
       JMMLU: 0.384
       JHumanEval: 0.121
-    en_basic:
-      En Avg: 0.383
+    en_pre:
+      avg: 0.383
       OpenBookQA: 0.346
       TriviaQA: 0.479
       HellaSwag: 0.532
@@ -5196,30 +3941,32 @@
       MATH: 0.034
       BBH: 0.373
       HumanEval: 0.146
-    other:
-      GPQA: 0.078
 - id: sbintuitions/sarashina2-13b
+  model_id: sbintuitions/sarashina2-13b
   name: Sarashina2-13B
   date: '2024-06-14'
   params: 13
-  base_model: ''
+  active_params: 13
+  family: Sarashina2
+  base: －
   sortkey: sarashina2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2-13b
   results:
-    ja_basic:
-      Ja Avg: 0.445
+    ja_pre:
+      avg: 0.445
       JComQA: 0.85
       JEMHopQA: 0.557
       NIILC: 0.661
       JSQuAD: 0.898
-      XL-Sum: 0.158
+      XLSum: 0.158
       MGSM: 0.188
-      WMT20-en-ja: 0.284
-      WMT20-ja-en: 0.221
+      WMT20enja: 0.284
+      WMT20jaen: 0.221
       JMMLU: 0.473
       JHumanEval: 0.161
-    en_basic:
-      En Avg: 0.418
+    en_pre:
+      avg: 0.418
       OpenBookQA: 0.34
       TriviaQA: 0.548
       HellaSwag: 0.562
@@ -5230,30 +3977,32 @@
       MATH: 0.036
       BBH: 0.442
       HumanEval: 0.198
-    other:
-      GPQA: 0.02
 - id: sbintuitions/sarashina2-70b
+  model_id: sbintuitions/sarashina2-70b
   name: Sarashina2-70B
   date: '2024-06-14'
   params: 70
-  base_model: ''
+  active_params: 70
+  family: Sarashina2
+  base: －
   sortkey: sarashina2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2-70b
   results:
-    ja_basic:
-      Ja Avg: 0.53
+    ja_pre:
+      avg: 0.53
       JComQA: 0.929
       JEMHopQA: 0.717
       NIILC: 0.668
       JSQuAD: 0.929
-      XL-Sum: 0.19
+      XLSum: 0.19
       MGSM: 0.488
-      WMT20-en-ja: 0.313
-      WMT20-ja-en: 0.243
+      WMT20enja: 0.313
+      WMT20jaen: 0.243
       JMMLU: 0.592
       JHumanEval: 0.235
-    en_basic:
-      En Avg: 0.491
+    en_pre:
+      avg: 0.491
       OpenBookQA: 0.388
       TriviaQA: 0.537
       HellaSwag: 0.628
@@ -5264,30 +4013,32 @@
       MATH: 0.206
       BBH: 0.639
       HumanEval: 0.281
-    other:
-      GPQA: 0.163
 - id: sbintuitions/sarashina2.2-0.5b
+  model_id: sbintuitions/sarashina2.2-0.5b
   name: Sarashina2.2 0.5B
   date: '2025-03-07'
   params: 0.8
-  base_model: ''
+  active_params: 0.8
+  family: Sarashina2
+  base: －
   sortkey: sarashina2.2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2.2-0.5b
   results:
-    ja_basic:
-      Ja Avg: 0.296
+    ja_pre:
+      avg: 0.296
       JComQA: 0.211
       JEMHopQA: 0.472
       NIILC: 0.451
       JSQuAD: 0.824
-      XL-Sum: 0.091
+      XLSum: 0.091
       MGSM: 0.196
-      WMT20-en-ja: 0.201
-      WMT20-ja-en: 0.111
+      WMT20enja: 0.201
+      WMT20jaen: 0.111
       JMMLU: 0.253
       JHumanEval: 0.148
-    en_basic:
-      En Avg: 0.339
+    en_pre:
+      avg: 0.339
       OpenBookQA: 0.302
       TriviaQA: 0.203
       HellaSwag: 0.42
@@ -5298,30 +4049,32 @@
       MATH: 0.13
       BBH: 0.312
       HumanEval: 0.223
-    other:
-      GPQA: 0.074
 - id: sbintuitions/sarashina2.2-1b
+  model_id: sbintuitions/sarashina2.2-1b
   name: Sarashina2.2 1B
   date: '2025-03-07'
   params: 1.4
-  base_model: ''
+  active_params: 1.4
+  family: Sarashina2
+  base: －
   sortkey: sarashina2.2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2.2-1b
   results:
-    ja_basic:
-      Ja Avg: 0.392
+    ja_pre:
+      avg: 0.392
       JComQA: 0.649
       JEMHopQA: 0.462
       NIILC: 0.523
       JSQuAD: 0.858
-      XL-Sum: 0.1
+      XLSum: 0.1
       MGSM: 0.388
-      WMT20-en-ja: 0.219
-      WMT20-ja-en: 0.136
+      WMT20enja: 0.219
+      WMT20jaen: 0.136
       JMMLU: 0.371
       JHumanEval: 0.215
-    en_basic:
-      En Avg: 0.415
+    en_pre:
+      avg: 0.415
       OpenBookQA: 0.324
       TriviaQA: 0.289
       HellaSwag: 0.469
@@ -5332,30 +4085,32 @@
       MATH: 0.206
       BBH: 0.385
       HumanEval: 0.342
-    other:
-      GPQA: 0.103
 - id: sbintuitions/sarashina2.2-3b
+  model_id: sbintuitions/sarashina2.2-3b
   name: Sarashina2.2 3B
   date: '2025-03-07'
   params: 3.4
-  base_model: ''
+  active_params: 3.4
+  family: Sarashina2
+  base: －
   sortkey: sarashina2.2
+  is_post: false
   url: https://huggingface.co/sbintuitions/sarashina2.2-3b
   results:
-    ja_basic:
-      Ja Avg: 0.516
+    ja_pre:
+      avg: 0.516
       JComQA: 0.911
       JEMHopQA: 0.563
       NIILC: 0.642
       JSQuAD: 0.906
-      XL-Sum: 0.162
+      XLSum: 0.162
       MGSM: 0.596
-      WMT20-en-ja: 0.273
-      WMT20-ja-en: 0.202
+      WMT20enja: 0.273
+      WMT20jaen: 0.202
       JMMLU: 0.541
       JHumanEval: 0.36
-    en_basic:
-      En Avg: 0.532
+    en_pre:
+      avg: 0.532
       OpenBookQA: 0.362
       TriviaQA: 0.447
       HellaSwag: 0.538
@@ -5366,586 +4121,81 @@
       MATH: 0.31
       BBH: 0.551
       HumanEval: 0.53
-    other:
-      GPQA: 0.275
-- id: sbintuitions/sarashina2.2-0.5b-instruct-v0.1
-  name: Sarashina2.2 0.5B Instruct v0.1
-  date: '2025-03-07'
-  params: 0.8
-  base_model: Sarashina2.2 0.5B
-  sortkey: sarashina2.2 v0.1
-  url: https://huggingface.co/sbintuitions/sarashina2.2-0.5b-instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.283
-      JComQA: 0.35
-      JEMHopQA: 0.37
-      NIILC: 0.363
-      JSQuAD: 0.756
-      XL-Sum: 0.077
-      MGSM: 0.228
-      WMT20-en-ja: 0.161
-      WMT20-ja-en: 0.112
-      JMMLU: 0.267
-      JHumanEval: 0.143
-    ja_mtb:
-      JMT Avg: 0.424
-      coding: 0.338
-      extraction: 0.364
-      humanities: 0.596
-      math: 0.45
-      reasoning: 0.283
-      roleplay: 0.482
-      stem: 0.386
-      writing: 0.49
-    en_basic:
-      En Avg: 0.331
-      OpenBookQA: 0.294
-      TriviaQA: 0.173
-      HellaSwag: 0.426
-      SQuAD2: 0.502
-      XWINO: 0.773
-      MMLU: 0.335
-      GSM8K: 0.221
-      MATH: 0.146
-      BBH: 0.28
-      HumanEval: 0.163
-    other:
-      GPQA: 0.027
-- id: sbintuitions/sarashina2.2-1b-instruct-v0.1
-  name: Sarashina2.2 1B Instruct v0.1
-  date: '2025-03-07'
-  params: 1.4
-  base_model: Sarashina2.2 1B
-  sortkey: sarashina2.2 v0.1
-  url: https://huggingface.co/sbintuitions/sarashina2.2-1b-instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.376
-      JComQA: 0.794
-      JEMHopQA: 0.45
-      NIILC: 0.395
-      JSQuAD: 0.795
-      XL-Sum: 0.081
-      MGSM: 0.312
-      WMT20-en-ja: 0.182
-      WMT20-ja-en: 0.129
-      JMMLU: 0.369
-      JHumanEval: 0.25
-    ja_mtb:
-      JMT Avg: 0.511
-      coding: 0.414
-      extraction: 0.429
-      humanities: 0.724
-      math: 0.472
-      reasoning: 0.321
-      roleplay: 0.607
-      stem: 0.549
-      writing: 0.568
-    en_basic:
-      En Avg: 0.415
-      OpenBookQA: 0.324
-      TriviaQA: 0.246
-      HellaSwag: 0.487
-      SQuAD2: 0.501
-      XWINO: 0.797
-      MMLU: 0.435
-      GSM8K: 0.444
-      MATH: 0.286
-      BBH: 0.332
-      HumanEval: 0.301
-    other:
-      GPQA: 0.158
 - id: sbintuitions/sarashina2.2-3b-instruct-v0.1
+  model_id: sbintuitions/sarashina2.2-3b-instruct-v0.1
   name: Sarashina2.2 3B Instruct v0.1
   date: '2025-03-07'
   params: 3.4
-  base_model: Sarashina2.2 3B
+  active_params: 3.4
+  family: Sarashina2
+  pre_training: Sarashina2.2 3B
+  reasoning: N/A
   sortkey: sarashina2.2 v0.1
+  is_post: true
   url: https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1
   results:
-    ja_basic:
-      Ja Avg: 0.485
-      JComQA: 0.921
-      JEMHopQA: 0.352
-      NIILC: 0.56
-      JSQuAD: 0.874
-      XL-Sum: 0.105
-      MGSM: 0.616
-      WMT20-en-ja: 0.256
-      WMT20-ja-en: 0.182
-      JMMLU: 0.543
-      JHumanEval: 0.437
+    ja_post:
+      avg: 0.4
+      JEMHopQA: 0.434
+      MMLU-ProX: 0.335
+      GPQA: 0.301
+      MATH100: 0.465
+      JHumanEval: 0.464
+      __MIFEvalJa: 0.288
+    en_post:
+      avg: 0.318
+      HellaSwag: 0.613
+      MMLU-Pro: 0.329
+      GPQA: 0.293
+      MATH500: 0.57
+      AIME: 0.017
+      LCB: 0.086
     ja_mtb:
-      JMT Avg: 0.629
-      coding: 0.548
-      extraction: 0.779
-      humanities: 0.816
-      math: 0.514
-      reasoning: 0.373
-      roleplay: 0.714
-      stem: 0.629
-      writing: 0.659
-    en_basic:
-      En Avg: 0.536
-      OpenBookQA: 0.378
-      TriviaQA: 0.388
-      HellaSwag: 0.59
-      SQuAD2: 0.534
-      XWINO: 0.855
-      MMLU: 0.582
-      GSM8K: 0.672
-      MATH: 0.474
-      BBH: 0.4
-      HumanEval: 0.489
-    other:
-      GPQA: 0.096
-- id: stockmark/stockmark-100b
-  name: Stockmark-100b
-  date: '2024-05-16'
-  params: 100
-  base_model: ''
-  sortkey: stockmark
-  url: https://huggingface.co/stockmark/stockmark-100b
-  results:
-    ja_basic:
-      Ja Avg: 0.238
-      JComQA: 0.205
-      JEMHopQA: 0.408
-      NIILC: 0.557
-      JSQuAD: 0.558
-      XL-Sum: 0.062
-      MGSM: 0.008
-      WMT20-en-ja: 0.203
-      WMT20-ja-en: 0.118
-      JMMLU: 0.235
-      JHumanEval: 0.032
-    en_basic:
-      En Avg: 0.302
-      OpenBookQA: 0.278
-      TriviaQA: 0.366
-      HellaSwag: 0.458
-      SQuAD2: 0.501
-      XWINO: 0.82
-      MMLU: 0.258
-      GSM8K: 0.017
-      MATH: 0.014
-      BBH: 0.259
-      HumanEval: 0.046
-    other:
-      GPQA: 0.0
-- id: tokyotech-llm/Swallow-7b-hf
-  name: Swallow 7B
-  date: '2023-12-19'
-  params: 6.7
-  base_model: ''
-  sortkey: swallow
-  url: https://huggingface.co/tokyotech-llm/Swallow-7b-hf
-  results:
-    ja_basic:
-      Ja Avg: 0.346
-      JComQA: 0.483
-      JEMHopQA: 0.511
-      NIILC: 0.585
-      JSQuAD: 0.847
-      XL-Sum: 0.182
-      MGSM: 0.108
-      WMT20-en-ja: 0.25
-      WMT20-ja-en: 0.149
-      JMMLU: 0.324
-      JHumanEval: 0.018
-    en_basic:
-      En Avg: 0.363
-      OpenBookQA: 0.312
-      TriviaQA: 0.491
-      HellaSwag: 0.527
-      SQuAD2: 0.501
-      XWINO: 0.885
-      MMLU: 0.391
-      GSM8K: 0.103
-      MATH: 0.02
-      BBH: 0.354
-      HumanEval: 0.041
-    other:
-      GPQA: 0.013
-- id: tokyotech-llm/Swallow-13b-hf
-  name: Swallow 13B
-  date: '2023-12-19'
-  params: 13
-  base_model: ''
-  sortkey: swallow
-  url: https://huggingface.co/tokyotech-llm/Swallow-13b-hf
-  results:
-    ja_basic:
-      Ja Avg: 0.415
-      JComQA: 0.764
-      JEMHopQA: 0.507
-      NIILC: 0.643
-      JSQuAD: 0.893
-      XL-Sum: 0.215
-      MGSM: 0.208
-      WMT20-en-ja: 0.272
-      WMT20-ja-en: 0.178
-      JMMLU: 0.439
-      JHumanEval: 0.027
-    en_basic:
-      En Avg: 0.412
-      OpenBookQA: 0.344
-      TriviaQA: 0.58
-      HellaSwag: 0.56
-      SQuAD2: 0.502
-      XWINO: 0.902
-      MMLU: 0.501
-      GSM8K: 0.197
-      MATH: 0.024
-      BBH: 0.43
-      HumanEval: 0.08
-    other:
-      GPQA: 0.116
-- id: tokyotech-llm/Swallow-70b-hf
-  name: Swallow 70B
-  date: '2023-12-19'
-  params: 70
-  base_model: ''
-  sortkey: swallow
-  url: https://huggingface.co/tokyotech-llm/Swallow-70b-hf
-  results:
-    ja_basic:
-      Ja Avg: 0.519
-      JComQA: 0.92
-      JEMHopQA: 0.626
-      NIILC: 0.689
-      JSQuAD: 0.92
-      XL-Sum: 0.225
-      MGSM: 0.48
-      WMT20-en-ja: 0.304
-      WMT20-ja-en: 0.231
-      JMMLU: 0.579
-      JHumanEval: 0.22
-    en_basic:
-      En Avg: 0.543
-      OpenBookQA: 0.416
-      TriviaQA: 0.761
-      HellaSwag: 0.643
-      SQuAD2: 0.522
-      XWINO: 0.92
-      MMLU: 0.659
-      GSM8K: 0.503
-      MATH: 0.108
-      BBH: 0.655
-      HumanEval: 0.24
-    other:
-      GPQA: 0.098
-- id: tokyotech-llm/Swallow-MS-7b-v0.1
-  name: Swallow-MS 7B v0.1
-  date: '2024-03-11'
-  params: 7.2
-  base_model: ''
-  sortkey: swallow ms v0.1
-  url: https://huggingface.co/tokyotech-llm/Swallow-MS-7b-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.439
-      JComQA: 0.873
-      JEMHopQA: 0.517
-      NIILC: 0.572
-      JSQuAD: 0.879
-      XL-Sum: 0.197
-      MGSM: 0.244
-      WMT20-en-ja: 0.251
-      WMT20-ja-en: 0.167
-      JMMLU: 0.459
-      JHumanEval: 0.232
-    en_basic:
-      En Avg: 0.461
-      OpenBookQA: 0.352
-      TriviaQA: 0.599
-      HellaSwag: 0.579
-      SQuAD2: 0.501
-      XWINO: 0.901
-      MMLU: 0.548
-      GSM8K: 0.268
-      MATH: 0.096
-      BBH: 0.491
-      HumanEval: 0.27
-    other:
-      GPQA: 0.08
-- id: tokyotech-llm/Swallow-MS-7b-instruct-v0.1
-  name: Swallow-MS-7b-instruct-v0.1
-  date: '2024-03-11'
-  params: 7.2
-  base_model: Swallow-MS 7B v0.1
-  sortkey: swallow ms v0.1
-  url: https://huggingface.co/tokyotech-llm/Swallow-MS-7b-instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.394
-      JComQA: 0.758
-      JEMHopQA: 0.49
-      NIILC: 0.446
-      JSQuAD: 0.864
-      XL-Sum: 0.158
-      MGSM: 0.172
-      WMT20-en-ja: 0.227
-      WMT20-ja-en: 0.187
-      JMMLU: 0.419
-      JHumanEval: 0.215
-    ja_mtb:
-      JMT Avg: 0.4
-      coding: 0.358
-      extraction: 0.421
-      humanities: 0.501
-      math: 0.222
-      reasoning: 0.349
-      roleplay: 0.458
-      stem: 0.444
-      writing: 0.449
-    en_basic:
-      En Avg: 0.436
-      OpenBookQA: 0.36
-      TriviaQA: 0.5
-      HellaSwag: 0.587
-      SQuAD2: 0.51
-      XWINO: 0.886
-      MMLU: 0.526
-      GSM8K: 0.215
-      MATH: 0.082
-      BBH: 0.441
-      HumanEval: 0.255
-    other:
-      GPQA: 0.201
-- id: tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1
-  name: Swallow-MX 8x7B v0.1
-  date: '2024-03-11'
-  params: 47
-  base_model: ''
-  sortkey: swallow mx v0.1
-  url: https://huggingface.co/tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.506
-      JComQA: 0.922
-      JEMHopQA: 0.533
-      NIILC: 0.577
-      JSQuAD: 0.917
-      XL-Sum: 0.263
-      MGSM: 0.444
-      WMT20-en-ja: 0.272
-      WMT20-ja-en: 0.209
-      JMMLU: 0.565
-      JHumanEval: 0.358
-    en_basic:
-      En Avg: 0.589
-      OpenBookQA: 0.348
-      TriviaQA: 0.773
-      HellaSwag: 0.651
-      SQuAD2: 0.538
-      XWINO: 0.919
-      MMLU: 0.692
-      GSM8K: 0.574
-      MATH: 0.298
-      BBH: 0.686
-      HumanEval: 0.41
-    other:
-      GPQA: 0.103
-- id: tokyotech-llm/Swallow-7b-instruct-v0.1
-  name: Swallow-7b-instruct-v0.1
-  date: '2023-12-19'
-  params: 6.7
-  base_model: Swallow 7B
-  sortkey: swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Swallow-7b-instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.353
-      JComQA: 0.599
-      JEMHopQA: 0.491
-      NIILC: 0.531
-      JSQuAD: 0.837
-      XL-Sum: 0.153
-      MGSM: 0.128
-      WMT20-en-ja: 0.228
-      WMT20-ja-en: 0.179
-      JMMLU: 0.352
-      JHumanEval: 0.027
-    ja_mtb:
-      JMT Avg: 0.419
-      coding: 0.324
-      extraction: 0.401
-      humanities: 0.519
-      math: 0.275
-      reasoning: 0.344
-      roleplay: 0.535
-      stem: 0.494
-      writing: 0.462
-    en_basic:
-      En Avg: 0.376
-      OpenBookQA: 0.33
-      TriviaQA: 0.481
-      HellaSwag: 0.55
-      SQuAD2: 0.501
-      XWINO: 0.88
-      MMLU: 0.407
-      GSM8K: 0.124
-      MATH: 0.034
-      BBH: 0.359
-      HumanEval: 0.094
-    other:
-      GPQA: 0.118
-- id: tokyotech-llm/Swallow-70b-instruct-v0.1
-  name: Swallow-70b-instruct-v0.1
-  date: '2023-12-19'
-  params: 70
-  base_model: Swallow 70B
-  sortkey: swallow v0.1
-  url: https://huggingface.co/tokyotech-llm/Swallow-70b-instruct-v0.1
-  results:
-    ja_basic:
-      Ja Avg: 0.492
-      JComQA: 0.923
-      JEMHopQA: 0.566
-      NIILC: 0.565
-      JSQuAD: 0.903
-      XL-Sum: 0.186
-      MGSM: 0.42
-      WMT20-en-ja: 0.263
-      WMT20-ja-en: 0.232
-      JMMLU: 0.571
-      JHumanEval: 0.293
-    ja_mtb:
-      JMT Avg: 0.509
-      coding: 0.381
-      extraction: 0.604
-      humanities: 0.568
-      math: 0.464
-      reasoning: 0.402
-      roleplay: 0.583
-      stem: 0.557
-      writing: 0.51
-    en_basic:
-      En Avg: 0.556
-      OpenBookQA: 0.446
-      TriviaQA: 0.742
-      HellaSwag: 0.656
-      SQuAD2: 0.571
-      XWINO: 0.917
-      MMLU: 0.668
-      GSM8K: 0.509
-      MATH: 0.108
-      BBH: 0.664
-      HumanEval: 0.28
-    other:
-      GPQA: 0.268
-- id: weblab-GENIAC/Tanuki-8B-dpo-v1.0
-  name: Tanuki-8B-dpo-v1.0
-  date: '2024-08-30'
-  params: 7.5
-  base_model: (private)
-  sortkey: tanuki dpo v1.0
-  url: https://huggingface.co/weblab-GENIAC/Tanuki-8B-dpo-v1.0
-  results:
-    ja_basic:
-      Ja Avg: 0.311
-      JComQA: 0.278
-      JEMHopQA: 0.284
-      NIILC: 0.37
-      JSQuAD: 0.67
-      XL-Sum: 0.102
-      MGSM: 0.428
-      WMT20-en-ja: 0.238
-      WMT20-ja-en: 0.183
-      JMMLU: 0.306
-      JHumanEval: 0.251
-    ja_mtb:
-      JMT Avg: 0.529
-      coding: 0.461
-      extraction: 0.597
-      humanities: 0.562
-      math: 0.495
-      reasoning: 0.377
-      roleplay: 0.589
-      stem: 0.509
-      writing: 0.643
-    en_basic:
-      En Avg: 0.406
-      OpenBookQA: 0.334
-      TriviaQA: 0.283
-      HellaSwag: 0.469
-      SQuAD2: 0.501
-      XWINO: 0.816
-      MMLU: 0.377
-      GSM8K: 0.487
-      MATH: 0.178
-      BBH: 0.333
-      HumanEval: 0.288
-    other:
-      GPQA: 0.136
-- id: weblab-GENIAC/Tanuki-8x8B-dpo-v1.0
-  name: Tanuki-8x8B-dpo-v1.0
-  date: '2024-08-30'
-  params: 47
-  base_model: (private)
-  sortkey: tanuki dpo v1.0
-  url: https://huggingface.co/weblab-GENIAC/Tanuki-8x8B-dpo-v1.0
-  results:
-    ja_basic:
-      Ja Avg: 0.454
-      JComQA: 0.708
-      JEMHopQA: 0.551
-      NIILC: 0.612
-      JSQuAD: 0.867
-      XL-Sum: 0.142
-      MGSM: 0.456
-      WMT20-en-ja: 0.269
-      WMT20-ja-en: 0.208
-      JMMLU: 0.439
-      JHumanEval: 0.284
-    ja_mtb:
-      JMT Avg: 0.546
-      coding: 0.513
-      extraction: 0.489
-      humanities: 0.624
-      math: 0.557
-      reasoning: 0.445
-      roleplay: 0.604
-      stem: 0.547
-      writing: 0.594
-    en_basic:
-      En Avg: 0.464
-      OpenBookQA: 0.348
-      TriviaQA: 0.481
-      HellaSwag: 0.555
-      SQuAD2: 0.521
-      XWINO: 0.85
-      MMLU: 0.493
-      GSM8K: 0.544
-      MATH: 0.236
-      BBH: 0.419
-      HumanEval: 0.193
-    other:
-      GPQA: 0.158
+      avg: 0.721
+      coding: 0.579
+      extraction: 0.68
+      humanities: 0.862
+      math: 0.828
+      reasoning: 0.467
+      roleplay: 0.832
+      stem: 0.766
+      writing: 0.752
+    en_mtb:
+      avg: 0.708
+      coding: 0.499
+      extraction: 0.642
+      humanities: 0.863
+      math: 0.747
+      reasoning: 0.552
+      roleplay: 0.783
+      stem: 0.827
+      writing: 0.75
 - id: SakanaAI/TinySwallow-1.5B
+  model_id: SakanaAI/TinySwallow-1.5B
   name: TinySwallow-1.5B
   date: '2025-01-30'
   params: 1.5
-  base_model: ''
+  active_params: 1.5
+  family: Qwen2.5
+  base: Qwen2.5-1.5B-Instruct
   sortkey: tinyswallow
+  is_post: false
   url: https://huggingface.co/SakanaAI/TinySwallow-1.5B
   results:
-    ja_basic:
-      Ja Avg: 0.402
+    ja_pre:
+      avg: 0.402
       JComQA: 0.84
       JEMHopQA: 0.437
       NIILC: 0.474
       JSQuAD: 0.839
-      XL-Sum: 0.173
+      XLSum: 0.173
       MGSM: 0.256
-      WMT20-en-ja: 0.201
-      WMT20-ja-en: 0.125
+      WMT20enja: 0.201
+      WMT20jaen: 0.125
       JMMLU: 0.446
       JHumanEval: 0.231
-    en_basic:
-      En Avg: 0.413
+    en_pre:
+      avg: 0.413
       OpenBookQA: 0.308
       TriviaQA: 0.332
       HellaSwag: 0.468
@@ -5956,152 +4206,3 @@
       MATH: 0.162
       BBH: 0.328
       HumanEval: 0.254
-    other:
-      GPQA: 0.011
-- id: SakanaAI/TinySwallow-1.5B-Instruct
-  name: TinySwallow-1.5B-Instruct
-  date: '2025-01-30'
-  params: 1.5
-  base_model: TinySwallow-1.5B
-  sortkey: tinyswallow
-  url: https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct
-  results:
-    ja_basic:
-      Ja Avg: 0.398
-      JComQA: 0.803
-      JEMHopQA: 0.345
-      NIILC: 0.447
-      JSQuAD: 0.856
-      XL-Sum: 0.159
-      MGSM: 0.308
-      WMT20-en-ja: 0.203
-      WMT20-ja-en: 0.143
-      JMMLU: 0.461
-      JHumanEval: 0.251
-    ja_mtb:
-      JMT Avg: 0.565
-      coding: 0.434
-      extraction: 0.572
-      humanities: 0.772
-      math: 0.453
-      reasoning: 0.392
-      roleplay: 0.645
-      stem: 0.61
-      writing: 0.643
-    en_basic:
-      En Avg: 0.411
-      OpenBookQA: 0.31
-      TriviaQA: 0.309
-      HellaSwag: 0.487
-      SQuAD2: 0.501
-      XWINO: 0.843
-      MMLU: 0.56
-      GSM8K: 0.398
-      MATH: 0.162
-      BBH: 0.25
-      HumanEval: 0.294
-    other:
-      GPQA: 0.013
-- id: 01-ai/Yi-1.5-6B
-  name: Yi-1.5 6B
-  date: '2024-05-13'
-  params: 6.1
-  base_model: ''
-  sortkey: yi 1.5
-  url: https://huggingface.co/01-ai/Yi-1.5-6B
-  results:
-    ja_basic:
-      Ja Avg: 0.354
-      JComQA: 0.658
-      JEMHopQA: 0.38
-      NIILC: 0.226
-      JSQuAD: 0.829
-      XL-Sum: 0.198
-      MGSM: 0.24
-      WMT20-en-ja: 0.13
-      WMT20-ja-en: 0.147
-      JMMLU: 0.423
-      JHumanEval: 0.313
-    en_basic:
-      En Avg: 0.54
-      OpenBookQA: 0.344
-      TriviaQA: 0.593
-      HellaSwag: 0.575
-      SQuAD2: 0.651
-      XWINO: 0.898
-      MMLU: 0.636
-      GSM8K: 0.522
-      MATH: 0.244
-      BBH: 0.583
-      HumanEval: 0.352
-    other:
-      GPQA: 0.266
-- id: 01-ai/Yi-1.5-9B
-  name: Yi-1.5 9B
-  date: '2024-05-13'
-  params: 8.8
-  base_model: ''
-  sortkey: yi 1.5
-  url: https://huggingface.co/01-ai/Yi-1.5-9B
-  results:
-    ja_basic:
-      Ja Avg: 0.432
-      JComQA: 0.834
-      JEMHopQA: 0.417
-      NIILC: 0.265
-      JSQuAD: 0.894
-      XL-Sum: 0.224
-      MGSM: 0.42
-      WMT20-en-ja: 0.174
-      WMT20-ja-en: 0.187
-      JMMLU: 0.516
-      JHumanEval: 0.391
-    en_basic:
-      En Avg: 0.592
-      OpenBookQA: 0.39
-      TriviaQA: 0.619
-      HellaSwag: 0.601
-      SQuAD2: 0.693
-      XWINO: 0.902
-      MMLU: 0.696
-      GSM8K: 0.62
-      MATH: 0.3
-      BBH: 0.71
-      HumanEval: 0.384
-    other:
-      GPQA: 0.275
-- id: 01-ai/Yi-1.5-34B
-  name: Yi-1.5 34B
-  date: '2024-05-13'
-  params: 34
-  base_model: ''
-  sortkey: yi 1.5
-  url: https://huggingface.co/01-ai/Yi-1.5-34B
-  results:
-    ja_basic:
-      Ja Avg: 0.468
-      JComQA: 0.869
-      JEMHopQA: 0.461
-      NIILC: 0.332
-      JSQuAD: 0.899
-      XL-Sum: 0.238
-      MGSM: 0.52
-      WMT20-en-ja: 0.219
-      WMT20-ja-en: 0.208
-      JMMLU: 0.591
-      JHumanEval: 0.346
-    en_basic:
-      En Avg: 0.65
-      OpenBookQA: 0.402
-      TriviaQA: 0.708
-      HellaSwag: 0.662
-      SQuAD2: 0.754
-      XWINO: 0.91
-      MMLU: 0.774
-      GSM8K: 0.743
-      MATH: 0.394
-      BBH: 0.763
-      HumanEval: 0.385
-    other:
-      GPQA: 0.342
-

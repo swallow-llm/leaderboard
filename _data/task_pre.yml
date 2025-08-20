@@ -1,0 +1,579 @@
+# Task definition of pre-trained models in Swallow LLM Leaderboard
+# Copyright (c) 2025 Swallow LLM team
+# This file is distributed under Creative Commons Attribution 4.0 (CC-BY 4.0) License
+
+ja_pre:
+  for: ['pre']
+  title:
+    ja: 事前学習（日本語）
+    en: Pre-trained (Japanese)
+  description:
+    ja: 日本語のベンチマークデータで事前学習済み（事後学習無し）モデルの能力を測定します。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: This benchmark evaluates pre-trained LLMs models (without post-training) on Japanese benchmark datasets. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: ja_pre_avg
+      collective: true
+      title:
+        ja: 事前学習（日本語）平均
+        en: Pre-trained (Japanese) average
+      short:
+        ja: 事前（日）平均
+        en: Pre (ja) avg
+      description:
+        ja: 事前学習モデル向けの日本語タスクの平均スコア
+        en: Average score of Japanese datasets for pre-trained models
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: JComQA
+      field: jcommonsenseqa
+      title: JCommonsenseQA
+      short: JComQA
+      description:
+        ja: 知識ベースに基づいて作成された5択の選択式問題
+        en: Five-choice questions created with a knowledge base
+      category:
+        ja: 常識的な知識
+        en: Commonsense
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2022.lrec-1.317/
+          en: https://aclanthology.org/2022.lrec-1.317/
+        author:
+          ja: Kurihara et al.
+          en: Kurihara et al.
+        year:
+          ja: 2022
+          en: 2022
+    - name: JEMHopQA
+      field: jemhopqa
+      title: JEMHopQA
+      short: JEMHQA
+      description:
+        ja: 知識量や推論能力を評価するための自由記述式質問応答
+        en: Open-ended Q&A to assess the amount of knowledge and reasoning ability
+      category:
+        ja: マルチホップ質問応答
+        en: Multi-hop Q&A
+      metric:
+        ja: 文字F1
+        en: Character F1
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2024.lrec-main.831/
+          en: https://aclanthology.org/2024.lrec-main.831/
+        author:
+          ja: Ishii et al.
+          en: Ishii et al.
+        year:
+          ja: 2024
+          en: 2024
+    - name: NIILC
+      field: niilc
+      title: NIILC
+      short: NIILC
+      description:
+        ja: 百科事典で解答が得られそうな自由記述式質問応答
+        en: Open-ended Q&A that can be answered by an encyclopedia
+      category:
+        ja: クラシカルな質問応答
+        en: Classical Q&A
+      metric:
+        ja: 文字F1
+        en: Character F1
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://www.anlp.jp/proceedings/annual_meeting/2003/pdf_dir/C7-6.pdf
+          en: https://www.anlp.jp/proceedings/annual_meeting/2003/pdf_dir/C7-6.pdf
+        author:
+          ja: 関根
+          en: Sekine
+        year:
+          ja: 2003
+          en: 2003
+    - name: JSQuAD
+      field: jsquad
+      title: JSQuAD
+      short: JSQuAD
+      description:
+        ja: Wikipedia記事に対する自由記述式質問応答
+        en: Open-ended Q&A for Wikipedia article
+      category:
+        ja: 機械読解
+        en: Reading comprehension
+      metric:
+        ja: 文字F1
+        en: Character F1
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2022.lrec-1.317/
+          en: https://aclanthology.org/2022.lrec-1.317/
+        author:
+          ja: Kurihara et al.
+          en: Kurihara et al.
+        year:
+          ja: 2022
+          en: 2022
+    - name: XLSum
+      field: XLSUM_ja_1shot
+      title: XL-Sum
+      short: XL-Sum
+      description:
+        ja: イギリス国営放送（BBC）の記事本文からハイライト（要約）を生成するタスク
+        en: Task to generate a highlight from a news article of BBC
+      category:
+        ja: 自動要約
+        en: Summarization
+      metric:
+        ja: ROUGE-2
+        en: ROUGE-2
+      input:
+        ja: 1-shot
+        en: 1-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2021.findings-acl.413/
+          en: https://aclanthology.org/2021.findings-acl.413/
+        author:
+          ja: Hasan et al.
+          en: Hasan et al.
+        year:
+          ja: 2021
+          en: 2021
+    - name: MGSM
+      field: MATH (mgsm_ja)
+      title: MGSM
+      short: MGSM
+      description:
+        ja: 小学校の数学の文章題データセット（GSM8K）の日本語訳
+        en: Japanese translation of math word problems (GSM8K)
+      category:
+        ja: 数学（算数）
+        en: Mathematics
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://openreview.net/forum?id=fR3wGCk-IXp
+          en: https://openreview.net/forum?id=fR3wGCk-IXp
+        author:
+          ja: Shi et al.
+          en: Shi et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: WMT20enja
+      field: wmt20_en_ja_bleu
+      title: WMT20 (en-ja)
+      short: En-Ja
+      description:
+        ja: ニュース記事の翻訳（英語から日本語）
+        en: Translation of news articles (English to Japanese)
+      category:
+        ja: 英日機械翻訳
+        en: English-Japanese translation
+      metric:
+        ja: BLEU
+        en: BLEU
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2020.wmt-1.1/
+          en: https://aclanthology.org/2020.wmt-1.1/
+        author:
+          ja: Barrault et al.
+          en: Barrault et al.
+        year:
+          ja: 2020
+          en: 2020
+    - name: WMT20jaen
+      field: wmt20_ja_en_bleu
+      title: WMT20 (ja-en)
+      short: Ja-En
+      description:
+        ja: ニュース記事の翻訳（日本語から英語）
+        en: Translation of news articles (Japanese to English)
+      category:
+        ja: 日英機械翻訳
+        en: Japanese-English translation
+      metric:
+        ja: BLEU
+        en: BLEU
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2020.wmt-1.1/
+          en: https://aclanthology.org/2020.wmt-1.1/
+        author:
+          ja: Barrault et al.
+          en: Barrault et al.
+        year:
+          ja: 2020
+          en: 2020
+    - name: JMMLU
+      field: jmmlu
+      title: JMMLU
+      short: JMMLU
+      description:
+        ja: 4値選択式試験問題のベンチマークMMLUの日本語訳（53科目）
+        en: Japanese translation of four-choice exam questions benchmark MMLU (53 subjects)
+      category:
+        ja: マルチタスク言語理解
+        en: Multi-task natural language understanding
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 5-shot
+        en: 5-shot
+      link:
+        href:
+          ja: https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/A7-5.pdf
+          en: https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/A7-5.pdf
+        author:
+          ja: 尹ら
+          en: Yin et al
+        year:
+          ja: 2024
+          en: 2024
+    - name: JHumanEval
+      field: jhumaneval-unstripped@1
+      title: JHumanEval
+      short: JHumanEval
+      description:
+        ja: コード生成能力のベンチマークHumanEvalの日本語訳
+        en: Japanese translation of HumanEval (code genration benchmark)
+      category:
+        ja: コード生成
+        en: Code generation
+      metric:
+        ja: pass@1
+        en: pass@1
+      input:
+        ja: 0-shot, 10回試行
+        en: 0-shot, 10 trials
+      link:
+        href:
+          ja: https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P10-9.pdf
+          en: https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P10-9.pdf
+        author:
+          ja: 佐藤ら
+          en: Sato et al.
+        year:
+          ja: 2024
+          en: 2024
+
+en_pre:
+  for: ['pre']
+  title:
+    ja: 事前学習（英語）
+    en: Pre-trained (English)
+  description:
+    ja: 英語のベンチマークデータで事前学習済み（事後学習無し）モデルの能力を測定します。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
+    en: This benchmark evaluates pre-trained LLMs models (without post-training) on English benchmark datasets. The evaluation scores range from 0 (lowest) to 1 (highest).
+  tasks:
+    - name: avg
+      field: en_pre_avg
+      collective: true
+      title:
+        ja: 事前学習（英語）平均
+        en: Pre-trained (English) average
+      short:
+        ja: 事前（英）平均
+        en: Pre (en) avg
+      description:
+        ja: 事前学習モデル向けの英語タスクの平均スコア
+        en: Average score of English datasets for pre-trained models
+      category:
+        ja: 平均
+        en: Average
+      metric:
+        ja: 平均
+        en: Average
+    - name: OpenBookQA
+      field: OpenBookQA
+      title: OpenBookQA
+      short: OpenBookQA
+      description:
+        ja: 科学的な知識と常識に基づく4択の選択式問題
+        en: Four-choice questions based on scientific knowledge and common sense
+      category:
+        ja: 事実と常識に基づく質問応答
+        en: Q&A based on facts and common sense
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/D18-1260/
+          en: https://aclanthology.org/D18-1260/
+        author:
+          ja: Mihaylov et al.
+          en: Mihaylov et al.
+        year:
+          ja: 2018
+          en: 2018
+    - name: TriviaQA
+      field: triviaqa
+      title: TriviaQA
+      short: TriviaQA
+      description:
+        ja: 雑学的な知識に基づく自由記述式質問応答
+        en: Open-ended Q&A based on trivias
+      category:
+        ja: 知識に基づく質問応答
+        en: Q&A based on knowledge
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/P17-1147/
+          en: https://aclanthology.org/P17-1147/
+        author:
+          ja: Joshi et al.
+          en: Joshi et al.
+        year:
+          ja: 2017
+          en: 2017
+    - name: HellaSwag
+      field: hellaswag
+      title: HellaSwag
+      short: HellaSwag
+      description:
+        ja: 次に起こる出来事を予測する4択の選択式問題
+        en: Four-choice questions to predict the next event
+      category:
+        ja: 常識推論
+        en: Commonsense inference
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/P19-1472/
+          en: https://aclanthology.org/P19-1472/
+        author:
+          ja: Zellers et al.
+          en: Zellers et al.
+        year:
+          ja: 2019
+          en: 2019
+    - name: SQuAD2
+      field: squad2_best_exact
+      title: SQuAD2
+      short: SQuAD2
+      description:
+        ja: 根拠文書に対して作成された自由記述式質問応答
+        en: Open-ended Q&A developed for the evidence document
+      category:
+        ja: 機械読解
+        en: Reading comprehension
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/P18-2124/
+          en: https://aclanthology.org/P18-2124/
+        author:
+          ja: Rajpurkar et al.
+          en: Rajpurkar et al.
+        year:
+          ja: 2018
+          en: 2018
+    - name: XWINO
+      field: xwinograd_en
+      title: XWINO
+      short: XWINO
+      description:
+        ja: 文中の代名詞の先行詞を推定する2択の選択式問題
+        en: Two-choice question to predict the antecedent of a pronoun
+      category:
+        ja: 常識推論
+        en: Commonsense inference
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://aclanthology.org/2021.findings-acl.310/
+          en: https://aclanthology.org/2021.findings-acl.310/
+        author:
+          ja: Tikhonov and Ryabinin
+          en: Tikhonov and Ryabinin
+        year:
+          ja: 2021
+          en: 2021
+    - name: MMLU
+      field: mmlu
+      title: MMLU
+      short: MMLU
+      description:
+        ja: 57科目からなる4値選択式の試験問題
+        en: Four-choice exam questions benchmark MMLU (53 subjects)
+      category:
+        ja: マルチタスク言語理解
+        en: Multitask natural language understanding
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: 5-shot
+        en: 5-shot
+      link:
+        href:
+          ja: https://openreview.net/forum?id=d7KBjmI3GmQ
+          en: https://openreview.net/forum?id=d7KBjmI3GmQ
+        author:
+          ja: Hendrycks et al.
+          en: Hendrycks et al.
+        year:
+          ja: 2021
+          en: 2021
+    - name: GSM8K
+      field: gsm8k
+      title: GSM8K
+      short: GSM8K
+      description:
+        ja: 小学校の数学の文章題データセット
+        en: Math word problems
+      category:
+        ja: 数学（算数）
+        en: Mathematics
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://arxiv.org/abs/2110.14168
+          en: https://arxiv.org/abs/2110.14168
+        author:
+          ja: Cobbe et al.
+          en: Cobbe et al.
+        year:
+          ja: 2021
+          en: 2021
+    - name: MATH
+      field: minerva_math-cot-maj1@1
+      title: MATH
+      short: MATH
+      description:
+        ja: 高校生向け数学コンテスト
+        en: High school math competitions
+      category:
+        ja: 数学
+        en: Mathematics
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 4-shot
+        en: 4-shot
+      link:
+        href:
+          ja: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html
+          en: https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html
+        author:
+          ja: Hendrycks et al.
+          en: Hendrycks et al.
+        year:
+          ja: 2021
+          en: 2021
+    - name: BBH
+      field: bbh_cot
+      title: BIG-Bench-Hard (BBH)
+      short: BBH
+      description:
+        ja: BIG-Benchデータセット (Srivastava et al., 2023) の中でも難易度の高い23件のタスク
+        en: 23 tasks that are difficult in BIG-Bench dataset (Srivastava et al., 2023)
+      category:
+        ja: LLMにとって難しいタスクのコレクション
+        en: Collection of hard-to-solve tasks for LLM
+      metric:
+        ja: 正解率, 完全一致
+        en: Accuracy (exact match)
+      input:
+        ja: 3-shot, CoT
+        en: 3-shot, CoT
+      link:
+        href:
+          ja: https://aclanthology.org/2023.findings-acl.824/
+          en: https://aclanthology.org/2023.findings-acl.824/
+        author:
+          ja: Suzgun et al.
+          en: Suzgun et al.
+        year:
+          ja: 2023
+          en: 2023
+    - name: HumanEval
+      field: humaneval-unstripped@1
+      title: HumanEval
+      short: HumanEval
+      description:
+        ja: 単体テストによるコード生成能力の評価
+        en: Ability of code generation measured by unit test
+      category:
+        ja: コード生成
+        en: Code generation
+      metric:
+        ja: pass@1
+        en: pass@1
+      input:
+        ja: 0-shot, 10回試行
+        en: 0-shot, 10 trials
+      link:
+        href:
+          ja: https://arxiv.org/abs/2107.03374
+          en: https://arxiv.org/abs/2107.03374
+        author:
+          ja: Chen et al.
+          en: Chen et al.
+        year:
+          ja: 2021
+          en: 2021

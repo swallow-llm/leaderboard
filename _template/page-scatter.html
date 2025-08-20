@@ -1,0 +1,49 @@
+{% extends "site.html" %}
+
+{% block content_title %}
+<h2 id="title" class="page-title">{% if is_post %}{{ ui.post_title }}{% else %}{{ ui.pre_title }}{% endif %}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="row row-deck row-cards">
+
+  <!-- Scatter chart -->
+  {% if is_post %}
+  <div class="col-sm-6 col-lg-6">
+  {% with _id="scatter1", _categories=ui.post, _ycat="ja_post", _yname="avg", _height="480" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+  </div>
+  <div class="col-sm-6 col-lg-6">
+  {% with _id="scatter2", _categories=ui.post, _ycat="en_post", _yname="avg", _height="480" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+  </div>
+  {% else %}
+  <div class="col-sm-6 col-lg-6">
+  {% with _id="scatter1", _categories=ui.pre, _ycat="ja_pre", _yname="avg", _height="480" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+  </div>
+  <div class="col-sm-6 col-lg-6">
+  {% with _id="scatter2", _categories=ui.pre, _ycat="en_pre", _yname="avg", _height="480" %}
+  {% include "scatter.html" %}
+  {% endwith %}
+  </div>
+  {% endif %}
+
+  <div class="col-12">
+    {% if is_post %}
+    {% with _tabs=ui.post %}
+    {% include "table.html" %}
+    {% endwith %}
+    {% else %}
+    {% with _tabs=ui.pre %}
+    {% include "table.html" %}
+    {% endwith %}
+    {% endif %}
+  </div>
+
+</div>
+
+{% endblock %}
