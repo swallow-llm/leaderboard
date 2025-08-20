@@ -132,6 +132,7 @@ if __name__ == '__main__':
         for name, model in post_models.items():
             uri = model['id'].replace('/', '_')
             args['select'] = model['id']
+            args['description'] = f'{model["name"]} の性能を棒グラフやレーダーチャートでチェック' if lang == 'ja' else f'Check the performance of {model["name"]} with bar and radar charts'
             generate(env, 'page-radar.html', f'{uri}.{lang}.html', args)
 
         # About page.
@@ -143,5 +144,6 @@ if __name__ == '__main__':
             taskspec=taskspec_pre | taskspec_post,
             ui=ui,
             lang=lang,
+            description=about['description'],
         )
         generate(env, 'about.html', f'about.{lang}.html', args)

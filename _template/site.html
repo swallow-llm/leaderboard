@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="description" content="{{ description }}">
+  <meta name="description" content="{{ description | default(ui.description) }}">
   <meta name="author" content="Naoaki Okazaki and Swallow project">
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>{{ ui.title }}{% if title %} | {{ title }}{% endif %}</title>
@@ -11,13 +11,13 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ ui.title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image:src" content="./static/logo.svg">
+  <meta name="twitter:description" content="{{ description | default(ui.description) }}">
+  <meta name="twitter:image:src" content="./static/logo.png">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="{{ ui.title }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="./static/logo.svg">
+  <meta property="og:description" content="{{ description | default(ui.description) }}">
+  <meta property="og:image" content="./static/logo.png">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="./static/favicon-96x96.png" sizes="96x96" />

@@ -32,6 +32,10 @@ model:
     ja: 未評価タスク
     en: Missing scores
 
+description:
+  ja: 日本語・英語の大規模言語モデルの性能を棒グラフやレーダーチャート、散布図で比較
+  en: Compare Japanese and English LLMs with bar charts, radar charts, and scatter plots
+
 title:
   ja: Swallow LLM Leaderboard
   en: Swallow LLM Leaderboard
