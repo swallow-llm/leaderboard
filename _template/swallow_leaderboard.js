@@ -221,7 +221,7 @@ var swallow_leaderboard_chart_radar = function(element, config) {
         for (let t of g_tasks[query[0]].tasks) {
           if (query[1] == t.name || (query[1] == "*" && !t.collective) || (query[1] == "+" && !t.collective && !t.exclude_from_avg)) {
             data.push(model.results[query[0]][t.name]);
-            labels.push(t.title);
+            labels.push(t.short);
           }
         }
       }

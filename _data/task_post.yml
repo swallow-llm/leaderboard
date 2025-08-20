@@ -506,8 +506,8 @@ ja_mtb:
         ja: ロールプレイ
         en: Roleplay
       short:
-        ja: ロール
-        en: Role
+        ja: ロールプレイ
+        en: Roleplay
       description:
         ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
         en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
@@ -530,7 +530,7 @@ ja_mtb:
         ja: 科学・技術・工学・数学
         en: STEM
       short:
-        ja: STEM
+        ja: 科・技・工・数
         en: STEM
       description:
         ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する
@@ -606,7 +606,7 @@ en_mtb:
         ja: コーディング
         en: Coding
       short:
-        js: コード
+        ja: コード
         en: Code
       description:
         ja: PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する
@@ -726,8 +726,8 @@ en_mtb:
         ja: ロールプレイ
         en: Roleplay
       short:
-        ja: ロール
-        en: Role
+        ja: ロールプレイ
+        en: Roleplay
       description:
         ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
         en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
@@ -750,7 +750,7 @@ en_mtb:
         ja: 科学・技術・工学・数学
         en: STEM
       short:
-        ja: STEM
+        ja: 科・技・工・数
         en: STEM
       description:
         ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する

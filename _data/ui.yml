@@ -95,6 +95,14 @@ select:
   ja: モデルを一括選択
   en: Select models
 
+active_param:
+  ja: 有効パラメータ
+  en: active parameters
+
+release_date:
+  ja: 公開日
+  en: Release date
+
 nav:
   - name: bar
     title:

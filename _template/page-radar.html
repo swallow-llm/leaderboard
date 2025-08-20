@@ -6,10 +6,11 @@
 {% if is_post %}{{ ui.post_title }}{% else %}{{ ui.pre_title }}{% endif %}
 </h2>
 {% else %}
+{% set model = models[select] %}
 <h2 id="title" class="page-title">
-{{ models[select].name }}
+{{ model.name }}
 </h2>
-<div class="text-secondary mt-1">{% if 0 < models[select].params %}{{ models[select].params }}B{% else %}{{ ui.unknown_size }}{% endif %} ({{ models[select].date }}) <a href="{{ models[select].url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></div>
+<div class="text-secondary mt-1"><a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a> {% if 0 < model.params %}{{ model.params }}B{% if model.params != model.active_params %} ({{ model.active_params }}B {{ ui.active_param }}){% endif %}{% else %}{{ ui.unknown_size }}{% endif %} ({{ ui.release_date }}: {{ model.date }}) {% if model.is_post %}({{ ui.model.reasoning }}: {{ model.reasoning }}){% endif %}</div>
 {% endif %}
 {% endblock %}
 
