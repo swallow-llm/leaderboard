@@ -395,7 +395,7 @@ post:
     columns:
       - ['ja_mtb', 'avg']
       - ['ja_mtb', '*']
-  - name: en_post
+  - name: en_mtb
     title:
       ja: 英語MT-Bench
       en: English MT-Bench
