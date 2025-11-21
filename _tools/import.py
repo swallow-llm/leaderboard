@@ -52,6 +52,9 @@ includes_pre = set([
     'tiiuae/Falcon3-3B-Base',
     'tiiuae/Falcon3-7B-Base',
     'tiiuae/Falcon3-10B-Base',
+    'pfnet/plamo-3-nict-2b-base',
+    'pfnet/plamo-3-nict-8b-base',
+    'pfnet/plamo-3-nict-31b-base',
 ])
 
 excludes_post = set([
@@ -61,6 +64,8 @@ excludes_post = set([
     'sbintuitions/sarashina2.2-0.5b-instruct-v0.1',
     'sbintuitions/sarashina2.2-1b-instruct-v0.1',
     'XiaomiMiMo/MiMo-7B-RL',
+    'nvidia/NVIDIA-Nemotron-Nano-9B-v2',
+    'nvidia/NVIDIA-Nemotron-Nano-12B-v2',
 ])
 
 renames = {
@@ -128,15 +133,14 @@ def get_url(inst):
     else:
         return 'https://huggingface.co/' + inst['id']
 
-def read_data(fi, F, T, is_post=False, includes=None, excludes=None):
+def read_data(fi, F, T, is_post=False, includes=None, excludes=None, num_skips=2):
     # Open the CSV file.
     reader = csv.reader(fi)
     
     # Skip two lines and obtain column names.
     columns = next(reader)
-    next(reader)
-    next(reader)
-    next(reader)
+    for i in range(num_skips):
+        next(reader)
 
     # Index for associating CSV columns to fields, which is a tuple of:
     #   category:   category name for a result; None otherwise (basic fields).
@@ -215,7 +219,7 @@ if __name__ == '__main__':
             ('base', 'base', read_base),
         ]
         with open('Swallow実験結果 - (Llama-3.x,Gemma-2,3)-Swallow-base-v0.x.csv') as fi:
-            data += read_data(fi, F, T, False, includes_pre)
+            data += read_data(fi, F, T, False, includes_pre, num_skips=2)
 
     # Read evaluation results of post-trained models.
     with open('../_data/task_post.yml') as fi:
@@ -230,8 +234,8 @@ if __name__ == '__main__':
             ('pre_training', 'base', read_base),
             ('reasoning', 'reasoning mode', read_reasoning),
         ]
-        with open('Swallow実験結果 - (Llama-3.x,Gemma-3)-Swallow-Instruct-v0.6--.csv') as fi:
-            data += read_data(fi, F, T, True, None, excludes_post)
+        with open('Swallow実験結果 - (Qwen3,GPT-OSS)-Swallow-Instruct.csv') as fi:
+            data += read_data(fi, F, T, True, None, excludes_post, num_skips=4)
 
     # Sort models.
     data.sort(key=operator.itemgetter('sortkey', 'params'))

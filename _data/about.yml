@@ -10,6 +10,20 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2025-11-21
+      text:
+        - ja: PLaMo 3 NICT 2B, 8B, 31B Baseの評価結果を追加しました。
+          en: We added evaluation results of PLaMo 3 NICT 2B, 8B, and 31B Base.
+    - date: 2025-10-29
+      text:
+        - ja: 評価フレームワークを <a href="https://github.com/swallow-llm/swallow-evaluation-instruct/releases/tag/v202510">swallow-evaluation-instruct v202510</a> にアップデートしました。
+          en: We upgraded the evaluation framework to <a href="https://github.com/swallow-llm/swallow-evaluation-instruct/releases/tag/v202510">swallow-evaluation-instruct v202510</a>.
+        - ja: 事後学習済みモデル向けの日本語のベンチマークとして、JamC-QA (日本固有の知識を問う多肢選択式質問応答) を追加しました。
+          en: We have added JamC-QA (question answering for Japan-specific knowledge) as Japanese benchmarks for post-trained models.
+        - ja: 事後学習済みモデル向けの日本語のベンチマークからJEMHopQAを削除しました。
+          en: We have removed JEMHopQA from the Japanese benchmarks for post-trained models.
+        - ja: Apertus-8B-Instruct, Apertus-70B-Instruct, ELYZA-Shortcut-1.0-Qwen-32B, Flux-Japanese-Qwen2.5-32B-Instruct-V1.0, Qwen2.5-0.5B, QwQ Bakeneko 32Bの評価結果を追加しました。
+          en: We added evaluation results of Apertus-8B-Instruct, Apertus-70B-Instruct, ELYZA-Shortcut-1.0-Qwen-32B, Flux-Japanese-Qwen2.5-32B-Instruct-V1.0, Qwen2.5-0.5B, and QwQ Bakeneko 32B.
     - date: 2025-08-18
       text:
         - ja: Swallow LLM Leaderboard v2を公開しました。

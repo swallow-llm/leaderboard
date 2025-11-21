@@ -29,30 +29,92 @@ ja_post:
       metric:
         ja: 平均
         en: Average
-    - name: JEMHopQA
-      field: jemhopqa_cot_f1_score_quasi
-      title: JEMHopQA
-      short: JEMHopQA
+    - name: JamC-QA
+      field: jamcqa
+      title: JamC-QA
+      short: JamC-QA
       description:
-        ja: 説明可能なマルチホップ日本語質問応答
-        en: Japanese explainable multi-hop question answering
-      version: v1.2
+        ja: 日本固有の知識を問う質問応答
+        en: Question answering for Japan-specific knowledge
+      version: v1.0
       category:
-        ja: 多段階推論
-        en: Multihop reasoning
+        ja: 質問応答
+        en: Question answering
       metric:
-        ja: 文字F1 (柔軟)
-        en: Character F1 (lenient)
+        ja: 正解率
+        en: Accuracy
       input:
         ja: ゼロショット、思考の連鎖プロンプト
         en: zero-shot, chain-of-thought prompt
       format:
-        ja: 自由記述
-        en: Free text
+        ja: 多肢選択
+        en: Multiple choice
       link:
-        href: https://aclanthology.org/2024.lrec-main.831/
-        author: Ishii et al.
-        year: 2024
+        href: https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/Q2-18.pdf
+        author:
+          ja: 岡ら
+          en: Oka et al.
+        year: 2025
+#    - name: WMT20enja
+#      field: wmt20_en_ja_bleu
+#      title:
+#        ja: WMT20 (英日)
+#        en: WMT20 (en-ja)
+#      short:
+#        ja: 英日翻訳
+#        en: En-Ja
+#      description:
+#        ja: ニュース記事の翻訳（英語から日本語）
+#        en: Translation of news articles (English to Japanese)
+#      category:
+#        ja: 英日機械翻訳
+#        en: English-Japanese translation
+#      metric:
+#        ja: BLEU
+#        en: BLEU
+#      input:
+#        ja: ゼロショット、思考の連鎖プロンプト
+#        en: zero-shot, chain-of-thought prompt
+#      link:
+#        href:
+#          ja: https://aclanthology.org/2020.wmt-1.1/
+#          en: https://aclanthology.org/2020.wmt-1.1/
+#        author:
+#          ja: Barrault et al.
+#          en: Barrault et al.
+#        year:
+#          ja: 2020
+#          en: 2020
+#    - name: WMT20jaen
+#      field: wmt20_ja_en_bleu
+#      title:
+#        ja: WMT20 (日英)
+#        en: WMT20 (ja-en)
+#      short:
+#        ja: 日英翻訳
+#        en: Ja-en
+#      description:
+#        ja: ニュース記事の翻訳（日本語から英語）
+#        en: Translation of news articles (Japanese to English)
+#      category:
+#        ja: 日英機械翻訳
+#        en: Japanese-English translation
+#      metric:
+#        ja: BLEU
+#        en: BLEU
+#      input:
+#        ja: ゼロショット、思考の連鎖プロンプト
+#        en: zero-shot, chain-of-thought prompt
+#      link:
+#        href:
+#          ja: https://aclanthology.org/2020.wmt-1.1/
+#          en: https://aclanthology.org/2020.wmt-1.1/
+#        author:
+#          ja: Barrault et al.
+#          en: Barrault et al.
+#        year:
+#          ja: 2020
+#          en: 2020
     - name: MMLU-ProX
       field: mmlu_prox_japanese
       title:

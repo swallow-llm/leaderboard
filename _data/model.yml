@@ -16,8 +16,8 @@
   url: https://huggingface.co/abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0
   results:
     ja_post:
-      avg: 0.73
-      JEMHopQA: 0.644
+      avg: 0.582
+      JamC-QA: 0.611
       MMLU-ProX: 0.712
       GPQA: 0.527
       MATH100: 0.899
@@ -51,6 +51,104 @@
       roleplay: 0.872
       stem: 0.882
       writing: 0.881
+- id: swiss-ai/Apertus-8B-Instruct-2509
+  model_id: swiss-ai/Apertus-8B-Instruct-2509
+  name: Apertus-8B-Instruct
+  date: '2025-09-02'
+  params: 8.1
+  active_params: 8.1
+  family: Apertus
+  pre_training: Apertus-8B
+  reasoning: N/A
+  sortkey: apertus
+  is_post: true
+  url: https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509
+  results:
+    ja_post:
+      avg: 0.221
+      JamC-QA: 0.366
+      MMLU-ProX: 0.221
+      GPQA: 0.214
+      MATH100: 0.172
+      JHumanEval: 0.353
+      __MIFEvalJa: 0.487
+    en_post:
+      avg: 0.269
+      HellaSwag: 0.636
+      MMLU-Pro: 0.321
+      GPQA: 0.293
+      MATH500: 0.288
+      AIME: 0.0
+      LCB: 0.075
+    ja_mtb:
+      avg: 0.576
+      coding: 0.478
+      extraction: 0.525
+      humanities: 0.728
+      math: 0.352
+      reasoning: 0.446
+      roleplay: 0.697
+      stem: 0.672
+      writing: 0.707
+    en_mtb:
+      avg: 0.628
+      coding: 0.494
+      extraction: 0.601
+      humanities: 0.817
+      math: 0.423
+      reasoning: 0.445
+      roleplay: 0.787
+      stem: 0.682
+      writing: 0.775
+- id: swiss-ai/Apertus-70B-Instruct-2509
+  model_id: swiss-ai/Apertus-70B-Instruct-2509
+  name: Apertus-70B-Instruct
+  date: '2025-09-02'
+  params: 71
+  active_params: 71
+  family: Apertus
+  pre_training: Apertus-70B
+  reasoning: N/A
+  sortkey: apertus
+  is_post: true
+  url: https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509
+  results:
+    ja_post:
+      avg: 0.325
+      JamC-QA: 0.469
+      MMLU-ProX: 0.355
+      GPQA: 0.266
+      MATH100: 0.263
+      JHumanEval: 0.438
+      __MIFEvalJa: 0.549
+    en_post:
+      avg: 0.315
+      HellaSwag: 0.745
+      MMLU-Pro: 0.422
+      GPQA: 0.253
+      MATH500: 0.386
+      AIME: 0.0
+      LCB: 0.084
+    ja_mtb:
+      avg: 0.675
+      coding: 0.558
+      extraction: 0.709
+      humanities: 0.848
+      math: 0.486
+      reasoning: 0.443
+      roleplay: 0.811
+      stem: 0.767
+      writing: 0.774
+    en_mtb:
+      avg: 0.74
+      coding: 0.587
+      extraction: 0.732
+      humanities: 0.896
+      math: 0.608
+      reasoning: 0.64
+      roleplay: 0.8
+      stem: 0.815
+      writing: 0.844
 - id: cyberagent/calm3-22b-chat
   model_id: cyberagent/calm3-22b-chat
   name: CyberAgentLM3-22B-chat
@@ -65,8 +163,8 @@
   url: https://huggingface.co/cyberagent/calm3-22b-chat
   results:
     ja_post:
-      avg: 0.397
-      JEMHopQA: 0.612
+      avg: 0.331
+      JamC-QA: 0.495
       MMLU-ProX: 0.31
       GPQA: 0.266
       MATH100: 0.354
@@ -114,8 +212,8 @@
   url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B
   results:
     ja_post:
-      avg: 0.451
-      JEMHopQA: 0.348
+      avg: 0.346
+      JamC-QA: 0.279
       MMLU-ProX: 0.319
       GPQA: 0.31
       MATH100: 0.556
@@ -163,8 +261,8 @@
   url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
   results:
     ja_post:
-      avg: 0.683
-      JEMHopQA: 0.567
+      avg: 0.535
+      JamC-QA: 0.461
       MMLU-ProX: 0.642
       GPQA: 0.538
       MATH100: 0.859
@@ -204,7 +302,7 @@
   date: '2025-01-20'
   params: 7.6
   active_params: 7.6
-  family: Qwen2
+  family: Qwen2.5
   pre_training: Qwen2.5-Math-7B
   reasoning: 'on'
   sortkey: deepseek r1 distill qwen
@@ -212,8 +310,8 @@
   url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
   results:
     ja_post:
-      avg: 0.514
-      JEMHopQA: 0.279
+      avg: 0.382
+      JamC-QA: 0.257
       MMLU-ProX: 0.438
       GPQA: 0.4
       MATH100: 0.778
@@ -261,8 +359,8 @@
   url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
   results:
     ja_post:
-      avg: 0.638
-      JEMHopQA: 0.508
+      avg: 0.495
+      JamC-QA: 0.414
       MMLU-ProX: 0.591
       GPQA: 0.496
       MATH100: 0.737
@@ -310,8 +408,8 @@
   url: https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
   results:
     ja_post:
-      avg: 0.692
-      JEMHopQA: 0.572
+      avg: 0.535
+      JamC-QA: 0.439
       MMLU-ProX: 0.66
       GPQA: 0.536
       MATH100: 0.838
@@ -359,8 +457,8 @@
   url: https://huggingface.co/cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese
   results:
     ja_post:
-      avg: 0.575
-      JEMHopQA: 0.545
+      avg: 0.442
+      JamC-QA: 0.393
       MMLU-ProX: 0.525
       GPQA: 0.4
       MATH100: 0.788
@@ -408,8 +506,8 @@
   url: https://huggingface.co/cyberagent/DeepSeek-R1-Distill-Qwen-32B-Japanese
   results:
     ja_post:
-      avg: 0.649
-      JEMHopQA: 0.654
+      avg: 0.491
+      JamC-QA: 0.434
       MMLU-ProX: 0.606
       GPQA: 0.464
       MATH100: 0.838
@@ -443,6 +541,55 @@
       roleplay: 0.871
       stem: 0.872
       writing: 0.861
+- id: elyza/ELYZA-Shortcut-1.0-Qwen-32B
+  model_id: elyza/ELYZA-Shortcut-1.0-Qwen-32B
+  name: ELYZA-Shortcut-1.0-Qwen-32B
+  date: '2025-05-01'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5-32B-Instruct
+  reasoning: N/A
+  sortkey: elyza shortcut 1.0 qwen
+  is_post: true
+  url: https://huggingface.co/elyza/ELYZA-Shortcut-1.0-Qwen-32B
+  results:
+    ja_post:
+      avg: 0.514
+      JamC-QA: 0.524
+      MMLU-ProX: 0.631
+      GPQA: 0.415
+      MATH100: 0.788
+      JHumanEval: 0.77
+      __MIFEvalJa: 0.633
+    en_post:
+      avg: 0.547
+      HellaSwag: 0.897
+      MMLU-Pro: 0.684
+      GPQA: 0.46
+      MATH500: 0.83
+      AIME: 0.15
+      LCB: 0.263
+    ja_mtb:
+      avg: 0.827
+      coding: 0.794
+      extraction: 0.876
+      humanities: 0.877
+      math: 0.875
+      reasoning: 0.641
+      roleplay: 0.873
+      stem: 0.834
+      writing: 0.845
+    en_mtb:
+      avg: 0.868
+      coding: 0.834
+      extraction: 0.888
+      humanities: 0.892
+      math: 0.89
+      reasoning: 0.841
+      roleplay: 0.864
+      stem: 0.888
+      writing: 0.845
 - id: elyza/ELYZA-Thinking-1.0-Qwen-32B
   model_id: elyza/ELYZA-Thinking-1.0-Qwen-32B
   name: ELYZA-Thinking-1.0-Qwen-32B
@@ -457,8 +604,8 @@
   url: https://huggingface.co/elyza/ELYZA-Thinking-1.0-Qwen-32B
   results:
     ja_post:
-      avg: 0.526
-      JEMHopQA: 0.601
+      avg: 0.426
+      JamC-QA: 0.495
       MMLU-ProX: 0.623
       GPQA: 0.455
       MATH100: 0.788
@@ -517,7 +664,7 @@
       JMMLU: 0.264
       JHumanEval: 0.088
     en_pre:
-      avg: 0.376
+      avg: 0.375
       OpenBookQA: 0.316
       TriviaQA: 0.296
       HellaSwag: 0.458
@@ -526,7 +673,7 @@
       MMLU: 0.449
       GSM8K: 0.337
       MATH: 0.14
-      BBH: 0.323
+      BBH: 0.311
       HumanEval: 0.125
 - id: tiiuae/Falcon3-3B-Base
   model_id: tiiuae/Falcon3-3B-Base
@@ -553,7 +700,7 @@
       JMMLU: 0.319
       JHumanEval: 0.229
     en_pre:
-      avg: 0.495
+      avg: 0.494
       OpenBookQA: 0.312
       TriviaQA: 0.346
       HellaSwag: 0.492
@@ -562,7 +709,7 @@
       MMLU: 0.567
       GSM8K: 0.634
       MATH: 0.344
-      BBH: 0.553
+      BBH: 0.547
       HumanEval: 0.348
 - id: tiiuae/Falcon3-7B-Base
   model_id: tiiuae/Falcon3-7B-Base
@@ -589,7 +736,7 @@
       JMMLU: 0.385
       JHumanEval: 0.361
     en_pre:
-      avg: 0.596
+      avg: 0.595
       OpenBookQA: 0.354
       TriviaQA: 0.552
       HellaSwag: 0.566
@@ -598,7 +745,7 @@
       MMLU: 0.701
       GSM8K: 0.766
       MATH: 0.438
-      BBH: 0.692
+      BBH: 0.673
       HumanEval: 0.476
 - id: tiiuae/Falcon3-10B-Base
   model_id: tiiuae/Falcon3-10B-Base
@@ -625,7 +772,7 @@
       JMMLU: 0.435
       JHumanEval: 0.426
     en_pre:
-      avg: 0.639
+      avg: 0.638
       OpenBookQA: 0.368
       TriviaQA: 0.579
       HellaSwag: 0.596
@@ -634,8 +781,57 @@
       MMLU: 0.732
       GSM8K: 0.802
       MATH: 0.492
-      BBH: 0.776
+      BBH: 0.762
       HumanEval: 0.543
+- id: flux-inc/Flux-Japanese-Qwen2.5-32B-Instruct-V1.0
+  model_id: flux-inc/Flux-Japanese-Qwen2.5-32B-Instruct-V1.0
+  name: Flux-Japanese-Qwen2.5-32B-Instruct-V1.0
+  date: '2025-09-28'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5-32B-Instruct
+  reasoning: N/A
+  sortkey: flux japanese qwen2.5 v1.0
+  is_post: true
+  url: https://huggingface.co/flux-inc/Flux-Japanese-Qwen2.5-32B-Instruct-V1.0
+  results:
+    ja_post:
+      avg: 0.431
+      JamC-QA: 0.487
+      MMLU-ProX: 0.63
+      GPQA: 0.458
+      MATH100: 0.788
+      JHumanEval: 0.438
+      __MIFEvalJa: 0.54
+    en_post:
+      avg: 0.551
+      HellaSwag: 0.929
+      MMLU-Pro: 0.677
+      GPQA: 0.51
+      MATH500: 0.838
+      AIME: 0.15
+      LCB: 0.203
+    ja_mtb:
+      avg: 0.801
+      coding: 0.807
+      extraction: 0.819
+      humanities: 0.856
+      math: 0.892
+      reasoning: 0.654
+      roleplay: 0.791
+      stem: 0.818
+      writing: 0.768
+    en_mtb:
+      avg: 0.853
+      coding: 0.789
+      extraction: 0.852
+      humanities: 0.885
+      math: 0.957
+      reasoning: 0.782
+      roleplay: 0.852
+      stem: 0.868
+      writing: 0.838
 - id: google/gemma-2-2b
   model_id: google/gemma-2-2b
   name: Gemma 2 2B
@@ -661,7 +857,7 @@
       JMMLU: 0.388
       JHumanEval: 0.177
     en_pre:
-      avg: 0.439
+      avg: 0.44
       OpenBookQA: 0.342
       TriviaQA: 0.552
       HellaSwag: 0.552
@@ -670,7 +866,7 @@
       MMLU: 0.53
       GSM8K: 0.249
       MATH: 0.176
-      BBH: 0.415
+      BBH: 0.424
       HumanEval: 0.188
 - id: google/gemma-2-2b-it
   model_id: google/gemma-2-2b-it
@@ -686,8 +882,8 @@
   url: https://huggingface.co/google/gemma-2-2b-it
   results:
     ja_post:
-      avg: 0.269
-      JEMHopQA: 0.321
+      avg: 0.231
+      JamC-QA: 0.28
       MMLU-ProX: 0.214
       GPQA: 0.248
       MATH100: 0.202
@@ -755,7 +951,7 @@
       MMLU: 0.706
       GSM8K: 0.688
       MATH: 0.338
-      BBH: 0.704
+      BBH: 0.708
       HumanEval: 0.39
 - id: google/gemma-2-9b-it
   model_id: google/gemma-2-9b-it
@@ -771,8 +967,8 @@
   url: https://huggingface.co/google/gemma-2-9b-it
   results:
     ja_post:
-      avg: 0.447
-      JEMHopQA: 0.506
+      avg: 0.366
+      JamC-QA: 0.385
       MMLU-ProX: 0.423
       GPQA: 0.277
       MATH100: 0.444
@@ -831,7 +1027,7 @@
       JMMLU: 0.659
       JHumanEval: 0.49
     en_pre:
-      avg: 0.655
+      avg: 0.656
       OpenBookQA: 0.412
       TriviaQA: 0.78
       HellaSwag: 0.675
@@ -840,7 +1036,7 @@
       MMLU: 0.754
       GSM8K: 0.757
       MATH: 0.438
-      BBH: 0.76
+      BBH: 0.762
       HumanEval: 0.508
 - id: google/gemma-2-27b-it
   model_id: google/gemma-2-27b-it
@@ -856,8 +1052,8 @@
   url: https://huggingface.co/google/gemma-2-27b-it
   results:
     ja_post:
-      avg: 0.506
-      JEMHopQA: 0.561
+      avg: 0.41
+      JamC-QA: 0.418
       MMLU-ProX: 0.462
       GPQA: 0.304
       MATH100: 0.505
@@ -916,7 +1112,7 @@
       JMMLU: 0.461
       JHumanEval: 0.251
     en_pre:
-      avg: 0.426
+      avg: 0.427
       OpenBookQA: 0.312
       TriviaQA: 0.435
       HellaSwag: 0.516
@@ -925,7 +1121,7 @@
       MMLU: 0.538
       GSM8K: 0.275
       MATH: 0.144
-      BBH: 0.384
+      BBH: 0.388
       HumanEval: 0.286
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
   model_id: tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
@@ -941,8 +1137,8 @@
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1
   results:
     ja_post:
-      avg: 0.245
-      JEMHopQA: 0.274
+      avg: 0.24
+      JamC-QA: 0.372
       MMLU-ProX: 0.19
       GPQA: 0.259
       MATH100: 0.263
@@ -1010,7 +1206,7 @@
       MMLU: 0.687
       GSM8K: 0.678
       MATH: 0.33
-      BBH: 0.664
+      BBH: 0.669
       HumanEval: 0.529
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
   model_id: tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
@@ -1026,8 +1222,8 @@
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1
   results:
     ja_post:
-      avg: 0.402
-      JEMHopQA: 0.465
+      avg: 0.354
+      JamC-QA: 0.464
       MMLU-ProX: 0.372
       GPQA: 0.283
       MATH100: 0.374
@@ -1095,7 +1291,7 @@
       MMLU: 0.749
       GSM8K: 0.732
       MATH: 0.416
-      BBH: 0.765
+      BBH: 0.766
       HumanEval: 0.658
 - id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
   model_id: tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
@@ -1111,8 +1307,8 @@
   url: https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1
   results:
     ja_post:
-      avg: 0.517
-      JEMHopQA: 0.681
+      avg: 0.421
+      JamC-QA: 0.531
       MMLU-ProX: 0.452
       GPQA: 0.333
       MATH100: 0.465
@@ -1171,7 +1367,7 @@
       JMMLU: 0.239
       JHumanEval: 0.073
     en_pre:
-      avg: 0.31
+      avg: 0.309
       OpenBookQA: 0.304
       TriviaQA: 0.358
       HellaSwag: 0.471
@@ -1180,7 +1376,7 @@
       MMLU: 0.262
       GSM8K: 0.016
       MATH: 0.008
-      BBH: 0.276
+      BBH: 0.271
       HumanEval: 0.07
 - id: google/gemma-3-1b-it
   model_id: google/gemma-3-1b-it
@@ -1196,8 +1392,8 @@
   url: https://huggingface.co/google/gemma-3-1b-it
   results:
     ja_post:
-      avg: 0.17
-      JEMHopQA: 0.168
+      avg: 0.145
+      JamC-QA: 0.249
       MMLU-ProX: 0.148
       GPQA: 0.248
       MATH100: 0.172
@@ -1281,8 +1477,8 @@
   url: https://huggingface.co/google/gemma-3-4b-it
   results:
     ja_post:
-      avg: 0.448
-      JEMHopQA: 0.45
+      avg: 0.35
+      JamC-QA: 0.285
       MMLU-ProX: 0.335
       GPQA: 0.246
       MATH100: 0.606
@@ -1350,7 +1546,7 @@
       MMLU: 0.737
       GSM8K: 0.703
       MATH: 0.398
-      BBH: 0.683
+      BBH: 0.681
       HumanEval: 0.445
 - id: google/gemma-3-12b-it
   model_id: google/gemma-3-12b-it
@@ -1366,8 +1562,8 @@
   url: https://huggingface.co/google/gemma-3-12b-it
   results:
     ja_post:
-      avg: 0.597
-      JEMHopQA: 0.525
+      avg: 0.474
+      JamC-QA: 0.401
       MMLU-ProX: 0.527
       GPQA: 0.373
       MATH100: 0.798
@@ -1426,7 +1622,7 @@
       JMMLU: 0.724
       JHumanEval: 0.473
     en_pre:
-      avg: 0.677
+      avg: 0.675
       OpenBookQA: 0.414
       TriviaQA: 0.809
       HellaSwag: 0.667
@@ -1435,7 +1631,7 @@
       MMLU: 0.78
       GSM8K: 0.801
       MATH: 0.52
-      BBH: 0.732
+      BBH: 0.711
       HumanEval: 0.507
 - id: google/gemma-3-27b-it
   model_id: google/gemma-3-27b-it
@@ -1451,8 +1647,8 @@
   url: https://huggingface.co/google/gemma-3-27b-it
   results:
     ja_post:
-      avg: 0.658
-      JEMHopQA: 0.607
+      avg: 0.522
+      JamC-QA: 0.488
       MMLU-ProX: 0.609
       GPQA: 0.417
       MATH100: 0.859
@@ -1500,8 +1696,8 @@
   url: https://platform.openai.com/docs/models
   results:
     ja_post:
-      avg: 0.808
-      JEMHopQA: 0.856
+      avg: 0.645
+      JamC-QA: 0.79
       MMLU-ProX: 0.772
       GPQA: 0.603
       MATH100: 0.899
@@ -1549,8 +1745,8 @@
   url: https://platform.openai.com/docs/models
   results:
     ja_post:
-      avg: 0.71
-      JEMHopQA: 0.813
+      avg: 0.576
+      JamC-QA: 0.747
       MMLU-ProX: 0.685
       GPQA: 0.453
       MATH100: 0.758
@@ -1598,8 +1794,8 @@
   url: https://platform.openai.com/docs/models
   results:
     ja_post:
-      avg: 0.891
-      JEMHopQA: 0.9
+      avg: 0.703
+      JamC-QA: 0.858
       MMLU-ProX: 0.849
       GPQA: 0.786
       MATH100: 0.98
@@ -1647,8 +1843,8 @@
   url: https://huggingface.co/openai/gpt-oss-20b
   results:
     ja_post:
-      avg: 0.727
-      JEMHopQA: 0.506
+      avg: 0.568
+      JamC-QA: 0.403
       MMLU-ProX: 0.702
       GPQA: 0.571
       MATH100: 0.929
@@ -1696,8 +1892,8 @@
   url: https://huggingface.co/openai/gpt-oss-120b
   results:
     ja_post:
-      avg: 0.79
-      JEMHopQA: 0.635
+      avg: 0.614
+      JamC-QA: 0.516
       MMLU-ProX: 0.756
       GPQA: 0.663
       MATH100: 0.97
@@ -1756,7 +1952,7 @@
       JMMLU: 0.479
       JHumanEval: 0.32
     en_pre:
-      avg: 0.545
+      avg: 0.546
       OpenBookQA: 0.38
       TriviaQA: 0.702
       HellaSwag: 0.609
@@ -1765,7 +1961,7 @@
       MMLU: 0.651
       GSM8K: 0.507
       MATH: 0.214
-      BBH: 0.616
+      BBH: 0.626
       HumanEval: 0.364
 - id: meta-llama/Meta-Llama-3.1-8B-Instruct
   model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
@@ -1781,8 +1977,8 @@
   url: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct
   results:
     ja_post:
-      avg: 0.403
-      JEMHopQA: 0.482
+      avg: 0.317
+      JamC-QA: 0.31
       MMLU-ProX: 0.306
       GPQA: 0.261
       MATH100: 0.384
@@ -1841,7 +2037,7 @@
       JMMLU: 0.669
       JHumanEval: 0.462
     en_pre:
-      avg: 0.671
+      avg: 0.687
       OpenBookQA: 0.45
       TriviaQA: 0.829
       HellaSwag: 0.69
@@ -1850,7 +2046,7 @@
       MMLU: 0.786
       GSM8K: 0.798
       MATH: 0.434
-      BBH: 0.655
+      BBH: 0.807
       HumanEval: 0.546
 - id: nvidia/Llama-3.1-Nemotron-Nano-8B-v1
   model_id: nvidia/Llama-3.1-Nemotron-Nano-8B-v1
@@ -1866,8 +2062,8 @@
   url: https://huggingface.co/nvidia/Llama-3.1-Nemotron-Nano-8B-v1
   results:
     ja_post:
-      avg: 0.55
-      JEMHopQA: 0.202
+      avg: 0.423
+      JamC-QA: 0.264
       MMLU-ProX: 0.489
       GPQA: 0.339
       MATH100: 0.919
@@ -1915,8 +2111,8 @@
   url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
   results:
     ja_post:
-      avg: 0.389
-      JEMHopQA: 0.549
+      avg: 0.326
+      JamC-QA: 0.414
       MMLU-ProX: 0.306
       GPQA: 0.239
       MATH100: 0.364
@@ -1975,7 +2171,7 @@
       JMMLU: 0.59
       JHumanEval: 0.491
     en_pre:
-      avg: 0.597
+      avg: 0.605
       OpenBookQA: 0.372
       TriviaQA: 0.665
       HellaSwag: 0.597
@@ -1984,7 +2180,7 @@
       MMLU: 0.666
       GSM8K: 0.699
       MATH: 0.39
-      BBH: 0.589
+      BBH: 0.666
       HumanEval: 0.557
 - id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
   model_id: tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
@@ -2000,8 +2196,8 @@
   url: https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5
   results:
     ja_post:
-      avg: 0.451
-      JEMHopQA: 0.602
+      avg: 0.374
+      JamC-QA: 0.496
       MMLU-ProX: 0.369
       GPQA: 0.295
       MATH100: 0.404
@@ -2060,7 +2256,7 @@
       JMMLU: 0.26
       JHumanEval: 0.15
     en_pre:
-      avg: 0.339
+      avg: 0.34
       OpenBookQA: 0.3
       TriviaQA: 0.388
       HellaSwag: 0.477
@@ -2069,7 +2265,7 @@
       MMLU: 0.313
       GSM8K: 0.049
       MATH: 0.02
-      BBH: 0.303
+      BBH: 0.309
       HumanEval: 0.193
 - id: meta-llama/Llama-3.2-3B
   model_id: meta-llama/Llama-3.2-3B
@@ -2105,7 +2301,7 @@
       MMLU: 0.558
       GSM8K: 0.262
       MATH: 0.07
-      BBH: 0.466
+      BBH: 0.467
       HumanEval: 0.285
 - id: meta-llama/Llama-3.3-70B-Instruct
   model_id: meta-llama/Llama-3.3-70B-Instruct
@@ -2121,8 +2317,8 @@
   url: https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct
   results:
     ja_post:
-      avg: 0.603
-      JEMHopQA: 0.557
+      avg: 0.491
+      JamC-QA: 0.484
       MMLU-ProX: 0.607
       GPQA: 0.453
       MATH100: 0.646
@@ -2170,8 +2366,8 @@
   url: https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1
   results:
     ja_post:
-      avg: 0.716
-      JEMHopQA: 0.541
+      avg: 0.555
+      JamC-QA: 0.446
       MMLU-ProX: 0.687
       GPQA: 0.531
       MATH100: 0.919
@@ -2230,7 +2426,7 @@
       JMMLU: 0.742
       JHumanEval: 0.604
     en_pre:
-      avg: 0.711
+      avg: 0.719
       OpenBookQA: 0.424
       TriviaQA: 0.817
       HellaSwag: 0.683
@@ -2239,7 +2435,7 @@
       MMLU: 0.802
       GSM8K: 0.863
       MATH: 0.496
-      BBH: 0.754
+      BBH: 0.84
       HumanEval: 0.709
 - id: tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
   model_id: tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
@@ -2255,8 +2451,8 @@
   url: https://huggingface.co/tokyotech-llm/Llama-3.3-Swallow-70B-Instruct-v0.4
   results:
     ja_post:
-      avg: 0.594
-      JEMHopQA: 0.658
+      avg: 0.486
+      JamC-QA: 0.562
       MMLU-ProX: 0.533
       GPQA: 0.355
       MATH100: 0.697
@@ -2315,7 +2511,7 @@
       JMMLU: 0.736
       JHumanEval: 0.33
     en_pre:
-      avg: 0.639
+      avg: 0.606
       OpenBookQA: 0.432
       TriviaQA: 0.75
       HellaSwag: 0.689
@@ -2324,7 +2520,7 @@
       MMLU: 0.78
       GSM8K: 0.811
       MATH: 0.522
-      BBH: 0.618
+      BBH: 0.289
       HumanEval: 0.359
 - id: meta-llama/Llama-4-Scout-17B-16E-Instruct
   model_id: meta-llama/Llama-4-Scout-17B-16E-Instruct
@@ -2340,8 +2536,8 @@
   url: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
   results:
     ja_post:
-      avg: 0.663
-      JEMHopQA: 0.512
+      avg: 0.55
+      JamC-QA: 0.579
       MMLU-ProX: 0.687
       GPQA: 0.54
       MATH100: 0.758
@@ -2400,7 +2596,7 @@
       JMMLU: 0.242
       JHumanEval: 0.001
     en_pre:
-      avg: 0.293
+      avg: 0.292
       OpenBookQA: 0.244
       TriviaQA: 0.301
       HellaSwag: 0.462
@@ -2409,7 +2605,7 @@
       MMLU: 0.248
       GSM8K: 0.017
       MATH: 0.018
-      BBH: 0.276
+      BBH: 0.274
       HumanEval: 0.008
 - id: llm-jp/llm-jp-3-3.7b
   model_id: llm-jp/llm-jp-3-3.7b
@@ -2481,7 +2677,7 @@
       MMLU: 0.373
       GSM8K: 0.086
       MATH: 0.022
-      BBH: 0.362
+      BBH: 0.361
       HumanEval: 0.02
 - id: llm-jp/llm-jp-3-13b
   model_id: llm-jp/llm-jp-3-13b
@@ -2508,7 +2704,7 @@
       JMMLU: 0.399
       JHumanEval: 0.023
     en_pre:
-      avg: 0.399
+      avg: 0.397
       OpenBookQA: 0.332
       TriviaQA: 0.602
       HellaSwag: 0.57
@@ -2517,7 +2713,7 @@
       MMLU: 0.462
       GSM8K: 0.158
       MATH: 0.026
-      BBH: 0.402
+      BBH: 0.39
       HumanEval: 0.032
 - id: llm-jp/llm-jp-3.1-1.8b-instruct4
   model_id: llm-jp/llm-jp-3.1-1.8b-instruct4
@@ -2533,8 +2729,8 @@
   url: https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4
   results:
     ja_post:
-      avg: 0.271
-      JEMHopQA: 0.342
+      avg: 0.217
+      JamC-QA: 0.348
       MMLU-ProX: 0.195
       GPQA: 0.239
       MATH100: 0.212
@@ -2582,8 +2778,8 @@
   url: https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4
   results:
     ja_post:
-      avg: 0.384
-      JEMHopQA: 0.698
+      avg: 0.271
+      JamC-QA: 0.509
       MMLU-ProX: 0.296
       GPQA: 0.23
       MATH100: 0.232
@@ -2631,8 +2827,8 @@
   url: https://huggingface.co/google/medgemma-27b-it
   results:
     ja_post:
-      avg: 0.463
-      JEMHopQA: 0.537
+      avg: 0.389
+      JamC-QA: 0.456
       MMLU-ProX: 0.606
       GPQA: 0.35
       MATH100: 0.818
@@ -2680,8 +2876,8 @@
   url: https://platform.openai.com/docs/models
   results:
     ja_post:
-      avg: 0.87
-      JEMHopQA: 0.852
+      avg: 0.692
+      JamC-QA: 0.851
       MMLU-ProX: 0.835
       GPQA: 0.766
       MATH100: 0.97
@@ -2729,8 +2925,8 @@
   url: https://platform.openai.com/docs/models
   results:
     ja_post:
-      avg: 0.785
-      JEMHopQA: 0.607
+      avg: 0.613
+      JamC-QA: 0.507
       MMLU-ProX: 0.76
       GPQA: 0.685
       MATH100: 0.939
@@ -2778,8 +2974,8 @@
   url: https://huggingface.co/microsoft/phi-4
   results:
     ja_post:
-      avg: 0.646
-      JEMHopQA: 0.589
+      avg: 0.507
+      JamC-QA: 0.444
       MMLU-ProX: 0.638
       GPQA: 0.435
       MATH100: 0.798
@@ -2827,8 +3023,8 @@
   url: https://huggingface.co/microsoft/phi-4-reasoning-plus
   results:
     ja_post:
-      avg: 0.437
-      JEMHopQA: 0.015
+      avg: 0.31
+      JamC-QA: 0.0
       MMLU-ProX: 0.118
       GPQA: 0.563
       MATH100: 0.737
@@ -2887,7 +3083,7 @@
       JMMLU: 0.256
       JHumanEval: 0.057
     en_pre:
-      avg: 0.274
+      avg: 0.282
       OpenBookQA: 0.28
       TriviaQA: 0.129
       HellaSwag: 0.425
@@ -2896,7 +3092,7 @@
       MMLU: 0.294
       GSM8K: 0.072
       MATH: 0.034
-      BBH: 0.122
+      BBH: 0.202
       HumanEval: 0.08
 - id: pfnet/plamo-2-8b
   model_id: pfnet/plamo-2-8b
@@ -2923,7 +3119,7 @@
       JMMLU: 0.536
       JHumanEval: 0.213
     en_pre:
-      avg: 0.474
+      avg: 0.486
       OpenBookQA: 0.346
       TriviaQA: 0.584
       HellaSwag: 0.56
@@ -2932,8 +3128,152 @@
       MMLU: 0.575
       GSM8K: 0.55
       MATH: 0.2
-      BBH: 0.26
+      BBH: 0.387
       HumanEval: 0.26
+- id: pfnet/plamo-3-nict-2b-base
+  model_id: pfnet/plamo-3-nict-2b-base
+  name: PLaMo 3 NICT 2B Base
+  date: '2025-11-14'
+  params: 2.6
+  active_params: 2.6
+  family: PLaMo 3
+  base: －
+  sortkey: plamo 3 nict
+  is_post: false
+  url: https://huggingface.co/pfnet/plamo-3-nict-2b-base
+  results:
+    ja_pre:
+      avg: 0.387
+      JComQA: 0.617
+      JEMHopQA: 0.447
+      NIILC: 0.548
+      JSQuAD: 0.866
+      XLSum: 0.084
+      MGSM: 0.188
+      WMT20enja: 0.272
+      WMT20jaen: 0.166
+      JMMLU: 0.391
+      JHumanEval: 0.295
+    en_pre:
+      avg: 0.371
+      OpenBookQA: 0.298
+      TriviaQA: 0.296
+      HellaSwag: 0.443
+      SQuAD2: 0.531
+      XWINO: 0.812
+      MMLU: 0.417
+      GSM8K: 0.193
+      MATH: 0.14
+      BBH: 0.331
+      HumanEval: 0.251
+- id: pfnet/plamo-3-nict-8b-base
+  model_id: pfnet/plamo-3-nict-8b-base
+  name: PLaMo 3 NICT 8B Base
+  date: '2025-11-14'
+  params: 8.1
+  active_params: 8.1
+  family: PLaMo 3
+  base: －
+  sortkey: plamo 3 nict
+  is_post: false
+  url: https://huggingface.co/pfnet/plamo-3-nict-8b-base
+  results:
+    ja_pre:
+      avg: 0.495
+      JComQA: 0.825
+      JEMHopQA: 0.524
+      NIILC: 0.645
+      JSQuAD: 0.926
+      XLSum: 0.126
+      MGSM: 0.436
+      WMT20enja: 0.301
+      WMT20jaen: 0.21
+      JMMLU: 0.573
+      JHumanEval: 0.384
+    en_pre:
+      avg: 0.527
+      OpenBookQA: 0.344
+      TriviaQA: 0.553
+      HellaSwag: 0.558
+      SQuAD2: 0.645
+      XWINO: 0.871
+      MMLU: 0.598
+      GSM8K: 0.534
+      MATH: 0.308
+      BBH: 0.568
+      HumanEval: 0.295
+- id: pfnet/plamo-3-nict-31b-base
+  model_id: pfnet/plamo-3-nict-31b-base
+  name: PLaMo 3 NICT 31B Base
+  date: '2025-11-14'
+  params: 32
+  active_params: 32
+  family: PLaMo 3
+  base: －
+  sortkey: plamo 3 nict
+  is_post: false
+  url: https://huggingface.co/pfnet/plamo-3-nict-31b-base
+  results:
+    ja_pre:
+      avg: 0.583
+      JComQA: 0.955
+      JEMHopQA: 0.625
+      NIILC: 0.694
+      JSQuAD: 0.936
+      XLSum: 0.201
+      MGSM: 0.68
+      WMT20enja: 0.313
+      WMT20jaen: 0.236
+      JMMLU: 0.679
+      JHumanEval: 0.507
+    en_pre:
+      avg: 0.632
+      OpenBookQA: 0.382
+      TriviaQA: 0.668
+      HellaSwag: 0.628
+      SQuAD2: 0.728
+      XWINO: 0.888
+      MMLU: 0.733
+      GSM8K: 0.782
+      MATH: 0.45
+      BBH: 0.769
+      HumanEval: 0.29
+- id: Qwen/Qwen2.5-0.5B
+  model_id: Qwen/Qwen2.5-0.5B
+  name: Qwen2.5-0.5B
+  date: '2024-09-19'
+  params: 0.5
+  active_params: 0.5
+  family: Qwen2.5
+  base: －
+  sortkey: qwen2.5
+  is_post: false
+  url: https://huggingface.co/Qwen/Qwen2.5-0.5B
+  results:
+    ja_pre:
+      avg: 0.234
+      JComQA: 0.369
+      JEMHopQA: 0.389
+      NIILC: 0.139
+      JSQuAD: 0.635
+      XLSum: 0.101
+      MGSM: 0.076
+      WMT20enja: 0.058
+      WMT20jaen: 0.064
+      JMMLU: 0.304
+      JHumanEval: 0.203
+    en_pre:
+      avg: 0.367
+      OpenBookQA: 0.266
+      TriviaQA: 0.19
+      HellaSwag: 0.399
+      SQuAD2: 0.501
+      XWINO: 0.768
+      MMLU: 0.479
+      GSM8K: 0.341
+      MATH: 0.148
+      BBH: 0.299
+      HumanEval: 0.277
 - id: Qwen/Qwen2.5-1.5B
   model_id: Qwen/Qwen2.5-1.5B
   name: Qwen2.5-1.5B
@@ -2959,7 +3299,7 @@
       JMMLU: 0.438
       JHumanEval: 0.308
     en_pre:
-      avg: 0.49
+      avg: 0.492
       OpenBookQA: 0.342
       TriviaQA: 0.397
       HellaSwag: 0.499
@@ -2968,7 +3308,7 @@
       MMLU: 0.61
       GSM8K: 0.611
       MATH: 0.314
-      BBH: 0.413
+      BBH: 0.438
       HumanEval: 0.356
 - id: Qwen/Qwen2.5-3B
   model_id: Qwen/Qwen2.5-3B
@@ -2995,7 +3335,7 @@
       JMMLU: 0.529
       JHumanEval: 0.404
     en_pre:
-      avg: 0.534
+      avg: 0.545
       OpenBookQA: 0.36
       TriviaQA: 0.504
       HellaSwag: 0.553
@@ -3004,7 +3344,7 @@
       MMLU: 0.657
       GSM8K: 0.58
       MATH: 0.44
-      BBH: 0.442
+      BBH: 0.554
       HumanEval: 0.387
 - id: Qwen/Qwen2.5-7B
   model_id: Qwen/Qwen2.5-7B
@@ -3031,7 +3371,7 @@
       JMMLU: 0.634
       JHumanEval: 0.507
     en_pre:
-      avg: 0.63
+      avg: 0.643
       OpenBookQA: 0.392
       TriviaQA: 0.601
       HellaSwag: 0.6
@@ -3040,7 +3380,7 @@
       MMLU: 0.742
       GSM8K: 0.832
       MATH: 0.51
-      BBH: 0.562
+      BBH: 0.69
       HumanEval: 0.554
 - id: Qwen/Qwen2.5-7B-Instruct
   model_id: Qwen/Qwen2.5-7B-Instruct
@@ -3048,7 +3388,7 @@
   date: '2024-09-19'
   params: 7.6
   active_params: 7.6
-  family: Qwen2
+  family: Qwen2.5
   pre_training: Qwen2.5-7B
   reasoning: N/A
   sortkey: qwen2.5
@@ -3056,8 +3396,8 @@
   url: https://huggingface.co/Qwen/Qwen2.5-7B-Instruct
   results:
     ja_post:
-      avg: 0.502
-      JEMHopQA: 0.372
+      avg: 0.411
+      JamC-QA: 0.365
       MMLU-ProX: 0.452
       GPQA: 0.315
       MATH100: 0.636
@@ -3116,7 +3456,7 @@
       JMMLU: 0.69
       JHumanEval: 0.55
     en_pre:
-      avg: 0.66
+      avg: 0.666
       OpenBookQA: 0.412
       TriviaQA: 0.666
       HellaSwag: 0.642
@@ -3125,7 +3465,7 @@
       MMLU: 0.797
       GSM8K: 0.793
       MATH: 0.53
-      BBH: 0.686
+      BBH: 0.751
       HumanEval: 0.544
 - id: Qwen/Qwen2.5-14B-Instruct
   model_id: Qwen/Qwen2.5-14B-Instruct
@@ -3141,8 +3481,8 @@
   url: https://huggingface.co/Qwen/Qwen2.5-14B-Instruct
   results:
     ja_post:
-      avg: 0.596
-      JEMHopQA: 0.553
+      avg: 0.471
+      JamC-QA: 0.444
       MMLU-ProX: 0.556
       GPQA: 0.348
       MATH100: 0.768
@@ -3201,7 +3541,7 @@
       JMMLU: 0.751
       JHumanEval: 0.637
     en_pre:
-      avg: 0.67
+      avg: 0.68
       OpenBookQA: 0.406
       TriviaQA: 0.664
       HellaSwag: 0.656
@@ -3210,7 +3550,7 @@
       MMLU: 0.832
       GSM8K: 0.718
       MATH: 0.6
-      BBH: 0.717
+      BBH: 0.819
       HumanEval: 0.523
 - id: Qwen/Qwen2.5-32B-Instruct
   model_id: Qwen/Qwen2.5-32B-Instruct
@@ -3226,8 +3566,8 @@
   url: https://huggingface.co/Qwen/Qwen2.5-32B-Instruct
   results:
     ja_post:
-      avg: 0.642
-      JEMHopQA: 0.604
+      avg: 0.504
+      JamC-QA: 0.476
       MMLU-ProX: 0.623
       GPQA: 0.411
       MATH100: 0.768
@@ -3286,7 +3626,7 @@
       JMMLU: 0.804
       JHumanEval: 0.648
     en_pre:
-      avg: 0.709
+      avg: 0.721
       OpenBookQA: 0.416
       TriviaQA: 0.76
       HellaSwag: 0.685
@@ -3295,7 +3635,7 @@
       MMLU: 0.861
       GSM8K: 0.87
       MATH: 0.626
-      BBH: 0.727
+      BBH: 0.847
       HumanEval: 0.554
 - id: Qwen/Qwen3-0.6B
   model_id: Qwen/Qwen3-0.6B
@@ -3311,8 +3651,8 @@
   url: https://huggingface.co/Qwen/Qwen3-0.6B
   results:
     ja_post:
-      avg: 0.353
-      JEMHopQA: 0.221
+      avg: 0.257
+      JamC-QA: 0.25
       MMLU-ProX: 0.295
       GPQA: 0.237
       MATH100: 0.606
@@ -3371,7 +3711,7 @@
       JMMLU: 0.373
       JHumanEval: 0.216
     en_pre:
-      avg: 0.397
+      avg: 0.42
       OpenBookQA: 0.268
       TriviaQA: 0.2
       HellaSwag: 0.41
@@ -3380,7 +3720,7 @@
       MMLU: 0.523
       GSM8K: 0.483
       MATH: 0.334
-      BBH: 0.17
+      BBH: 0.407
       HumanEval: 0.295
 - id: Qwen/Qwen3-1.7B
   model_id: Qwen/Qwen3-1.7B
@@ -3396,8 +3736,8 @@
   url: https://huggingface.co/Qwen/Qwen3-1.7B
   results:
     ja_post:
-      avg: 0.533
-      JEMHopQA: 0.23
+      avg: 0.428
+      JamC-QA: 0.278
       MMLU-ProX: 0.514
       GPQA: 0.315
       MATH100: 0.859
@@ -3456,7 +3796,7 @@
       JMMLU: 0.501
       JHumanEval: 0.35
     en_pre:
-      avg: 0.516
+      avg: 0.526
       OpenBookQA: 0.348
       TriviaQA: 0.362
       HellaSwag: 0.493
@@ -3465,7 +3805,7 @@
       MMLU: 0.626
       GSM8K: 0.629
       MATH: 0.456
-      BBH: 0.431
+      BBH: 0.535
       HumanEval: 0.462
 - id: Qwen/Qwen3-4B
   model_id: Qwen/Qwen3-4B
@@ -3481,8 +3821,8 @@
   url: https://huggingface.co/Qwen/Qwen3-4B
   results:
     ja_post:
-      avg: 0.646
-      JEMHopQA: 0.389
+      avg: 0.502
+      JamC-QA: 0.328
       MMLU-ProX: 0.643
       GPQA: 0.44
       MATH100: 0.919
@@ -3541,7 +3881,7 @@
       JMMLU: 0.649
       JHumanEval: 0.537
     en_pre:
-      avg: 0.61
+      avg: 0.622
       OpenBookQA: 0.382
       TriviaQA: 0.508
       HellaSwag: 0.555
@@ -3550,7 +3890,7 @@
       MMLU: 0.729
       GSM8K: 0.719
       MATH: 0.52
-      BBH: 0.594
+      BBH: 0.713
       HumanEval: 0.617
 - id: Qwen/Qwen3-8B-Base
   model_id: Qwen/Qwen3-8B-Base
@@ -3577,7 +3917,7 @@
       JMMLU: 0.689
       JHumanEval: 0.595
     en_pre:
-      avg: 0.667
+      avg: 0.679
       OpenBookQA: 0.382
       TriviaQA: 0.618
       HellaSwag: 0.594
@@ -3586,7 +3926,7 @@
       MMLU: 0.765
       GSM8K: 0.855
       MATH: 0.622
-      BBH: 0.655
+      BBH: 0.775
       HumanEval: 0.669
 - id: Qwen/Qwen3-8B
   model_id: Qwen/Qwen3-8B
@@ -3602,8 +3942,8 @@
   url: https://huggingface.co/Qwen/Qwen3-8B
   results:
     ja_post:
-      avg: 0.691
-      JEMHopQA: 0.468
+      avg: 0.542
+      JamC-QA: 0.398
       MMLU-ProX: 0.696
       GPQA: 0.491
       MATH100: 0.929
@@ -3662,7 +4002,7 @@
       JMMLU: 0.729
       JHumanEval: 0.709
     en_pre:
-      avg: 0.66
+      avg: 0.692
       OpenBookQA: 0.416
       TriviaQA: 0.657
       HellaSwag: 0.625
@@ -3671,7 +4011,7 @@
       MMLU: 0.806
       GSM8K: 0.799
       MATH: 0.548
-      BBH: 0.466
+      BBH: 0.787
       HumanEval: 0.709
 - id: Qwen/Qwen3-14B
   model_id: Qwen/Qwen3-14B
@@ -3687,8 +4027,8 @@
   url: https://huggingface.co/Qwen/Qwen3-14B
   results:
     ja_post:
-      avg: 0.75
-      JEMHopQA: 0.609
+      avg: 0.578
+      JamC-QA: 0.455
       MMLU-ProX: 0.737
       GPQA: 0.556
       MATH100: 0.939
@@ -3736,8 +4076,8 @@
   url: https://huggingface.co/Qwen/Qwen3-32B
   results:
     ja_post:
-      avg: 0.756
-      JEMHopQA: 0.588
+      avg: 0.588
+      JamC-QA: 0.479
       MMLU-ProX: 0.746
       GPQA: 0.571
       MATH100: 0.949
@@ -3796,7 +4136,7 @@
       JMMLU: 0.743
       JHumanEval: 0.641
     en_pre:
-      avg: 0.691
+      avg: 0.699
       OpenBookQA: 0.414
       TriviaQA: 0.653
       HellaSwag: 0.631
@@ -3805,7 +4145,7 @@
       MMLU: 0.812
       GSM8K: 0.828
       MATH: 0.634
-      BBH: 0.72
+      BBH: 0.804
       HumanEval: 0.694
 - id: Qwen/Qwen3-235B-A22B-Instruct-2507
   model_id: Qwen/Qwen3-235B-A22B-Instruct-2507
@@ -3821,8 +4161,8 @@
   url: https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507
   results:
     ja_post:
-      avg: 0.821
-      JEMHopQA: 0.735
+      avg: 0.642
+      JamC-QA: 0.636
       MMLU-ProX: 0.799
       GPQA: 0.701
       MATH100: 0.97
@@ -3870,8 +4210,8 @@
   url: https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507
   results:
     ja_post:
-      avg: 0.823
-      JEMHopQA: 0.651
+      avg: 0.66
+      JamC-QA: 0.659
       MMLU-ProX: 0.819
       GPQA: 0.739
       MATH100: 0.97
@@ -3905,6 +4245,55 @@
       roleplay: 0.908
       stem: 0.952
       writing: 0.908
+- id: rinna/qwq-bakeneko-32b
+  model_id: rinna/qwq-bakeneko-32b
+  name: QwQ Bakeneko 32B
+  date: '2025-03-13'
+  params: 33
+  active_params: 33
+  family: Qwen2.5
+  pre_training: Qwen2.5 Bakeneko 32B
+  reasoning: 'on'
+  sortkey: qwq bakeneko
+  is_post: true
+  url: https://huggingface.co/rinna/qwq-bakeneko-32b
+  results:
+    ja_post:
+      avg: 0.546
+      JamC-QA: 0.495
+      MMLU-ProX: 0.677
+      GPQA: 0.487
+      MATH100: 0.859
+      JHumanEval: 0.867
+      __MIFEvalJa: 0.584
+    en_post:
+      avg: 0.718
+      HellaSwag: 0.903
+      MMLU-Pro: 0.773
+      GPQA: 0.611
+      MATH500: 0.942
+      AIME: 0.567
+      LCB: 0.513
+    ja_mtb:
+      avg: 0.879
+      coding: 0.839
+      extraction: 0.903
+      humanities: 0.886
+      math: 0.969
+      reasoning: 0.838
+      roleplay: 0.857
+      stem: 0.892
+      writing: 0.85
+    en_mtb:
+      avg: 0.871
+      coding: 0.848
+      extraction: 0.821
+      humanities: 0.883
+      math: 0.967
+      reasoning: 0.816
+      roleplay: 0.851
+      stem: 0.892
+      writing: 0.89
 - id: sbintuitions/sarashina2-7b
   model_id: sbintuitions/sarashina2-7b
   name: Sarashina2-7B
@@ -3930,7 +4319,7 @@
       JMMLU: 0.384
       JHumanEval: 0.121
     en_pre:
-      avg: 0.383
+      avg: 0.381
       OpenBookQA: 0.346
       TriviaQA: 0.479
       HellaSwag: 0.532
@@ -3939,7 +4328,7 @@
       MMLU: 0.425
       GSM8K: 0.101
       MATH: 0.034
-      BBH: 0.373
+      BBH: 0.349
       HumanEval: 0.146
 - id: sbintuitions/sarashina2-13b
   model_id: sbintuitions/sarashina2-13b
@@ -3966,7 +4355,7 @@
       JMMLU: 0.473
       JHumanEval: 0.161
     en_pre:
-      avg: 0.418
+      avg: 0.416
       OpenBookQA: 0.34
       TriviaQA: 0.548
       HellaSwag: 0.562
@@ -3975,7 +4364,7 @@
       MMLU: 0.496
       GSM8K: 0.158
       MATH: 0.036
-      BBH: 0.442
+      BBH: 0.422
       HumanEval: 0.198
 - id: sbintuitions/sarashina2-70b
   model_id: sbintuitions/sarashina2-70b
@@ -4002,7 +4391,7 @@
       JMMLU: 0.592
       JHumanEval: 0.235
     en_pre:
-      avg: 0.491
+      avg: 0.492
       OpenBookQA: 0.388
       TriviaQA: 0.537
       HellaSwag: 0.628
@@ -4011,7 +4400,7 @@
       MMLU: 0.63
       GSM8K: 0.011
       MATH: 0.206
-      BBH: 0.639
+      BBH: 0.643
       HumanEval: 0.281
 - id: sbintuitions/sarashina2.2-0.5b
   model_id: sbintuitions/sarashina2.2-0.5b
@@ -4047,7 +4436,7 @@
       MMLU: 0.262
       GSM8K: 0.246
       MATH: 0.13
-      BBH: 0.312
+      BBH: 0.305
       HumanEval: 0.223
 - id: sbintuitions/sarashina2.2-1b
   model_id: sbintuitions/sarashina2.2-1b
@@ -4074,7 +4463,7 @@
       JMMLU: 0.371
       JHumanEval: 0.215
     en_pre:
-      avg: 0.415
+      avg: 0.414
       OpenBookQA: 0.324
       TriviaQA: 0.289
       HellaSwag: 0.469
@@ -4083,7 +4472,7 @@
       MMLU: 0.4
       GSM8K: 0.403
       MATH: 0.206
-      BBH: 0.385
+      BBH: 0.376
       HumanEval: 0.342
 - id: sbintuitions/sarashina2.2-3b
   model_id: sbintuitions/sarashina2.2-3b
@@ -4119,7 +4508,7 @@
       MMLU: 0.572
       GSM8K: 0.624
       MATH: 0.31
-      BBH: 0.551
+      BBH: 0.543
       HumanEval: 0.53
 - id: sbintuitions/sarashina2.2-3b-instruct-v0.1
   model_id: sbintuitions/sarashina2.2-3b-instruct-v0.1
@@ -4135,8 +4524,8 @@
   url: https://huggingface.co/sbintuitions/sarashina2.2-3b-instruct-v0.1
   results:
     ja_post:
-      avg: 0.4
-      JEMHopQA: 0.434
+      avg: 0.318
+      JamC-QA: 0.498
       MMLU-ProX: 0.335
       GPQA: 0.301
       MATH100: 0.465
@@ -4195,7 +4584,7 @@
       JMMLU: 0.446
       JHumanEval: 0.231
     en_pre:
-      avg: 0.413
+      avg: 0.418
       OpenBookQA: 0.308
       TriviaQA: 0.332
       HellaSwag: 0.468
@@ -4204,5 +4593,5 @@
       MMLU: 0.546
       GSM8K: 0.379
       MATH: 0.162
-      BBH: 0.328
+      BBH: 0.376
       HumanEval: 0.254
