@@ -79,9 +79,9 @@ var swallow_leaderboard_tasks = function(queries) {
   let tasks = [];
 
   for (let query of queries) {
-    for (task of g_tasks[query[0]].tasks) {
-      if (task.name == query[1] || (query[1] == "__ALL__" && !task.collective)) {
-        tasks.push(task);
+    for (let t of g_tasks[query[0]].tasks) {
+      if (query[1] == t.name || query[1] == "__ALL__" || (query[1] == "*" && !t.collective) || (query[1] == "+" && !t.collective && !t.exclude_from_avg)) {
+        tasks.push({category: query[0], task: t});
       }
     }
   }
@@ -102,18 +102,36 @@ var swallow_leaderboard_chart_bar = function(element, config) {
     // Build series.
     let series = [];
     let labels = [];
-    for (var query of config.tasks) {
-      let data = [];
-      for (var model of models) {
-        data.push(model.results[query[0]][query[1]]);
-      }
-      const t = swallow_leaderboard_get_taskdef(query);
-      series.push({name: t.title, data: data});
-    }
+    let tasks = swallow_leaderboard_tasks(config.tasks);
 
-    // Build labels.
-    for (var model of models) {
-      labels.push(model.name);
+    if ("groupby" in config && config.groupby == "task") {
+      for (var model of models) {
+        let data = [];
+        for (var q of tasks) {
+          data.push(model.results[q.category][q.task.name]);
+        }
+        series.push({name: model.name, data: data});
+      }
+
+      // Build labels.
+      for (var q of tasks) {
+        labels.push(q.task.title);
+      }
+
+    } else {
+      for (var query of config.tasks) {
+        let data = [];
+        for (var model of models) {
+          data.push(model.results[query[0]][query[1]]);
+        }
+        const t = swallow_leaderboard_get_taskdef(query);
+        series.push({name: t.title, data: data});
+      }
+
+      // Build labels.
+      for (var model of models) {
+        labels.push(model.name);
+      }
     }
   
     // Determine the orientation.
@@ -146,6 +164,7 @@ var swallow_leaderboard_chart_bar = function(element, config) {
       xaxis: {
         categories: labels,
         labels: {
+          rotateAlways: true,
           hideOverlappingLabels: false,
           style: {
 //            fontSize: '9px',
@@ -248,6 +267,9 @@ var swallow_leaderboard_chart_radar = function(element, config) {
         tickAmount: 5,
         min: 0.,
         max: 1.,
+      },
+      legend: {
+        position: 'top',
       },
       tooltip: {
         marker: {

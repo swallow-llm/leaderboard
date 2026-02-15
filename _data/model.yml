@@ -18,6 +18,8 @@
     ja_post:
       avg: 0.582
       JamC-QA: 0.611
+      WMT20enja: 0.243
+      WMT20jaen: 0.215
       MMLU-ProX: 0.712
       GPQA: 0.527
       MATH100: 0.899
@@ -67,6 +69,8 @@
     ja_post:
       avg: 0.221
       JamC-QA: 0.366
+      WMT20enja: 0.01
+      WMT20jaen: 0.214
       MMLU-ProX: 0.221
       GPQA: 0.214
       MATH100: 0.172
@@ -116,6 +120,8 @@
     ja_post:
       avg: 0.325
       JamC-QA: 0.469
+      WMT20enja: 0.255
+      WMT20jaen: 0.228
       MMLU-ProX: 0.355
       GPQA: 0.266
       MATH100: 0.263
@@ -165,6 +171,8 @@
     ja_post:
       avg: 0.331
       JamC-QA: 0.495
+      WMT20enja: 0.237
+      WMT20jaen: 0.21
       MMLU-ProX: 0.31
       GPQA: 0.266
       MATH100: 0.354
@@ -214,6 +222,8 @@
     ja_post:
       avg: 0.346
       JamC-QA: 0.279
+      WMT20enja: 0.096
+      WMT20jaen: 0.144
       MMLU-ProX: 0.319
       GPQA: 0.31
       MATH100: 0.556
@@ -263,6 +273,8 @@
     ja_post:
       avg: 0.535
       JamC-QA: 0.461
+      WMT20enja: 0.21
+      WMT20jaen: 0.224
       MMLU-ProX: 0.642
       GPQA: 0.538
       MATH100: 0.859
@@ -312,6 +324,8 @@
     ja_post:
       avg: 0.382
       JamC-QA: 0.257
+      WMT20enja: 0.044
+      WMT20jaen: 0.082
       MMLU-ProX: 0.438
       GPQA: 0.4
       MATH100: 0.778
@@ -361,6 +375,8 @@
     ja_post:
       avg: 0.495
       JamC-QA: 0.414
+      WMT20enja: 0.171
+      WMT20jaen: 0.199
       MMLU-ProX: 0.591
       GPQA: 0.496
       MATH100: 0.737
@@ -410,6 +426,8 @@
     ja_post:
       avg: 0.535
       JamC-QA: 0.439
+      WMT20enja: 0.204
+      WMT20jaen: 0.211
       MMLU-ProX: 0.66
       GPQA: 0.536
       MATH100: 0.838
@@ -459,6 +477,8 @@
     ja_post:
       avg: 0.442
       JamC-QA: 0.393
+      WMT20enja: 0.191
+      WMT20jaen: 0.178
       MMLU-ProX: 0.525
       GPQA: 0.4
       MATH100: 0.788
@@ -508,6 +528,8 @@
     ja_post:
       avg: 0.491
       JamC-QA: 0.434
+      WMT20enja: 0.215
+      WMT20jaen: 0.196
       MMLU-ProX: 0.606
       GPQA: 0.464
       MATH100: 0.838
@@ -557,6 +579,8 @@
     ja_post:
       avg: 0.514
       JamC-QA: 0.524
+      WMT20enja: 0.245
+      WMT20jaen: 0.228
       MMLU-ProX: 0.631
       GPQA: 0.415
       MATH100: 0.788
@@ -606,6 +630,8 @@
     ja_post:
       avg: 0.426
       JamC-QA: 0.495
+      WMT20enja: 0.238
+      WMT20jaen: 0.223
       MMLU-ProX: 0.623
       GPQA: 0.455
       MATH100: 0.788
@@ -799,6 +825,8 @@
     ja_post:
       avg: 0.431
       JamC-QA: 0.487
+      WMT20enja: 0.0
+      WMT20jaen: 0.219
       MMLU-ProX: 0.63
       GPQA: 0.458
       MATH100: 0.788
@@ -832,6 +860,57 @@
       roleplay: 0.852
       stem: 0.868
       writing: 0.838
+- id: google/gemini-3-pro-preview
+  model_id: google/gemini-3-pro-preview
+  name: Gemini 3 Pro Preview (gemini-3-pro-preview)
+  date: '2025-11-18'
+  params: 0
+  active_params: 0
+  family: Gemini 3
+  pre_training: (private)
+  reasoning: on (high)
+  sortkey: gemini 3 pro preview (gemini 3 pro preview)
+  is_post: true
+  url: https://huggingface.co/google/gemini-3-pro-preview
+  results:
+    ja_post:
+      avg: 0.733
+      JamC-QA: 0.937
+      WMT20enja: 0.29
+      WMT20jaen: 0.268
+      MMLU-ProX: 0.873
+      GPQA: 0.844
+      MATH100: 0.949
+      JHumanEval: 0.97
+      __MIFEvalJa: 0.792
+    en_post:
+      avg: 0.927
+      HellaSwag: 0.948
+      MMLU-Pro: 0.885
+      GPQA: 0.924
+      MATH500: 0.986
+      AIME: 0.95
+      LCB: 0.866
+    ja_mtb:
+      avg: 0.906
+      coding: 0.902
+      extraction: 0.897
+      humanities: 0.934
+      math: 0.994
+      reasoning: 0.865
+      roleplay: 0.88
+      stem: 0.901
+      writing: 0.873
+    en_mtb:
+      avg: 0.907
+      coding: 0.882
+      extraction: 0.895
+      humanities: 0.932
+      math: 0.96
+      reasoning: 0.835
+      roleplay: 0.915
+      stem: 0.942
+      writing: 0.897
 - id: google/gemma-2-2b
   model_id: google/gemma-2-2b
   name: Gemma 2 2B
@@ -884,6 +963,8 @@
     ja_post:
       avg: 0.231
       JamC-QA: 0.28
+      WMT20enja: 0.147
+      WMT20jaen: 0.165
       MMLU-ProX: 0.214
       GPQA: 0.248
       MATH100: 0.202
@@ -969,6 +1050,8 @@
     ja_post:
       avg: 0.366
       JamC-QA: 0.385
+      WMT20enja: 0.223
+      WMT20jaen: 0.227
       MMLU-ProX: 0.423
       GPQA: 0.277
       MATH100: 0.444
@@ -1054,6 +1137,8 @@
     ja_post:
       avg: 0.41
       JamC-QA: 0.418
+      WMT20enja: 0.247
+      WMT20jaen: 0.236
       MMLU-ProX: 0.462
       GPQA: 0.304
       MATH100: 0.505
@@ -1139,6 +1224,8 @@
     ja_post:
       avg: 0.24
       JamC-QA: 0.372
+      WMT20enja: 0.21
+      WMT20jaen: 0.142
       MMLU-ProX: 0.19
       GPQA: 0.259
       MATH100: 0.263
@@ -1224,6 +1311,8 @@
     ja_post:
       avg: 0.354
       JamC-QA: 0.464
+      WMT20enja: 0.251
+      WMT20jaen: 0.218
       MMLU-ProX: 0.372
       GPQA: 0.283
       MATH100: 0.374
@@ -1309,6 +1398,8 @@
     ja_post:
       avg: 0.421
       JamC-QA: 0.531
+      WMT20enja: 0.267
+      WMT20jaen: 0.247
       MMLU-ProX: 0.452
       GPQA: 0.333
       MATH100: 0.465
@@ -1394,6 +1485,8 @@
     ja_post:
       avg: 0.145
       JamC-QA: 0.249
+      WMT20enja: 0.004
+      WMT20jaen: 0.083
       MMLU-ProX: 0.148
       GPQA: 0.248
       MATH100: 0.172
@@ -1479,6 +1572,8 @@
     ja_post:
       avg: 0.35
       JamC-QA: 0.285
+      WMT20enja: 0.186
+      WMT20jaen: 0.189
       MMLU-ProX: 0.335
       GPQA: 0.246
       MATH100: 0.606
@@ -1564,6 +1659,8 @@
     ja_post:
       avg: 0.474
       JamC-QA: 0.401
+      WMT20enja: 0.225
+      WMT20jaen: 0.229
       MMLU-ProX: 0.527
       GPQA: 0.373
       MATH100: 0.798
@@ -1649,6 +1746,8 @@
     ja_post:
       avg: 0.522
       JamC-QA: 0.488
+      WMT20enja: 0.25
+      WMT20jaen: 0.238
       MMLU-ProX: 0.609
       GPQA: 0.417
       MATH100: 0.859
@@ -1698,6 +1797,8 @@
     ja_post:
       avg: 0.645
       JamC-QA: 0.79
+      WMT20enja: 0.278
+      WMT20jaen: 0.26
       MMLU-ProX: 0.772
       GPQA: 0.603
       MATH100: 0.899
@@ -1747,6 +1848,8 @@
     ja_post:
       avg: 0.576
       JamC-QA: 0.747
+      WMT20enja: 0.282
+      WMT20jaen: 0.265
       MMLU-ProX: 0.685
       GPQA: 0.453
       MATH100: 0.758
@@ -1788,7 +1891,7 @@
   active_params: 0
   family: GPT-5
   pre_training: (private)
-  reasoning: on (middle)
+  reasoning: on (medium)
   sortkey: gpt 5 (gpt 5 2025 08 07)
   is_post: true
   url: https://platform.openai.com/docs/models
@@ -1796,6 +1899,8 @@
     ja_post:
       avg: 0.703
       JamC-QA: 0.858
+      WMT20enja: 0.272
+      WMT20jaen: 0.236
       MMLU-ProX: 0.849
       GPQA: 0.786
       MATH100: 0.98
@@ -1829,6 +1934,159 @@
       roleplay: 0.906
       stem: 0.927
       writing: 0.904
+- id: openai/gpt-5.1-2025-11-13
+  model_id: openai/gpt-5.1-2025-11-13
+  name: GPT-5.1 Instant (gpt-5.1-2025-11-13)
+  date: '2025-11-13'
+  params: 0
+  active_params: 0
+  family: GPT-5.1
+  pre_training: (private)
+  reasoning: 'off'
+  sortkey: gpt 5.1 ant (gpt 5.1 2025 11 13)
+  is_post: true
+  url: https://huggingface.co/openai/gpt-5.1-2025-11-13
+  results:
+    ja_post:
+      avg: 0.64
+      JamC-QA: 0.77
+      WMT20enja: 0.254
+      WMT20jaen: 0.226
+      MMLU-ProX: 0.774
+      GPQA: 0.625
+      MATH100: 0.929
+      JHumanEval: 0.902
+      __MIFEvalJa: 0.779
+    en_post:
+      avg: 0.678
+      HellaSwag: 0.948
+      MMLU-Pro: 0.726
+      GPQA: 0.646
+      MATH500: 0.892
+      AIME: 0.417
+      LCB: 0.442
+    ja_mtb:
+      avg: 0.89
+      coding: 0.88
+      extraction: 0.855
+      humanities: 0.93
+      math: 0.961
+      reasoning: 0.773
+      roleplay: 0.918
+      stem: 0.927
+      writing: 0.879
+    en_mtb:
+      avg: 0.907
+      coding: 0.922
+      extraction: 0.892
+      humanities: 0.896
+      math: 0.931
+      reasoning: 0.854
+      roleplay: 0.911
+      stem: 0.94
+      writing: 0.907
+- id: openai/gpt-5.1-2025-11-13
+  model_id: openai/gpt-5.1-2025-11-13
+  name: GPT-5.1 Thinking (gpt-5.1-2025-11-13)
+  date: '2025-11-13'
+  params: 0
+  active_params: 0
+  family: GPT-5.1
+  pre_training: (private)
+  reasoning: on (medium)
+  sortkey: gpt 5.1 thinking (gpt 5.1 2025 11 13)
+  is_post: true
+  url: https://huggingface.co/openai/gpt-5.1-2025-11-13
+  results:
+    ja_post:
+      avg: 0.696
+      JamC-QA: 0.838
+      WMT20enja: 0.262
+      WMT20jaen: 0.225
+      MMLU-ProX: 0.843
+      GPQA: 0.795
+      MATH100: 0.97
+      JHumanEval: 0.941
+      __MIFEvalJa: 0.894
+    en_post:
+      avg: 0.874
+      HellaSwag: 0.954
+      MMLU-Pro: 0.741
+      GPQA: 0.838
+      MATH500: 0.984
+      AIME: 0.933
+      LCB: 0.796
+    ja_mtb:
+      avg: 0.897
+      coding: 0.899
+      extraction: 0.885
+      humanities: 0.932
+      math: 0.996
+      reasoning: 0.766
+      roleplay: 0.905
+      stem: 0.921
+      writing: 0.872
+    en_mtb:
+      avg: 0.907
+      coding: 0.878
+      extraction: 0.911
+      humanities: 0.921
+      math: 0.954
+      reasoning: 0.837
+      roleplay: 0.912
+      stem: 0.949
+      writing: 0.895
+- id: openai/gpt-5.1-2025-11-13
+  model_id: openai/gpt-5.1-2025-11-13
+  name: GPT-5.1 Thinking (gpt-5.1-2025-11-13)
+  date: '2025-11-13'
+  params: 0
+  active_params: 0
+  family: GPT-5.1
+  pre_training: (private)
+  reasoning: on (high)
+  sortkey: gpt 5.1 thinking (gpt 5.1 2025 11 13)
+  is_post: true
+  url: https://huggingface.co/openai/gpt-5.1-2025-11-13
+  results:
+    ja_post:
+      avg: 0.701
+      JamC-QA: 0.851
+      WMT20enja: 0.264
+      WMT20jaen: 0.225
+      MMLU-ProX: 0.851
+      GPQA: 0.792
+      MATH100: 0.97
+      JHumanEval: 0.954
+      __MIFEvalJa: 0.885
+    en_post:
+      avg: 0.591
+      HellaSwag: 0.959
+      MMLU-Pro: 0.788
+      GPQA: 0.874
+      MATH500: 0.992
+      AIME: 0.933
+      LCB: -0.001
+    ja_mtb:
+      avg: 0.905
+      coding: 0.869
+      extraction: 0.923
+      humanities: 0.95
+      math: 0.98
+      reasoning: 0.779
+      roleplay: 0.909
+      stem: 0.927
+      writing: 0.899
+    en_mtb:
+      avg: 0.907
+      coding: 0.896
+      extraction: 0.914
+      humanities: 0.922
+      math: 0.932
+      reasoning: 0.848
+      roleplay: 0.905
+      stem: 0.947
+      writing: 0.893
 - id: openai/gpt-oss-20b
   model_id: openai/gpt-oss-20b
   name: gpt-oss-20b
@@ -1837,7 +2095,7 @@
   active_params: 3.6
   family: gpt-oss
   pre_training: (private)
-  reasoning: on (middle)
+  reasoning: on (medium)
   sortkey: gpt oss
   is_post: true
   url: https://huggingface.co/openai/gpt-oss-20b
@@ -1845,6 +2103,8 @@
     ja_post:
       avg: 0.568
       JamC-QA: 0.403
+      WMT20enja: 0.239
+      WMT20jaen: 0.208
       MMLU-ProX: 0.702
       GPQA: 0.571
       MATH100: 0.929
@@ -1886,7 +2146,7 @@
   active_params: 5.1
   family: gpt-oss
   pre_training: (private)
-  reasoning: on (middle)
+  reasoning: on (medium)
   sortkey: gpt oss
   is_post: true
   url: https://huggingface.co/openai/gpt-oss-120b
@@ -1894,6 +2154,8 @@
     ja_post:
       avg: 0.614
       JamC-QA: 0.516
+      WMT20enja: 0.263
+      WMT20jaen: 0.207
       MMLU-ProX: 0.756
       GPQA: 0.663
       MATH100: 0.97
@@ -1927,6 +2189,210 @@
       roleplay: 0.886
       stem: 0.96
       writing: 0.886
+- id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
+  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
+  name: GPT-OSS-Swallow-20B-RL-v0.1
+  date: '2026-02-20'
+  params: 22
+  active_params: 3.6
+  family: gpt-oss
+  pre_training: GPT-OSS-Swallow-20B-SFT-v0.1
+  reasoning: 'on'
+  sortkey: gpt oss swallow rl v0.1
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
+  results:
+    ja_post:
+      avg: -0.001
+      JamC-QA: -0.001
+      WMT20enja: -0.001
+      WMT20jaen: -0.001
+      MMLU-ProX: -0.001
+      GPQA: -0.001
+      MATH100: -0.001
+      JHumanEval: -0.001
+      __MIFEvalJa: -0.001
+    en_post:
+      avg: -0.001
+      HellaSwag: -0.001
+      MMLU-Pro: -0.001
+      GPQA: -0.001
+      MATH500: -0.001
+      AIME: -0.001
+      LCB: -0.001
+    ja_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+    en_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+- id: 構築中
+  model_id: 構築中
+  name: GPT-OSS-Swallow-120B-RL-v0.1
+  date: '2026-02-20'
+  params: 120
+  active_params: 5.1
+  family: gpt-oss
+  pre_training: GPT-OSS-Swallow-120B-SFT-v0.1
+  reasoning: 'on'
+  sortkey: gpt oss swallow rl v0.1
+  is_post: true
+  url: https://huggingface.co/構築中
+  results:
+    ja_post:
+      avg: -0.001
+      JamC-QA: -0.001
+      WMT20enja: -0.001
+      WMT20jaen: -0.001
+      MMLU-ProX: -0.001
+      GPQA: -0.001
+      MATH100: -0.001
+      JHumanEval: -0.001
+      __MIFEvalJa: -0.001
+    en_post:
+      avg: -0.001
+      HellaSwag: -0.001
+      MMLU-Pro: -0.001
+      GPQA: -0.001
+      MATH500: -0.001
+      AIME: -0.001
+      LCB: -0.001
+    ja_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+    en_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+- id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  name: GPT-OSS-Swallow-20B-SFT-v0.1
+  date: '2026-02-20'
+  params: 22
+  active_params: 3.6
+  family: gpt-oss
+  pre_training: GPT-OSS-Swallow-20B-CPT-v0.1
+  reasoning: 'on'
+  sortkey: gpt oss swallow sft v0.1
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  results:
+    ja_post:
+      avg: 0.59
+      JamC-QA: 0.513
+      WMT20enja: 0.254
+      WMT20jaen: 0.22
+      MMLU-ProX: 0.695
+      GPQA: 0.578
+      MATH100: 0.96
+      JHumanEval: 0.909
+      __MIFEvalJa: 0.575
+    en_post:
+      avg: 0.738
+      HellaSwag: 0.818
+      MMLU-Pro: 0.733
+      GPQA: 0.636
+      MATH500: 0.948
+      AIME: 0.683
+      LCB: 0.61
+    ja_mtb:
+      avg: 0.893
+      coding: 0.936
+      extraction: 0.904
+      humanities: 0.858
+      math: 1.0
+      reasoning: 0.799
+      roleplay: 0.881
+      stem: 0.917
+      writing: 0.851
+    en_mtb:
+      avg: 0.879
+      coding: 0.942
+      extraction: 0.894
+      humanities: 0.893
+      math: 0.91
+      reasoning: 0.745
+      roleplay: 0.881
+      stem: 0.923
+      writing: 0.846
+- id: tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  model_id: tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  name: GPT-OSS-Swallow-120B-SFT-v0.1
+  date: '2026-02-20'
+  params: 120
+  active_params: 5.1
+  family: gpt-oss
+  pre_training: GPT-OSS-Swallow-120B-CPT-v0.1
+  reasoning: 'on'
+  sortkey: gpt oss swallow sft v0.1
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  results:
+    ja_post:
+      avg: 0.616
+      JamC-QA: 0.589
+      WMT20enja: 0.27
+      WMT20jaen: 0.216
+      MMLU-ProX: 0.747
+      GPQA: 0.636
+      MATH100: 0.929
+      JHumanEval: 0.922
+      __MIFEvalJa: 0.708
+    en_post:
+      avg: 0.785
+      HellaSwag: 0.878
+      MMLU-Pro: 0.779
+      GPQA: 0.712
+      MATH500: 0.966
+      AIME: 0.717
+      LCB: 0.655
+    ja_mtb:
+      avg: 0.902
+      coding: 0.934
+      extraction: 0.928
+      humanities: 0.905
+      math: 1.0
+      reasoning: 0.793
+      roleplay: 0.883
+      stem: 0.928
+      writing: 0.847
+    en_mtb:
+      avg: 0.894
+      coding: 0.895
+      extraction: 0.923
+      humanities: 0.903
+      math: 0.994
+      reasoning: 0.801
+      roleplay: 0.873
+      stem: 0.912
+      writing: 0.852
 - id: meta-llama/Meta-Llama-3.1-8B
   model_id: meta-llama/Meta-Llama-3.1-8B
   name: Llama 3.1 8B
@@ -1979,6 +2445,8 @@
     ja_post:
       avg: 0.317
       JamC-QA: 0.31
+      WMT20enja: 0.187
+      WMT20jaen: 0.194
       MMLU-ProX: 0.306
       GPQA: 0.261
       MATH100: 0.384
@@ -2064,6 +2532,8 @@
     ja_post:
       avg: 0.423
       JamC-QA: 0.264
+      WMT20enja: 0.065
+      WMT20jaen: 0.08
       MMLU-ProX: 0.489
       GPQA: 0.339
       MATH100: 0.919
@@ -2113,6 +2583,8 @@
     ja_post:
       avg: 0.326
       JamC-QA: 0.414
+      WMT20enja: 0.249
+      WMT20jaen: 0.223
       MMLU-ProX: 0.306
       GPQA: 0.239
       MATH100: 0.364
@@ -2198,6 +2670,8 @@
     ja_post:
       avg: 0.374
       JamC-QA: 0.496
+      WMT20enja: 0.249
+      WMT20jaen: 0.222
       MMLU-ProX: 0.369
       GPQA: 0.295
       MATH100: 0.404
@@ -2319,6 +2793,8 @@
     ja_post:
       avg: 0.491
       JamC-QA: 0.484
+      WMT20enja: 0.245
+      WMT20jaen: 0.246
       MMLU-ProX: 0.607
       GPQA: 0.453
       MATH100: 0.646
@@ -2368,6 +2844,8 @@
     ja_post:
       avg: 0.555
       JamC-QA: 0.446
+      WMT20enja: 0.215
+      WMT20jaen: 0.185
       MMLU-ProX: 0.687
       GPQA: 0.531
       MATH100: 0.919
@@ -2453,6 +2931,8 @@
     ja_post:
       avg: 0.486
       JamC-QA: 0.562
+      WMT20enja: 0.275
+      WMT20jaen: 0.251
       MMLU-ProX: 0.533
       GPQA: 0.355
       MATH100: 0.697
@@ -2538,6 +3018,8 @@
     ja_post:
       avg: 0.55
       JamC-QA: 0.579
+      WMT20enja: 0.237
+      WMT20jaen: 0.23
       MMLU-ProX: 0.687
       GPQA: 0.54
       MATH100: 0.758
@@ -2731,6 +3213,8 @@
     ja_post:
       avg: 0.217
       JamC-QA: 0.348
+      WMT20enja: 0.0
+      WMT20jaen: 0.159
       MMLU-ProX: 0.195
       GPQA: 0.239
       MATH100: 0.212
@@ -2780,6 +3264,8 @@
     ja_post:
       avg: 0.271
       JamC-QA: 0.509
+      WMT20enja: 0.007
+      WMT20jaen: 0.161
       MMLU-ProX: 0.296
       GPQA: 0.23
       MATH100: 0.232
@@ -2829,6 +3315,8 @@
     ja_post:
       avg: 0.389
       JamC-QA: 0.456
+      WMT20enja: 0.253
+      WMT20jaen: 0.24
       MMLU-ProX: 0.606
       GPQA: 0.35
       MATH100: 0.818
@@ -2870,7 +3358,7 @@
   active_params: 0
   family: o3
   pre_training: (private)
-  reasoning: on (middle)
+  reasoning: on (medium)
   sortkey: o3 (o3 2025 04 16)
   is_post: true
   url: https://platform.openai.com/docs/models
@@ -2878,6 +3366,8 @@
     ja_post:
       avg: 0.692
       JamC-QA: 0.851
+      WMT20enja: 0.276
+      WMT20jaen: 0.216
       MMLU-ProX: 0.835
       GPQA: 0.766
       MATH100: 0.97
@@ -2919,7 +3409,7 @@
   active_params: 0
   family: o3
   pre_training: (private)
-  reasoning: on (middle)
+  reasoning: on (medium)
   sortkey: o3 mini (o3 mini 2025 01 31)
   is_post: true
   url: https://platform.openai.com/docs/models
@@ -2927,6 +3417,8 @@
     ja_post:
       avg: 0.613
       JamC-QA: 0.507
+      WMT20enja: 0.243
+      WMT20jaen: 0.221
       MMLU-ProX: 0.76
       GPQA: 0.685
       MATH100: 0.939
@@ -2960,6 +3452,108 @@
       roleplay: 0.895
       stem: 0.914
       writing: 0.882
+- id: allenai/Olmo-3-7B-Think
+  model_id: allenai/Olmo-3-7B-Think
+  name: Olmo 3 7B Think
+  date: '2025-11-20'
+  params: 7.3
+  active_params: 7.3
+  family: Olmo 3
+  pre_training: Olmo 3 7B
+  reasoning: 'on'
+  sortkey: olmo 3 think
+  is_post: true
+  url: https://huggingface.co/allenai/Olmo-3-7B-Think
+  results:
+    ja_post:
+      avg: 0.47
+      JamC-QA: 0.276
+      WMT20enja: 0.131
+      WMT20jaen: 0.143
+      MMLU-ProX: 0.512
+      GPQA: 0.393
+      MATH100: 0.949
+      JHumanEval: 0.885
+      __MIFEvalJa: 0.31
+    en_post:
+      avg: 0.658
+      HellaSwag: 0.703
+      MMLU-Pro: 0.627
+      GPQA: 0.49
+      MATH500: 0.936
+      AIME: 0.683
+      LCB: 0.51
+    ja_mtb:
+      avg: 0.498
+      coding: 0.439
+      extraction: 0.604
+      humanities: 0.522
+      math: 0.705
+      reasoning: 0.393
+      roleplay: 0.488
+      stem: 0.472
+      writing: 0.359
+    en_mtb:
+      avg: 0.621
+      coding: 0.472
+      extraction: 0.615
+      humanities: 0.667
+      math: 0.703
+      reasoning: 0.543
+      roleplay: 0.707
+      stem: 0.6
+      writing: 0.663
+- id: allenai/Olmo-3-32B-Think
+  model_id: allenai/Olmo-3-32B-Think
+  name: Olmo 3 32B Think
+  date: '2025-11-20'
+  params: 32
+  active_params: 32
+  family: Olmo 3
+  pre_training: Olmo 3 32B
+  reasoning: 'on'
+  sortkey: olmo 3 think
+  is_post: true
+  url: https://huggingface.co/allenai/Olmo-3-32B-Think
+  results:
+    ja_post:
+      avg: 0.537
+      JamC-QA: 0.353
+      WMT20enja: 0.174
+      WMT20jaen: 0.186
+      MMLU-ProX: 0.669
+      GPQA: 0.547
+      MATH100: 0.919
+      JHumanEval: 0.915
+      __MIFEvalJa: 0.332
+    en_post:
+      avg: 0.751
+      HellaSwag: 0.851
+      MMLU-Pro: 0.753
+      GPQA: 0.591
+      MATH500: 0.962
+      AIME: 0.75
+      LCB: 0.597
+    ja_mtb:
+      avg: 0.616
+      coding: 0.494
+      extraction: 0.646
+      humanities: 0.67
+      math: 0.749
+      reasoning: 0.535
+      roleplay: 0.673
+      stem: 0.584
+      writing: 0.579
+    en_mtb:
+      avg: 0.689
+      coding: 0.546
+      extraction: 0.647
+      humanities: 0.776
+      math: 0.748
+      reasoning: 0.665
+      roleplay: 0.799
+      stem: 0.671
+      writing: 0.663
 - id: microsoft/phi-4
   model_id: microsoft/phi-4
   name: Phi-4
@@ -2976,6 +3570,8 @@
     ja_post:
       avg: 0.507
       JamC-QA: 0.444
+      WMT20enja: 0.24
+      WMT20jaen: 0.221
       MMLU-ProX: 0.638
       GPQA: 0.435
       MATH100: 0.798
@@ -3025,6 +3621,8 @@
     ja_post:
       avg: 0.31
       JamC-QA: 0.0
+      WMT20enja: 0.001
+      WMT20jaen: 0.001
       MMLU-ProX: 0.118
       GPQA: 0.563
       MATH100: 0.737
@@ -3398,6 +3996,8 @@
     ja_post:
       avg: 0.411
       JamC-QA: 0.365
+      WMT20enja: 0.189
+      WMT20jaen: 0.184
       MMLU-ProX: 0.452
       GPQA: 0.315
       MATH100: 0.636
@@ -3483,6 +4083,8 @@
     ja_post:
       avg: 0.471
       JamC-QA: 0.444
+      WMT20enja: 0.207
+      WMT20jaen: 0.218
       MMLU-ProX: 0.556
       GPQA: 0.348
       MATH100: 0.768
@@ -3568,6 +4170,8 @@
     ja_post:
       avg: 0.504
       JamC-QA: 0.476
+      WMT20enja: 0.221
+      WMT20jaen: 0.224
       MMLU-ProX: 0.623
       GPQA: 0.411
       MATH100: 0.768
@@ -3653,6 +4257,8 @@
     ja_post:
       avg: 0.257
       JamC-QA: 0.25
+      WMT20enja: 0.001
+      WMT20jaen: 0.0
       MMLU-ProX: 0.295
       GPQA: 0.237
       MATH100: 0.606
@@ -3738,6 +4344,8 @@
     ja_post:
       avg: 0.428
       JamC-QA: 0.278
+      WMT20enja: 0.13
+      WMT20jaen: 0.156
       MMLU-ProX: 0.514
       GPQA: 0.315
       MATH100: 0.859
@@ -3823,6 +4431,8 @@
     ja_post:
       avg: 0.502
       JamC-QA: 0.328
+      WMT20enja: 0.154
+      WMT20jaen: 0.189
       MMLU-ProX: 0.643
       GPQA: 0.44
       MATH100: 0.919
@@ -3944,6 +4554,8 @@
     ja_post:
       avg: 0.542
       JamC-QA: 0.398
+      WMT20enja: 0.209
+      WMT20jaen: 0.202
       MMLU-ProX: 0.696
       GPQA: 0.491
       MATH100: 0.929
@@ -4029,6 +4641,8 @@
     ja_post:
       avg: 0.578
       JamC-QA: 0.455
+      WMT20enja: 0.228
+      WMT20jaen: 0.22
       MMLU-ProX: 0.737
       GPQA: 0.556
       MATH100: 0.939
@@ -4069,7 +4683,7 @@
   params: 33
   active_params: 33
   family: Qwen3
-  pre_training: Qwen3-32B-Base
+  pre_training: (private)
   reasoning: 'on'
   sortkey: qwen3
   is_post: true
@@ -4078,6 +4692,8 @@
     ja_post:
       avg: 0.588
       JamC-QA: 0.479
+      WMT20enja: 0.226
+      WMT20jaen: 0.22
       MMLU-ProX: 0.746
       GPQA: 0.571
       MATH100: 0.949
@@ -4111,6 +4727,57 @@
       roleplay: 0.899
       stem: 0.919
       writing: 0.869
+- id: Qwen/Qwen3-30B-A3B
+  model_id: Qwen/Qwen3-30B-A3B
+  name: Qwen3-30B-A3B
+  date: '2025-04-29'
+  params: 15
+  active_params: 15
+  family: Qwen3
+  pre_training: Qwen3-30B-A3B-Base
+  reasoning: 'on'
+  sortkey: qwen3 a
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-30B-A3B
+  results:
+    ja_post:
+      avg: 0.572
+      JamC-QA: 0.46
+      WMT20enja: 0.17
+      WMT20jaen: 0.219
+      MMLU-ProX: 0.738
+      GPQA: 0.558
+      MATH100: 0.96
+      JHumanEval: 0.899
+      __MIFEvalJa: 0.655
+    en_post:
+      avg: 0.764
+      HellaSwag: 0.883
+      MMLU-Pro: 0.782
+      GPQA: 0.636
+      MATH500: 0.964
+      AIME: 0.733
+      LCB: 0.589
+    ja_mtb:
+      avg: 0.858
+      coding: 0.883
+      extraction: 0.801
+      humanities: 0.91
+      math: 0.966
+      reasoning: 0.763
+      roleplay: 0.86
+      stem: 0.853
+      writing: 0.832
+    en_mtb:
+      avg: 0.893
+      coding: 0.915
+      extraction: 0.909
+      humanities: 0.909
+      math: 0.972
+      reasoning: 0.798
+      roleplay: 0.882
+      stem: 0.895
+      writing: 0.866
 - id: Qwen/Qwen3-30B-A3B-Base
   model_id: Qwen/Qwen3-30B-A3B-Base
   name: Qwen3-30B-A3B-Base
@@ -4163,6 +4830,8 @@
     ja_post:
       avg: 0.642
       JamC-QA: 0.636
+      WMT20enja: 0.258
+      WMT20jaen: 0.23
       MMLU-ProX: 0.799
       GPQA: 0.701
       MATH100: 0.97
@@ -4212,6 +4881,8 @@
     ja_post:
       avg: 0.66
       JamC-QA: 0.659
+      WMT20enja: 0.26
+      WMT20jaen: 0.234
       MMLU-ProX: 0.819
       GPQA: 0.739
       MATH100: 0.97
@@ -4245,6 +4916,567 @@
       roleplay: 0.908
       stem: 0.952
       writing: 0.908
+- id: Qwen/Qwen3-Next-80B-A3B-Instruct
+  model_id: Qwen/Qwen3-Next-80B-A3B-Instruct
+  name: Qwen3-Next-80B-A3B-Instruct
+  date: '2025-09-11'
+  params: 81
+  active_params: 3
+  family: Qwen3
+  pre_training: (private)
+  reasoning: N/A
+  sortkey: qwen3 next a
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct
+  results:
+    ja_post:
+      avg: 0.614
+      JamC-QA: 0.599
+      WMT20enja: 0.24
+      WMT20jaen: 0.228
+      MMLU-ProX: 0.77
+      GPQA: 0.614
+      MATH100: 0.939
+      JHumanEval: 0.905
+      __MIFEvalJa: 0.681
+    en_post:
+      avg: 0.802
+      HellaSwag: 0.929
+      MMLU-Pro: 0.824
+      GPQA: 0.753
+      MATH500: 0.98
+      AIME: 0.733
+      LCB: 0.592
+    ja_mtb:
+      avg: 0.916
+      coding: 0.919
+      extraction: 0.92
+      humanities: 0.931
+      math: 0.987
+      reasoning: 0.83
+      roleplay: 0.89
+      stem: 0.945
+      writing: 0.906
+    en_mtb:
+      avg: 0.92
+      coding: 0.908
+      extraction: 0.925
+      humanities: 0.932
+      math: 0.966
+      reasoning: 0.842
+      roleplay: 0.925
+      stem: 0.949
+      writing: 0.912
+- id: Qwen/Qwen3-Next-80B-A3B-Thinking
+  model_id: Qwen/Qwen3-Next-80B-A3B-Thinking
+  name: Qwen3-Next-80B-A3B-Thinking
+  date: '2025-09-11'
+  params: 81
+  active_params: 3
+  family: Qwen3
+  pre_training: (private)
+  reasoning: 'on'
+  sortkey: qwen3 next a thinking
+  is_post: true
+  url: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking
+  results:
+    ja_post:
+      avg: 0.631
+      JamC-QA: 0.595
+      WMT20enja: 0.232
+      WMT20jaen: 0.197
+      MMLU-ProX: 0.797
+      GPQA: 0.71
+      MATH100: 0.96
+      JHumanEval: 0.927
+      __MIFEvalJa: 0.743
+    en_post:
+      avg: 0.84
+      HellaSwag: 0.923
+      MMLU-Pro: 0.828
+      GPQA: 0.798
+      MATH500: 0.974
+      AIME: 0.85
+      LCB: 0.67
+    ja_mtb:
+      avg: 0.879
+      coding: 0.871
+      extraction: 0.855
+      humanities: 0.912
+      math: 0.993
+      reasoning: 0.811
+      roleplay: 0.85
+      stem: 0.92
+      writing: 0.821
+    en_mtb:
+      avg: 0.883
+      coding: 0.855
+      extraction: 0.853
+      humanities: 0.934
+      math: 0.941
+      reasoning: 0.774
+      roleplay: 0.889
+      stem: 0.964
+      writing: 0.851
+- id: tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
+  model_id: tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
+  name: Qwen3-Swallow-30B-A3B-CPT-v0.2
+  date: '2026-02-20'
+  params: 31
+  active_params: 31
+  family: Qwen3-Swallow
+  pre_training: Qwen3-30B-A3B-Base
+  reasoning: 'on'
+  sortkey: qwen3 swallow a cpt v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
+  results:
+    ja_post:
+      avg: 0.581
+      JamC-QA: 0.528
+      WMT20enja: 0.248
+      WMT20jaen: 0.229
+      MMLU-ProX: 0.713
+      GPQA: 0.547
+      MATH100: 0.909
+      JHumanEval: 0.894
+      __MIFEvalJa: 0.518
+    en_post:
+      avg: 0.696
+      HellaSwag: 0.849
+      MMLU-Pro: 0.745
+      GPQA: 0.611
+      MATH500: 0.922
+      AIME: 0.533
+      LCB: 0.513
+    ja_mtb:
+      avg: 0.747
+      coding: 0.699
+      extraction: 0.708
+      humanities: 0.784
+      math: 0.805
+      reasoning: 0.588
+      roleplay: 0.87
+      stem: 0.857
+      writing: 0.669
+    en_mtb:
+      avg: 0.748
+      coding: 0.731
+      extraction: 0.737
+      humanities: 0.755
+      math: 0.773
+      reasoning: 0.732
+      roleplay: 0.831
+      stem: 0.747
+      writing: 0.68
+- id: 構築中
+  model_id: 構築中
+  name: Qwen3-Swallow-30B-A3B-RL-v0.2
+  date: '2026-02-20'
+  params: 31
+  active_params: 31
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-30B-A3B-SFT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow a rl v0.2
+  is_post: true
+  url: https://huggingface.co/構築中
+  results:
+    ja_post:
+      avg: -0.001
+      JamC-QA: -0.001
+      WMT20enja: -0.001
+      WMT20jaen: -0.001
+      MMLU-ProX: -0.001
+      GPQA: -0.001
+      MATH100: -0.001
+      JHumanEval: -0.001
+      __MIFEvalJa: -0.001
+    en_post:
+      avg: -0.001
+      HellaSwag: -0.001
+      MMLU-Pro: -0.001
+      GPQA: -0.001
+      MATH500: -0.001
+      AIME: -0.001
+      LCB: -0.001
+    ja_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+    en_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+- id: 構築中
+  model_id: 構築中
+  name: Qwen3-Swallow-30B-A3B-SFT-v0.2
+  date: '2026-02-20'
+  params: 31
+  active_params: 31
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-30B-A3B-CPT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow a sft v0.2
+  is_post: true
+  url: https://huggingface.co/構築中
+  results:
+    ja_post:
+      avg: -0.001
+      JamC-QA: -0.001
+      WMT20enja: -0.001
+      WMT20jaen: -0.001
+      MMLU-ProX: -0.001
+      GPQA: -0.001
+      MATH100: -0.001
+      JHumanEval: -0.001
+      __MIFEvalJa: -0.001
+    en_post:
+      avg: -0.001
+      HellaSwag: -0.001
+      MMLU-Pro: -0.001
+      GPQA: -0.001
+      MATH500: -0.001
+      AIME: -0.001
+      LCB: -0.001
+    ja_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+    en_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+- id: tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
+  model_id: tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
+  name: Qwen3-Swallow-8B-CPT-v0.2
+  date: '2026-02-20'
+  params: 8.2
+  active_params: 8.2
+  family: Qwen3-Swallow
+  pre_training: Qwen3-8B-Base
+  reasoning: 'on'
+  sortkey: qwen3 swallow cpt v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
+  results:
+    ja_post:
+      avg: 0.515
+      JamC-QA: 0.449
+      WMT20enja: 0.238
+      WMT20jaen: 0.215
+      MMLU-ProX: 0.628
+      GPQA: 0.404
+      MATH100: 0.838
+      JHumanEval: 0.833
+      __MIFEvalJa: 0.456
+    en_post:
+      avg: 0.601
+      HellaSwag: 0.791
+      MMLU-Pro: 0.621
+      GPQA: 0.515
+      MATH500: 0.872
+      AIME: 0.467
+      LCB: 0.341
+    ja_mtb:
+      avg: 0.719
+      coding: 0.699
+      extraction: 0.618
+      humanities: 0.73
+      math: 0.82
+      reasoning: 0.574
+      roleplay: 0.859
+      stem: 0.812
+      writing: 0.637
+    en_mtb:
+      avg: 0.683
+      coding: 0.612
+      extraction: 0.65
+      humanities: 0.694
+      math: 0.799
+      reasoning: 0.507
+      roleplay: 0.831
+      stem: 0.733
+      writing: 0.642
+- id: tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
+  model_id: tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
+  name: Qwen3-Swallow-32B-CPT-v0.2
+  date: '2026-02-20'
+  params: 33
+  active_params: 33
+  family: Qwen3-Swallow
+  pre_training: Qwen3-32B
+  reasoning: 'on'
+  sortkey: qwen3 swallow cpt v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
+  results:
+    ja_post:
+      avg: 0.6
+      JamC-QA: 0.551
+      WMT20enja: 0.255
+      WMT20jaen: 0.235
+      MMLU-ProX: 0.735
+      GPQA: 0.576
+      MATH100: 0.939
+      JHumanEval: 0.91
+      __MIFEvalJa: 0.549
+    en_post:
+      avg: 0.731
+      HellaSwag: 0.899
+      MMLU-Pro: 0.761
+      GPQA: 0.636
+      MATH500: 0.95
+      AIME: 0.583
+      LCB: 0.556
+    ja_mtb:
+      avg: 0.788
+      coding: 0.696
+      extraction: 0.785
+      humanities: 0.783
+      math: 0.887
+      reasoning: 0.732
+      roleplay: 0.878
+      stem: 0.84
+      writing: 0.706
+    en_mtb:
+      avg: 0.766
+      coding: 0.684
+      extraction: 0.762
+      humanities: 0.745
+      math: 0.822
+      reasoning: 0.743
+      roleplay: 0.845
+      stem: 0.77
+      writing: 0.754
+- id: tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
+  model_id: tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
+  name: Qwen3-Swallow-8B-RL-v0.2
+  date: '2026-02-20'
+  params: 8.2
+  active_params: 8.2
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-30B-A3B-SFT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow rl v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
+  results:
+    ja_post:
+      avg: 0.557
+      JamC-QA: 0.444
+      WMT20enja: 0.235
+      WMT20jaen: 0.204
+      MMLU-ProX: 0.675
+      GPQA: 0.529
+      MATH100: 0.929
+      JHumanEval: 0.885
+      __MIFEvalJa: 0.473
+    en_post:
+      avg: 0.694
+      HellaSwag: 0.79
+      MMLU-Pro: 0.675
+      GPQA: 0.54
+      MATH500: 0.938
+      AIME: 0.667
+      LCB: 0.555
+    ja_mtb:
+      avg: 0.844
+      coding: 0.899
+      extraction: 0.775
+      humanities: 0.799
+      math: 0.927
+      reasoning: 0.748
+      roleplay: 0.882
+      stem: 0.89
+      writing: 0.828
+    en_mtb:
+      avg: 0.855
+      coding: 0.819
+      extraction: 0.864
+      humanities: 0.885
+      math: 0.919
+      reasoning: 0.72
+      roleplay: 0.904
+      stem: 0.897
+      writing: 0.832
+- id: 構築中
+  model_id: 構築中
+  name: Qwen3-Swallow-32B-RL-v0.2
+  date: '2026-02-20'
+  params: 33
+  active_params: 33
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-32B-SFT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow rl v0.2
+  is_post: true
+  url: https://huggingface.co/構築中
+  results:
+    ja_post:
+      avg: -0.001
+      JamC-QA: -0.001
+      WMT20enja: -0.001
+      WMT20jaen: -0.001
+      MMLU-ProX: -0.001
+      GPQA: -0.001
+      MATH100: -0.001
+      JHumanEval: -0.001
+      __MIFEvalJa: -0.001
+    en_post:
+      avg: -0.001
+      HellaSwag: -0.001
+      MMLU-Pro: -0.001
+      GPQA: -0.001
+      MATH500: -0.001
+      AIME: -0.001
+      LCB: -0.001
+    ja_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+    en_mtb:
+      avg: -0.001
+      coding: -0.001
+      extraction: -0.001
+      humanities: -0.001
+      math: -0.001
+      reasoning: -0.001
+      roleplay: -0.001
+      stem: -0.001
+      writing: -0.001
+- id: tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
+  model_id: tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
+  name: Qwen3-Swallow-8B-SFT-v0.2
+  date: '2026-02-20'
+  params: 8.2
+  active_params: 8.2
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-8B-CPT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow sft v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
+  results:
+    ja_post:
+      avg: 0.534
+      JamC-QA: 0.439
+      WMT20enja: 0.231
+      WMT20jaen: 0.205
+      MMLU-ProX: 0.653
+      GPQA: 0.446
+      MATH100: 0.929
+      JHumanEval: 0.83
+      __MIFEvalJa: 0.451
+    en_post:
+      avg: 0.638
+      HellaSwag: 0.797
+      MMLU-Pro: 0.669
+      GPQA: 0.545
+      MATH500: 0.926
+      AIME: 0.467
+      LCB: 0.422
+    ja_mtb:
+      avg: 0.868
+      coding: 0.859
+      extraction: 0.821
+      humanities: 0.878
+      math: 0.965
+      reasoning: 0.831
+      roleplay: 0.893
+      stem: 0.91
+      writing: 0.785
+    en_mtb:
+      avg: 0.855
+      coding: 0.877
+      extraction: 0.785
+      humanities: 0.91
+      math: 0.928
+      reasoning: 0.752
+      roleplay: 0.878
+      stem: 0.903
+      writing: 0.809
+- id: tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
+  model_id: tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
+  name: Qwen3-Swallow-32B-SFT-v0.2
+  date: '2026-02-20'
+  params: 33
+  active_params: 33
+  family: Qwen3-Swallow
+  pre_training: Qwen3-Swallow-32-CPT-v0.2
+  reasoning: 'on'
+  sortkey: qwen3 swallow sft v0.2
+  is_post: true
+  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
+  results:
+    ja_post:
+      avg: 0.592
+      JamC-QA: 0.493
+      WMT20enja: 0.251
+      WMT20jaen: 0.216
+      MMLU-ProX: 0.723
+      GPQA: 0.594
+      MATH100: 0.96
+      JHumanEval: 0.904
+      __MIFEvalJa: 0.54
+    en_post:
+      avg: 0.729
+      HellaSwag: 0.879
+      MMLU-Pro: 0.757
+      GPQA: 0.631
+      MATH500: 0.96
+      AIME: 0.583
+      LCB: 0.567
+    ja_mtb:
+      avg: 0.879
+      coding: 0.911
+      extraction: 0.841
+      humanities: 0.886
+      math: 0.933
+      reasoning: 0.814
+      roleplay: 0.885
+      stem: 0.919
+      writing: 0.846
+    en_mtb:
+      avg: 0.89
+      coding: 0.887
+      extraction: 0.862
+      humanities: 0.901
+      math: 1.0
+      reasoning: 0.752
+      roleplay: 0.909
+      stem: 0.951
+      writing: 0.86
 - id: rinna/qwq-bakeneko-32b
   model_id: rinna/qwq-bakeneko-32b
   name: QwQ Bakeneko 32B
@@ -4261,6 +5493,8 @@
     ja_post:
       avg: 0.546
       JamC-QA: 0.495
+      WMT20enja: 0.232
+      WMT20jaen: 0.207
       MMLU-ProX: 0.677
       GPQA: 0.487
       MATH100: 0.859
@@ -4526,6 +5760,8 @@
     ja_post:
       avg: 0.318
       JamC-QA: 0.498
+      WMT20enja: 0.002
+      WMT20jaen: 0.16
       MMLU-ProX: 0.335
       GPQA: 0.301
       MATH100: 0.465

@@ -19,37 +19,37 @@
 
   <!-- Radar chart -->
   {% if is_post %}
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_ja_post", _category="ja_post", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_en_post", _category="en_post", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_ja_mtb", _category="ja_mtb", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_en_mtb", _category="en_mtb", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
+    <div class="col-sm-8 col-lg-8">
+    {% with _id="bar_ja_post", _title=taskspec.ja_post.title, _tasks='[["ja_post", "+"], ["ja_post", "avg"]]', _groupby="task" %}
+      {% include "bar.html" %}
+    {% endwith %}
+    </div>
+    <div class="col-sm-4 col-lg-4">
+    {% with _id="radar_ja_mtb", _category="ja_mtb", _height="360" %}
+      {% include "radar.html" %}
+    {% endwith %}
+    </div>
+    <div class="col-sm-8 col-lg-8">
+    {% with _id="bar_en_post", _title=taskspec.en_post.title, _tasks='[["en_post", "+"], ["en_post", "avg"]]', _groupby="task" %}
+      {% include "bar.html" %}
+    {% endwith %}
+    </div>
+    <div class="col-sm-4 col-lg-4">
+    {% with _id="radar_en_mtb", _category="en_mtb", _height="360" %}
+      {% include "radar.html" %}
+    {% endwith %}
+    </div>
   {% else %}
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_ja_pre", _category="ja_pre", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
-  <div class="col-sm-6 col-lg-6">
-  {% with _id="radar_en_pre", _category="en_pre", _height="480" %}
-  {% include "radar.html" %}
-  {% endwith %}
-  </div>
+    <div class="col-sm-6 col-lg-6">
+    {% with _id="bar_ja_pre", _title=taskspec.ja_pre.title, _tasks='[["ja_pre", "+"], ["ja_pre", "avg"]]', _groupby="task" %}
+      {% include "bar.html" %}
+    {% endwith %}
+    </div>
+    <div class="col-sm-6 col-lg-6">
+    {% with _id="bar_en_pre", _title=taskspec.en_pre.title, _tasks='[["en_pre", "+"], ["en_pre", "avg"]]', _groupby="task" %}
+      {% include "bar.html" %}
+    {% endwith %}
+    </div>
   {% endif %}
 
   <div class="col-12">

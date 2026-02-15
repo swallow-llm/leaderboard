@@ -9,28 +9,15 @@
 
   <!-- Bar chart -->
   <div class="col-12">
-    <div class="card">
-      <div class="card-body">
-        <div id="bar" class="chart-lg"></div>
-      </div>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        swallow_leaderboard_chart(
-          "bar",
-          {
-            type: "bar",
-            models: {includes: g_filter},
-            sort: 0,
-            {% if is_post %}
-            tasks: [["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]],
-            {% else %}
-            tasks: [["ja_pre", "avg"], ["en_pre", "avg"]],
-            {% endif %}
-          }
-        );
-      });
-    </script>
+    {% if is_post %}
+      {% with _id="bar", _tasks='[["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]]' %}
+        {% include "bar.html" %}
+      {% endwith %}
+    {% else %}
+      {% with _id="bar", _tasks='[["ja_pre", "avg"], ["en_pre", "avg"]]' %}
+        {% include "bar.html" %}
+      {% endwith %}
+    {% endif %}
   </div>
 
   <div class="col-12">

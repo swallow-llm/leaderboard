@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    {% if _title %}<h3 class="card-title">{{ _title }}</h3>{% endif %}
+    <div id="{{ _id }}" class="chart-lg"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    swallow_leaderboard_chart(
+      "{{ _id }}",
+      {
+        type: "bar",
+        models: {includes: g_filter},
+        sort: 0,
+        tasks: {{ _tasks }},
+        {% if _groupby %}groupby: "{{ _groupby }}"{% endif %}
+      }
+    );
+  });
+</script>
