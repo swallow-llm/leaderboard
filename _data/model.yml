@@ -1987,57 +1987,6 @@
       writing: 0.89
 - id: openai/gpt-5.1-2025-11-13
   model_id: openai/gpt-5.1-2025-11-13
-  name: GPT-5.1 Instant (gpt-5.1-2025-11-13)
-  date: '2025-11-13'
-  params: 0
-  active_params: 0
-  family: GPT-5.1
-  pre_training: (private)
-  reasoning: 'off'
-  sortkey: gpt 5.1 ant (gpt 5.1 2025 11 13)
-  is_post: true
-  url: https://huggingface.co/openai/gpt-5.1-2025-11-13
-  results:
-    ja_post:
-      avg: 0.64
-      JamC-QA: 0.77
-      WMT20enja: 0.254
-      WMT20jaen: 0.226
-      MMLU-ProX: 0.774
-      GPQA: 0.625
-      MATH100: 0.929
-      JHumanEval: 0.902
-      __MIFEvalJa: 0.779
-    en_post:
-      avg: 0.678
-      HellaSwag: 0.948
-      MMLU-Pro: 0.726
-      GPQA: 0.646
-      MATH500: 0.892
-      AIME: 0.417
-      LCB: 0.442
-    ja_mtb:
-      avg: 0.89
-      coding: 0.88
-      extraction: 0.855
-      humanities: 0.93
-      math: 0.961
-      reasoning: 0.773
-      roleplay: 0.918
-      stem: 0.927
-      writing: 0.879
-    en_mtb:
-      avg: 0.907
-      coding: 0.922
-      extraction: 0.892
-      humanities: 0.896
-      math: 0.931
-      reasoning: 0.854
-      roleplay: 0.911
-      stem: 0.94
-      writing: 0.907
-- id: openai/gpt-5.1-2025-11-13
-  model_id: openai/gpt-5.1-2025-11-13
   name: GPT-5.1 Thinking (gpt-5.1-2025-11-13)
   date: '2025-11-13'
   params: 0
@@ -2087,57 +2036,6 @@
       roleplay: 0.912
       stem: 0.949
       writing: 0.895
-- id: openai/gpt-5.1-2025-11-13
-  model_id: openai/gpt-5.1-2025-11-13
-  name: GPT-5.1 Thinking (gpt-5.1-2025-11-13)
-  date: '2025-11-13'
-  params: 0
-  active_params: 0
-  family: GPT-5.1
-  pre_training: (private)
-  reasoning: on (high)
-  sortkey: gpt 5.1 thinking (gpt 5.1 2025 11 13)
-  is_post: true
-  url: https://huggingface.co/openai/gpt-5.1-2025-11-13
-  results:
-    ja_post:
-      avg: 0.701
-      JamC-QA: 0.851
-      WMT20enja: 0.264
-      WMT20jaen: 0.225
-      MMLU-ProX: 0.851
-      GPQA: 0.792
-      MATH100: 0.97
-      JHumanEval: 0.954
-      __MIFEvalJa: 0.885
-    en_post:
-      avg: 0.591
-      HellaSwag: 0.959
-      MMLU-Pro: 0.788
-      GPQA: 0.874
-      MATH500: 0.992
-      AIME: 0.933
-      LCB: -0.001
-    ja_mtb:
-      avg: 0.905
-      coding: 0.869
-      extraction: 0.923
-      humanities: 0.95
-      math: 0.98
-      reasoning: 0.779
-      roleplay: 0.909
-      stem: 0.927
-      writing: 0.899
-    en_mtb:
-      avg: 0.907
-      coding: 0.896
-      extraction: 0.914
-      humanities: 0.922
-      math: 0.932
-      reasoning: 0.848
-      roleplay: 0.905
-      stem: 0.947
-      writing: 0.893
 - id: openai/gpt-oss-20b
   model_id: openai/gpt-oss-20b
   name: gpt-oss-20b

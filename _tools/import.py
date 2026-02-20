@@ -58,16 +58,19 @@ includes_pre = set([
 ])
 
 excludes_post = set([
-    # Base models
-    
     # Post-trained models
     'sbintuitions/sarashina2.2-0.5b-instruct-v0.1',
     'sbintuitions/sarashina2.2-1b-instruct-v0.1',
     'XiaomiMiMo/MiMo-7B-RL',
     'nvidia/NVIDIA-Nemotron-Nano-9B-v2',
     'nvidia/NVIDIA-Nemotron-Nano-12B-v2',
-    'Qwen/Qwen3-8B-Base',
-    'Qwen/Qwen3-30B-A3B-Base',
+    'Qwen/Qwen3-8B-Base',       # Pre-trained model.
+    'Qwen/Qwen3-30B-A3B-Base',  # Pre-trained model.
+])
+
+excludes_reasoning = set([
+    ('openai/gpt-5.1-2025-11-13', 'off'),           # Prioritize "on (medium)"
+    ('openai/gpt-5.1-2025-11-13', 'on (high)'),     # Failed on LCB.
 ])
 
 renames = {
@@ -148,7 +151,7 @@ def get_url(inst):
     else:
         return 'https://huggingface.co/' + inst['id']
 
-def read_data(fi, F, T, is_post=False, includes=None, excludes=None, num_skips=2):
+def read_data(fi, F, T, is_post=False, includes=None, excludes=None, excludes_reasoning=None, num_skips=2):
     # Open the CSV file.
     reader = csv.reader(fi)
     
@@ -210,6 +213,9 @@ def read_data(fi, F, T, is_post=False, includes=None, excludes=None, num_skips=2
         # Skip models that are registered in the exclude list.
         if excludes is not None and inst['id'] in excludes:
             continue
+        # Skip reasoning models that are registered in the exclude list.
+        if excludes_reasoning is not None and (inst['id'], inst['reasoning']) in excludes_reasoning:
+            continue
         # Skip models that are not registered in the include list.
         if includes is not None and inst['id'] not in includes:
             continue
@@ -250,7 +256,7 @@ if __name__ == '__main__':
             ('reasoning', 'reasoning mode', read_reasoning),
         ]
         with open('Swallow実験結果 - (Qwen3,GPT-OSS)-Swallow-Instruct.csv') as fi:
-            data += read_data(fi, F, T, True, None, excludes_post, num_skips=4)
+            data += read_data(fi, F, T, True, None, excludes_post, excludes_reasoning, num_skips=4)
 
     # Sort models.
     data.sort(key=operator.itemgetter('sortkey', 'params'))
