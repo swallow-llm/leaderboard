@@ -18,6 +18,8 @@ changelog:
           en: We added evaluation results of Gemini 3 Pro Preview (gemini-3-pro-preview), GPT-5.1 Thinking (gpt-5.1-2025-11-13), GPT-5 mini (gpt-5-mini-2025-08-07), Qwen3-30B-A3B, Qwen3-Next-80B-A3B-Instruct, Qwen3-Next-80B-A3B-Thinking. Olmo 3 7B Think, and Olmo 3 32B Think.
         - ja: 事後学習済みモデルの評価タスクに日英翻訳と英日翻訳 (WMT20) を追加しました。
           en: We added Japanese-English and English-Japanese translation (WMT20) to the benchmark datasets for post-trained models.
+        - ja: 日本語と英語の個別のタスクの性能を可視化する手段を、レーダーチャートから棒グラフに変更しました (MT-Benchを除く)。
+          en: We changed the visualization method for individual Japanese and English task performance from radar charts to bar charts (excluding MT-Bench).
     - date: 2025-11-21
       text:
         - ja: PLaMo 3 NICT 2B, 8B, 31B Baseの評価結果を追加しました。
