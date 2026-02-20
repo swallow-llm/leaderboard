@@ -1934,6 +1934,57 @@
       roleplay: 0.906
       stem: 0.927
       writing: 0.904
+- id: gpt-5-mini-2025-08-07
+  model_id: gpt-5-mini-2025-08-07
+  name: GPT-5 mini (gpt-5-mini-2025-08-07)
+  date: '2025-08-07'
+  params: 0
+  active_params: 0
+  family: GPT-5
+  pre_training: (private)
+  reasoning: on (medium)
+  sortkey: gpt 5 mini (gpt 5 mini 2025 08 07)
+  is_post: true
+  url: https://platform.openai.com/docs/models
+  results:
+    ja_post:
+      avg: 0.667
+      JamC-QA: 0.701
+      WMT20enja: 0.267
+      WMT20jaen: 0.239
+      MMLU-ProX: 0.805
+      GPQA: 0.75
+      MATH100: 0.96
+      JHumanEval: 0.945
+      __MIFEvalJa: 0.827
+    en_post:
+      avg: 0.831
+      HellaSwag: 0.934
+      MMLU-Pro: 0.822
+      GPQA: 0.692
+      MATH500: 0.97
+      AIME: 0.883
+      LCB: 0.686
+    ja_mtb:
+      avg: 0.898
+      coding: 0.912
+      extraction: 0.907
+      humanities: 0.902
+      math: 0.949
+      reasoning: 0.834
+      roleplay: 0.871
+      stem: 0.937
+      writing: 0.875
+    en_mtb:
+      avg: 0.902
+      coding: 0.914
+      extraction: 0.882
+      humanities: 0.925
+      math: 0.925
+      reasoning: 0.835
+      roleplay: 0.905
+      stem: 0.939
+      writing: 0.89
 - id: openai/gpt-5.1-2025-11-13
   model_id: openai/gpt-5.1-2025-11-13
   name: GPT-5.1 Instant (gpt-5.1-2025-11-13)
@@ -2189,8 +2240,8 @@
       roleplay: 0.886
       stem: 0.96
       writing: 0.886
-- id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
-  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
+- id: tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1
+  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1
   name: GPT-OSS-Swallow-20B-RL-v0.1
   date: '2026-02-20'
   params: 22
@@ -2200,48 +2251,48 @@
   reasoning: 'on'
   sortkey: gpt oss swallow rl v0.1
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1
   results:
     ja_post:
-      avg: -0.001
-      JamC-QA: -0.001
-      WMT20enja: -0.001
-      WMT20jaen: -0.001
-      MMLU-ProX: -0.001
-      GPQA: -0.001
-      MATH100: -0.001
-      JHumanEval: -0.001
-      __MIFEvalJa: -0.001
+      avg: 0.606
+      JamC-QA: 0.533
+      WMT20enja: 0.251
+      WMT20jaen: 0.213
+      MMLU-ProX: 0.722
+      GPQA: 0.629
+      MATH100: 0.97
+      JHumanEval: 0.924
+      __MIFEvalJa: 0.553
     en_post:
-      avg: -0.001
-      HellaSwag: -0.001
-      MMLU-Pro: -0.001
-      GPQA: -0.001
-      MATH500: -0.001
-      AIME: -0.001
-      LCB: -0.001
+      avg: 0.788
+      HellaSwag: 0.831
+      MMLU-Pro: 0.737
+      GPQA: 0.646
+      MATH500: 0.964
+      AIME: 0.85
+      LCB: 0.697
     ja_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
+      avg: 0.872
+      coding: 0.915
+      extraction: 0.888
+      humanities: 0.809
+      math: 0.938
+      reasoning: 0.788
+      roleplay: 0.886
+      stem: 0.903
+      writing: 0.849
     en_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
-- id: 構築中
-  model_id: 構築中
+      avg: 0.846
+      coding: 0.873
+      extraction: 0.855
+      humanities: 0.848
+      math: 0.869
+      reasoning: 0.7
+      roleplay: 0.874
+      stem: 0.913
+      writing: 0.838
+- id: tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1
+  model_id: tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1
   name: GPT-OSS-Swallow-120B-RL-v0.1
   date: '2026-02-20'
   params: 120
@@ -2251,48 +2302,48 @@
   reasoning: 'on'
   sortkey: gpt oss swallow rl v0.1
   is_post: true
-  url: https://huggingface.co/構築中
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1
   results:
     ja_post:
-      avg: -0.001
-      JamC-QA: -0.001
-      WMT20enja: -0.001
-      WMT20jaen: -0.001
-      MMLU-ProX: -0.001
-      GPQA: -0.001
-      MATH100: -0.001
-      JHumanEval: -0.001
-      __MIFEvalJa: -0.001
+      avg: 0.642
+      JamC-QA: 0.63
+      WMT20enja: 0.266
+      WMT20jaen: 0.221
+      MMLU-ProX: 0.775
+      GPQA: 0.705
+      MATH100: 0.96
+      JHumanEval: 0.935
+      __MIFEvalJa: 0.695
     en_post:
-      avg: -0.001
-      HellaSwag: -0.001
-      MMLU-Pro: -0.001
-      GPQA: -0.001
-      MATH500: -0.001
-      AIME: -0.001
-      LCB: -0.001
+      avg: 0.804
+      HellaSwag: 0.855
+      MMLU-Pro: 0.732
+      GPQA: 0.641
+      MATH500: 0.988
+      AIME: 0.883
+      LCB: 0.723
     ja_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
+      avg: 0.916
+      coding: 0.901
+      extraction: 0.959
+      humanities: 0.928
+      math: 0.977
+      reasoning: 0.848
+      roleplay: 0.915
+      stem: 0.937
+      writing: 0.864
     en_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
-- id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
-  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+      avg: 0.905
+      coding: 0.885
+      extraction: 0.9
+      humanities: 0.896
+      math: 0.934
+      reasoning: 0.873
+      roleplay: 0.906
+      stem: 0.966
+      writing: 0.878
+- id: tokyotech-llm/GPT-OSS-Swallow-20B-SFT-v0.1
+  model_id: tokyotech-llm/GPT-OSS-Swallow-20B-SFT-v0.1
   name: GPT-OSS-Swallow-20B-SFT-v0.1
   date: '2026-02-20'
   params: 22
@@ -2302,7 +2353,7 @@
   reasoning: 'on'
   sortkey: gpt oss swallow sft v0.1
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-20B-SFT-v0.1
   results:
     ja_post:
       avg: 0.59
@@ -2342,8 +2393,8 @@
       roleplay: 0.881
       stem: 0.923
       writing: 0.846
-- id: tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
-  model_id: tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+- id: tokyotech-llm/GPT-OSS-Swallow-120B-SFT-v0.1
+  model_id: tokyotech-llm/GPT-OSS-Swallow-120B-SFT-v0.1
   name: GPT-OSS-Swallow-120B-SFT-v0.1
   date: '2026-02-20'
   params: 120
@@ -2353,7 +2404,7 @@
   reasoning: 'on'
   sortkey: gpt oss swallow sft v0.1
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373
+  url: https://huggingface.co/tokyotech-llm/GPT-OSS-Swallow-120B-SFT-v0.1
   results:
     ja_post:
       avg: 0.616
@@ -5018,8 +5069,8 @@
       roleplay: 0.889
       stem: 0.964
       writing: 0.851
-- id: tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
-  model_id: tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
+- id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-CPT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-CPT-v0.2
   name: Qwen3-Swallow-30B-A3B-CPT-v0.2
   date: '2026-02-20'
   params: 31
@@ -5029,7 +5080,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow a cpt v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-CPT-v0.2
   results:
     ja_post:
       avg: 0.581
@@ -5069,8 +5120,8 @@
       roleplay: 0.831
       stem: 0.747
       writing: 0.68
-- id: 構築中
-  model_id: 構築中
+- id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2
   name: Qwen3-Swallow-30B-A3B-RL-v0.2
   date: '2026-02-20'
   params: 31
@@ -5080,48 +5131,48 @@
   reasoning: 'on'
   sortkey: qwen3 swallow a rl v0.2
   is_post: true
-  url: https://huggingface.co/構築中
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2
   results:
     ja_post:
-      avg: -0.001
-      JamC-QA: -0.001
-      WMT20enja: -0.001
-      WMT20jaen: -0.001
-      MMLU-ProX: -0.001
-      GPQA: -0.001
-      MATH100: -0.001
-      JHumanEval: -0.001
-      __MIFEvalJa: -0.001
+      avg: 0.591
+      JamC-QA: 0.496
+      WMT20enja: 0.243
+      WMT20jaen: 0.213
+      MMLU-ProX: 0.729
+      GPQA: 0.596
+      MATH100: 0.949
+      JHumanEval: 0.909
+      __MIFEvalJa: 0.531
     en_post:
-      avg: -0.001
-      HellaSwag: -0.001
-      MMLU-Pro: -0.001
-      GPQA: -0.001
-      MATH500: -0.001
-      AIME: -0.001
-      LCB: -0.001
+      avg: 0.732
+      HellaSwag: 0.808
+      MMLU-Pro: 0.674
+      GPQA: 0.576
+      MATH500: 0.956
+      AIME: 0.733
+      LCB: 0.646
     ja_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
+      avg: 0.889
+      coding: 0.908
+      extraction: 0.882
+      humanities: 0.896
+      math: 0.993
+      reasoning: 0.785
+      roleplay: 0.905
+      stem: 0.904
+      writing: 0.835
     en_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
-- id: 構築中
-  model_id: 構築中
+      avg: 0.866
+      coding: 0.831
+      extraction: 0.857
+      humanities: 0.883
+      math: 0.94
+      reasoning: 0.793
+      roleplay: 0.889
+      stem: 0.906
+      writing: 0.827
+- id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-SFT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-30B-A3B-SFT-v0.2
   name: Qwen3-Swallow-30B-A3B-SFT-v0.2
   date: '2026-02-20'
   params: 31
@@ -5131,48 +5182,48 @@
   reasoning: 'on'
   sortkey: qwen3 swallow a sft v0.2
   is_post: true
-  url: https://huggingface.co/構築中
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-SFT-v0.2
   results:
     ja_post:
-      avg: -0.001
-      JamC-QA: -0.001
-      WMT20enja: -0.001
-      WMT20jaen: -0.001
-      MMLU-ProX: -0.001
-      GPQA: -0.001
-      MATH100: -0.001
-      JHumanEval: -0.001
-      __MIFEvalJa: -0.001
+      avg: 0.574
+      JamC-QA: 0.504
+      WMT20enja: 0.242
+      WMT20jaen: 0.219
+      MMLU-ProX: 0.711
+      GPQA: 0.558
+      MATH100: 0.899
+      JHumanEval: 0.888
+      __MIFEvalJa: 0.553
     en_post:
-      avg: -0.001
-      HellaSwag: -0.001
-      MMLU-Pro: -0.001
-      GPQA: -0.001
-      MATH500: -0.001
-      AIME: -0.001
-      LCB: -0.001
+      avg: 0.704
+      HellaSwag: 0.832
+      MMLU-Pro: 0.711
+      GPQA: 0.571
+      MATH500: 0.932
+      AIME: 0.667
+      LCB: 0.514
     ja_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
+      avg: 0.887
+      coding: 0.906
+      extraction: 0.896
+      humanities: 0.919
+      math: 0.965
+      reasoning: 0.817
+      roleplay: 0.889
+      stem: 0.882
+      writing: 0.825
     en_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
-- id: tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
-  model_id: tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
+      avg: 0.882
+      coding: 0.934
+      extraction: 0.844
+      humanities: 0.923
+      math: 0.964
+      reasoning: 0.775
+      roleplay: 0.878
+      stem: 0.916
+      writing: 0.821
+- id: tokyotech-llm/Qwen-3-Swallow-8B-CPT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-8B-CPT-v0.2
   name: Qwen3-Swallow-8B-CPT-v0.2
   date: '2026-02-20'
   params: 8.2
@@ -5182,7 +5233,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow cpt v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-8B-CPT-v0.2
   results:
     ja_post:
       avg: 0.515
@@ -5222,8 +5273,8 @@
       roleplay: 0.831
       stem: 0.733
       writing: 0.642
-- id: tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
-  model_id: tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
+- id: tokyotech-llm/Qwen-3-Swallow-32B-CPT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-32B-CPT-v0.2
   name: Qwen3-Swallow-32B-CPT-v0.2
   date: '2026-02-20'
   params: 33
@@ -5233,7 +5284,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow cpt v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-32B-CPT-v0.2
   results:
     ja_post:
       avg: 0.6
@@ -5273,8 +5324,8 @@
       roleplay: 0.845
       stem: 0.77
       writing: 0.754
-- id: tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
-  model_id: tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
+- id: tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2
   name: Qwen3-Swallow-8B-RL-v0.2
   date: '2026-02-20'
   params: 8.2
@@ -5284,7 +5335,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow rl v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2
   results:
     ja_post:
       avg: 0.557
@@ -5324,8 +5375,8 @@
       roleplay: 0.904
       stem: 0.897
       writing: 0.832
-- id: 構築中
-  model_id: 構築中
+- id: tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2
   name: Qwen3-Swallow-32B-RL-v0.2
   date: '2026-02-20'
   params: 33
@@ -5335,48 +5386,48 @@
   reasoning: 'on'
   sortkey: qwen3 swallow rl v0.2
   is_post: true
-  url: https://huggingface.co/構築中
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2
   results:
     ja_post:
-      avg: -0.001
-      JamC-QA: -0.001
-      WMT20enja: -0.001
-      WMT20jaen: -0.001
-      MMLU-ProX: -0.001
-      GPQA: -0.001
-      MATH100: -0.001
-      JHumanEval: -0.001
-      __MIFEvalJa: -0.001
+      avg: 0.609
+      JamC-QA: 0.534
+      WMT20enja: 0.252
+      WMT20jaen: 0.219
+      MMLU-ProX: 0.754
+      GPQA: 0.607
+      MATH100: 0.97
+      JHumanEval: 0.93
+      __MIFEvalJa: 0.584
     en_post:
-      avg: -0.001
-      HellaSwag: -0.001
-      MMLU-Pro: -0.001
-      GPQA: -0.001
-      MATH500: -0.001
-      AIME: -0.001
-      LCB: -0.001
+      avg: 0.792
+      HellaSwag: 0.882
+      MMLU-Pro: 0.778
+      GPQA: 0.657
+      MATH500: 0.976
+      AIME: 0.8
+      LCB: 0.662
     ja_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
+      avg: 0.894
+      coding: 0.915
+      extraction: 0.941
+      humanities: 0.881
+      math: 0.981
+      reasoning: 0.803
+      roleplay: 0.896
+      stem: 0.893
+      writing: 0.842
     en_mtb:
-      avg: -0.001
-      coding: -0.001
-      extraction: -0.001
-      humanities: -0.001
-      math: -0.001
-      reasoning: -0.001
-      roleplay: -0.001
-      stem: -0.001
-      writing: -0.001
-- id: tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
-  model_id: tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
+      avg: 0.877
+      coding: 0.909
+      extraction: 0.799
+      humanities: 0.902
+      math: 0.989
+      reasoning: 0.762
+      roleplay: 0.886
+      stem: 0.911
+      writing: 0.855
+- id: tokyotech-llm/Qwen-3-Swallow-8B-SFT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-8B-SFT-v0.2
   name: Qwen3-Swallow-8B-SFT-v0.2
   date: '2026-02-20'
   params: 8.2
@@ -5386,7 +5437,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow sft v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-8B-SFT-v0.2
   results:
     ja_post:
       avg: 0.534
@@ -5426,8 +5477,8 @@
       roleplay: 0.878
       stem: 0.903
       writing: 0.809
-- id: tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
-  model_id: tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
+- id: tokyotech-llm/Qwen-3-Swallow-32B-SFT-v0.2
+  model_id: tokyotech-llm/Qwen-3-Swallow-32B-SFT-v0.2
   name: Qwen3-Swallow-32B-SFT-v0.2
   date: '2026-02-20'
   params: 33
@@ -5437,7 +5488,7 @@
   reasoning: 'on'
   sortkey: qwen3 swallow sft v0.2
   is_post: true
-  url: https://huggingface.co/tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374
+  url: https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-32B-SFT-v0.2
   results:
     ja_post:
       avg: 0.592

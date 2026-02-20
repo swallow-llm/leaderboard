@@ -12,9 +12,11 @@
       {
         type: "bar",
         models: {includes: g_filter},
-        sort: 0,
+        {% if _sort %}sort: {{ _sort }},{% endif %}
         tasks: {{ _tasks }},
-        {% if _groupby %}groupby: "{{ _groupby }}"{% endif %}
+        {% if _groupby %}groupby: "{{ _groupby }}",{% endif %}
+        {% if _show_category %}show_category: true,{% endif %}
+        {% if _pb %}pb: {{ _pb }},{% endif %}
       }
     );
   });

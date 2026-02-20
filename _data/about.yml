@@ -10,6 +10,12 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2026-02-20
+      text:
+        - ja: GPT-OSS Swallowシリーズ、Qwen3 Swallowシリーズの評価結果を追加しました。
+          en: We added evaluation results of GPT-OSS Swallow and Qwen3 Swallow.
+        - ja: Gemini 3 Pro Preview (gemini-3-pro-preview), GPT-5 mini (gpt-5-mini-2025-08-07) の評価結果を追加しました。
+          en: We added evaluation results of Gemini 3 Pro Preview (gemini-3-pro-preview) and GPT-5 mini (gpt-5-mini-2025-08-07).
     - date: 2025-11-21
       text:
         - ja: PLaMo 3 NICT 2B, 8B, 31B Baseの評価結果を追加しました。

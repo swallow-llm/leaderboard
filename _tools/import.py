@@ -66,6 +66,8 @@ excludes_post = set([
     'XiaomiMiMo/MiMo-7B-RL',
     'nvidia/NVIDIA-Nemotron-Nano-9B-v2',
     'nvidia/NVIDIA-Nemotron-Nano-12B-v2',
+    'Qwen/Qwen3-8B-Base',
+    'Qwen/Qwen3-30B-A3B-Base',
 ])
 
 renames = {
@@ -89,6 +91,19 @@ renames = {
     'tokyotech-llm/gemma2_2b_sft_exp3-checkpoint-1495': 'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1',
     'tokyotech-llm/gemma2_9b_sft_exp11-checkpoint-1495': 'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1',
     'tokyotech-llm/gemma2_27b_sft_exp12-checkpoint-1495': 'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1',
+    'tokyotech-llm/Qwen-3-Swallow-8B-v0.2-Base-LR1.5E-5-iter0025000': 'tokyotech-llm/Qwen-3-Swallow-8B-CPT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-8B-Instruct-v0.2-exp3-LR1.5E-5-iter0033000': 'tokyotech-llm/Qwen-3-Swallow-8B-SFT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-8B-RL-v0.2_iter_0000800': 'tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-30B-A3B-v0.2-LR2.5E-5-iter0025000': 'tokyotech-llm/Qwen-3-Swallow-30B-A3B-CPT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-30B-A3B-Instruct-v0.2-exp2-LR1.5E-5-iter0017374': 'tokyotech-llm/Qwen-3-Swallow-30B-A3B-SFT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-30B-A3B-exp2-RL-v0.2_iter_0000800': 'tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-32B-v0.2-LR1.0E-5-iter0025000': 'tokyotech-llm/Qwen-3-Swallow-32B-CPT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-32B-Instruct-v0.2-exp2-LR1.0E-5-iter0017374': 'tokyotech-llm/Qwen-3-Swallow-32B-SFT-v0.2',
+    'tokyotech-llm/Qwen3-Swallow-32B-exp2-RL-v0.2_iter_0000600': 'tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2',
+    'tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373': 'tokyotech-llm/GPT-OSS-Swallow-20B-SFT-v0.1',
+    'tokyotech-llm/GPT-OSS-Swallow-20B-v0.1-Instruct-exp1-RL_iter_0000800': 'tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1',
+    'tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-LR-1.0E-5-iter0017373': 'tokyotech-llm/GPT-OSS-Swallow-120B-SFT-v0.1',
+    'tokyotech-llm/GPT-OSS-Swallow-120B-v0.1-Instruct-exp1-RL_iter_0000652': 'tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1',
 }
 
 def read_float(x):

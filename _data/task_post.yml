@@ -15,8 +15,8 @@ ja_post:
       field: ja_post_avg
       collective: true
       title:
-        ja: 事後学習（日本語）平均
-        en: Post-trained (Japanese) average
+        ja: 平均
+        en: Average
       short:
         ja: 事後（日）平均
         en: Post (ja) avg
@@ -31,7 +31,9 @@ ja_post:
         en: Average
     - name: JamC-QA
       field: jamcqa
-      title: JamC-QA
+      title:
+        ja: 質問応答 (JamC-QA)
+        en: Q&A (JamC-QA)
       short: JamC-QA
       description:
         ja: 日本固有の知識を問う質問応答
@@ -58,8 +60,8 @@ ja_post:
     - name: WMT20enja
       field: wmt20_en_ja_bleu
       title:
-        ja: WMT20 (英日)
-        en: WMT20 (en-ja)
+        ja: 英日翻訳 (WMT20)
+        en: En-Ja (WMT20)
       short:
         ja: 英日翻訳
         en: En-Ja
@@ -88,8 +90,8 @@ ja_post:
     - name: WMT20jaen
       field: wmt20_ja_en_bleu
       title:
-        ja: WMT20 (日英)
-        en: WMT20 (ja-en)
+        ja: 日英翻訳 (WMT20)
+        en: Ja-En (WMT20)
       short:
         ja: 日英翻訳
         en: Ja-en
@@ -118,8 +120,8 @@ ja_post:
     - name: MMLU-ProX
       field: mmlu_prox_japanese
       title:
-        ja: MMLU-ProX (日本語)
-        en: MMLU-ProX (Japanese)
+        ja: 言語理解と推論 (MMLU-ProX)
+        en: NLU and reasoning (MMLU-ProX)
       short:
         ja: MMLU-ProX (日)
         en: MMLU-ProX (ja)
@@ -145,8 +147,8 @@ ja_post:
     - name: GPQA
       field: gpqa_main_ja
       title:
-        ja: GPQA (日本語)
-        en: GPQA (Japanese)
+        ja: 科学 (GPQA, 日本語)
+        en: Science (GPQA, Japanese)
       short:
         ja: GPQA (日)
         en: GPQA (ja)
@@ -172,8 +174,8 @@ ja_post:
     - name: MATH100
       field: mclm_math_100_japanese
       title:
-        ja: MATH-100 (日本語)
-        en: MATH-100 (Japanese)
+        ja: 数学 (MATH-100)
+        en: Math (MATH-100)
       short:
         ja: MATH-100 (日)
         en: MATH-100 (ja)
@@ -198,7 +200,9 @@ ja_post:
         year: 2025
     - name: JHumanEval
       field: jhumaneval_pass@1
-      title: JHumanEval
+      title:
+        ja: コーディング (JHumanEval)
+        en: Coding (JHumanEval)
       short: JHumanEval
       description:
         ja: コード生成能力のベンチマークHumanEvalの日本語訳
@@ -260,8 +264,8 @@ en_post:
       field: en_post_avg
       collective: true
       title:
-        ja: 事後学習（英語）平均
-        en: Post-trained (English) average
+        ja: 平均
+        en: Average
       short:
         ja: 事後（英）平均
         en: Post (en) avg
@@ -276,7 +280,9 @@ en_post:
         en: Average
     - name: HellaSwag
       field: swallow_hellaswag
-      title: HellaSwag
+      title:
+        ja: 自然言語推論 (HellaSwag)
+        en: NLI (HellaSwag)
       short: HellaSwag
       description:
         ja: 次に起こる出来事を予測する4択の選択式問題
@@ -300,8 +306,8 @@ en_post:
     - name: MMLU-Pro
       field: mmlu_pro_english
       title:
-        ja: MMLU-Pro (英語)
-        en: MMLU-Pro (English)
+        ja: 言語理解と推論 (MMLU-Pro)
+        en: NLU and reasoning (MMLU-Pro)
       short:
         ja: MMLU-Pro (英)
         en: MMLU-Pro (en)
@@ -327,8 +333,8 @@ en_post:
     - name: GPQA
       field: gpqa_diamond
       title:
-        ja: GPQA (英語)
-        en: GPQA (English)
+        ja: 科学 (GPQA)
+        en: Science (GPQA)
       short:
         ja: GPQA (英)
         en: GPQA (en)
@@ -354,8 +360,8 @@ en_post:
     - name: MATH500
       field: math_500
       title:
-        ja: MATH-500 (英語)
-        en: MATH-500 (English)
+        ja: 数学 (MATH-500)
+        en: Math (MATH-500)
       short:
         ja: MATH-500 (英)
         en: MATH-500 (en)
@@ -380,7 +386,9 @@ en_post:
         year: 2021
     - name: AIME
       field: aime_2024_2025
-      title: AIME 2024-2025
+      title:
+        ja: 数学 (AIME 2024-2025)
+        en: Math (AIME 2024-2025)
       short: AIME 24-25
       description:
         ja: 米国数学オリンピック (USAMO) の予選
@@ -399,7 +407,9 @@ en_post:
         en: Free text
     - name: LCB
       field: livecodebench_v5_v6_pass@1
-      title: LiveCodeBench
+      title:
+        ja: コーディング (LCB)
+        en: Coding (LCB)
       short: LCB
       description:
         ja: 競技プログラミング (LeetCode, AtCoder, CodeForces)
@@ -428,8 +438,8 @@ ja_mtb:
       field: japanese_mtbench_average
       collective: true
       title:
-        ja: 日本語 MT-Bench 平均
-        en: Average of Japanese MT-Bench
+        ja: 平均
+        en: Average
       short:
         ja: MTB (日) 平均
         en: MTB (ja) avg
@@ -639,7 +649,7 @@ en_mtb:
   for: ['post']
   title:
     ja: 英語 MT-Bench
-    en: 英語 MT-Bench
+    en: English MT-Bench
   description:
     ja: マルチターン対話能力を測定する英語 MT-Bench。評価スコアは0 (最低) から1 (最高) までの範囲の値をとります。
     en: English MT-Bench evaluates multi-turn dialogue capabilities. The evaluation scores range from 0 (lowest) to 1 (highest).
@@ -648,8 +658,8 @@ en_mtb:
       field: english_mtbench_average
       collective: true
       title:
-        ja: 英語 MT-Bench 平均
-        en: Average of English MT-Bench
+        ja: 平均
+        en: Average
       short:
         ja: MTB (英) 平均
         en: MTB (en) avg

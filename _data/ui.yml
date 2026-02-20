@@ -230,32 +230,62 @@ nav:
       en: Tasks
     svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chart-radar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l9.5 7l-3.5 11h-12l-3.5 -11z" /><path d="M12 7.5l5.5 4l-2.5 5.5h-6.5l-2 -5.5z" /><path d="M2.5 10l9.5 3l9.5 -3" /><path d="M12 3v10l6 8" /><path d="M6 21l6 -8" /></svg>
     children:
-      - name: radar-post
+      - name: task-post
         title:
           ja: 事後学習モデル
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-chatbot"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /><path d="M9.5 9h.01" /><path d="M14.5 9h.01" /><path d="M9.5 13a3.5 3.5 0 0 0 5 0" /></svg>
-        path: radar-post
-      - name: radar-post-sota
+        path: task-post
+      - name: task-post-sota
         title:
           ja: 最先端モデル
           en: State of the art
-        path: radar-post
+        path: task-post
         query: category=post-sota
-      - name: radar-post-sota-open
+      - name: task-post-sota-open
         title:
           ja: 最先端オープンモデル
           en: State-of-the-art open
-        path: radar-post
+        path: task-post
         query: category=post-sota-open
+      - name: task-gptoss-swallow-20b
+        title:
+          ja: GPT-OSS Swallow 20B
+          en: GPT-OSS Swallow 20B
+        path: task-post
+        query: category=gptoss-swallow-20b
+      - name: task-gptoss-swallow-120b
+        title:
+          ja: GPT-OSS Swallow 120B
+          en: GPT-OSS Swallow 120B
+        path: task-post
+        query: category=gptoss-swallow-120b
+      - name: task-qwen3-swallow-8b
+        title:
+          ja: Qwen3 Swallow 8B
+          en: Qwen3 Swallow 8B
+        path: task-post
+        query: category=qwen3-swallow-8b
+      - name: task-qwen3-swallow-30b-a3b
+        title:
+          ja: Qwen3 Swallow 30B-A3B
+          en: Qwen3 Swallow 30B-A3B
+        path: task-post
+        query: category=qwen3-swallow-30b-a3b
+      - name: task-qwen3-swallow-32b
+        title:
+          ja: Qwen3 Swallow 32B
+          en: Qwen3 Swallow 32B
+        path: task-post
+        query: category=qwen3-swallow-32b
       - break: true
-      - name: radar-pre
-        path: radar-pre
+      - name: task-pre
+        path: task-pre
         title:
           ja: 事前学習モデル
           en: Post-trained models
         svg: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></svg>
-        path: radar-pre
+        path: task-pre
   - name: scatter
     title:
       ja: 散布図
@@ -334,6 +364,31 @@ model_selection:
       ja: 最先端事後学習モデル
       en: State of the art
     query: {includes: ["gpt-5-2025-08-07", "openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507"]}
+  - name: gptoss-swallow-20b
+    title:
+      ja: GPT-OSS Swallow 20B
+      en: GPT-OSS Swallow 20B
+    query: {includes: ["google/gemma-3-27b-it", "Qwen/Qwen3-14B", "openai/gpt-oss-20b", "tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1", "openai/gpt-oss-120b"]}
+  - name: gptoss-swallow-120b
+    title:
+      ja: GPT-OSS Swallow 120B
+      en: GPT-OSS Swallow 120B
+    query: {includes: ["Qwen/Qwen3-Next-80B-A3B-Thinking", "openai/gpt-oss-120b", "tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1", "Qwen/Qwen3-235B-A22B-Thinking-2507", "gpt-5-mini-2025-08-07"]}
+  - name: qwen3-swallow-8b
+    title:
+      ja: Qwen3 Swallow 8B
+      en: Qwen3 Swallow 8B
+    query: {includes: ["tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5", "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "allenai/Olmo-3-7B-Think", "Qwen/Qwen3-8B", "tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2"]}
+  - name: qwen3-swallow-30b-a3b
+    title:
+      ja: Qwen3 Swallow 30B-A3B
+      en: Qwen3 Swallow 30B-A3B
+    query: {includes: ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-30B-A3B", "tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2"]}
+  - name: qwen3-swallow-32b
+    title:
+      ja: Qwen3 Swallow 32B
+      en: Qwen3 Swallow 32B
+    query: {includes: ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-32B", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2"]}
   - name: post-sota-open
     title:
       ja: 最先端オープン事後学習モデル

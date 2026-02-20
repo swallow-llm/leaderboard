@@ -20,7 +20,7 @@
   <!-- Radar chart -->
   {% if is_post %}
     <div class="col-sm-8 col-lg-8">
-    {% with _id="bar_ja_post", _title=taskspec.ja_post.title, _tasks='[["ja_post", "+"], ["ja_post", "avg"]]', _groupby="task" %}
+    {% with _id="bar_ja_post", _title=taskspec.ja_post.title, _tasks='[["ja_post", "+"], ["ja_post", "avg"]]', _groupby="task", _pb=32 %}
       {% include "bar.html" %}
     {% endwith %}
     </div>
@@ -30,7 +30,7 @@
     {% endwith %}
     </div>
     <div class="col-sm-8 col-lg-8">
-    {% with _id="bar_en_post", _title=taskspec.en_post.title, _tasks='[["en_post", "+"], ["en_post", "avg"]]', _groupby="task" %}
+    {% with _id="bar_en_post", _title=taskspec.en_post.title, _tasks='[["en_post", "+"], ["en_post", "avg"]]', _groupby="task", _pb=32 %}
       {% include "bar.html" %}
     {% endwith %}
     </div>

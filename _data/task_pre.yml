@@ -15,8 +15,8 @@ ja_pre:
       field: ja_pre_avg
       collective: true
       title:
-        ja: 事前学習（日本語）平均
-        en: Pre-trained (Japanese) average
+        ja: 平均
+        en: Average
       short:
         ja: 事前（日）平均
         en: Pre (ja) avg
@@ -303,8 +303,8 @@ en_pre:
       field: en_pre_avg
       collective: true
       title:
-        ja: 事前学習（英語）平均
-        en: Pre-trained (English) average
+        ja: 平均
+        en: Average
       short:
         ja: 事前（英）平均
         en: Pre (en) avg

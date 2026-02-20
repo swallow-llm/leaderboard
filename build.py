@@ -99,7 +99,7 @@ if __name__ == '__main__':
         generate(env, 'page-bar.html', f'index-pre.{lang}.html', args)
         generate(env, 'page-scatter.html', f'scatter-pre.{lang}.html', args)
         args['select'] = ''
-        generate(env, 'page-radar.html', f'radar-pre.{lang}.html', args)
+        generate(env, 'page-radar.html', f'task-pre.{lang}.html', args)
         for name, model in pre_models.items():
             uri = model['id'].replace('/', '_')
             args['select'] = model['id']
@@ -128,7 +128,7 @@ if __name__ == '__main__':
         generate(env, 'page-bar.html', f'index-post.{lang}.html', args)
         generate(env, 'page-scatter.html', f'scatter-post.{lang}.html', args)
         args['select'] = ''
-        generate(env, 'page-radar.html', f'radar-post.{lang}.html', args)
+        generate(env, 'page-radar.html', f'task-post.{lang}.html', args)
         for name, model in post_models.items():
             uri = model['id'].replace('/', '_')
             args['select'] = model['id']

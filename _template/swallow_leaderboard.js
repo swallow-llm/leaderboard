@@ -3,22 +3,22 @@ const g_tasks = {{ tasks | tojson }};
 const g_updater = [];
 
 var swallow_leaderboard_models = function(query, sortkey) {
+  let models = [];
+
   if ("name" in query) {
     // Return a single model specified by a name.
     return g_models[query.name];
-  } else {
 
-    let models = [];
+  } else if ("includes" in query) {
+    for (let name of query.includes) {
+      if (name in g_models) {
+        models.push(g_models[name]);
+      }
+    }
+
+  } else {
     for (let key in g_models) {
       const model = g_models[key];
-
-      // Filter by the include list.
-      if ("includes" in query) {
-        if (query.includes.includes(model['id'])) {
-          models.push(model);
-        }
-        continue;
-      }
 
       // Filter by the model family.
       if ("family" in query) {
@@ -56,14 +56,14 @@ var swallow_leaderboard_models = function(query, sortkey) {
       
       models.push(model);
     }
-
-    // Sort models.
-    if (sortkey !== undefined) {
-      models.sort((a, b) => a.results[sortkey[0]][sortkey[1]] - b.results[sortkey[0]][sortkey[1]]);
-    }
-
-    return models;
   }
+
+  // Sort models.
+  if (sortkey !== undefined) {
+    models.sort((a, b) => a.results[sortkey[0]][sortkey[1]] - b.results[sortkey[0]][sortkey[1]]);
+  }
+
+  return models;
 };
 
 var swallow_leaderboard_get_taskdef = function(query) {
@@ -97,7 +97,9 @@ var swallow_leaderboard_chart_bar = function(element, config) {
   };
 
   var get_option = function(element, config) {
-    const models = swallow_leaderboard_models(config.models, config.tasks[config.sort]);
+    const models = "sort" in config ?
+      swallow_leaderboard_models(config.models, config.tasks[config.sort]) :
+      swallow_leaderboard_models(config.models);
 
     // Build series.
     let series = [];
@@ -125,7 +127,9 @@ var swallow_leaderboard_chart_bar = function(element, config) {
           data.push(model.results[query[0]][query[1]]);
         }
         const t = swallow_leaderboard_get_taskdef(query);
-        series.push({name: t.title, data: data});
+        let title = ("show_category" in config && config.show_category) ? g_tasks[query[0]].title : "";
+        title += " " + t.title;
+        series.push({name: title, data: data});
       }
 
       // Build labels.
@@ -133,11 +137,13 @@ var swallow_leaderboard_chart_bar = function(element, config) {
         labels.push(model.name);
       }
     }
+
+    const pb = "pb" in config ? config.pb : 0;
   
     // Determine the orientation.
     const horizontal = (window.outerWidth < window.outerHeight);
     const height = horizontal ? Math.max(480, labels.length * 16 + 64) : 480;
-    const padding = horizontal ? {} : { left: 48, right: 48, top: 0, bottom: 64 };
+    const padding = horizontal ? {} : { left: 48, right: 48, top: 0, bottom: pb };
     return {
       chart: {
         type: "bar",
@@ -193,6 +199,8 @@ var swallow_leaderboard_chart_bar = function(element, config) {
         position: 'top',
       },
       tooltip: {
+        shared: false,
+        intersect: true,
         marker: {
           show: false,
         },

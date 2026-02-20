@@ -10,11 +10,11 @@
   <!-- Bar chart -->
   <div class="col-12">
     {% if is_post %}
-      {% with _id="bar", _tasks='[["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]]' %}
+      {% with _id="bar", _tasks='[["ja_post", "avg"], ["en_post", "avg"], ["ja_mtb", "avg"], ["en_mtb", "avg"]]', _sort="0", _pb=72, _show_category="True" %}
         {% include "bar.html" %}
       {% endwith %}
     {% else %}
-      {% with _id="bar", _tasks='[["ja_pre", "avg"], ["en_pre", "avg"]]' %}
+      {% with _id="bar", _tasks='[["ja_pre", "avg"], ["en_pre", "avg"]]', _sort="0", _pb=72, _show_category="True" %}
         {% include "bar.html" %}
       {% endwith %}
     {% endif %}
