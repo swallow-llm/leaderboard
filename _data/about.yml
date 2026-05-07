@@ -10,14 +10,16 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
-    - date: 2026-05-07
+    - date: 2026-05-08
       text:
-        - ja: 推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。ただし、非推論型モデルの評価や、元々複数回デコーディングを行うMT-Bench、HumanEval、LiveCodeBenchタスクでは、従来通り貪欲デコーディングを用います。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます（LLM開発元の公式発表スコアと比較しやすくなります）。
-          en: We adopted probabilistic decoding (temperature=0.6, top-p=0.95) for evaluating reasoning models. However, for non-reasoning models and for tasks that inherently involve multiple decoding runs, such as MT-Bench, HumanEval, and LiveCodeBench, we continue to use greedy decoding as before. This mitigates the impact of cases where reasoning models fail to complete reasoning (e.g., generation does not terminate) and aligns the evaluation more closely with standard practices for reasoning models.
+        - ja: 推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます（LLM開発元の公式発表スコアと比較しやすくなります）。非推論型モデルの評価は、ひきつづき原則として貪欲デコーディング（temperature=0）を用いて、デコーディングを複数回試行する日英MT-Bench、JHumanEval、LiveCodeBenchタスクのみ確率的デコーディングとします。
+          en: We adopted stochastic decoding (temperature = 0.6, top-p = 0.95) to evaluate reasoning models. This mitigates the impact of cases in which reasoning models fail to complete reasoning (e.g., when generation does not stop) and aligns the evaluation more closely with standard practices for reasoning models. For non-reasoning models, we continue to use greedy decoding as before, except for tasks that require multiple decoding trials, such as Japanese and English MT-Bench, JHumanEval, and LiveCodeBench.
         - ja: GPQA, AIMEの評価におけるデコーディングの試行を4回に増やしました。これらのベンチマークは設問が少ないため、統計誤差の影響を軽減する効果が期待できます。
           en: We increased the number of decoding trials to four for GPQA and AIME evaluations. Since these benchmarks contain a limited number of questions, this is expected to reduce the effect of statistical variance.
-        - ja: 日本語と英語のMT-BenchのジャッジをGPT-5.2に変更しました。これは、GPT-4oの公開終了に備えること、および採点をより厳密に行うことが狙いです。
-          en: We changed the judge for both Japanese and English MT-Bench to GPT-5.2. This is intended to prepare for the deprecation of GPT-4o and to enable more rigorous scoring.
+        - ja: LiveCodeBenchタスクで評価する設問を、v6で追加された設問に変更しました（従来は v5 および v6で追加された設問でした）。
+          en: We changed the questions evaluated in the LiveCodeBench to those added in v6 (previously, questions from v5 and v6 were used).
+        - ja: 日本語と英語のMT-Benchの自動採点モデルをGPT-5.2（推論off）に変更しました。これにより，幻覚・誤答・指示追従違反・対話の破綻に対する採点（減点）を正確にする狙いです。
+          en: We changed the judge for both Japanese and English MT-Bench to GPT-5.2 (reasoning disabled). This change is intended to make scoring more accurate for hallucinations, incorrect answers, instruction-following failures, and off-track dialogues.
         - ja: 評価スコアが飽和気味となったMATH-100を日本語ベンチマークから外し、PolyMathの難易度高 (high) とトップ (top) の日本語の設問を採用しました。
           en: We removed MATH-100 from the Japanese benchmarks due to score saturation and instead adopted high- and top-difficulty Japanese questions from PolyMath.
         - ja: 指示追従能力を測定するIFBench（英語）およびM-IFEval-Ja（日本語）を平均スコアの算出に組み入れました。
