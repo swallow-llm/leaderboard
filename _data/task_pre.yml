@@ -18,8 +18,8 @@ ja_pre:
         ja: 平均
         en: Average
       short:
-        ja: 事前（日）平均
-        en: Pre (ja) avg
+        ja: 日本語平均
+        en: Ja Avg
       description:
         ja: 事前学習モデル向けの日本語タスクの平均スコア
         en: Average score of Japanese datasets for pre-trained models
@@ -306,8 +306,8 @@ en_pre:
         ja: 平均
         en: Average
       short:
-        ja: 事前（英）平均
-        en: Pre (en) avg
+        ja: 英語平均
+        en: En Avg
       description:
         ja: 事前学習モデル向けの英語タスクの平均スコア
         en: Average score of English datasets for pre-trained models

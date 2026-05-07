@@ -1,3 +1,4 @@
+import collections
 import csv
 import oyaml as yaml
 import re
@@ -59,13 +60,31 @@ includes_pre = set([
 
 excludes_post = set([
     # Post-trained models
-    'sbintuitions/sarashina2.2-0.5b-instruct-v0.1',
-    'sbintuitions/sarashina2.2-1b-instruct-v0.1',
-    'XiaomiMiMo/MiMo-7B-RL',
-    'nvidia/NVIDIA-Nemotron-Nano-9B-v2',
-    'nvidia/NVIDIA-Nemotron-Nano-12B-v2',
-    'Qwen/Qwen3-8B-Base',       # Pre-trained model.
-    'Qwen/Qwen3-30B-A3B-Base',  # Pre-trained model.
+    'google/gemma-2-2b-it',
+    'tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1',
+    'Qwen/Qwen2.5-7B-Instruct',
+    'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
+    'deepseek-ai/DeepSeek-R1-Distill-Llama-8B',
+    'tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3',
+    'swiss-ai/Apertus-8B-Instruct-2509',
+    'google/gemma-2-9b-it',
+    'tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1',
+    'microsoft/phi-4',
+    'Qwen/Qwen2.5-14B-Instruct',
+    'deepseek-ai/DeepSeek-R1-Distill-Qwen-14B',
+    'cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese',
+    'cyberagent/calm3-22b-chat',
+    'google/gemma-2-27b-it',
+    'tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1',
+    'google/medgemma-27b-it',
+    'Qwen/Qwen2.5-32B-Instruct',
+    'flux-inc/Flux-Japanese-Qwen2.5-32B-Instruct-V1.0',
+    'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
+    'nvidia/Llama-3_3-Nemotron-Super-49B-v1',
+    'deepseek-ai/DeepSeek-R1-Distill-Llama-70B',
+    'swiss-ai/Apertus-70B-Instruct-2509',
+    'openai/gpt-5.1-2025-11-13',
+    'gpt-5.1-2025-11-13',
 ])
 
 excludes_reasoning = set([
@@ -247,7 +266,7 @@ if __name__ == '__main__':
         T = yaml.safe_load(fi)
         F = [
             ('model_id', 'id', read_model_id),
-            ('name', 'name', str),
+            ('name', 'non-reasoning model eval. metric name →', str),
             ('date', 'date', str),
             ('params', 'params', read_float),
             ('active_params', 'active_params', read_float),
@@ -255,14 +274,21 @@ if __name__ == '__main__':
             ('pre_training', 'base', read_base),
             ('reasoning', 'reasoning mode', read_reasoning),
         ]
-        with open('Swallow実験結果 - (Qwen3,GPT-OSS)-Swallow-Instruct.csv') as fi:
-            data += read_data(fi, F, T, True, None, excludes_post, excludes_reasoning, num_skips=4)
+        with open('Swallow実験結果 - Swallow-LB-v2-202603-.csv') as fi:
+            data += read_data(fi, F, T, True, None, excludes_post, excludes_reasoning, num_skips=5)
+
+    # Rename id and name if multiple configurations exist for the same model.
+    C = collections.Counter(d['id'] for d in data)
+    for d in data:
+        if 1 < C[d['id']]:
+            d['id'] += f' [{d["reasoning"]}]'.replace(' ', '_')
+            d['name'] += f' [{d["reasoning"]}]'
 
     # Sort models.
     data.sort(key=operator.itemgetter('sortkey', 'params'))
 
     print('# Evaluation results in Swallow LLM Leaderboard')
-    print('# Copyright (c) 2025 Swallow LLM team')
+    print('# Copyright (c) 2025-2026 Swallow LLM team')
     print('# This file is distributed under Creative Commons Attribution 4.0 (CC-BY 4.0) License')
     print('')
     print(yaml.dump(data, allow_unicode=True), end='')

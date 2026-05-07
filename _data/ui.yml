@@ -126,12 +126,6 @@ nav:
           en: OpenAI family
         path: index-post
         query: category=openai
-      - name: bar-post-llama
-        title:
-          ja: Llama系統
-          en: Llama family
-        path: index-post
-        query: category=llama
       - name: bar-post-gemma
         title:
           ja: Gemma系統
@@ -144,6 +138,12 @@ nav:
           en: Qwen family
         path: index-post
         query: category=qwen
+      - name: bar-post-llama
+        title:
+          ja: Llama系統
+          en: Llama family
+        path: index-post
+        query: category=llama
       - name: bar-post-tiny
         title:
           ja: 超小型 (5B未満)
@@ -182,12 +182,6 @@ nav:
           en: OpenAI family
         path: index-pre
         query: category=openai
-      - name: bar-pre-llama
-        title:
-          ja: Llama系統
-          en: Llama family
-        path: index-pre
-        query: category=llama
       - name: bar-pre-gemma
         title:
           ja: Gemma系統
@@ -200,6 +194,12 @@ nav:
           en: Qwen family
         path: index-pre
         query: category=qwen
+      - name: bar-pre-llama
+        title:
+          ja: Llama系統
+          en: Llama family
+        path: index-pre
+        query: category=llama
       - name: bar-pre-tiny
         title:
           ja: 超小型 (5B未満)
@@ -242,12 +242,12 @@ nav:
           en: State of the art
         path: task-post
         query: category=post-sota
-      - name: task-post-sota-open
+      - name: post-ja
         title:
-          ja: 最先端オープンモデル
-          en: State-of-the-art open
+          ja: 日本のオープンモデル
+          en: Japanese open models
         path: task-post
-        query: category=post-sota-open
+        query: category=post-ja
       - name: task-gptoss-swallow-20b
         title:
           ja: GPT-OSS Swallow 20B
@@ -363,7 +363,7 @@ model_selection:
     title:
       ja: 最先端事後学習モデル
       en: State of the art
-    query: {includes: ["gpt-5-2025-08-07", "openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507"]}
+    query: {includes: ["openai/gpt-oss-120b", "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16", "Qwen/Qwen3.5-122B-A10B", "google/gemma-4-31B-it", "gpt-5.4-2026-03-05"]}
   - name: gptoss-swallow-20b
     title:
       ja: GPT-OSS Swallow 20B
@@ -389,11 +389,11 @@ model_selection:
       ja: Qwen3 Swallow 32B
       en: Qwen3 Swallow 32B
     query: {includes: ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-32B", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2"]}
-  - name: post-sota-open
+  - name: post-ja
     title:
-      ja: 最先端オープン事後学習モデル
-      en: State-of-the-art open
-    query: {includes: ["openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507", "meta-llama/Llama-4-Scout-17B-16E-Instruct", "google/gemma-3-27b-it"]}
+      ja: 日本のオープンモデル
+      en: Japanese open models
+    query: {includes: ["llm-jp/llm-jp-4-8b-thinking", "tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1", "llm-jp/llm-jp-4-32b-a3b-thinking", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2", "tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1"]}
 
 pre_title:
   ja: 事前学習済みモデル

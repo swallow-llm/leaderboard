@@ -33,7 +33,7 @@
       {% for tab in _tabs %}
       <div class="tab-pane{% if loop.first %} active show{% endif %}" id="tabs-{{ tab.name }}">
         <div class="table-responsive">
-          <table class="table card-table table-vcenter text-nowrap datatable">
+          <table class="table card-table table-vcenter text-nowrap datatable table-sort">
             <thead>
               <tr>
                 <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all models" name="__ALL__"></th>
@@ -47,10 +47,10 @@
               {% for id, model in models.items() %}
               <tr>
                 <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select model" name="{{ model.id }}"></td>
-                <td><a href="{{ model.id | replace('/', '_') }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td data-sort="{{ model.sortkey }}"><a href="{{ model.id | replace('/', '_') }}.{{ lang }}.html">{{ model.name }}</a> <a href="{{ model.url }}"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 {% for category, name in tab.columns %}
                 {% set value = model.results[category][name] %}
-                <td class="text-end">{% if 0 <= value %}{{ '%0.3f' | format(value | float) }}{% endif %}</td>
+                <td class="text-end" data-sort="{% if 0 <= value %}{{ value }}{% else %}-1{% endif %}">{% if 0 <= value %}{{ '%0.3f' | format(value | float) }}{% endif %}</td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -66,95 +66,119 @@
 <script>
   // @formatter:off
   document.addEventListener("DOMContentLoaded", function () {
-    console.log(g_filter);
-    g_filter.forEach(function(id) {
-      document.querySelectorAll('input[name="'+id+'"]').forEach(function(e) {
-        e.checked = true;
-      });
-    });
-    if (g_filter.length == Object.keys(g_models).length) {
-      document.querySelectorAll('th > input').forEach(function(e) {
-        e.checked = true;
-      });
-    }
+    const selections = {{ ui.model_selection | tojson }};
+    const allModelIds = Object.keys(g_models).map(key => g_models[key].id);
 
-    var check = function(id, checked) {
-      document.querySelectorAll('input[name="'+id+'"]').forEach(function(e) {
-        e.checked = checked;
-      });
+    const normalizeFilter = function () {
+      g_filter = Array.isArray(g_filter) ? Array.from(new Set(g_filter)) : [];
     };
 
-    var check_all = function(checked) {
-      document.querySelectorAll('th > input').forEach(function(e) {
-        e.checked = checked;
-      });
-      document.querySelectorAll('td > input').forEach(function(e) {
-        e.checked = checked;
-      });
-    };
+    const renderChecks = function () {
+      normalizeFilter();
 
-    document.querySelectorAll('#model_selection > button').forEach(e => e.onclick = function() {
-      const selections = {{ ui.model_selection | tojson }};
+      const selected = new Set(g_filter);
+      const allChecked = selected.size === allModelIds.length;
 
-      // Uncheck all models.
-      check_all(false);
-
-      for (let selection of selections) {
-        if (selection.name == e.getAttribute("data")) {
-          const query = selection.query;
-          const models = swallow_leaderboard_models(query);
-
-          g_filter = [];
-          for (let model of models) {
-            g_filter.push(model.id);
-            check(model.id, true);
-          }
-        }
-      }
-
-      if (g_filter.length == Object.keys(g_models).length) {
-        check_all(true);
-      }
-
-      swallow_leaderboard_update("", {models: {includes: g_filter}});
-    });
-
-    document.querySelectorAll('td > input').forEach(e => e.onclick = function() {
-      const id = this.name;
-      const checked = this.checked;
-      if (checked) {
-        if (g_filter === null) {
-          g_filter = [id];
+      document.querySelectorAll('table.table-sort input[type="checkbox"]').forEach(function (input) {
+        if (input.name === "__ALL__") {
+          input.checked = allChecked;
         } else {
+          input.checked = selected.has(input.name);
+        }
+      });
+    };
+
+    const updateLeaderboard = function () {
+      normalizeFilter();
+      swallow_leaderboard_update("", { models: { includes: g_filter } });
+    };
+
+    const setModelChecked = function (id, checked) {
+      normalizeFilter();
+
+      if (checked) {
+        if (!g_filter.includes(id)) {
           g_filter.push(id);
         }
       } else {
-        var i = g_filter.indexOf(id);
-        if (i !== -1) {
-          g_filter.splice(i, 1);
-        }
+        g_filter = g_filter.filter(x => x !== id);
       }
 
-      // Update check states in other tabs.
-      check(checked);
+      renderChecks();
+      updateLeaderboard();
+    };
 
-      swallow_leaderboard_update("", {models: {includes: g_filter}});
+    const setAllChecked = function (checked) {
+      g_filter = checked ? [...allModelIds] : [];
+
+      renderChecks();
+      updateLeaderboard();
+    };
+
+    const applyModelSelection = function (selectionName) {
+      const selection = selections.find(s => s.name === selectionName);
+
+      if (!selection) {
+        return;
+      }
+
+      const models = swallow_leaderboard_models(selection.query);
+      g_filter = models.map(model => model.id);
+
+      renderChecks();
+      updateLeaderboard();
+    };
+
+    // Initial rendering.
+    renderChecks();
+
+    // Preset model selection.
+    document.querySelector('#model_selection')?.addEventListener('click', function (event) {
+      const button = event.target.closest('button[data]');
+
+      if (!button) {
+        return;
+      }
+
+      applyModelSelection(button.getAttribute("data"));
     });
 
-    document.querySelectorAll('th > input').forEach(e => e.onclick = function() {
-      const id = this.name;
-      const checked = this.checked;
-      if (checked) {
-        for (let key in g_models) {
-          g_filter.push(g_models[key].id);
-        }
-      } else {
-        g_filter = [];
-      }
+    // Individual checkboxes.
+    document.querySelectorAll('table.table-sort tbody').forEach(function (tbody) {
+      tbody.addEventListener('change', function (event) {
+        const input = event.target;
 
-      check_all(checked);
-      swallow_leaderboard_update("", {models: {includes: g_filter}});
+        if (!input.matches('input[type="checkbox"]')) {
+          return;
+        }
+
+        setModelChecked(input.name, input.checked);
+      });
+    });
+
+    // All-select checkboxes.
+    document.querySelectorAll('table.table-sort thead').forEach(function (thead) {
+      thead.addEventListener('change', function (event) {
+        const input = event.target;
+
+        if (!input.matches('input[type="checkbox"][name="__ALL__"]')) {
+          return;
+        }
+
+        setAllChecked(input.checked);
+      });
+    });
+
+    // Restore checkboxes after sorting.
+    document.querySelectorAll('table.table-sort th').forEach(function (th) {
+      th.addEventListener('click', function (event) {
+        if (event.target.matches('input[type="checkbox"]')) {
+          return;
+        }
+
+        setTimeout(renderChecks, 0);
+      });
     });
   });
-// @formatter:on
+  // @formatter:on
 </script>

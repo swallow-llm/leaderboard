@@ -18,8 +18,8 @@ ja_post:
         ja: 平均
         en: Average
       short:
-        ja: 事後（日）平均
-        en: Post (ja) avg
+        ja: 日本語平均
+        en: Ja avg
       description:
         ja: 事後学習モデル向けの日本語タスクの平均スコア
         en: Average score of Japanese datasets for post-trained models
@@ -117,6 +117,31 @@ ja_post:
         year:
           ja: 2020
           en: 2020
+    - name: MIFEvalJa
+      field: mifeval_ja_inst_level_strict_acc
+      title: M-IFEval-Ja
+      short:
+        ja: M-IFEval (日)
+        en: M-IFEval (Ja)
+      description:
+        ja: 指示追従能力の制御性
+        en: Controllability of instruction following
+      category:
+        ja: 指示追従
+        en: Instruction following
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://aclanthology.org/2025.findings-naacl.344/
+        author: Dussolle et al.
+        year: 2025
     - name: MMLU-ProX
       field: mmlu_prox_japanese
       title:
@@ -171,17 +196,17 @@ ja_post:
         href: https://arxiv.org/abs/2502.07346
         author: Huang et al.
         year: 2025
-    - name: MATH100
-      field: mclm_math_100_japanese
+    - name: PolyMathJaHT
+      field: polymath_ja_high_top
       title:
-        ja: 数学 (MATH-100)
-        en: Math (MATH-100)
+        ja: 数学 (PolyMath Ja, HT)
+        en: Math (PolyMath Ja, HT)
       short:
-        ja: MATH-100 (日)
-        en: MATH-100 (ja)
+        ja: PolyMath HT (日)
+        en: PolyMath HT (ja)
       description:
-        ja: コンテストレベルの数学
-        en: Competition-level mathmatics
+        ja: 高難度な数学
+        en: High-to-competition level mathmatics
       category:
         ja: 数学
         en: Mathematics
@@ -195,9 +220,9 @@ ja_post:
         ja: 自由記述
         en: Free text
       link:
-        href: https://aclanthology.org/2025.acl-long.699/
-        author: Son et al.
-        year: 2025
+        href: https://neurips.cc/virtual/2025/loc/mexico-city/poster/121795
+        author: Wang et al.
+        year: 2026
     - name: JHumanEval
       field: jhumaneval_pass@1
       title:
@@ -223,33 +248,6 @@ ja_post:
           ja: 佐藤ら
           en: Sato et al.
         year: 2024
-    - name: __MIFEvalJa
-      field: mifeval_ja_inst_level_strict_acc
-      title: M-IFEval-Ja
-      short: M-IFEval-Ja
-      exclude_from_avg: true
-      description:
-        ja: 指示追従能力の制御性
-        en: Controllability of instruction following
-      remark:
-        ja: このタスクの評価結果は平均の算出から除外されます
-        en: Evaluation results of this task are excluded from average calculation.
-      category:
-        ja: 指示追従
-        en: Instruction following
-      metric:
-        ja: 正解率
-        en: Accuracy
-      input:
-        ja: ゼロショット
-        en: zero-shot
-      format:
-        ja: 自由記述
-        en: Free text
-      link:
-        href: https://aclanthology.org/2025.findings-naacl.344/
-        author: Dussolle et al.
-        year: 2025
 
 en_post:
   for: ['post']
@@ -267,8 +265,8 @@ en_post:
         ja: 平均
         en: Average
       short:
-        ja: 事後（英）平均
-        en: Post (en) avg
+        ja: 英語平均
+        en: En Avg
       description:
         ja: 事後学習モデル向けの英語タスクの平均スコア
         en: Average score of English datasets for post-trained models
@@ -303,6 +301,29 @@ en_post:
         href: https://aclanthology.org/P19-1472/
         author: Zellers et al.
         year: 2019
+    - name: MIFEvalJa
+      field: ifbench_inst_level_strict_acc
+      title: IFBench
+      short: IFBench
+      description:
+        ja: 指示追従能力
+        en: Instruction following
+      category:
+        ja: 指示追従
+        en: Instruction following
+      metric:
+        ja: 正解率
+        en: Accuracy
+      input:
+        ja: ゼロショット
+        en: zero-shot
+      format:
+        ja: 自由記述
+        en: Free text
+      link:
+        href: https://neurips.cc/virtual/2025/loc/san-diego/poster/121379
+        author: Pyatkin et al.
+        year: 2025
     - name: MMLU-Pro
       field: mmlu_pro_english
       title:
@@ -406,10 +427,10 @@ en_post:
         ja: 自由記述
         en: Free text
     - name: LCB
-      field: livecodebench_v5_v6_pass@1
+      field: livecodebench_v6_pass@1
       title:
-        ja: コーディング (LCB)
-        en: Coding (LCB)
+        ja: コーディング (LCB v6)
+        en: Coding (LCB v6)
       short: LCB
       description:
         ja: 競技プログラミング (LeetCode, AtCoder, CodeForces)
@@ -441,8 +462,8 @@ ja_mtb:
         ja: 平均
         en: Average
       short:
-        ja: MTB (日) 平均
-        en: MTB (ja) avg
+        ja: 日本語MTB平均
+        en: Ja MTB Avg
       description:
         ja: 日本語 MT-Bench 8タスクの平均スコア
         en: Average score of eight tasks of Japanese MT-bench
@@ -464,8 +485,8 @@ ja_mtb:
         ja: PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する
         en: Implementing algorithms in Python or C++, and creating websites using HTML.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -488,8 +509,8 @@ ja_mtb:
         ja: 文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する
         en: Extracting named entities (such as author names and numerical values) and sentiment (e.g., positive or negative) from text.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -512,8 +533,8 @@ ja_mtb:
         ja: 法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する
         en: Creating essays and strategies on topics related to law, economics, history, philosophy, and education.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -536,8 +557,8 @@ ja_mtb:
         ja: 代数、幾何、確率、整数などの問題や文章題に対する解答を作成する
         en: Generating solutions for problems and word problems in algebra, geometry, probability, and number theory.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -560,8 +581,8 @@ ja_mtb:
         ja: 常識や推論力を活用して問題に対する解答を作成する
         en: Generating answers to questions by leveraging common knowledge and reasoning skills.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -584,8 +605,8 @@ ja_mtb:
         ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
         en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -608,8 +629,8 @@ ja_mtb:
         ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する
         en: Generating answers and explanations on topics related to physics, chemistry, biology, geography, architecture, and machine learning.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -632,8 +653,8 @@ ja_mtb:
         ja: ブログ記事やメール文面、フィクションの文章などを執筆するタスク
         en: Writing blog articles, email drafts, and fictional narratives.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -661,8 +682,8 @@ en_mtb:
         ja: 平均
         en: Average
       short:
-        ja: MTB (英) 平均
-        en: MTB (en) avg
+        ja: 英語MTB平均
+        en: En MTB Avg
       description:
         ja: 英語 MT-Bench 8タスクの平均スコア
         en: Average score of eight tasks of English MT-bench
@@ -684,8 +705,8 @@ en_mtb:
         ja: PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する
         en: Implementing algorithms in Python or C++, and creating websites using HTML.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -708,8 +729,8 @@ en_mtb:
         ja: 文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する
         en: Extracting named entities (such as author names and numerical values) and sentiment (e.g., positive or negative) from text.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -732,8 +753,8 @@ en_mtb:
         ja: 法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する
         en: Creating essays and strategies on topics related to law, economics, history, philosophy, and education.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -756,8 +777,8 @@ en_mtb:
         ja: 代数、幾何、確率、整数などの問題や文章題に対する解答を作成する
         en: Generating solutions for problems and word problems in algebra, geometry, probability, and number theory.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -780,8 +801,8 @@ en_mtb:
         ja: 常識や推論力を活用して問題に対する解答を作成する
         en: Generating answers to questions by leveraging common knowledge and reasoning skills.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -804,8 +825,8 @@ en_mtb:
         ja: 有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する
         en: Writing creative texts by assuming the persona of famous individuals or fictional characters and imagining hypothetical scenarios.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -828,8 +849,8 @@ en_mtb:
         ja: 物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する
         en: Generating answers and explanations on topics related to physics, chemistry, biology, geography, architecture, and machine learning.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html
@@ -852,8 +873,8 @@ en_mtb:
         ja: ブログ記事やメール文面、フィクションの文章などを執筆するタスク
         en: Writing blog articles, email drafts, and fictional narratives.
       metric:
-        ja: GPT-4o (gpt-4o-2024-08-06) による自動採点
-        en: Reference-guided grading by GPT-4o (gpt-4o-2024-08-06)
+        ja: GPT-5.2による自動採点
+        en: Reference-guided grading by GPT-5.2
       link:
         href:
           ja: https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html

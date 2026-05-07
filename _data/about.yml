@@ -10,6 +10,28 @@ changelog:
     ja: 更新履歴
     en: Change log
   changes:
+    - date: 2026-05-07
+      text:
+        - ja: 推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。ただし、非推論型モデルの評価や、元々複数回デコーディングを行うMT-Bench、HumanEval、LiveCodeBenchタスクでは、従来通り貪欲デコーディングを用います。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます（LLM開発元の公式発表スコアと比較しやすくなります）。
+          en: We adopted probabilistic decoding (temperature=0.6, top-p=0.95) for evaluating reasoning models. However, for non-reasoning models and for tasks that inherently involve multiple decoding runs, such as MT-Bench, HumanEval, and LiveCodeBench, we continue to use greedy decoding as before. This mitigates the impact of cases where reasoning models fail to complete reasoning (e.g., generation does not terminate) and aligns the evaluation more closely with standard practices for reasoning models.
+        - ja: GPQA, AIMEの評価におけるデコーディングの試行を4回に増やしました。これらのベンチマークは設問が少ないため、統計誤差の影響を軽減する効果が期待できます。
+          en: We increased the number of decoding trials to four for GPQA and AIME evaluations. Since these benchmarks contain a limited number of questions, this is expected to reduce the effect of statistical variance.
+        - ja: 日本語と英語のMT-BenchのジャッジをGPT-5.2に変更しました。これは、GPT-4oの公開終了に備えること、および採点をより厳密に行うことが狙いです。
+          en: We changed the judge for both Japanese and English MT-Bench to GPT-5.2. This is intended to prepare for the deprecation of GPT-4o and to enable more rigorous scoring.
+        - ja: 評価スコアが飽和気味となったMATH-100を日本語ベンチマークから外し、PolyMathの難易度高 (high) とトップ (top) の日本語の設問を採用しました。
+          en: We removed MATH-100 from the Japanese benchmarks due to score saturation and instead adopted high- and top-difficulty Japanese questions from PolyMath.
+        - ja: 指示追従能力を測定するIFBench（英語）およびM-IFEval-Ja（日本語）を平均スコアの算出に組み入れました。
+          en: We incorporated IFBench (English) and M-IFEval-Ja (Japanese), which measure instruction-following ability, into the computation of the average score.
+        - ja: GPT-5.4, Qwen 3.5, Gemma 4, llm-jp-4など、最近公開されたモデルの評価結果を掲載しました。
+          en: We added evaluation results for recently released models, including GPT-5.4, Qwen 3.5, Gemma 4, and llm-jp-4.
+        - ja: Gemma 2系列やQwen2.5系列など、古いモデルの評価を終了しました。
+          en: We discontinued the evaluation of older model series such as Gemma 2 and Qwen2.5.
+        - ja: リーダーボードの結果を表示する表の列をクリックすることにより、その列の順番でモデルを整列できるようになりました。
+          en: By clicking the columns in the leaderboard table, models can now be sorted according to the selected column.
+    - date: 2026-03-12
+      text:
+        - ja: Nemotron 3 Super 120B-A12B (reasoning off, reasoning low, reasoning on) の評価結果を追加しました。NVIDIA様より事前アクセスをご提供頂き、モデルの評価を実施しました。なお、一部の推論設定においてLive Code Benchの評価が完了しなかったため、英語タスクのLive Code Benchおより平均スコアは欠損値としています。
+          en: We added evaluation results of Nemotron 3 Super 120B-A12B (reasoning off, reasoning low, reasoning on). We evaluated the model with early access provided by NVIDIA. Note that the evaluation on Live Code Bench was not completed for some reasoning modes; therefore, the Live Code Bench score for the English tasks and the overall average score are reported as missing values.
     - date: 2026-02-20
       text:
         - ja: GPT-OSS Swallowシリーズ、Qwen3 Swallowシリーズの評価結果を追加しました。
