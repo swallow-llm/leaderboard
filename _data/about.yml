@@ -12,7 +12,9 @@ changelog:
   changes:
     - date: 2026-05-08
       text:
-        - ja: 推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます（LLM開発元の公式発表スコアと比較しやすくなります）。非推論型モデルの評価は、ひきつづき原則として貪欲デコーディング（temperature=0）を用いて、デコーディングを複数回試行する日英MT-Bench、JHumanEval、LiveCodeBenchタスクのみ確率的デコーディングとします。
+        - ja: 評価フレームワークを <a href="https://github.com/swallow-llm/swallow-evaluation-instruct/releases/tag/v202604">swallow-evaluation-instruct v202604</a> にアップデートしました。
+          en: We upgraded the evaluation framework to <a href="https://github.com/swallow-llm/swallow-evaluation-instruct/releases/tag/v202604">swallow-evaluation-instruct v202604</a>.
+        - ja: 推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます。また、LLM開発元の公式発表スコアと比較しやすくなります。非推論型モデルの評価は、ひきつづき原則として貪欲デコーディング（temperature=0）を用いて、デコーディングを複数回試行する日英MT-Bench、JHumanEval、LiveCodeBenchタスクのみ確率的デコーディングとします。
           en: We adopted stochastic decoding (temperature = 0.6, top-p = 0.95) to evaluate reasoning models. This mitigates the impact of cases in which reasoning models fail to complete reasoning (e.g., when generation does not stop) and aligns the evaluation more closely with standard practices for reasoning models. For non-reasoning models, we continue to use greedy decoding as before, except for tasks that require multiple decoding trials, such as Japanese and English MT-Bench, JHumanEval, and LiveCodeBench.
         - ja: GPQA, AIMEの評価におけるデコーディングの試行を4回に増やしました。これらのベンチマークは設問が少ないため、統計誤差の影響を軽減する効果が期待できます。
           en: We increased the number of decoding trials to four for GPQA and AIME evaluations. Since these benchmarks contain a limited number of questions, this is expected to reduce the effect of statistical variance.
@@ -139,58 +141,74 @@ tools:
     ja: 評価に用いたツール
     en: Evaluation tools
   content:
-    - title:
-        ja: "LLM-jp 評価スクリプト (1.3.0)"
-        en: "LLM-jp evaluation script (1.3.0)"
-      subtitle:
-        ja: 日本語の大規模言語モデルの自動評価ツール
-        en: Automatic evaluation tool for Japanese LLMs
-      link:
-        href: https://github.com/llm-jp/llm-jp-eval
-        text:
-          ja: (Hanら, 2024)
-          en: (Han et al, 2024)
-    - title:
-        ja: "JP Language Model Evaluation Harness (commit #9b42d41)"
-        en: "JP Language Model Evaluation Harness (commit #9b42d41)"
-      subtitle:
-        ja: 日本語の大規模言語モデルの評価フレームワーク
-        en: An evaluation framework for Japanese LLMs
-      link:
-        href: https://github.com/Stability-AI/lm-evaluation-harness/
-    - title:
-        ja: Language Model Evaluation Harness (0.4.2)
-        en: Language Model Evaluation Harness (0.4.2)
-      subtitle:
-        ja: 大規模言語モデルの評価フレームワーク
-        en: An evaluation framework for LLMs
-      link:
-        href: https://github.com/EleutherAI/lm-evaluation-harness
-        text: (Biderman et al., 2024)
-    - title:
-        ja: "Code Generation LM Evaluation Harness (commit #0261c52)"
-        en: "Code Generation LM Evaluation Harness (commit #0261c52)"
-      subtitle:
-        ja: コード生成（HumanEval）の評価フレームワーク
-        en: An evaluation framework for code generation (HumanEval)
-      link:
-        href: https://github.com/bigcode-project/bigcode-evaluation-harness
-    - title:
-        ja: "FastChat (commit #e86e70d0)"
-        en: "FastChat (commit #e86e70d0)"
-      subtitle:
-        ja: LLMによる自動評価（MT-Bench）のフレームワーク
-        en: An automatic evaluation framework by an LLM (MT-Bench)
-      link:
-        href: https://github.com/lm-sys/FastChat
-    - title:
-        ja: "swallow-evaluation"
-        en: "swallow-evaluation"
-      subtitle:
-        ja: 上記5つのツールを統合・改修した、Swallowプロジェクトで用いた評価フレームワーク
-        en: An evaluation framework used in Swallow Project (encompassing all the above-mentioned tools)
-      link:
-        href: https://github.com/swallow-llm/swallow-evaluation
+    - section: 
+        ja: 事前学習モデルの評価に用いたツール
+        en: Tools used to evaluate pre-trained models
+      items:
+      - title:
+          ja: "LLM-jp 評価スクリプト (1.3.0)"
+          en: "LLM-jp evaluation script (1.3.0)"
+        subtitle:
+          ja: 日本語の大規模言語モデルの自動評価ツール
+          en: Automatic evaluation tool for Japanese LLMs
+        link:
+          href: https://github.com/llm-jp/llm-jp-eval
+          text:
+            ja: (Hanら, 2024)
+            en: (Han et al, 2024)
+      - title:
+          ja: "JP Language Model Evaluation Harness (commit #9b42d41)"
+          en: "JP Language Model Evaluation Harness (commit #9b42d41)"
+        subtitle:
+          ja: 日本語の大規模言語モデルの評価フレームワーク
+          en: An evaluation framework for Japanese LLMs
+        link:
+          href: https://github.com/Stability-AI/lm-evaluation-harness/
+      - title:
+          ja: Language Model Evaluation Harness (0.4.2)
+          en: Language Model Evaluation Harness (0.4.2)
+        subtitle:
+          ja: 大規模言語モデルの評価フレームワーク
+          en: An evaluation framework for LLMs
+        link:
+          href: https://github.com/EleutherAI/lm-evaluation-harness
+          text: (Biderman et al., 2024)
+      - title:
+          ja: "Code Generation LM Evaluation Harness (commit #0261c52)"
+          en: "Code Generation LM Evaluation Harness (commit #0261c52)"
+        subtitle:
+          ja: コード生成（HumanEval）の評価フレームワーク
+          en: An evaluation framework for code generation (HumanEval)
+        link:
+          href: https://github.com/bigcode-project/bigcode-evaluation-harness
+      - title:
+          ja: "FastChat (commit #e86e70d0)"
+          en: "FastChat (commit #e86e70d0)"
+        subtitle:
+          ja: LLMによる自動評価（MT-Bench）のフレームワーク
+          en: An automatic evaluation framework by an LLM (MT-Bench)
+        link:
+          href: https://github.com/lm-sys/FastChat
+      - title:
+          ja: "swallow-evaluation"
+          en: "swallow-evaluation"
+        subtitle:
+          ja: 上記5つのツールを統合・改修した、Swallowプロジェクトで用いた評価フレームワーク
+          en: An evaluation framework used in Swallow Project (encompassing all the above-mentioned tools)
+        link:
+          href: https://github.com/swallow-llm/swallow-evaluation
+    - section: 
+        ja: 事後学習モデルの評価に用いたツール
+        en: Tools used to evaluate post-trained models
+      items:
+      - title:
+          ja: "swallow-evaluation-instruct (v202604)"
+          en: "swallow-evaluation-instruct (v202604)"
+        subtitle:
+          ja: HuggingFace社が開発した lighteval (v0.8.0) をもとに、Swallowプロジェクトで開発した評価フレームワーク
+          en: An evaluation framework developed in Swallow project based on lighteval (v0.8.0), developed by Hugging Face Inc.
+        link:
+          href: https://github.com/swallow-llm/swallow-evaluation-instruct
 
 models:
   title:

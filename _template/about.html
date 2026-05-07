@@ -84,8 +84,10 @@
 
 <h2 class="pt-6">{{ about.tools.title }}</h2>
 
+{% for group in about.tools.content %}
+<h3 class="pt-4">{{ group['section'] }}</h3>
 <div class="row row-deck row-cards">
-  {% for item in about.tools.content %}
+  {% for item in group['items'] %}
   <div class="col-sm-6 mb-3">
     <div class="card">
       <div class="card-body">
@@ -97,6 +99,7 @@
   </div>
   {% endfor %}
 </div>
+{% endfor %}
 
 <h2 class="pt-6">{{ about.models.title }}</h2>
 
