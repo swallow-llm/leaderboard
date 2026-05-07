@@ -20,7 +20,7 @@ changelog:
           en: We increased the number of decoding trials to four for GPQA and AIME evaluations. Since these benchmarks contain a limited number of questions, this is expected to reduce the effect of statistical variance.
         - ja: LiveCodeBenchタスクで評価する設問を、v6で追加された設問に変更しました（従来は v5 および v6で追加された設問でした）。
           en: We changed the questions evaluated in the LiveCodeBench to those added in v6 (previously, questions from v5 and v6 were used).
-        - ja: 日本語と英語のMT-Benchの自動採点モデルをGPT-5.2（推論off）に変更しました。これにより，幻覚・誤答・指示追従違反・対話の破綻に対する採点（減点）を正確にする狙いです。
+        - ja: 日本語と英語のMT-Benchの自動採点モデルをGPT-5.2（推論off）に変更しました。この変更は幻覚・誤答・指示追従違反・対話の破綻に対する採点（減点）をより厳密に行うことを狙っています。
           en: We changed the judge for both Japanese and English MT-Bench to GPT-5.2 (reasoning disabled). This change is intended to make scoring more accurate for hallucinations, incorrect answers, instruction-following failures, and off-track dialogues.
         - ja: 評価スコアが飽和気味となったMATH-100を日本語ベンチマークから外し、PolyMathの難易度高 (high) とトップ (top) の日本語の設問を採用しました。
           en: We removed MATH-100 from the Japanese benchmarks due to score saturation and instead adopted high- and top-difficulty Japanese questions from PolyMath.
@@ -28,7 +28,7 @@ changelog:
           en: We incorporated IFBench (English) and M-IFEval-Ja (Japanese), which measure instruction-following ability, into the computation of the average score.
         - ja: GPT-5.4, Qwen 3.5, Gemma 4, llm-jp-4など、最近公開されたモデルの評価結果を掲載しました。
           en: We added evaluation results for recently released models, including GPT-5.4, Qwen 3.5, Gemma 4, and llm-jp-4.
-        - ja: Gemma 2系列やQwen2.5系列など、古いモデルの評価を終了しました。
+        - ja: Gemma 2系列やQwen2.5系列など、古いモデルの評価を取り止めました。
           en: We discontinued the evaluation of older model series such as Gemma 2 and Qwen2.5.
         - ja: リーダーボードの結果を表示する表の列をクリックすることにより、その列の順番でモデルを整列できるようになりました。
           en: By clicking the columns in the leaderboard table, models can now be sorted according to the selected column.
