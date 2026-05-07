@@ -142,6 +142,18 @@ tools:
     en: Evaluation tools
   content:
     - section: 
+        ja: 事後学習モデルの評価に用いたツール
+        en: Tools used to evaluate post-trained models
+      items:
+      - title:
+          ja: "swallow-evaluation-instruct (v202604)"
+          en: "swallow-evaluation-instruct (v202604)"
+        subtitle:
+          ja: HuggingFace社が開発した lighteval (v0.8.0) をもとに、Swallowプロジェクトで開発した評価フレームワーク
+          en: An evaluation framework developed in Swallow project based on lighteval (v0.8.0), developed by Hugging Face Inc.
+        link:
+          href: https://github.com/swallow-llm/swallow-evaluation-instruct
+    - section: 
         ja: 事前学習モデルの評価に用いたツール
         en: Tools used to evaluate pre-trained models
       items:
@@ -197,18 +209,6 @@ tools:
           en: An evaluation framework used in Swallow Project (encompassing all the above-mentioned tools)
         link:
           href: https://github.com/swallow-llm/swallow-evaluation
-    - section: 
-        ja: 事後学習モデルの評価に用いたツール
-        en: Tools used to evaluate post-trained models
-      items:
-      - title:
-          ja: "swallow-evaluation-instruct (v202604)"
-          en: "swallow-evaluation-instruct (v202604)"
-        subtitle:
-          ja: HuggingFace社が開発した lighteval (v0.8.0) をもとに、Swallowプロジェクトで開発した評価フレームワーク
-          en: An evaluation framework developed in Swallow project based on lighteval (v0.8.0), developed by Hugging Face Inc.
-        link:
-          href: https://github.com/swallow-llm/swallow-evaluation-instruct
 
 models:
   title:
