@@ -1,5 +1,0 @@
-AuthUserFile /home/chokkan/wwwdata/passwd/.nvidia
-AuthGroupFile /dev/null
-AuthName "Secret"
-AuthType Basic
-require user nvidia-super

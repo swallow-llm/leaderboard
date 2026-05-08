@@ -113,15 +113,15 @@
                         
                         
                         
-                        <a class="dropdown-item" href="index-post.ja.html?category=llama"> Llama系統</a>
-                        
-                        
-                        
                         <a class="dropdown-item" href="index-post.ja.html?category=gemma"> Gemma系統</a>
                         
                         
                         
                         <a class="dropdown-item" href="index-post.ja.html?category=qwen"> Qwen系統</a>
+                        
+                        
+                        
+                        <a class="dropdown-item" href="index-post.ja.html?category=llama"> Llama系統</a>
                         
                         
                         
@@ -154,15 +154,15 @@
                         
                         
                         
-                        <a class="dropdown-item" href="index-pre.ja.html?category=llama"> Llama系統</a>
-                        
-                        
-                        
                         <a class="dropdown-item" href="index-pre.ja.html?category=gemma"> Gemma系統</a>
                         
                         
                         
                         <a class="dropdown-item" href="index-pre.ja.html?category=qwen"> Qwen系統</a>
+                        
+                        
+                        
+                        <a class="dropdown-item" href="index-pre.ja.html?category=llama"> Llama系統</a>
                         
                         
                         
@@ -208,7 +208,7 @@
                         
                         
                         
-                        <a class="dropdown-item" href="task-post.ja.html?category=post-sota-open"> 最先端オープンモデル</a>
+                        <a class="dropdown-item" href="task-post.ja.html?category=post-ja"> 日本のオープンモデル</a>
                         
                         
                         
@@ -357,6 +357,32 @@
         <div class="markdown text-secondary">
           
 <ul>
+  
+  <li>2026-05-08 
+    <ul>
+      
+      <li>評価フレームワークを <a href="https://github.com/swallow-llm/swallow-evaluation-instruct/releases/tag/v202604">swallow-evaluation-instruct v202604</a> にアップデートしました。</li>
+      
+      <li>推論型モデルの評価に確率的デコーディング（temperature=0.6, top-p=0.95）を採用しました。これにより、推論型モデルが推論に失敗した（生成が止まらなくなった）場合の影響を軽減するとともに、推論型モデルの標準的な評価方法に近づきます。また、LLM開発元の公式発表スコアと比較しやすくなります。非推論型モデルの評価は、ひきつづき原則として貪欲デコーディング（temperature=0）を用いて、デコーディングを複数回試行する日英MT-Bench、JHumanEval、LiveCodeBenchタスクのみ確率的デコーディングとします。</li>
+      
+      <li>GPQA, AIMEの評価におけるデコーディングの試行を4回に増やしました。これらのベンチマークは設問が少ないため、統計誤差の影響を軽減する効果が期待できます。</li>
+      
+      <li>LiveCodeBenchタスクで評価する設問を、v6で追加された設問に変更しました（従来は v5 および v6で追加された設問でした）。</li>
+      
+      <li>日本語と英語のMT-Benchの自動採点モデルをGPT-5.2（推論off）に変更しました。この変更は幻覚・誤答・指示追従違反・対話の破綻に対する採点（減点）をより厳密に行うことを狙っています。</li>
+      
+      <li>評価スコアが飽和気味となったMATH-100を日本語ベンチマークから外し、PolyMathの難易度高 (high) とトップ (top) の日本語の設問を採用しました。</li>
+      
+      <li>指示追従能力を測定するIFBench（英語）およびM-IFEval-Ja（日本語）を平均スコアの算出に組み入れました。</li>
+      
+      <li>GPT-5.4, Qwen 3.5, Gemma 4, llm-jp-4など、最近公開されたモデルの評価結果を掲載しました。</li>
+      
+      <li>Gemma 2系列やQwen2.5系列など、古いモデルの評価を取り止めました。</li>
+      
+      <li>リーダーボードの結果を表示する表の列をクリックすることにより、その列の順番でモデルを整列できるようになりました。</li>
+      
+    </ul>
+  </li>
   
   <li>2026-03-12 
     <ul>
@@ -564,6 +590,20 @@
   <div class="col-sm-6 col-lg-3">
     <div class="card">
       <div class="card-body">
+        <div class="subheader">指示追従</div>
+        <h5 class="card-title mb-3">M-IFEval-Ja</h5>
+        <p class="text-secondary">指示追従能力の制御性</p>
+        <div>評価尺度: <span class="text-secondary">正解率</span></div>
+        
+        <div>出典: <span class="text-secondary"><a href="https://aclanthology.org/2025.findings-naacl.344/">Dussolle et al. (2025)</a></span></div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 col-lg-3">
+    <div class="card">
+      <div class="card-body">
         <div class="subheader">大学レベルの試験問題</div>
         <h5 class="card-title mb-3">言語理解と推論 (MMLU-ProX)</h5>
         <p class="text-secondary">多分野にわたる高度な言語理解と推論能力</p>
@@ -593,11 +633,11 @@
     <div class="card">
       <div class="card-body">
         <div class="subheader">数学</div>
-        <h5 class="card-title mb-3">数学 (MATH-100)</h5>
-        <p class="text-secondary">コンテストレベルの数学</p>
+        <h5 class="card-title mb-3">数学 (PolyMath Ja, HT)</h5>
+        <p class="text-secondary">高難度な数学</p>
         <div>評価尺度: <span class="text-secondary">正解率</span></div>
         
-        <div>出典: <span class="text-secondary"><a href="https://aclanthology.org/2025.acl-long.699/">Son et al. (2025)</a></span></div>
+        <div>出典: <span class="text-secondary"><a href="https://neurips.cc/virtual/2025/loc/mexico-city/poster/121795">Wang et al. (2026)</a></span></div>
         
       </div>
     </div>
@@ -613,20 +653,6 @@
         
         <div>出典: <span class="text-secondary"><a href="https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P10-9.pdf">佐藤ら (2024)</a></span></div>
         
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-6 col-lg-3">
-    <div class="card">
-      <div class="card-body">
-        <div class="subheader">指示追従</div>
-        <h5 class="card-title mb-3">M-IFEval-Ja</h5>
-        <p class="text-secondary">指示追従能力の制御性</p>
-        <div>評価尺度: <span class="text-secondary">正解率</span></div>
-        
-        <div>出典: <span class="text-secondary"><a href="https://aclanthology.org/2025.findings-naacl.344/">Dussolle et al. (2025)</a></span></div>
-        <p class="text-warning">このタスクの評価結果は平均の算出から除外されます</p>
       </div>
     </div>
   </div>
@@ -651,6 +677,20 @@
         <div>評価尺度: <span class="text-secondary">正解率</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://aclanthology.org/P19-1472/">Zellers et al. (2019)</a></span></div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="subheader">指示追従</div>
+        <h5 class="card-title mb-3">IFBench</h5>
+        <p class="text-secondary">指示追従能力</p>
+        <div>評価尺度: <span class="text-secondary">正解率</span></div>
+        
+        <div>出典: <span class="text-secondary"><a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121379">Pyatkin et al. (2025)</a></span></div>
         
       </div>
     </div>
@@ -716,7 +756,7 @@
     <div class="card">
       <div class="card-body">
         <div class="subheader">コーディング</div>
-        <h5 class="card-title mb-3">コーディング (LCB)</h5>
+        <h5 class="card-title mb-3">コーディング (LCB v6)</h5>
         <p class="text-secondary">競技プログラミング (LeetCode, AtCoder, CodeForces)</p>
         <div>評価尺度: <span class="text-secondary">Pass@1 (n=10)</span></div>
         
@@ -743,7 +783,7 @@
         
         <h5 class="card-title mb-3">コーディング</h5>
         <p class="text-secondary">PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -757,7 +797,7 @@
         
         <h5 class="card-title mb-3">情報抽出</h5>
         <p class="text-secondary">文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -771,7 +811,7 @@
         
         <h5 class="card-title mb-3">人文科学</h5>
         <p class="text-secondary">法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -785,7 +825,7 @@
         
         <h5 class="card-title mb-3">数学</h5>
         <p class="text-secondary">代数、幾何、確率、整数などの問題や文章題に対する解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -799,7 +839,7 @@
         
         <h5 class="card-title mb-3">推論</h5>
         <p class="text-secondary">常識や推論力を活用して問題に対する解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -813,7 +853,7 @@
         
         <h5 class="card-title mb-3">ロールプレイ</h5>
         <p class="text-secondary">有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -827,7 +867,7 @@
         
         <h5 class="card-title mb-3">科学・技術・工学・数学</h5>
         <p class="text-secondary">物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -841,7 +881,7 @@
         
         <h5 class="card-title mb-3">執筆</h5>
         <p class="text-secondary">ブログ記事やメール文面、フィクションの文章などを執筆するタスク</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -866,7 +906,7 @@
         
         <h5 class="card-title mb-3">コーディング</h5>
         <p class="text-secondary">PythonやC++でアルゴリズムを実装したり、HTMLでウェブサイトを作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -880,7 +920,7 @@
         
         <h5 class="card-title mb-3">情報抽出</h5>
         <p class="text-secondary">文書から固有表現（著者名や数値など）や評判（ポジネガなど）を抽出する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -894,7 +934,7 @@
         
         <h5 class="card-title mb-3">人文科学</h5>
         <p class="text-secondary">法律や経済、歴史、哲学、教育などの話題に関する論説や戦略を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -908,7 +948,7 @@
         
         <h5 class="card-title mb-3">数学</h5>
         <p class="text-secondary">代数、幾何、確率、整数などの問題や文章題に対する解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -922,7 +962,7 @@
         
         <h5 class="card-title mb-3">推論</h5>
         <p class="text-secondary">常識や推論力を活用して問題に対する解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -936,7 +976,7 @@
         
         <h5 class="card-title mb-3">ロールプレイ</h5>
         <p class="text-secondary">有名人や映画中の人物になりすますなど、仮想の状況を想定して文章を作文する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -950,7 +990,7 @@
         
         <h5 class="card-title mb-3">科学・技術・工学・数学</h5>
         <p class="text-secondary">物理学、化学、生物学、地理、建築、機械学習などの話題に関して解答を作成する</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -964,7 +1004,7 @@
         
         <h5 class="card-title mb-3">執筆</h5>
         <p class="text-secondary">ブログ記事やメール文面、フィクションの文章などを執筆するタスク</p>
-        <div>評価尺度: <span class="text-secondary">GPT-4o (gpt-4o-2024-08-06) による自動採点</span></div>
+        <div>評価尺度: <span class="text-secondary">GPT-5.2による自動採点</span></div>
         
         <div>出典: <span class="text-secondary"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html">Zheng et al. (2023)</a></span></div>
         
@@ -1278,6 +1318,23 @@
 
 <h2 class="pt-6">評価に用いたツール</h2>
 
+
+<h3 class="pt-4">事後学習モデルの評価に用いたツール</h3>
+<div class="row row-deck row-cards">
+  
+  <div class="col-sm-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title mb-3">swallow-evaluation-instruct (v202604)</h5>
+        <div class="text-secondary">HuggingFace社が開発した lighteval (v0.8.0) をもとに、Swallowプロジェクトで開発した評価フレームワーク</div>
+        <div class="text-secondary"><a href="https://github.com/swallow-llm/swallow-evaluation-instruct">https://github.com/swallow-llm/swallow-evaluation-instruct</a></div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<h3 class="pt-4">事前学習モデルの評価に用いたツール</h3>
 <div class="row row-deck row-cards">
   
   <div class="col-sm-6 mb-3">
@@ -1342,6 +1399,7 @@
   
 </div>
 
+
 <h2 class="pt-6">評価したモデル</h2>
 
 <div class="row row-deck row-cards">
@@ -1371,715 +1429,6 @@
                 <td>
                   
                   
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="swiss-ai_Apertus-8B-Instruct-2509.ja.html">Apertus-8B-Instruct</a> <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">8.1</td>
-                <td>2025-09-02</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="swiss-ai_Apertus-70B-Instruct-2509.ja.html">Apertus-70B-Instruct</a> <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">71</td>
-                <td>2025-09-02</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="cyberagent_calm3-22b-chat.ja.html">CyberAgentLM3-22B-chat</a> <a href="https://huggingface.co/cyberagent/calm3-22b-chat"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">22</td>
-                <td>2024-07-09</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="deepseek-ai_DeepSeek-R1-Distill-Llama-8B.ja.html">DeepSeek-R1-Distill-Llama-8B</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">8.0</td>
-                <td>2025-01-20</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="deepseek-ai_DeepSeek-R1-Distill-Llama-70B.ja.html">DeepSeek-R1-Distill-Llama-70B</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">70</td>
-                <td>2025-01-20</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="deepseek-ai_DeepSeek-R1-Distill-Qwen-7B.ja.html">DeepSeek-R1-Distill-Qwen-7B</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">7.6</td>
-                <td>2025-01-20</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="deepseek-ai_DeepSeek-R1-Distill-Qwen-14B.ja.html">DeepSeek-R1-Distill-Qwen-14B</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
-                <td>2025-01-20</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="deepseek-ai_DeepSeek-R1-Distill-Qwen-32B.ja.html">DeepSeek-R1-Distill-Qwen-32B</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">33</td>
-                <td>2025-01-20</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="cyberagent_DeepSeek-R1-Distill-Qwen-14B-Japanese.ja.html">DeepSeek-R1-Distill-Qwen-14B-Japanese</a> <a href="https://huggingface.co/cyberagent/DeepSeek-R1-Distill-Qwen-14B-Japanese"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
-                <td>2025-01-27</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
                   
                   
                   
@@ -2228,6 +1577,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -2307,6 +1658,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -2317,6 +1670,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -2610,249 +1965,12 @@
               </tr>
               
               <tr>
-                <td><a href="flux-inc_Flux-Japanese-Qwen2.5-32B-Instruct-V1.0.ja.html">Flux-Japanese-Qwen2.5-32B-Instruct-V1.0</a> <a href="https://huggingface.co/flux-inc/Flux-Japanese-Qwen2.5-32B-Instruct-V1.0"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">33</td>
-                <td>2025-09-28</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="google_gemini-3-pro-preview.ja.html">Gemini 3 Pro Preview (gemini-3-pro-preview)</a> <a href="https://huggingface.co/google/gemini-3-pro-preview"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">0</td>
-                <td>2025-11-18</td>
-                <td>あり</td>
-                <td>on (high)</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="google_gemma-2-2b.ja.html">Gemma 2 2B</a> <a href="https://huggingface.co/google/gemma-2-2b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">2.6</td>
                 <td>2024-06-27</td>
                 <td>なし</td>
                 <td></td>
                 <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="google_gemma-2-2b-it.ja.html">Gemma 2 2B IT</a> <a href="https://huggingface.co/google/gemma-2-2b-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">2.6</td>
-                <td>2024-06-27</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                   
@@ -2957,170 +2075,12 @@
               </tr>
               
               <tr>
-                <td><a href="google_gemma-2-9b-it.ja.html">Gemma 2 9B IT</a> <a href="https://huggingface.co/google/gemma-2-9b-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">9.2</td>
-                <td>2024-06-27</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="google_gemma-2-27b.ja.html">Gemma 2 27B</a> <a href="https://huggingface.co/google/gemma-2-27b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">27</td>
                 <td>2024-06-27</td>
                 <td>なし</td>
                 <td></td>
                 <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="google_gemma-2-27b-it.ja.html">Gemma 2 27B IT</a> <a href="https://huggingface.co/google/gemma-2-27b-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">27</td>
-                <td>2024-06-27</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                   
@@ -3225,85 +2185,6 @@
               </tr>
               
               <tr>
-                <td><a href="tokyotech-llm_Gemma-2-Llama-Swallow-2b-it-v0.1.ja.html">Gemma-2-Llama Swallow 2B IT</a> <a href="https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-2b-it-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">2.6</td>
-                <td>2025-05-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="tokyotech-llm_Gemma-2-Llama-Swallow-9b-pt-v0.1.ja.html">Gemma-2-Llama Swallow 9B</a> <a href="https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-pt-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">9.2</td>
                 <td>2025-05-19</td>
@@ -3359,170 +2240,12 @@
               </tr>
               
               <tr>
-                <td><a href="tokyotech-llm_Gemma-2-Llama-Swallow-9b-it-v0.1.ja.html">Gemma-2-Llama Swallow 9B IT</a> <a href="https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-9b-it-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">9.2</td>
-                <td>2025-05-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="tokyotech-llm_Gemma-2-Llama-Swallow-27b-pt-v0.1.ja.html">Gemma-2-Llama Swallow 27B</a> <a href="https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-27b-pt-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">27</td>
                 <td>2025-05-19</td>
                 <td>なし</td>
                 <td></td>
                 <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="tokyotech-llm_Gemma-2-Llama-Swallow-27b-it-v0.1.ja.html">Gemma-2-Llama Swallow 27B IT</a> <a href="https://huggingface.co/tokyotech-llm/Gemma-2-Llama-Swallow-27b-it-v0.1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">27</td>
-                <td>2025-05-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                   
@@ -3633,6 +2356,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -3836,6 +2561,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -3901,6 +2628,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4104,6 +2833,332 @@
                   
                   
                   
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="google_gemma-4-31B-it.ja.html">Gemma 4 31B IT</a> <a href="https://huggingface.co/google/gemma-4-31B-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">33</td>
+                <td>2026-04-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="google_gemma-4-26B-A4B-it.ja.html">Gemma 4 26B-A4B IT</a> <a href="https://huggingface.co/google/gemma-4-26B-A4B-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">27</td>
+                <td>2026-04-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="google_gemma-4-E2B-it.ja.html">Gemma 4 E2B IT</a> <a href="https://huggingface.co/google/gemma-4-E2B-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">5.1</td>
+                <td>2026-04-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="google_gemma-4-E4B-it.ja.html">Gemma 4 E4B IT</a> <a href="https://huggingface.co/google/gemma-4-E4B-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">8.0</td>
+                <td>2026-04-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                 </td>
               </tr>
               
@@ -4114,6 +3169,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4262,6 +3319,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -4272,6 +3331,8 @@
                 <td>あり</td>
                 <td>on (medium)</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4420,16 +3481,20 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
               <tr>
-                <td><a href="openai_gpt-5.1-2025-11-13.ja.html">GPT-5.1 Thinking (gpt-5.1-2025-11-13)</a> <a href="https://huggingface.co/openai/gpt-5.1-2025-11-13"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td><a href="gpt-5.4-2026-03-05.ja.html">GPT-5.4 Thinking (gpt-5.4-2026-03-05)</a> <a href="https://platform.openai.com/docs/models"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">0</td>
-                <td>2025-11-13</td>
+                <td>2026-03-05</td>
                 <td>あり</td>
                 <td>on (medium)</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4578,6 +3643,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -4588,6 +3655,8 @@
                 <td>あり</td>
                 <td>on (medium)</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4736,6 +3805,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -4746,6 +3817,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -4894,6 +3967,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -4904,6 +3979,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -5107,6 +4184,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -5241,83 +4320,6 @@
                   
                   
                   
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="tokyotech-llm_Llama-3.1-Swallow-8B-Instruct-v0.3.ja.html">Llama 3.1 Swallow 8B Instruct v0.3</a> <a href="https://huggingface.co/tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">8.0</td>
-                <td>2024-12-23</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                 </td>
@@ -5385,6 +4387,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -5643,83 +4647,6 @@
                   
                   
                   
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="nvidia_Llama-3_3-Nemotron-Super-49B-v1.ja.html">Llama-3.3-Nemotron-Super-49B-v1</a> <a href="https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">50</td>
-                <td>2025-03-18</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                 </td>
@@ -5856,6 +4783,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -5921,6 +4850,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -6289,6 +5220,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -6368,15 +5301,17 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
               <tr>
-                <td><a href="google_medgemma-27b-it.ja.html">MedGemma 27B IT</a> <a href="https://huggingface.co/google/medgemma-27b-it"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">27</td>
-                <td>2025-07-09</td>
+                <td><a href="llm-jp_llm-jp-4-32b-a3b-thinking.ja.html">llm-jp-4-32b-a3b-thinking</a> <a href="https://huggingface.co/llm-jp/llm-jp-4-32b-a3b-thinking"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">32</td>
+                <td>2026-04-03</td>
                 <td>あり</td>
-                <td>N/A</td>
+                <td>on</td>
                 <td>
                   
                   
@@ -6447,94 +5382,17 @@
                   
                   
                   
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="nvidia_nemotron-3-super-120b-a12b_[off].ja.html">NVIDIA-Nemotron-3-Super-120B-A12B [off]</a> <a href="https://huggingface.co/nvidia/nemotron-3-super-120b-a12b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">120 (12)</td>
-                <td>2026-03-12</td>
-                <td>あり</td>
-                <td>off</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  avg
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  LCB
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                 </td>
               </tr>
               
               <tr>
-                <td><a href="nvidia_nemotron-3-super-120b-a12b_[on_(low)].ja.html">NVIDIA-Nemotron-3-Super-120B-A12B [on (low)]</a> <a href="https://huggingface.co/nvidia/nemotron-3-super-120b-a12b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">120 (12)</td>
-                <td>2026-03-12</td>
+                <td><a href="llm-jp_llm-jp-4-8b-thinking.ja.html">llm-jp-4-8b-thinking</a> <a href="https://huggingface.co/llm-jp/llm-jp-4-8b-thinking"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">8.6</td>
+                <td>2026-04-03</td>
                 <td>あり</td>
-                <td>on (low)</td>
+                <td>on</td>
                 <td>
                   
                   
@@ -6605,11 +5463,13 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
               <tr>
-                <td><a href="nvidia_nemotron-3-super-120b-a12b_[on].ja.html">NVIDIA-Nemotron-3-Super-120B-A12B [on]</a> <a href="https://huggingface.co/nvidia/nemotron-3-super-120b-a12b"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td><a href="nvidia_NVIDIA-Nemotron-3-Super-120B-A12B-BF16.ja.html">NVIDIA-Nemotron-3-Super-120B-A12B</a> <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">120 (12)</td>
                 <td>2026-03-12</td>
                 <td>あり</td>
@@ -6634,7 +5494,6 @@
                   
                   
                   
-                  avg
                   
                   
                   
@@ -6646,7 +5505,10 @@
                   
                   
                   
-                  LCB
+                  
+                  
+                  
+                  
                   
                   
                   
@@ -6694,6 +5556,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -6842,6 +5706,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -6852,6 +5718,8 @@
                 <td>あり</td>
                 <td>on (medium)</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -7000,6 +5868,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -7012,162 +5882,6 @@
                 <td>
                   
                   
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="microsoft_phi-4.ja.html">Phi-4</a> <a href="https://huggingface.co/microsoft/phi-4"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
-                <td>2024-12-13</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="microsoft_phi-4-reasoning-plus.ja.html">Phi-4-reasoning-plus</a> <a href="https://huggingface.co/microsoft/phi-4-reasoning-plus"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
-                <td>2025-04-30</td>
-                <td>あり</td>
-                <td>on</td>
-                <td>
                   
                   
                   
@@ -7736,85 +6450,6 @@
               </tr>
               
               <tr>
-                <td><a href="Qwen_Qwen2.5-7B-Instruct.ja.html">Qwen2.5-7B-Instruct</a> <a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">7.6</td>
-                <td>2024-09-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="Qwen_Qwen2.5-14B.ja.html">Qwen2.5-14B</a> <a href="https://huggingface.co/Qwen/Qwen2.5-14B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">14</td>
                 <td>2024-09-19</td>
@@ -7870,170 +6505,12 @@
               </tr>
               
               <tr>
-                <td><a href="Qwen_Qwen2.5-14B-Instruct.ja.html">Qwen2.5-14B-Instruct</a> <a href="https://huggingface.co/Qwen/Qwen2.5-14B-Instruct"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
-                <td>2024-09-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
                 <td><a href="Qwen_Qwen2.5-32B.ja.html">Qwen2.5-32B</a> <a href="https://huggingface.co/Qwen/Qwen2.5-32B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
                 <td class="text-right">33</td>
                 <td>2024-09-19</td>
                 <td>なし</td>
                 <td></td>
                 <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="Qwen_Qwen2.5-32B-Instruct.ja.html">Qwen2.5-32B-Instruct</a> <a href="https://huggingface.co/Qwen/Qwen2.5-32B-Instruct"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">33</td>
-                <td>2024-09-19</td>
-                <td>あり</td>
-                <td>N/A</td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                   
@@ -8144,6 +6621,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -8347,6 +6826,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -8412,6 +6893,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -8670,6 +7153,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -8735,6 +7220,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -8883,12 +7370,69 @@
                   
                   
                   
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3-30B-A3B-Base.ja.html">Qwen3-30B-A3B-Base</a> <a href="https://huggingface.co/Qwen/Qwen3-30B-A3B-Base"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">31 (3.3)</td>
+                <td>2025-04-29</td>
+                <td>なし</td>
+                <td></td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                 </td>
               </tr>
               
               <tr>
                 <td><a href="Qwen_Qwen3-30B-A3B.ja.html">Qwen3-30B-A3B</a> <a href="https://huggingface.co/Qwen/Qwen3-30B-A3B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">15</td>
+                <td class="text-right">31 (3)</td>
                 <td>2025-04-29</td>
                 <td>あり</td>
                 <td>on</td>
@@ -8962,59 +7506,6 @@
                   
                   
                   
-                </td>
-              </tr>
-              
-              <tr>
-                <td><a href="Qwen_Qwen3-30B-A3B-Base.ja.html">Qwen3-30B-A3B-Base</a> <a href="https://huggingface.co/Qwen/Qwen3-30B-A3B-Base"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">31 (3.3)</td>
-                <td>2025-04-29</td>
-                <td>なし</td>
-                <td></td>
-                <td>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   
                   
                 </td>
@@ -9027,6 +7518,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9175,6 +7668,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -9185,6 +7680,8 @@
                 <td>あり</td>
                 <td>N/A</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9333,16 +7830,20 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
               <tr>
                 <td><a href="tokyotech-llm_Qwen-3-Swallow-30B-A3B-CPT-v0.2.ja.html">Qwen3-Swallow-30B-A3B-CPT-v0.2</a> <a href="https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-CPT-v0.2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">31</td>
+                <td class="text-right">31 (3)</td>
                 <td>2026-02-20</td>
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9417,11 +7918,13 @@
               
               <tr>
                 <td><a href="tokyotech-llm_Qwen-3-Swallow-30B-A3B-RL-v0.2.ja.html">Qwen3-Swallow-30B-A3B-RL-v0.2</a> <a href="https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">31</td>
+                <td class="text-right">31 (3)</td>
                 <td>2026-02-20</td>
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9496,11 +7999,13 @@
               
               <tr>
                 <td><a href="tokyotech-llm_Qwen-3-Swallow-30B-A3B-SFT-v0.2.ja.html">Qwen3-Swallow-30B-A3B-SFT-v0.2</a> <a href="https://huggingface.co/tokyotech-llm/Qwen-3-Swallow-30B-A3B-SFT-v0.2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
-                <td class="text-right">31</td>
+                <td class="text-right">31 (3)</td>
                 <td>2026-02-20</td>
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9649,6 +8154,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -9659,6 +8166,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9807,6 +8316,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -9817,6 +8328,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -9965,6 +8478,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -10044,6 +8559,575 @@
                   
                   
                   
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-0.8B.ja.html">Qwen3.5-0.8B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-0.8B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">0.8</td>
+                <td>2026-03-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-2B.ja.html">Qwen3.5-2B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-2B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">1.9</td>
+                <td>2026-03-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-4B.ja.html">Qwen3.5-4B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-4B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">4.2</td>
+                <td>2026-03-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-9B.ja.html">Qwen3.5-9B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-9B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">9.0</td>
+                <td>2026-03-02</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-27B.ja.html">Qwen3.5-27B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-27B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">28</td>
+                <td>2026-02-16</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-35B-A3B.ja.html">Qwen3.5-35B-A3B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">36 (3)</td>
+                <td>2026-02-16</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td><a href="Qwen_Qwen3.5-122B-A10B.ja.html">Qwen3.5-122B-A10B</a> <a href="https://huggingface.co/Qwen/Qwen3.5-122B-A10B"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a></td>
+                <td class="text-right">125 (10)</td>
+                <td>2026-02-16</td>
+                <td>あり</td>
+                <td>on</td>
+                <td>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                 </td>
               </tr>
               
@@ -10054,6 +9138,8 @@
                 <td>あり</td>
                 <td>on</td>
                 <td>
+                  
+                  
                   
                   
                   
@@ -10532,6 +9618,8 @@
                   
                   
                   
+                  
+                  
                 </td>
               </tr>
               
@@ -10713,7 +9801,7 @@ Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
                 Swallow LLM Leaderboard
               </li>
               <li class="list-inline-item">
-                Copyright &copy; 2025 <a href="https://swallow-llm.github.io/" class="link-secondary">Swallow LLM team</a>
+                Copyright &copy; 2025-2026 <a href="https://swallow-llm.github.io/" class="link-secondary">Swallow LLM team</a>
               </li>
               <li class="list-inline-item">
                 Contents are licensed under 
@@ -10731,6 +9819,7 @@ Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
   <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/demo.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/table-sort-js/table-sort.min.js"></script>
   <script src=""></script>
   <script>
     var g_filter = [];
@@ -10743,7 +9832,7 @@ Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
 
     if (!!params.category) {
       const category = params.category;
-      const selections = [{"name": "all", "query": {}, "title": "\u5168\u3066"}, {"name": "tiny", "query": {"maxp": 5, "minp": 0.1}, "title": "\u8d85\u5c0f\u578b (5B\u672a\u6e80)"}, {"name": "small", "query": {"maxp": 15, "minp": 5}, "title": "\u5c0f\u578b (5B-15B)"}, {"name": "middle", "query": {"maxp": 100, "minp": 15}, "title": "\u4e2d\u578b (15B-100B)"}, {"name": "large", "query": {"maxp": 1000, "minp": 100}, "title": "\u5927\u578b (100B\u4ee5\u4e0a)"}, {"name": "openai", "query": {"family": ["gpt", "o3"]}, "title": "OpenAI\u7cfb\u7d71"}, {"name": "llama", "query": {"family": "llama"}, "title": "Llama\u7cfb\u7d71"}, {"name": "gemma", "query": {"family": ["gemma", "medgemma"]}, "title": "Gemma\u7cfb\u7d71"}, {"name": "qwen", "query": {"family": "qwen"}, "title": "Qwen\u7cfb\u7d71"}, {"name": "post-sota", "query": {"includes": ["gpt-5-2025-08-07", "openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507"]}, "title": "\u6700\u5148\u7aef\u4e8b\u5f8c\u5b66\u7fd2\u30e2\u30c7\u30eb"}, {"name": "gptoss-swallow-20b", "query": {"includes": ["google/gemma-3-27b-it", "Qwen/Qwen3-14B", "openai/gpt-oss-20b", "tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1", "openai/gpt-oss-120b"]}, "title": "GPT-OSS Swallow 20B"}, {"name": "gptoss-swallow-120b", "query": {"includes": ["Qwen/Qwen3-Next-80B-A3B-Thinking", "openai/gpt-oss-120b", "tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1", "Qwen/Qwen3-235B-A22B-Thinking-2507", "gpt-5-mini-2025-08-07"]}, "title": "GPT-OSS Swallow 120B"}, {"name": "qwen3-swallow-8b", "query": {"includes": ["tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5", "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "allenai/Olmo-3-7B-Think", "Qwen/Qwen3-8B", "tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2"]}, "title": "Qwen3 Swallow 8B"}, {"name": "qwen3-swallow-30b-a3b", "query": {"includes": ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-30B-A3B", "tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2"]}, "title": "Qwen3 Swallow 30B-A3B"}, {"name": "qwen3-swallow-32b", "query": {"includes": ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-32B", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2"]}, "title": "Qwen3 Swallow 32B"}, {"name": "post-sota-open", "query": {"includes": ["openai/gpt-oss-120b", "Qwen/Qwen3-235B-A22B-Thinking-2507", "meta-llama/Llama-4-Scout-17B-16E-Instruct", "google/gemma-3-27b-it"]}, "title": "\u6700\u5148\u7aef\u30aa\u30fc\u30d7\u30f3\u4e8b\u5f8c\u5b66\u7fd2\u30e2\u30c7\u30eb"}];
+      const selections = [{"name": "all", "query": {}, "title": "\u5168\u3066"}, {"name": "tiny", "query": {"maxp": 5, "minp": 0.1}, "title": "\u8d85\u5c0f\u578b (5B\u672a\u6e80)"}, {"name": "small", "query": {"maxp": 15, "minp": 5}, "title": "\u5c0f\u578b (5B-15B)"}, {"name": "middle", "query": {"maxp": 100, "minp": 15}, "title": "\u4e2d\u578b (15B-100B)"}, {"name": "large", "query": {"maxp": 1000, "minp": 100}, "title": "\u5927\u578b (100B\u4ee5\u4e0a)"}, {"name": "openai", "query": {"family": ["gpt", "o3"]}, "title": "OpenAI\u7cfb\u7d71"}, {"name": "llama", "query": {"family": "llama"}, "title": "Llama\u7cfb\u7d71"}, {"name": "gemma", "query": {"family": ["gemma", "medgemma"]}, "title": "Gemma\u7cfb\u7d71"}, {"name": "qwen", "query": {"family": "qwen"}, "title": "Qwen\u7cfb\u7d71"}, {"name": "post-sota", "query": {"includes": ["openai/gpt-oss-120b", "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16", "Qwen/Qwen3.5-122B-A10B", "google/gemma-4-31B-it", "gpt-5.4-2026-03-05"]}, "title": "\u6700\u5148\u7aef\u4e8b\u5f8c\u5b66\u7fd2\u30e2\u30c7\u30eb"}, {"name": "gptoss-swallow-20b", "query": {"includes": ["google/gemma-3-27b-it", "Qwen/Qwen3-14B", "openai/gpt-oss-20b", "tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1", "openai/gpt-oss-120b"]}, "title": "GPT-OSS Swallow 20B"}, {"name": "gptoss-swallow-120b", "query": {"includes": ["Qwen/Qwen3-Next-80B-A3B-Thinking", "openai/gpt-oss-120b", "tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1", "Qwen/Qwen3-235B-A22B-Thinking-2507", "gpt-5-mini-2025-08-07"]}, "title": "GPT-OSS Swallow 120B"}, {"name": "qwen3-swallow-8b", "query": {"includes": ["tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.5", "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "allenai/Olmo-3-7B-Think", "Qwen/Qwen3-8B", "tokyotech-llm/Qwen-3-Swallow-8B-RL-v0.2"]}, "title": "Qwen3 Swallow 8B"}, {"name": "qwen3-swallow-30b-a3b", "query": {"includes": ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-30B-A3B", "tokyotech-llm/Qwen-3-Swallow-30B-A3B-RL-v0.2"]}, "title": "Qwen3 Swallow 30B-A3B"}, {"name": "qwen3-swallow-32b", "query": {"includes": ["allenai/Olmo-3-32B-Think", "rinna/qwq-bakeneko-32b", "abeja/ABEJA-QwQ32b-Reasoning-Japanese-v1.0", "Qwen/Qwen3-32B", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2"]}, "title": "Qwen3 Swallow 32B"}, {"name": "post-ja", "query": {"includes": ["llm-jp/llm-jp-4-8b-thinking", "tokyotech-llm/GPT-OSS-Swallow-20B-RL-v0.1", "llm-jp/llm-jp-4-32b-a3b-thinking", "tokyotech-llm/Qwen-3-Swallow-32B-RL-v0.2", "tokyotech-llm/GPT-OSS-Swallow-120B-RL-v0.1"]}, "title": "\u65e5\u672c\u306e\u30aa\u30fc\u30d7\u30f3\u30e2\u30c7\u30eb"}];
 
       var e = document.getElementById('link-dark');
       var old = e.getAttribute('href');
